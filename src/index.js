@@ -6,13 +6,14 @@ import { RootStoreContext } from "./store/store_context";
 import RootStore from "./store/root_store";
 import { ChakraProvider } from "@chakra-ui/react";
 import PageContainer from "./components/page_container";
+import MainPage from "./pages/main_page/main_page";
 
 const router = createHashRouter([
   {
     path: "/",
     element: (
       <PageContainer>
-        <App />
+        <MainPage />
       </PageContainer>
     ),
   },
