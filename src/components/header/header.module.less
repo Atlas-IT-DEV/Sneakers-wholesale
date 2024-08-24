@@ -1,18 +1,26 @@
 .container {
   display: flex;
   justify-content: space-between;
+  padding: 15px;
   .imageUser {
     width: 48px;
     height: 48px;
     border-radius: 50%;
+    object-fit: cover;
   }
   .aboutUser {
     display: flex;
-    gap: 5px;
+    gap: 7px;
+    .attributes {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
     .userValues {
-      color: black;
+      color: white;
       font-size: 17px;
       font-weight: 600;
+      line-height: 16px;
     }
     .rankUser {
       color: white;

@@ -13,7 +13,7 @@ const router = createHashRouter([
     path: "/",
     element: (
       <PageContainer>
-        <MainPage />
+        <MainPage/>
       </PageContainer>
     ),
   },

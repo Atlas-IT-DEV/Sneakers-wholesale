@@ -10,7 +10,7 @@ const Header = ({
     <div className={styles.container}>
       <div className={styles.aboutUser}>
         <img src={image} alt="" className={styles.imageUser} />
-        <div>
+        <div className={styles.attributes}>
           <p className={styles.userValues}>{user}</p>
           <p className={styles.rankUser}>{rank}</p>
         </div>
