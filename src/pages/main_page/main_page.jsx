@@ -1,6 +1,7 @@
 import AboutDelivery from "../../components/about_delivery/about_delivery";
 import Adress from "../../components/adress/adress";
 import BottomMenu from "../../components/bottom_menu/bottom_menu";
+import Catalog from "../../components/catalog/catalog";
 import CompanyInformation from "../../components/company_information/company_information";
 import Delivery from "../../components/delivery/delivery";
 import Header from "../../components/header/header";
@@ -22,6 +23,7 @@ const MainPage = () => {
       <main>
         <Delivery />
         <SelectCatalog />
+        <Catalog />
         <CompanyInformation />
         <Adress />
         <AboutDelivery />

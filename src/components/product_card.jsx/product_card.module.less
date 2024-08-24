@@ -1,0 +1,71 @@
+.container {
+  margin-top: 20px;
+  .imageContainer {
+    position: relative;
+    img:first-child {
+      border-radius: 28px;
+      min-width: 180px;
+      height: 230px;
+      object-fit: cover;
+    }
+    .favouriteButton {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: 12px;
+      top: 12px;
+      background-color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+  }
+  .countProductText {
+    color: rgba(255, 255, 255, 1);
+    font-size: 21px;
+    font-weight: 500;
+    margin-top: 15px;
+  }
+  .priceField {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    .priceText {
+      color: rgba(219, 105, 0, 1);
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .oldPriceText {
+      color: rgba(155, 155, 155, 1);
+      text-decoration: line-through;
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+  .brandNameText {
+    color: white;
+    font-size: 21px;
+    font-weight: 500;
+  }
+  .modelNameText {
+    color: white;
+    font-size: 21px;
+    font-weight: 500;
+  }
+  .addButton {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    height: 48px;
+    background-color: rgba(219, 105, 0, 1);
+    border-radius: 152px;
+    margin-top: 5px;
+    .addButtonText {
+      font-size: 18px;
+      font-weight: 600;
+      color: white;
+    }
+  }
+}

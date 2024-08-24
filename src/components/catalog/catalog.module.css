@@ -4,23 +4,21 @@
   width: 100%;
   border-radius: 26px;
 }
-.container .divideLine {
-  width: 100%;
-  height: 2px;
-  background-color: #363636;
-  margin: 20px 0 20px 0;
-}
-.container .field {
+.container .headerField {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.container .fieldText {
+.container .headerField .nameText {
   color: #f1f1f1;
   font-size: 21px;
   font-weight: 600;
 }
-.container .statusDeliveryText {
-  font-size: 20px;
-  color: #686868;
+.container .productCarousel {
+  width: 100%;
+  display: flex;
+  gap: 28px;
+  overflow: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
 }

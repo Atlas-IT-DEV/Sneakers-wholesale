@@ -1,0 +1,71 @@
+.container {
+  margin-top: 20px;
+}
+.container .imageContainer {
+  position: relative;
+}
+.container .imageContainer img:first-child {
+  border-radius: 28px;
+  min-width: 180px;
+  height: 230px;
+  object-fit: cover;
+}
+.container .imageContainer .favouriteButton {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 12px;
+  top: 12px;
+  background-color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.container .countProductText {
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+.container .priceField {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.container .priceField .priceText {
+  color: #db6900;
+  font-size: 24px;
+  font-weight: 600;
+}
+.container .priceField .oldPriceText {
+  color: #9b9b9b;
+  text-decoration: line-through;
+  font-size: 24px;
+  font-weight: 500;
+}
+.container .brandNameText {
+  color: white;
+  font-size: 21px;
+  font-weight: 500;
+}
+.container .modelNameText {
+  color: white;
+  font-size: 21px;
+  font-weight: 500;
+}
+.container .addButton {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  height: 48px;
+  background-color: #db6900;
+  border-radius: 152px;
+  margin-top: 5px;
+}
+.container .addButton .addButtonText {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
