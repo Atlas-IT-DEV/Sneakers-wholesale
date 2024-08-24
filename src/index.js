@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import { RootStoreContext } from "./store/store_context";
 import RootStore from "./store/root_store";

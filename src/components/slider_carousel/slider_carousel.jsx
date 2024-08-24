@@ -1,11 +1,11 @@
 import CarouselCard from "./carousel_card";
 import styles from "./slider_carousel.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
-import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import { Autoplay, FreeMode } from "swiper/modules";
 import { useEffect, useState } from "react";
+
 
 const SliderCarousel = () => {
   const [message, setMessage] = useState("");
@@ -19,17 +19,16 @@ const SliderCarousel = () => {
       );
     }
     setMessage(buffer);
-  });
+  }, []);
 
   return (
     <>
       <Swiper
         spaceBetween={50}
         className={styles.slideTrack}
-        modules={[FreeMode, Pagination, Autoplay]}
+        modules={[FreeMode, Autoplay]}
         freeMode={true}
-        pagination={true}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{ delay: 3000, disableOnInteraction: true }}
       >
         {message}
       </Swiper>

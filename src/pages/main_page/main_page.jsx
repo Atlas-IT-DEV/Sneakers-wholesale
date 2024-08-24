@@ -7,6 +7,7 @@ import Delivery from "../../components/delivery/delivery";
 import Header from "../../components/header/header";
 import SelectCatalog from "../../components/select_catalog/select_catalog";
 import SliderCarousel from "../../components/slider_carousel/slider_carousel";
+
 import styles from "./main_page.module.css";
 
 const MainPage = () => {
