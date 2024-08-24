@@ -1,0 +1,26 @@
+.container {
+  padding: 14px 30px 14px 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+}
+.container .divideLine {
+  width: 100%;
+  height: 2px;
+  background-color: #363636;
+  margin: 20px 0 20px 0;
+}
+.container .field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .fieldText {
+  color: #f1f1f1;
+  font-size: 21px;
+  font-weight: 600;
+}
+.container .statusDeliveryText {
+  font-size: 20px;
+  color: #686868;
+}
