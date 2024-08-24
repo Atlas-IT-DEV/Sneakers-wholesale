@@ -1,0 +1,37 @@
+.container {
+  padding: 14px 30px 14px 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+}
+.container .nameText {
+  color: #f1f1f1;
+  font-size: 21px;
+  font-weight: 600;
+}
+.container .buttonsBlock {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  gap: 12px;
+}
+.container .buttonsBlock .buttonsRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.container .buttonsBlock .buttonsRow .button {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c1c1c;
+  height: 60px;
+  border-radius: 10px;
+}
+.container .buttonsBlock .buttonsRow .button .buttonText {
+  color: #f1f1f1;
+  font-size: 21px;
+  font-weight: 500;
+}
