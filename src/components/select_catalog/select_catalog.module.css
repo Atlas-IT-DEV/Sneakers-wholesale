@@ -28,7 +28,7 @@
   align-items: center;
   background-color: #1c1c1c;
   height: 60px;
-  border-radius: 10px;
+  cursor: pointer;
 }
 .container .buttonsBlock .buttonsRow .button .buttonText {
   color: #f1f1f1;

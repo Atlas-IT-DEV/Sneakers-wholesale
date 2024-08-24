@@ -9,6 +9,7 @@
   border-radius: 28px;
   min-width: 180px;
   height: 230px;
+  cursor: pointer;
 }
 .container .favouriteButton {
   position: absolute;
@@ -21,6 +22,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
+  cursor: pointer;
 }
 .container .favouriteButton img {
   width: 20px;
@@ -67,6 +69,7 @@
   background-color: #db6900;
   border-radius: 152px;
   margin-top: 5px;
+  cursor: pointer;
 }
 .container .addButton .addButtonText {
   font-size: 18px;
