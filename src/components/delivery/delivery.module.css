@@ -20,8 +20,10 @@
   color: #f1f1f1;
   font-size: 21px;
   font-weight: 600;
+  font-family: TTForsTrialVariable;
 }
 .container .statusDeliveryText {
   font-size: 20px;
   color: #686868;
+  font-family: TTForsTrialVariable;
 }

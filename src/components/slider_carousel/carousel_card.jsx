@@ -10,7 +10,7 @@ const CarouselCard = () => {
           кроссовок с премиальным <br />
           качеством
         </p>
-        <p className={styles.descriptionText}>
+        <p className={styles.subDescriptionText}>
           Ожидание и реальность совпадают!
         </p>
       </div>

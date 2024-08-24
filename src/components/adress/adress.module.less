@@ -1,3 +1,5 @@
+@font: TTForsTrialVariable;
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -11,11 +13,13 @@
     color: rgba(241, 241, 241, 1);
     font-size: 23px;
     font-weight: 600;
+    font-family: @font;
   }
   .placeText {
     color: rgba(241, 241, 241, 1);
     font-size: 21px;
     font-weight: 500;
+    font-family: @font;
   }
   .buttonAdress {
     display: flex;
@@ -24,6 +28,7 @@
     .buttonAdressText {
       color: rgba(104, 104, 104, 1);
       font-size: 20px;
+      font-family: @font;
     }
   }
 }

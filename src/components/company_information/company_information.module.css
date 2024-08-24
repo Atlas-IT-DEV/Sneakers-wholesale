@@ -17,11 +17,13 @@
   cursor: pointer;
 }
 .container .fieldText {
+  font-family: TTForsTrialVariable;
   color: #f1f1f1;
   font-size: 21px;
   font-weight: 600;
 }
 .container .aboutFaqtext {
+  font-family: TTForsTrialVariable;
   font-size: 20px;
   color: #686868;
 }

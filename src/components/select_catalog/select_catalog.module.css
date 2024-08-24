@@ -8,6 +8,7 @@
   color: #f1f1f1;
   font-size: 21px;
   font-weight: 600;
+  font-family: TTForsTrialVariable;
 }
 .container .buttonsBlock {
   display: flex;
@@ -27,6 +28,7 @@
   justify-content: center;
   align-items: center;
   height: 60px;
+  padding: 0 10px 0 10px;
 }
 .container .buttonsBlock .buttonsRow .activeButton {
   background-color: #1c1c1c;
@@ -41,4 +43,30 @@
 .container .buttonsBlock .buttonsRow .buttonText {
   font-size: 21px;
   font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+@media (max-width: 570px) {
+  .container .buttonsBlock .buttonsRow .buttonText {
+    font-size: 18px;
+  }
+}
+@media (max-width: 510px) {
+  .container .buttonsBlock .buttonsRow .buttonText {
+    font-size: 16px;
+  }
+}
+@media (max-width: 475px) {
+  .container .buttonsBlock .buttonsRow .buttonText {
+    font-size: 14px;
+  }
+}
+@media (max-width: 435px) {
+  .container .buttonsBlock .buttonsRow .buttonText {
+    font-size: 12px;
+  }
+}
+@media (max-width: 400px) {
+  .container .buttonsBlock .buttonsRow .buttonText {
+    font-size: 10px;
+  }
 }

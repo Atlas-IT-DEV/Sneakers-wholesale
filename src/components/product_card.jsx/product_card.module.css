@@ -33,6 +33,7 @@
   font-size: 21px;
   font-weight: 500;
   margin-top: 15px;
+  font-family: TTForsTrialVariable;
 }
 .container .priceField {
   display: flex;
@@ -43,22 +44,26 @@
   color: #db6900;
   font-size: 24px;
   font-weight: 600;
+  font-family: TTForsTrialVariable;
 }
 .container .priceField .oldPriceText {
   color: #9b9b9b;
   text-decoration: line-through;
   font-size: 24px;
   font-weight: 500;
+  font-family: TTForsTrialVariable;
 }
 .container .brandNameText {
   color: white;
   font-size: 21px;
   font-weight: 500;
+  font-family: TTForsTrialVariable;
 }
 .container .modelNameText {
   color: white;
   font-size: 21px;
   font-weight: 500;
+  font-family: TTForsTrialVariable;
 }
 .container .addButton {
   display: flex;
@@ -75,4 +80,5 @@
   font-size: 18px;
   font-weight: 600;
   color: white;
+  font-family: TTForsTrialVariable;
 }

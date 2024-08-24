@@ -1,3 +1,5 @@
+@font: TTForsTrialVariable;
+
 .container {
   padding: 30px;
   background-color: rgba(8, 8, 8, 1);
@@ -7,6 +9,7 @@
     color: rgba(241, 241, 241, 1);
     font-size: 21px;
     font-weight: 600;
+    font-family: @font;
   }
   .buttonsBlock {
     display: flex;
@@ -24,7 +27,9 @@
         justify-content: center;
         align-items: center;
         height: 60px;
+        padding: 0 10px 0 10px;
       }
+
       .activeButton {
         background-color: rgba(28, 28, 28, 1);
         cursor: pointer;
@@ -38,6 +43,32 @@
       .buttonText {
         font-size: 21px;
         font-weight: 500;
+        font-family: @font;
+      }
+      @media (max-width: 570px) {
+        .buttonText {
+          font-size: 18px;
+        }
+      }
+      @media (max-width: 510px) {
+        .buttonText {
+          font-size: 16px;
+        }
+      }
+      @media (max-width: 475px) {
+        .buttonText {
+          font-size: 14px;
+        }
+      }
+      @media (max-width: 435px) {
+        .buttonText {
+          font-size: 12px;
+        }
+      }
+      @media (max-width: 400px) {
+        .buttonText {
+          font-size: 10px;
+        }
       }
     }
   }

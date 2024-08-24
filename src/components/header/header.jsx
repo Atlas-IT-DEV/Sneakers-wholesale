@@ -15,10 +15,10 @@ const Header = ({
           <p className={styles.rankUser}>{rank}</p>
         </div>
       </div>
-      <a href="">
+      <a href="https://t.me/REEDshopp">
         <div className={styles.telegramButton}>
           <img src={telegramIcon} alt="" />
-          <p>@REEDshopp</p>
+          <p className={styles.telegramText}>@REEDshopp</p>
         </div>
       </a>
     </div>

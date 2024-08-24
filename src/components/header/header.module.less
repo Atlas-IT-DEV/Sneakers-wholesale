@@ -1,3 +1,5 @@
+@font: TTForsTrialVariable;
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -20,7 +22,7 @@
       color: white;
       font-size: 17px;
       font-weight: 600;
-      line-height: 16px;
+      font-family: @font;
     }
     .rankUser {
       color: white;
@@ -32,6 +34,7 @@
       text-align: center;
       border-radius: 90px;
       width: max-content;
+      font-family: @font;
     }
   }
   .telegramButton {
@@ -44,5 +47,10 @@
     width: max-content;
     padding: 0 15px 0 15px;
     border-radius: 79px;
+  }
+  .telegramText {
+    font-family: @font;
+    color: black;
+    font-weight: 500;
   }
 }

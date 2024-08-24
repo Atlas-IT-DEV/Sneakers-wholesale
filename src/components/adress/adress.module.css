@@ -12,11 +12,13 @@
   color: #f1f1f1;
   font-size: 23px;
   font-weight: 600;
+  font-family: TTForsTrialVariable;
 }
 .container .placeText {
   color: #f1f1f1;
   font-size: 21px;
   font-weight: 500;
+  font-family: TTForsTrialVariable;
 }
 .container .buttonAdress {
   display: flex;
@@ -26,4 +28,5 @@
 .container .buttonAdress .buttonAdressText {
   color: #686868;
   font-size: 20px;
+  font-family: TTForsTrialVariable;
 }
