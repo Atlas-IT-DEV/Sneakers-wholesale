@@ -24,7 +24,6 @@ const SliderCarousel = () => {
   return (
     <>
       <Swiper
-        spaceBetween={50}
         className={styles.slideTrack}
         modules={[FreeMode, Autoplay]}
         freeMode={true}
