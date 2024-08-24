@@ -1,8 +1,8 @@
 import styles from "./bottom_menu.module.css";
-import homeIcon from "../../images/home.png";
-import catalogIcon from "../../images/catalog.png";
-import favouriteIcon from "../../images/fav.png";
-import shoppingCartIcon from "../../images/shopping_cart_inactive.png";
+import homeIcon from "../../images/home.svg";
+import catalogIcon from "../../images/catalog.svg";
+import favouriteIcon from "../../images/fav.svg";
+import shoppingCartIcon from "../../images/shopping_cart_inactive.svg";
 
 const BottomMenu = () => {
   return (

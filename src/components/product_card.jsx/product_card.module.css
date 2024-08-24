@@ -4,13 +4,13 @@
 .container .imageContainer {
   position: relative;
 }
-.container .imageContainer img:first-child {
+.container .imageProduct {
+  object-fit: cover;
   border-radius: 28px;
   min-width: 180px;
   height: 230px;
-  object-fit: cover;
 }
-.container .imageContainer .favouriteButton {
+.container .favouriteButton {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -21,6 +21,10 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
+}
+.container .favouriteButton img {
+  width: 20px;
+  height: 18px;
 }
 .container .countProductText {
   color: #ffffff;
