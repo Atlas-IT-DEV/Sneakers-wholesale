@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px 20px 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+}
+.container .headerText {
+  color: #f1f1f1;
+  font-size: 23px;
+  font-weight: 600;
+}
+.container .placeText {
+  color: #f1f1f1;
+  font-size: 21px;
+  font-weight: 500;
+}
+.container .buttonAdress {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.container .buttonAdress .buttonAdressText {
+  color: #686868;
+  font-size: 20px;
+}
