@@ -1,5 +1,5 @@
 import styles from "./adress.module.css";
-import arrowRightIcon from "../../images/arrow_right.png";
+import arrowRightIcon from "../../images/arrow_right_icon.svg";
 import geolocationIcon from "../../images/geo.png";
 
 const Adress = ({ adress = "ТЯК-Москва" }) => {

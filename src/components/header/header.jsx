@@ -1,5 +1,5 @@
 import styles from "./header.module.css";
-import telegramIcon from "../../images/logos_telegram.png";
+import telegramIcon from "../../images/telegram_icon.svg";
 
 const Header = ({
   image = "https://legacy.reactjs.org/logo-og.png",

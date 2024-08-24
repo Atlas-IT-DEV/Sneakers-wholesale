@@ -1,5 +1,5 @@
 import styles from "./select_catalog.module.css";
-import rightArrowIcon from "../../images/arrow_right.png";
+import rightArrowIcon from "../../images/arrow_right_icon.svg";
 
 const SelectCatalog = () => {
   return (

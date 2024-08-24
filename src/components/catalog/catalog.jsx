@@ -1,5 +1,5 @@
 import styles from "./catalog.module.css";
-import arrowRightIcon from "../../images/arrowRight.png";
+import arrowRightIcon from "../../images/arrow_right_icon.svg";
 import ProductCard from "../product_card.jsx/product_card";
 
 const Catalog = () => {

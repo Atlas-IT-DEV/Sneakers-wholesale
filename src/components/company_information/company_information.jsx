@@ -1,5 +1,5 @@
 import styles from "./company_information.module.css";
-import arrowRightIcon from "../../images/arrow_right.png";
+import arrowRightIcon from "../../images/arrow_right_icon.svg";
 
 const CompanyInformation = () => {
   return (
