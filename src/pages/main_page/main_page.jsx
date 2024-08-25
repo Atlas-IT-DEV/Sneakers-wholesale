@@ -13,7 +13,6 @@ import styles from "./main_page.module.css";
 const MainPage = () => {
   return (
     <div className={styles.container}>
-      <BottomMenu />
       <header>
         <Header />
       </header>
@@ -29,6 +28,7 @@ const MainPage = () => {
         <Adress />
         <AboutDelivery />
       </main>
+      <BottomMenu />
     </div>
   );
 };

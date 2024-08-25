@@ -1,27 +1,27 @@
-.container {
+.container585_600 {
   padding: 30px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
 }
-.container .nameText {
+.container585_600 .nameText {
   color: #f1f1f1;
   font-size: 21px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
-.container .buttonsBlock {
+.container585_600 .buttonsBlock {
   display: flex;
   flex-direction: column;
   margin-top: 12px;
   gap: 12px;
 }
-.container .buttonsBlock .buttonsRow {
+.container585_600 .buttonsBlock .buttonsRow {
   display: flex;
   justify-content: space-between;
   gap: 12px;
 }
-.container .buttonsBlock .buttonsRow .button {
+.container585_600 .buttonsBlock .buttonsRow .button {
   display: flex;
   width: 100%;
   gap: 5px;
@@ -30,43 +30,300 @@
   height: 60px;
   padding: 0 10px 0 10px;
 }
-.container .buttonsBlock .buttonsRow .activeButton {
+.container585_600 .buttonsBlock .buttonsRow .activeButton {
   background-color: #1c1c1c;
   cursor: pointer;
   color: #f1f1f1;
 }
-.container .buttonsBlock .buttonsRow .unActiveButton {
+.container585_600 .buttonsBlock .buttonsRow .unActiveButton {
   background-color: #0c0c0c;
   cursor: help;
   color: #9b9b9b;
 }
-.container .buttonsBlock .buttonsRow .buttonText {
+.container585_600 .buttonsBlock .buttonsRow .buttonText {
   font-size: 21px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
 }
-@media (max-width: 570px) {
-  .container .buttonsBlock .buttonsRow .buttonText {
-    font-size: 18px;
-  }
+.container565_585 {
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
 }
-@media (max-width: 510px) {
-  .container .buttonsBlock .buttonsRow .buttonText {
-    font-size: 16px;
-  }
+.container565_585 .nameText {
+  color: #f1f1f1;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
 }
-@media (max-width: 475px) {
-  .container .buttonsBlock .buttonsRow .buttonText {
-    font-size: 14px;
-  }
+.container565_585 .buttonsBlock {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  gap: 12px;
 }
-@media (max-width: 435px) {
-  .container .buttonsBlock .buttonsRow .buttonText {
-    font-size: 12px;
-  }
+.container565_585 .buttonsBlock .buttonsRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
 }
-@media (max-width: 400px) {
-  .container .buttonsBlock .buttonsRow .buttonText {
-    font-size: 10px;
-  }
+.container565_585 .buttonsBlock .buttonsRow .button {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 0 10px 0 10px;
+}
+.container565_585 .buttonsBlock .buttonsRow .activeButton {
+  background-color: #1c1c1c;
+  cursor: pointer;
+  color: #f1f1f1;
+}
+.container565_585 .buttonsBlock .buttonsRow .unActiveButton {
+  background-color: #0c0c0c;
+  cursor: help;
+  color: #9b9b9b;
+}
+.container565_585 .buttonsBlock .buttonsRow .buttonText {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 {
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+}
+.container525_565 .nameText {
+  color: #f1f1f1;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .buttonsBlock {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  gap: 12px;
+}
+.container525_565 .buttonsBlock .buttonsRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.container525_565 .buttonsBlock .buttonsRow .button {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 0 10px 0 10px;
+}
+.container525_565 .buttonsBlock .buttonsRow .activeButton {
+  background-color: #1c1c1c;
+  cursor: pointer;
+  color: #f1f1f1;
+}
+.container525_565 .buttonsBlock .buttonsRow .unActiveButton {
+  background-color: #0c0c0c;
+  cursor: help;
+  color: #9b9b9b;
+}
+.container525_565 .buttonsBlock .buttonsRow .buttonText {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 {
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+}
+.container485_525 .nameText {
+  color: #f1f1f1;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .buttonsBlock {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  gap: 12px;
+}
+.container485_525 .buttonsBlock .buttonsRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.container485_525 .buttonsBlock .buttonsRow .button {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 0 10px 0 10px;
+}
+.container485_525 .buttonsBlock .buttonsRow .activeButton {
+  background-color: #1c1c1c;
+  cursor: pointer;
+  color: #f1f1f1;
+}
+.container485_525 .buttonsBlock .buttonsRow .unActiveButton {
+  background-color: #0c0c0c;
+  cursor: help;
+  color: #9b9b9b;
+}
+.container485_525 .buttonsBlock .buttonsRow .buttonText {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 {
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+}
+.container450_485 .nameText {
+  color: #f1f1f1;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .buttonsBlock {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  gap: 12px;
+}
+.container450_485 .buttonsBlock .buttonsRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.container450_485 .buttonsBlock .buttonsRow .button {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 0 10px 0 10px;
+}
+.container450_485 .buttonsBlock .buttonsRow .activeButton {
+  background-color: #1c1c1c;
+  cursor: pointer;
+  color: #f1f1f1;
+}
+.container450_485 .buttonsBlock .buttonsRow .unActiveButton {
+  background-color: #0c0c0c;
+  cursor: help;
+  color: #9b9b9b;
+}
+.container450_485 .buttonsBlock .buttonsRow .buttonText {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 {
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+}
+.container410_450 .nameText {
+  color: #f1f1f1;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .buttonsBlock {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  gap: 12px;
+}
+.container410_450 .buttonsBlock .buttonsRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.container410_450 .buttonsBlock .buttonsRow .button {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 0 10px 0 10px;
+}
+.container410_450 .buttonsBlock .buttonsRow .activeButton {
+  background-color: #1c1c1c;
+  cursor: pointer;
+  color: #f1f1f1;
+}
+.container410_450 .buttonsBlock .buttonsRow .unActiveButton {
+  background-color: #0c0c0c;
+  cursor: help;
+  color: #9b9b9b;
+}
+.container410_450 .buttonsBlock .buttonsRow .buttonText {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 {
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+}
+.container375_410 .nameText {
+  color: #f1f1f1;
+  font-size: 10px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .buttonsBlock {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  gap: 12px;
+}
+.container375_410 .buttonsBlock .buttonsRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.container375_410 .buttonsBlock .buttonsRow .button {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 0 10px 0 10px;
+}
+.container375_410 .buttonsBlock .buttonsRow .activeButton {
+  background-color: #1c1c1c;
+  cursor: pointer;
+  color: #f1f1f1;
+}
+.container375_410 .buttonsBlock .buttonsRow .unActiveButton {
+  background-color: #0c0c0c;
+  cursor: help;
+  color: #9b9b9b;
+}
+.container375_410 .buttonsBlock .buttonsRow .buttonText {
+  font-size: 10px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
 }
