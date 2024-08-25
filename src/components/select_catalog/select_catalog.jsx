@@ -7,7 +7,6 @@ import useWindowDimensions from "../hooks/windowDimensions";
 const SelectCatalog = () => {
   const [showModal, setShowModal] = useState(false);
   const { width } = useWindowDimensions();
-  console.log(width);
   return (
     <div
       className={
