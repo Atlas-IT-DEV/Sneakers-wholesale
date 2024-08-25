@@ -1,29 +1,203 @@
-.container {
+.container585_600 {
   padding: 30px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
 }
-.container .divideLine {
+.container585_600 .divideLine {
   width: 100%;
   height: 2px;
   background-color: #363636;
   margin: 20px 0 20px 0;
 }
-.container .field {
+.container585_600 .field {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
-.container .fieldText {
+.container585_600 .fieldText {
   font-family: TTForsTrialVariable;
   color: #f1f1f1;
   font-size: 21px;
   font-weight: 600;
 }
-.container .aboutFaqtext {
+.container585_600 .aboutFaqtext {
   font-family: TTForsTrialVariable;
   font-size: 20px;
+  color: #686868;
+}
+.container565_585 {
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+}
+.container565_585 .divideLine {
+  width: 100%;
+  height: 2px;
+  background-color: #363636;
+  margin: 20px 0 20px 0;
+}
+.container565_585 .field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.container565_585 .fieldText {
+  font-family: TTForsTrialVariable;
+  color: #f1f1f1;
+  font-size: 20px;
+  font-weight: 600;
+}
+.container565_585 .aboutFaqtext {
+  font-family: TTForsTrialVariable;
+  font-size: 18px;
+  color: #686868;
+}
+.container525_565 {
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+}
+.container525_565 .divideLine {
+  width: 100%;
+  height: 2px;
+  background-color: #363636;
+  margin: 20px 0 20px 0;
+}
+.container525_565 .field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.container525_565 .fieldText {
+  font-family: TTForsTrialVariable;
+  color: #f1f1f1;
+  font-size: 18px;
+  font-weight: 600;
+}
+.container525_565 .aboutFaqtext {
+  font-family: TTForsTrialVariable;
+  font-size: 16px;
+  color: #686868;
+}
+.container485_525 {
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+}
+.container485_525 .divideLine {
+  width: 100%;
+  height: 2px;
+  background-color: #363636;
+  margin: 20px 0 20px 0;
+}
+.container485_525 .field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.container485_525 .fieldText {
+  font-family: TTForsTrialVariable;
+  color: #f1f1f1;
+  font-size: 16px;
+  font-weight: 600;
+}
+.container485_525 .aboutFaqtext {
+  font-family: TTForsTrialVariable;
+  font-size: 14px;
+  color: #686868;
+}
+.container450_485 {
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+}
+.container450_485 .divideLine {
+  width: 100%;
+  height: 2px;
+  background-color: #363636;
+  margin: 20px 0 20px 0;
+}
+.container450_485 .field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.container450_485 .fieldText {
+  font-family: TTForsTrialVariable;
+  color: #f1f1f1;
+  font-size: 14px;
+  font-weight: 600;
+}
+.container450_485 .aboutFaqtext {
+  font-family: TTForsTrialVariable;
+  font-size: 12px;
+  color: #686868;
+}
+.container410_450 {
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+}
+.container410_450 .divideLine {
+  width: 100%;
+  height: 2px;
+  background-color: #363636;
+  margin: 20px 0 20px 0;
+}
+.container410_450 .field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.container410_450 .fieldText {
+  font-family: TTForsTrialVariable;
+  color: #f1f1f1;
+  font-size: 12px;
+  font-weight: 600;
+}
+.container410_450 .aboutFaqtext {
+  font-family: TTForsTrialVariable;
+  font-size: 10px;
+  color: #686868;
+}
+.container375_410 {
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+}
+.container375_410 .divideLine {
+  width: 100%;
+  height: 2px;
+  background-color: #363636;
+  margin: 20px 0 20px 0;
+}
+.container375_410 .field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.container375_410 .fieldText {
+  font-family: TTForsTrialVariable;
+  color: #f1f1f1;
+  font-size: 10px;
+  font-weight: 600;
+}
+.container375_410 .aboutFaqtext {
+  font-family: TTForsTrialVariable;
+  font-size: 8px;
   color: #686868;
 }

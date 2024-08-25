@@ -1,30 +1,31 @@
-.container {
+.container585_600 {
   display: flex;
   justify-content: space-between;
   padding: 15px;
 }
-.container .imageUser {
+.container585_600 .imageUser {
   width: 48px;
-  height: 48px;
   border-radius: 50%;
   object-fit: cover;
 }
-.container .aboutUser {
+.container585_600 .aboutUser {
   display: flex;
   gap: 7px;
 }
-.container .aboutUser .attributes {
+.container585_600 .aboutUser .attributes {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.container .aboutUser .userValues {
+.container585_600 .aboutUser .userValues {
   color: white;
   font-size: 17px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
-.container .aboutUser .rankUser {
+.container585_600 .aboutUser .rankUser {
+  display: flex;
+  align-items: center;
   color: white;
   font-size: 14px;
   font-weight: 500;
@@ -36,7 +37,7 @@
   width: max-content;
   font-family: TTForsTrialVariable;
 }
-.container .telegramButton {
+.container585_600 .telegramButton {
   display: flex;
   gap: 5px;
   align-items: center;
@@ -47,8 +48,366 @@
   padding: 0 15px 0 15px;
   border-radius: 79px;
 }
-.container .telegramText {
+.container585_600 .tgIcon {
+  width: 31px;
+}
+.container585_600 .telegramText {
   font-family: TTForsTrialVariable;
   color: black;
   font-weight: 500;
+  font-size: 17px;
+}
+.container565_585 {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.container565_585 .imageUser {
+  width: 47px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.container565_585 .aboutUser {
+  display: flex;
+  gap: 7px;
+}
+.container565_585 .aboutUser .attributes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container565_585 .aboutUser .userValues {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .aboutUser .rankUser {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  height: 22px;
+  padding: 0 10px 0 10px;
+  background-color: black;
+  text-align: center;
+  border-radius: 90px;
+  width: max-content;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .telegramButton {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  background-color: white;
+  width: max-content;
+  padding: 0 15px 0 15px;
+  border-radius: 79px;
+}
+.container565_585 .tgIcon {
+  width: 30px;
+}
+.container565_585 .telegramText {
+  font-family: TTForsTrialVariable;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+}
+.container525_565 {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.container525_565 .imageUser {
+  width: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.container525_565 .aboutUser {
+  display: flex;
+  gap: 7px;
+}
+.container525_565 .aboutUser .attributes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container525_565 .aboutUser .userValues {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .aboutUser .rankUser {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  height: 22px;
+  padding: 0 10px 0 10px;
+  background-color: black;
+  text-align: center;
+  border-radius: 90px;
+  width: max-content;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .telegramButton {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  background-color: white;
+  width: max-content;
+  padding: 0 15px 0 15px;
+  border-radius: 79px;
+}
+.container525_565 .tgIcon {
+  width: 29px;
+}
+.container525_565 .telegramText {
+  font-family: TTForsTrialVariable;
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+}
+.container485_525 {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.container485_525 .imageUser {
+  width: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.container485_525 .aboutUser {
+  display: flex;
+  gap: 7px;
+}
+.container485_525 .aboutUser .attributes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container485_525 .aboutUser .userValues {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .aboutUser .rankUser {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
+  height: 22px;
+  padding: 0 10px 0 10px;
+  background-color: black;
+  text-align: center;
+  border-radius: 90px;
+  width: max-content;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .telegramButton {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  background-color: white;
+  width: max-content;
+  padding: 0 15px 0 15px;
+  border-radius: 79px;
+}
+.container485_525 .tgIcon {
+  width: 28px;
+}
+.container485_525 .telegramText {
+  font-family: TTForsTrialVariable;
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+}
+.container450_485 {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.container450_485 .imageUser {
+  width: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.container450_485 .aboutUser {
+  display: flex;
+  gap: 7px;
+}
+.container450_485 .aboutUser .attributes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container450_485 .aboutUser .userValues {
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .aboutUser .rankUser {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 10px;
+  font-weight: 500;
+  height: 22px;
+  padding: 0 10px 0 10px;
+  background-color: black;
+  text-align: center;
+  border-radius: 90px;
+  width: max-content;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .telegramButton {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  background-color: white;
+  width: max-content;
+  padding: 0 15px 0 15px;
+  border-radius: 79px;
+}
+.container450_485 .tgIcon {
+  width: 27px;
+}
+.container450_485 .telegramText {
+  font-family: TTForsTrialVariable;
+  color: black;
+  font-weight: 500;
+  font-size: 13px;
+}
+.container410_450 {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.container410_450 .imageUser {
+  width: 43px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.container410_450 .aboutUser {
+  display: flex;
+  gap: 7px;
+}
+.container410_450 .aboutUser .attributes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container410_450 .aboutUser .userValues {
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .aboutUser .rankUser {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 10px;
+  font-weight: 500;
+  height: 22px;
+  padding: 0 10px 0 10px;
+  background-color: black;
+  text-align: center;
+  border-radius: 90px;
+  width: max-content;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .telegramButton {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  background-color: white;
+  width: max-content;
+  padding: 0 15px 0 15px;
+  border-radius: 79px;
+}
+.container410_450 .tgIcon {
+  width: 26px;
+}
+.container410_450 .telegramText {
+  font-family: TTForsTrialVariable;
+  color: black;
+  font-weight: 500;
+  font-size: 12px;
+}
+.container375_410 {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.container375_410 .imageUser {
+  width: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.container375_410 .aboutUser {
+  display: flex;
+  gap: 7px;
+}
+.container375_410 .aboutUser .attributes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container375_410 .aboutUser .userValues {
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .aboutUser .rankUser {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 10px;
+  font-weight: 500;
+  height: 22px;
+  padding: 0 10px 0 10px;
+  background-color: black;
+  text-align: center;
+  border-radius: 90px;
+  width: max-content;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .telegramButton {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  background-color: white;
+  width: max-content;
+  padding: 0 15px 0 15px;
+  border-radius: 79px;
+}
+.container375_410 .tgIcon {
+  width: 25px;
+}
+.container375_410 .telegramText {
+  font-family: TTForsTrialVariable;
+  color: black;
+  font-weight: 500;
+  font-size: 11px;
 }

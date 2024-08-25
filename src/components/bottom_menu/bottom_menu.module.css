@@ -1,34 +1,119 @@
-.containerBig {
+.container585_600 {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  padding: 20px 0 20px 0;
+  justify-content: space-between;
+  padding: 20px 85px 20px 85px;
   position: absolute;
   left: 0;
   bottom: 0;
   background-color: black;
   z-index: 2;
 }
-.containerBig img {
+.container585_600 img {
   width: 56px;
   height: 56px;
   padding: 5px;
   cursor: pointer;
 }
-.containerMedium {
+.container565_585 {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  padding: 20px 0 20px 0;
+  justify-content: space-between;
+  padding: 20px 80px 20px 80px;
   position: absolute;
   left: 0;
   bottom: 0;
   background-color: black;
   z-index: 2;
 }
-.containerMedium img {
-  width: 56px;
-  height: 56px;
+.container565_585 img {
+  width: 54px;
+  height: 54px;
+  padding: 5px;
+  cursor: pointer;
+}
+.container525_565 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 75px 20px 75px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  z-index: 2;
+}
+.container525_565 img {
+  width: 52px;
+  height: 52px;
+  padding: 5px;
+  cursor: pointer;
+}
+.container485_525 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 70px 20px 70px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  z-index: 2;
+}
+.container485_525 img {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  cursor: pointer;
+}
+.container450_485 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 65px 20px 65px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  z-index: 2;
+}
+.container450_485 img {
+  width: 48px;
+  height: 48px;
+  padding: 5px;
+  cursor: pointer;
+}
+.container410_450 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px 20px 60px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  z-index: 2;
+}
+.container410_450 img {
+  width: 46px;
+  height: 46px;
+  padding: 5px;
+  cursor: pointer;
+}
+.container375_410 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 55px 20px 55px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  z-index: 2;
+}
+.container375_410 img {
+  width: 44px;
+  height: 44px;
   padding: 5px;
   cursor: pointer;
 }

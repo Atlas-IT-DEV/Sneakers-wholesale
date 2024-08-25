@@ -1,4 +1,4 @@
-.container {
+.container585_600 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,25 +8,242 @@
   border-radius: 26px;
   cursor: pointer;
 }
-.container .headerText {
+.container585_600 .headerText {
   color: #f1f1f1;
   font-size: 23px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
-.container .placeText {
+.container585_600 .placeText {
   color: #f1f1f1;
   font-size: 21px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
 }
-.container .buttonAdress {
+.container585_600 .buttonAdress {
   display: flex;
   gap: 10px;
   align-items: center;
 }
-.container .buttonAdress .buttonAdressText {
+.container585_600 .buttonAdress .buttonAdressText {
   color: #686868;
   font-size: 20px;
   font-family: TTForsTrialVariable;
+  margin-bottom: 2%;
+}
+.container565_585 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+  cursor: pointer;
+}
+.container565_585 .headerText {
+  color: #f1f1f1;
+  font-size: 21px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .placeText {
+  color: #f1f1f1;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .buttonAdress {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.container565_585 .buttonAdress .buttonAdressText {
+  color: #686868;
+  font-size: 18px;
+  font-family: TTForsTrialVariable;
+  margin-bottom: 2%;
+}
+.container565_585 .geoIcon {
+  width: 100px;
+}
+.container525_565 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+  cursor: pointer;
+}
+.container525_565 .headerText {
+  color: #f1f1f1;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .placeText {
+  color: #f1f1f1;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .buttonAdress {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.container525_565 .buttonAdress .buttonAdressText {
+  color: #686868;
+  font-size: 16px;
+  font-family: TTForsTrialVariable;
+  margin-bottom: 2%;
+}
+.container525_565 .geoIcon {
+  width: 95px;
+}
+.container485_525 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+  cursor: pointer;
+}
+.container485_525 .headerText {
+  color: #f1f1f1;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .placeText {
+  color: #f1f1f1;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .buttonAdress {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.container485_525 .buttonAdress .buttonAdressText {
+  color: #686868;
+  font-size: 14px;
+  font-family: TTForsTrialVariable;
+  margin-bottom: 2%;
+}
+.container485_525 .geoIcon {
+  width: 90px;
+}
+.container450_485 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+  cursor: pointer;
+}
+.container450_485 .headerText {
+  color: #f1f1f1;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .placeText {
+  color: #f1f1f1;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .buttonAdress {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.container450_485 .buttonAdress .buttonAdressText {
+  color: #686868;
+  font-size: 12px;
+  font-family: TTForsTrialVariable;
+  margin-bottom: 2%;
+}
+.container450_485 .geoIcon {
+  width: 85px;
+}
+.container410_450 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+  cursor: pointer;
+}
+.container410_450 .headerText {
+  color: #f1f1f1;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .placeText {
+  color: #f1f1f1;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .buttonAdress {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.container410_450 .buttonAdress .buttonAdressText {
+  color: #686868;
+  font-size: 10px;
+  font-family: TTForsTrialVariable;
+  margin-bottom: 2%;
+}
+.container410_450 .geoIcon {
+  width: 80px;
+}
+.container375_410 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+  cursor: pointer;
+}
+.container375_410 .headerText {
+  color: #f1f1f1;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .placeText {
+  color: #f1f1f1;
+  font-size: 10px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .buttonAdress {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.container375_410 .buttonAdress .buttonAdressText {
+  color: #686868;
+  font-size: 8px;
+  font-family: TTForsTrialVariable;
+  margin-bottom: 2%;
+}
+.container375_410 .geoIcon {
+  width: 75px;
 }

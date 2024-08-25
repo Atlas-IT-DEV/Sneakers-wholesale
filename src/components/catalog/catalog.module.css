@@ -1,22 +1,178 @@
-.container {
+.container585_600 {
   padding: 30px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
 }
-.container .headerField {
+.container585_600 .headerField {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
-.container .headerField .nameText {
+.container585_600 .headerField .nameText {
   color: #f1f1f1;
   font-size: 21px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
-.container .productCarousel {
+.container585_600 .productCarousel {
+  width: 100%;
+  display: flex;
+  gap: 28px;
+  overflow: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+.container565_585 {
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+}
+.container565_585 .headerField {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.container565_585 .headerField .nameText {
+  color: #f1f1f1;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .productCarousel {
+  width: 100%;
+  display: flex;
+  gap: 28px;
+  overflow: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+.container525_565 {
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+}
+.container525_565 .headerField {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.container525_565 .headerField .nameText {
+  color: #f1f1f1;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .productCarousel {
+  width: 100%;
+  display: flex;
+  gap: 28px;
+  overflow: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+.container485_525 {
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+}
+.container485_525 .headerField {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.container485_525 .headerField .nameText {
+  color: #f1f1f1;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .productCarousel {
+  width: 100%;
+  display: flex;
+  gap: 28px;
+  overflow: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+.container450_485 {
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+}
+.container450_485 .headerField {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.container450_485 .headerField .nameText {
+  color: #f1f1f1;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .productCarousel {
+  width: 100%;
+  display: flex;
+  gap: 28px;
+  overflow: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+.container410_450 {
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+}
+.container410_450 .headerField {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.container410_450 .headerField .nameText {
+  color: #f1f1f1;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .productCarousel {
+  width: 100%;
+  display: flex;
+  gap: 28px;
+  overflow: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+.container375_410 {
+  padding: 30px;
+  background-color: #080808;
+  width: 100%;
+  border-radius: 26px;
+}
+.container375_410 .headerField {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.container375_410 .headerField .nameText {
+  color: #f1f1f1;
+  font-size: 10px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .productCarousel {
   width: 100%;
   display: flex;
   gap: 28px;

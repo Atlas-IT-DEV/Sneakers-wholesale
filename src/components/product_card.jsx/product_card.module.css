@@ -1,17 +1,17 @@
-.container {
+.container585_600 {
   margin-top: 20px;
 }
-.container .imageContainer {
+.container585_600 .imageContainer {
   position: relative;
 }
-.container .imageProduct {
+.container585_600 .imageProduct {
   object-fit: cover;
   border-radius: 28px;
   min-width: 180px;
   height: 230px;
   cursor: pointer;
 }
-.container .favouriteButton {
+.container585_600 .favouriteButton {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -24,48 +24,48 @@
   border-radius: 50%;
   cursor: pointer;
 }
-.container .favouriteButton img {
+.container585_600 .favouriteButton img {
   width: 20px;
   height: 18px;
 }
-.container .countProductText {
+.container585_600 .countProductText {
   color: #ffffff;
   font-size: 21px;
   font-weight: 500;
   margin-top: 15px;
   font-family: TTForsTrialVariable;
 }
-.container .priceField {
+.container585_600 .priceField {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.container .priceField .priceText {
+.container585_600 .priceField .priceText {
   color: #db6900;
   font-size: 24px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
-.container .priceField .oldPriceText {
+.container585_600 .priceField .oldPriceText {
   color: #9b9b9b;
   text-decoration: line-through;
   font-size: 24px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
 }
-.container .brandNameText {
+.container585_600 .brandNameText {
   color: white;
   font-size: 21px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
 }
-.container .modelNameText {
+.container585_600 .modelNameText {
   color: white;
   font-size: 21px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
 }
-.container .addButton {
+.container585_600 .addButton {
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -76,9 +76,534 @@
   margin-top: 5px;
   cursor: pointer;
 }
-.container .addButton .addButtonText {
+.container585_600 .addButton .addButtonText {
   font-size: 18px;
   font-weight: 600;
   color: white;
   font-family: TTForsTrialVariable;
+}
+.container585_600 .addButton .shopIcon {
+  width: 35px;
+}
+.container565_585 {
+  margin-top: 20px;
+}
+.container565_585 .imageContainer {
+  position: relative;
+}
+.container565_585 .imageProduct {
+  object-fit: cover;
+  border-radius: 28px;
+  min-width: 180px;
+  height: 230px;
+  cursor: pointer;
+}
+.container565_585 .favouriteButton {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 12px;
+  top: 12px;
+  background-color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.container565_585 .favouriteButton img {
+  width: 20px;
+  height: 18px;
+}
+.container565_585 .countProductText {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 15px;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .priceField {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.container565_585 .priceField .priceText {
+  color: #db6900;
+  font-size: 23px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .priceField .oldPriceText {
+  color: #9b9b9b;
+  text-decoration: line-through;
+  font-size: 23px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .brandNameText {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .modelNameText {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .addButton {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  height: 48px;
+  background-color: #db6900;
+  border-radius: 152px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.container565_585 .addButton .addButtonText {
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .addButton .shopIcon {
+  width: 34px;
+}
+.container525_565 {
+  margin-top: 20px;
+}
+.container525_565 .imageContainer {
+  position: relative;
+}
+.container525_565 .imageProduct {
+  object-fit: cover;
+  border-radius: 28px;
+  min-width: 180px;
+  height: 230px;
+  cursor: pointer;
+}
+.container525_565 .favouriteButton {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 12px;
+  top: 12px;
+  background-color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.container525_565 .favouriteButton img {
+  width: 20px;
+  height: 18px;
+}
+.container525_565 .countProductText {
+  color: #ffffff;
+  font-size: 19px;
+  font-weight: 500;
+  margin-top: 15px;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .priceField {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.container525_565 .priceField .priceText {
+  color: #db6900;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .priceField .oldPriceText {
+  color: #9b9b9b;
+  text-decoration: line-through;
+  font-size: 22px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .brandNameText {
+  color: white;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .modelNameText {
+  color: white;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .addButton {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  height: 48px;
+  background-color: #db6900;
+  border-radius: 152px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.container525_565 .addButton .addButtonText {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .addButton .shopIcon {
+  width: 33px;
+}
+.container485_525 {
+  margin-top: 20px;
+}
+.container485_525 .imageContainer {
+  position: relative;
+}
+.container485_525 .imageProduct {
+  object-fit: cover;
+  border-radius: 28px;
+  min-width: 180px;
+  height: 230px;
+  cursor: pointer;
+}
+.container485_525 .favouriteButton {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 12px;
+  top: 12px;
+  background-color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.container485_525 .favouriteButton img {
+  width: 20px;
+  height: 18px;
+}
+.container485_525 .countProductText {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 15px;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .priceField {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.container485_525 .priceField .priceText {
+  color: #db6900;
+  font-size: 21px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .priceField .oldPriceText {
+  color: #9b9b9b;
+  text-decoration: line-through;
+  font-size: 21px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .brandNameText {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .modelNameText {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .addButton {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  height: 48px;
+  background-color: #db6900;
+  border-radius: 152px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.container485_525 .addButton .addButtonText {
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .addButton .shopIcon {
+  width: 32px;
+}
+.container450_485 {
+  margin-top: 20px;
+}
+.container450_485 .imageContainer {
+  position: relative;
+}
+.container450_485 .imageProduct {
+  object-fit: cover;
+  border-radius: 28px;
+  min-width: 180px;
+  height: 230px;
+  cursor: pointer;
+}
+.container450_485 .favouriteButton {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 12px;
+  top: 12px;
+  background-color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.container450_485 .favouriteButton img {
+  width: 20px;
+  height: 18px;
+}
+.container450_485 .countProductText {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 500;
+  margin-top: 15px;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .priceField {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.container450_485 .priceField .priceText {
+  color: #db6900;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .priceField .oldPriceText {
+  color: #9b9b9b;
+  text-decoration: line-through;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .brandNameText {
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .modelNameText {
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .addButton {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  height: 48px;
+  background-color: #db6900;
+  border-radius: 152px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.container450_485 .addButton .addButtonText {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .addButton .shopIcon {
+  width: 31px;
+}
+.container410_450 {
+  margin-top: 20px;
+}
+.container410_450 .imageContainer {
+  position: relative;
+}
+.container410_450 .imageProduct {
+  object-fit: cover;
+  border-radius: 28px;
+  min-width: 180px;
+  height: 230px;
+  cursor: pointer;
+}
+.container410_450 .favouriteButton {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 12px;
+  top: 12px;
+  background-color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.container410_450 .favouriteButton img {
+  width: 20px;
+  height: 18px;
+}
+.container410_450 .countProductText {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 15px;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .priceField {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.container410_450 .priceField .priceText {
+  color: #db6900;
+  font-size: 19px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .priceField .oldPriceText {
+  color: #9b9b9b;
+  text-decoration: line-through;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .brandNameText {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .modelNameText {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .addButton {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  height: 48px;
+  background-color: #db6900;
+  border-radius: 152px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.container410_450 .addButton .addButtonText {
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .addButton .shopIcon {
+  width: 30px;
+}
+.container375_410 {
+  margin-top: 20px;
+}
+.container375_410 .imageContainer {
+  position: relative;
+}
+.container375_410 .imageProduct {
+  object-fit: cover;
+  border-radius: 28px;
+  min-width: 180px;
+  height: 230px;
+  cursor: pointer;
+}
+.container375_410 .favouriteButton {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 12px;
+  top: 12px;
+  background-color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.container375_410 .favouriteButton img {
+  width: 20px;
+  height: 18px;
+}
+.container375_410 .countProductText {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 15px;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .priceField {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.container375_410 .priceField .priceText {
+  color: #db6900;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .priceField .oldPriceText {
+  color: #9b9b9b;
+  text-decoration: line-through;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .brandNameText {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .modelNameText {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .addButton {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  height: 48px;
+  background-color: #db6900;
+  border-radius: 152px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.container375_410 .addButton .addButtonText {
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .addButton .shopIcon {
+  width: 29px;
 }
