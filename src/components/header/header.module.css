@@ -10,7 +10,7 @@
 }
 .container585_600 .aboutUser {
   display: flex;
-  gap: 7px;
+  gap: 13px;
 }
 .container585_600 .aboutUser .attributes {
   display: flex;
@@ -19,7 +19,7 @@
 }
 .container585_600 .aboutUser .userValues {
   color: white;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
@@ -55,7 +55,7 @@
   font-family: TTForsTrialVariable;
   color: black;
   font-weight: 500;
-  font-size: 17px;
+  font-size: 18px;
 }
 .container565_585 {
   display: flex;
@@ -78,7 +78,7 @@
 }
 .container565_585 .aboutUser .userValues {
   color: white;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
@@ -86,7 +86,7 @@
   display: flex;
   align-items: center;
   color: white;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 500;
   height: 22px;
   padding: 0 10px 0 10px;
@@ -114,7 +114,7 @@
   font-family: TTForsTrialVariable;
   color: black;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
 }
 .container525_565 {
   display: flex;
@@ -137,7 +137,7 @@
 }
 .container525_565 .aboutUser .userValues {
   color: white;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
@@ -145,7 +145,7 @@
   display: flex;
   align-items: center;
   color: white;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 500;
   height: 22px;
   padding: 0 10px 0 10px;
@@ -173,7 +173,7 @@
   font-family: TTForsTrialVariable;
   color: black;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 18px;
 }
 .container485_525 {
   display: flex;
@@ -196,7 +196,7 @@
 }
 .container485_525 .aboutUser .userValues {
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
@@ -204,7 +204,7 @@
   display: flex;
   align-items: center;
   color: white;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 500;
   height: 22px;
   padding: 0 10px 0 10px;
@@ -232,7 +232,7 @@
   font-family: TTForsTrialVariable;
   color: black;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
 }
 .container450_485 {
   display: flex;
@@ -255,7 +255,7 @@
 }
 .container450_485 .aboutUser .userValues {
   color: white;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
@@ -263,7 +263,7 @@
   display: flex;
   align-items: center;
   color: white;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 500;
   height: 22px;
   padding: 0 10px 0 10px;
@@ -291,7 +291,7 @@
   font-family: TTForsTrialVariable;
   color: black;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 16px;
 }
 .container410_450 {
   display: flex;
@@ -314,7 +314,7 @@
 }
 .container410_450 .aboutUser .userValues {
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
@@ -322,7 +322,7 @@
   display: flex;
   align-items: center;
   color: white;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
   height: 22px;
   padding: 0 10px 0 10px;
@@ -340,7 +340,7 @@
   height: 45px;
   background-color: white;
   width: max-content;
-  padding: 0 15px 0 15px;
+  padding: 0 10px 0 10px;
   border-radius: 79px;
 }
 .container410_450 .tgIcon {
@@ -350,7 +350,7 @@
   font-family: TTForsTrialVariable;
   color: black;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
 }
 .container375_410 {
   display: flex;
@@ -373,7 +373,7 @@
 }
 .container375_410 .aboutUser .userValues {
   color: white;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
@@ -381,7 +381,7 @@
   display: flex;
   align-items: center;
   color: white;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
   height: 22px;
   padding: 0 10px 0 10px;
@@ -399,7 +399,7 @@
   height: 45px;
   background-color: white;
   width: max-content;
-  padding: 0 15px 0 15px;
+  padding: 0 5px 0 5px;
   border-radius: 79px;
 }
 .container375_410 .tgIcon {
@@ -409,5 +409,5 @@
   font-family: TTForsTrialVariable;
   color: black;
   font-weight: 500;
-  font-size: 11px;
+  font-size: 14px;
 }
