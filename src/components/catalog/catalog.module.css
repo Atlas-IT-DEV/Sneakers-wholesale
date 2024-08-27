@@ -1,5 +1,5 @@
 .container585_600 {
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
@@ -25,7 +25,7 @@
   scrollbar-width: none;
 }
 .container565_585 {
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
@@ -51,7 +51,7 @@
   scrollbar-width: none;
 }
 .container525_565 {
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
@@ -77,7 +77,7 @@
   scrollbar-width: none;
 }
 .container485_525 {
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
@@ -103,7 +103,7 @@
   scrollbar-width: none;
 }
 .container450_485 {
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
@@ -116,7 +116,7 @@
 }
 .container450_485 .headerField .nameText {
   color: #f1f1f1;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
@@ -129,7 +129,7 @@
   scrollbar-width: none;
 }
 .container410_450 {
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
@@ -142,7 +142,7 @@
 }
 .container410_450 .headerField .nameText {
   color: #f1f1f1;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
@@ -155,7 +155,7 @@
   scrollbar-width: none;
 }
 .container375_410 {
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
@@ -168,7 +168,7 @@
 }
 .container375_410 .headerField .nameText {
   color: #f1f1f1;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
