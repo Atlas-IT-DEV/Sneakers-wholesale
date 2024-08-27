@@ -6,6 +6,7 @@ import RootStore from "./store/root_store";
 import { ChakraProvider } from "@chakra-ui/react";
 import PageContainer from "./components/page_container";
 import MainPage from "./pages/main_page/main_page";
+import CartPage from "./pages/cart_page/cart_page";
 
 const router = createHashRouter([
   {
@@ -13,6 +14,14 @@ const router = createHashRouter([
     element: (
       <PageContainer>
         <MainPage />
+      </PageContainer>
+    ),
+  },
+  {
+    path: "/cart",
+    element: (
+      <PageContainer>
+        <CartPage />
       </PageContainer>
     ),
   },
