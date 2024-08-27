@@ -1,5 +1,5 @@
 .container585_600 {
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
@@ -28,7 +28,6 @@
   justify-content: center;
   align-items: center;
   height: 60px;
-  padding: 0 10px 0 10px;
 }
 .container585_600 .buttonsBlock .buttonsRow .activeButton {
   background-color: #1c1c1c;
@@ -47,7 +46,7 @@
   margin-bottom: 2%;
 }
 .container565_585 {
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
@@ -76,7 +75,6 @@
   justify-content: center;
   align-items: center;
   height: 60px;
-  padding: 0 10px 0 10px;
 }
 .container565_585 .buttonsBlock .buttonsRow .activeButton {
   background-color: #1c1c1c;
@@ -95,7 +93,7 @@
   margin-bottom: 2%;
 }
 .container525_565 {
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
@@ -124,7 +122,6 @@
   justify-content: center;
   align-items: center;
   height: 60px;
-  padding: 0 10px 0 10px;
 }
 .container525_565 .buttonsBlock .buttonsRow .activeButton {
   background-color: #1c1c1c;
@@ -143,7 +140,7 @@
   margin-bottom: 2%;
 }
 .container485_525 {
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
@@ -172,7 +169,6 @@
   justify-content: center;
   align-items: center;
   height: 60px;
-  padding: 0 10px 0 10px;
 }
 .container485_525 .buttonsBlock .buttonsRow .activeButton {
   background-color: #1c1c1c;
@@ -189,16 +185,17 @@
   font-weight: 500;
   font-family: TTForsTrialVariable;
   margin-bottom: 2%;
+  text-align: center;
 }
 .container450_485 {
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
 }
 .container450_485 .nameText {
   color: #f1f1f1;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
@@ -220,7 +217,6 @@
   justify-content: center;
   align-items: center;
   height: 60px;
-  padding: 0 10px 0 10px;
 }
 .container450_485 .buttonsBlock .buttonsRow .activeButton {
   background-color: #1c1c1c;
@@ -233,20 +229,21 @@
   color: #9b9b9b;
 }
 .container450_485 .buttonsBlock .buttonsRow .buttonText {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
   margin-bottom: 2%;
+  text-align: center;
 }
 .container410_450 {
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
 }
 .container410_450 .nameText {
   color: #f1f1f1;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
@@ -268,7 +265,6 @@
   justify-content: center;
   align-items: center;
   height: 60px;
-  padding: 0 10px 0 10px;
 }
 .container410_450 .buttonsBlock .buttonsRow .activeButton {
   background-color: #1c1c1c;
@@ -281,20 +277,21 @@
   color: #9b9b9b;
 }
 .container410_450 .buttonsBlock .buttonsRow .buttonText {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
   margin-bottom: 2%;
+  text-align: center;
 }
 .container375_410 {
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
 }
 .container375_410 .nameText {
   color: #f1f1f1;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
@@ -316,7 +313,7 @@
   justify-content: center;
   align-items: center;
   height: 60px;
-  padding: 0 10px 0 10px;
+  padding: 0 5px 0 5px;
 }
 .container375_410 .buttonsBlock .buttonsRow .activeButton {
   background-color: #1c1c1c;
@@ -329,8 +326,9 @@
   color: #9b9b9b;
 }
 .container375_410 .buttonsBlock .buttonsRow .buttonText {
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
   margin-bottom: 2%;
+  text-align: center;
 }

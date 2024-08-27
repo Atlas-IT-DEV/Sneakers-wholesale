@@ -42,7 +42,7 @@ const SelectCatalog = () => {
             className={`${styles.button} ${styles.unActiveButton}`}
             onClick={() => setShowModal(true)}
           >
-            <p className={styles.buttonText}>Dropshipping</p>
+            <p className={styles.buttonText}>Дропшиппинг</p>
             <img src={rightArrowIcon} alt="" />
           </div>
           <div className={`${styles.button} ${styles.unActiveButton}`}>
