@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
@@ -35,7 +35,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
@@ -60,7 +60,7 @@
 }
 .container565_585 .buttonAdress .buttonAdressText {
   color: #686868;
-  font-size: 18px;
+  font-size: 19px;
   font-family: TTForsTrialVariable;
   margin-bottom: 2%;
 }
@@ -71,7 +71,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
@@ -96,7 +96,7 @@
 }
 .container525_565 .buttonAdress .buttonAdressText {
   color: #686868;
-  font-size: 16px;
+  font-size: 17px;
   font-family: TTForsTrialVariable;
   margin-bottom: 2%;
 }
@@ -107,7 +107,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
@@ -132,7 +132,7 @@
 }
 .container485_525 .buttonAdress .buttonAdressText {
   color: #686868;
-  font-size: 14px;
+  font-size: 15px;
   font-family: TTForsTrialVariable;
   margin-bottom: 2%;
 }
@@ -143,7 +143,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
@@ -151,13 +151,13 @@
 }
 .container450_485 .headerText {
   color: #f1f1f1;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
 .container450_485 .placeText {
   color: #f1f1f1;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
 }
@@ -179,7 +179,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
@@ -187,7 +187,7 @@
 }
 .container410_450 .headerText {
   color: #f1f1f1;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
@@ -204,7 +204,7 @@
 }
 .container410_450 .buttonAdress .buttonAdressText {
   color: #686868;
-  font-size: 14px;
+  font-size: 13px;
   font-family: TTForsTrialVariable;
   margin-bottom: 2%;
 }
@@ -215,7 +215,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
   background-color: #080808;
   width: 100%;
   border-radius: 26px;
@@ -223,7 +223,7 @@
 }
 .container375_410 .headerText {
   color: #f1f1f1;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
@@ -240,7 +240,7 @@
 }
 .container375_410 .buttonAdress .buttonAdressText {
   color: #686868;
-  font-size: 8px;
+  font-size: 13px;
   font-family: TTForsTrialVariable;
   margin-bottom: 2%;
 }

@@ -5,9 +5,11 @@ import favouriteIcon from "../../images/fav.svg";
 import shoppingCartIcon from "../../images/shopping_cart_inactive.svg";
 
 import useWindowDimensions from "../hooks/windowDimensions";
+import { useNavigate } from "react-router";
 
 const BottomMenu = () => {
   const { width } = useWindowDimensions();
+  const navigate = useNavigate();
   return (
     <div
       className={
@@ -26,10 +28,10 @@ const BottomMenu = () => {
           : styles.container375_410
       }
     >
-      <img src={homeIcon} alt="" />
+      <img src={homeIcon} alt="" onClick={() => navigate("/")} />
       <img src={catalogIcon} alt="" />
       <img src={favouriteIcon} alt="" />
-      <img src={shoppingCartIcon} alt="" />
+      <img src={shoppingCartIcon} alt="" onClick={() => navigate("/cart")} />
     </div>
   );
 };
