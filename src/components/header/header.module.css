@@ -145,7 +145,7 @@
   display: flex;
   align-items: center;
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   height: 22px;
   padding: 0 10px 0 10px;
@@ -263,7 +263,7 @@
   display: flex;
   align-items: center;
   color: white;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 500;
   height: 22px;
   padding: 0 10px 0 10px;
@@ -314,7 +314,7 @@
 }
 .container410_450 .aboutUser .userValues {
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
@@ -322,7 +322,7 @@
   display: flex;
   align-items: center;
   color: white;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 500;
   height: 22px;
   padding: 0 10px 0 10px;
@@ -350,7 +350,7 @@
   font-family: TTForsTrialVariable;
   color: black;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
 }
 .container375_410 {
   display: flex;
@@ -381,7 +381,7 @@
   display: flex;
   align-items: center;
   color: white;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 500;
   height: 22px;
   padding: 0 10px 0 10px;
