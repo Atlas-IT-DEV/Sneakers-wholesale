@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 27px;
+}
+.container .headerText {
+  font-size: 22px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+  color: #1d1d1d;
+}
+.container .mainText {
+  font-size: 22px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  color: #1d1d1d;
+}
+.container .buttonText {
+  width: max-content;
+  cursor: pointer;
+  margin-top: 4px;
+  font-size: 22px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+  color: #ff7511;
+}

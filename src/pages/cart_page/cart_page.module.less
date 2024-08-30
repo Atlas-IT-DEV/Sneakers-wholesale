@@ -3,27 +3,39 @@
   height: 100vh;
   overflow: scroll;
   overflow-x: hidden;
-  header {
-    width: 100%;
+  .header {
+    position: sticky;
+    padding-top: 110px;
+    padding-bottom: 14px;
     background-color: rgba(219, 105, 0, 1);
-    height: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    .namePage {
+    .namePageText {
       display: flex;
       justify-content: center;
-      .namePageText {
-        color: rgba(252, 252, 252, 1);
-      }
+      color: rgba(252, 252, 252, 1);
+      font-size: 24px;
+      font-weight: 600;
+      font-family: TTForsTrialVariable;
     }
     .selectButton {
       position: absolute;
+      cursor: pointer;
       bottom: 14px;
       right: 24px;
       .selectButtonText {
         color: rgba(252, 252, 252, 1);
+        font-size: 24px;
+        font-weight: 500;
+        font-family: TTForsTrialVariable;
       }
     }
+  }
+  .discountContainer {
+    margin: 20px 16px 0 16px;
+  }
+  .productContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 12px 10px 110px 10px;
   }
 }
