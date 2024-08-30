@@ -7,6 +7,8 @@ import { ChakraProvider } from "@chakra-ui/react";
 import PageContainer from "./components/page_container";
 import MainPage from "./pages/main_page/main_page";
 import CartPage from "./pages/cart_page/cart_page";
+import CatalogPage from "./pages/catalog_page/catalog_page";
+import FavouritesPage from "./pages/favourites_page/favourites_page";
 
 const router = createHashRouter([
   {
@@ -22,6 +24,22 @@ const router = createHashRouter([
     element: (
       <PageContainer>
         <CartPage />
+      </PageContainer>
+    ),
+  },
+  {
+    path: "/catalog",
+    element: (
+      <PageContainer>
+      <CatalogPage/>
+      </PageContainer>
+    ),
+  },
+  {
+    path: "/favourites",
+    element: (
+      <PageContainer>
+        <FavouritesPage/>
       </PageContainer>
     ),
   },

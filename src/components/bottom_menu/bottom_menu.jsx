@@ -29,8 +29,8 @@ const BottomMenu = () => {
       }
     >
       <img src={homeIcon} alt="" onClick={() => navigate("/")} />
-      <img src={catalogIcon} alt="" />
-      <img src={favouriteIcon} alt="" />
+      <img src={catalogIcon} alt="" onClick={() => navigate("/catalog")}/>
+      <img src={favouriteIcon} alt="" onClick={() => navigate("/favourites")}/>
       <img src={shoppingCartIcon} alt="" onClick={() => navigate("/cart")} />
     </div>
   );
