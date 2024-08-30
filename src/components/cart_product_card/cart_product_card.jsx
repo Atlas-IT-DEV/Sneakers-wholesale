@@ -2,6 +2,7 @@ import styles from "./cart_product_card.module.css";
 import minusIcon from "../../images/minus_icon.svg";
 import plusIcon from "../../images/plus_icon.svg";
 import settingProductIcon from "../../images/setting_product_icon.svg";
+import { useState } from "react";
 
 const CartProductCard = ({
   brand = "Asics",
@@ -13,6 +14,7 @@ const CartProductCard = ({
   new_price = 12000,
   image = "https://legacy.reactjs.org/logo-og.png",
 }) => {
+  const [countGoods, setCountGoods] = useState(1);
   return (
     <div className={styles.container}>
       <div className={styles.productImage}>
@@ -29,11 +31,23 @@ const CartProductCard = ({
           <p className={styles.sizeText}>{size}</p>
         </div>
         <div className={styles.countProduct}>
-          <div className={`${styles.countUnactiveButton}`}>
+          <div
+            className={
+              countGoods == 1
+                ? styles.countUnactiveButton
+                : styles.countActiveButton
+            }
+            onClick={() =>
+              countGoods != 1 ? setCountGoods(countGoods - 1) : setCountGoods(1)
+            }
+          >
             <img src={minusIcon} alt="" />
           </div>
-          <p className={styles.countProductText}>1</p>
-          <div className={`${styles.countActiveButton}`}>
+          <p className={styles.countProductText}>{countGoods}</p>
+          <div
+            className={`${styles.countActiveButton}`}
+            onClick={() => setCountGoods(countGoods + 1)}
+          >
             <img src={plusIcon} alt="" />
           </div>
         </div>
