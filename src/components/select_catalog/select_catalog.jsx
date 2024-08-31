@@ -6,6 +6,7 @@ import useWindowDimensions from "../hooks/windowDimensions";
 
 const SelectCatalog = () => {
   const [showModal, setShowModal] = useState(false);
+  const [isActive, setIsActive] = useState([1, 0]);
   const { width } = useWindowDimensions();
   return (
     <div
@@ -25,6 +26,12 @@ const SelectCatalog = () => {
           : styles.container375_410
       }
     >
+      {showModal && (
+        <AttentionModal
+          name_section={isActive[0] == 1 ? "Дропшиппинг" : "Сборный опт"}
+          sum={isActive[0] == 1 ? "62 000" : "99 000"}
+        />
+      )}
       <p className={styles.nameText}>Каталог</p>
       <div className={styles.buttonsBlock}>
         <div className={styles.buttonsRow}>
@@ -40,18 +47,26 @@ const SelectCatalog = () => {
         <div className={styles.buttonsRow}>
           <div
             className={`${styles.button} ${styles.unActiveButton}`}
-            onClick={() => setShowModal(true)}
+            onClick={() => {
+              setIsActive([1, 0]);
+              setShowModal(true);
+            }}
           >
             <p className={styles.buttonText}>Дропшиппинг</p>
             <img src={rightArrowIcon} alt="" />
           </div>
-          <div className={`${styles.button} ${styles.unActiveButton}`}>
+          <div
+            className={`${styles.button} ${styles.unActiveButton}`}
+            onClick={() => {
+              setIsActive([0, 1]);
+              setShowModal(true);
+            }}
+          >
             <p className={styles.buttonText}>Сборный опт</p>
             <img src={rightArrowIcon} alt="" />
           </div>
         </div>
       </div>
-      {showModal && <AttentionModal />}
     </div>
   );
 };
