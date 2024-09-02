@@ -86,27 +86,18 @@
 .container585_600 .addButton .shopIcon {
   width: 33px;
 }
-.container585_600 .carouselImagesButtons {
-  display: flex;
-  justify-content: center;
-  gap: 4px;
-  margin-top: 9px;
-}
-.container585_600 .carouselImagesButtons img {
-  width: 10px;
-}
 .container565_585 {
   margin-top: 20px;
 }
 .container565_585 .imageContainer {
   position: relative;
+  cursor: pointer;
 }
 .container565_585 .imageProduct {
   object-fit: cover;
   border-radius: 28px;
   min-width: 180px;
   height: 230px;
-  cursor: pointer;
 }
 .container565_585 .favouriteButton {
   position: absolute;

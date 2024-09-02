@@ -40,7 +40,6 @@ const CatalogPage = () => {
           {/* <ProductCard /> */}
         </div>
       </div>
-
       <BottomMenu />
     </div>
   );

@@ -6,7 +6,6 @@ import "swiper/css";
 import { Autoplay, FreeMode } from "swiper/modules";
 import { useEffect, useState } from "react";
 
-
 const SliderCarousel = () => {
   const [message, setMessage] = useState("");
   let buffer = [];

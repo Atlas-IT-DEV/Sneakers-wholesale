@@ -2,8 +2,6 @@ import styles from "./product_card.module.css";
 import favouriteInactiveIcon from "../../images/favourite_inactive_icon.svg";
 import favouriteActiveIcon from "../../images/favourite_active_icon.svg";
 import shoppingIcon from "../../images/shopping_icon.svg";
-import currentImageIcon from "../../images/current_image.svg";
-import unCurrentImageIcon from "../../images/uncurrent_image.svg";
 
 import useWindowDimensions from "../hooks/windowDimensions";
 import { useState } from "react";
@@ -54,11 +52,6 @@ const ProductCard = ({
             alt=""
           />
         </div>
-      </div>
-      <div className={styles.carouselImagesButtons}>
-        <img src={currentImageIcon} alt="" />
-        <img src={unCurrentImageIcon} alt="" />
-        <img src={unCurrentImageIcon} alt="" />
       </div>
       <p className={styles.countProductText}>{countProduct}</p>
       <div className={styles.priceField}>
