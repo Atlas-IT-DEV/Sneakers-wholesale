@@ -17,6 +17,9 @@ fi
 # Создание папки logs/setup, если она не существует.
 mkdir -p "./logs/setup"
 
+# Создание папки public, если она не существует.
+mkdir -p "./public"
+
 # Деактивация активной среды.
 # Проверяем, активирована ли виртуальная среда.
 if [[ "$VIRTUAL_ENV" != "" ]]; then
@@ -30,6 +33,7 @@ python3 ./setup/check_local_modules.py
 source ./venv/bin/activate
 
 # Проверка, как был запущен скрипт.
+# shellcheck disable=SC2128
 if [[ "$0" != "$BASH_SOURCE" ]]; then
     # Скрипт был запущен в GUI
     echo "Script was run by double-clicking."
