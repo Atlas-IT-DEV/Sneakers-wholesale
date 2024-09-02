@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createHashRouter, RouterProvider } from "react-router-dom";
+import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import { RootStoreContext } from "./store/store_context";
 import RootStore from "./store/root_store";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -10,7 +10,7 @@ import CartPage from "./pages/cart_page/cart_page";
 import CatalogPage from "./pages/catalog_page/catalog_page";
 import FavouritesPage from "./pages/favourites_page/favourites_page";
 
-const router = createHashRouter([
+const router = createMemoryRouter([
   {
     path: "/",
     element: (
