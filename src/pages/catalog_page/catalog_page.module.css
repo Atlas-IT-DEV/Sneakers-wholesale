@@ -40,3 +40,18 @@
   margin-top: 100px;
   margin-right: 30px;
 }
+.container .cateroriesField {
+  display: flex;
+  gap: 25px;
+}
+.container .productsField {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+  margin-bottom: 120px;
+}
+.container .productsField .productRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 22px 0 22px;
+}

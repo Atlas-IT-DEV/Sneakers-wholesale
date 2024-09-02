@@ -6,10 +6,11 @@
     position: relative;
   }
   .imageProduct {
+    // position: relative;
     object-fit: cover;
     border-radius: 28px;
-    min-width: 180px;
-    height: 230px;
+    width: 263px;
+    height: 263px;
     cursor: pointer;
   }
   .favouriteButton {
@@ -17,8 +18,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    right: 12px;
-    top: 12px;
+    right: 17px;
+    top: 17px;
     background-color: white;
     width: 32px;
     height: 32px;
@@ -50,7 +51,7 @@
     .oldPriceText {
       color: rgba(155, 155, 155, 1);
       text-decoration: line-through;
-      font-size: 23px;
+      font-size: 21px;
       font-weight: 500;
       font-family: @font;
     }
@@ -70,9 +71,10 @@
   .addButton {
     display: flex;
     justify-content: center;
+    width: max-content;
     gap: 10px;
     align-items: center;
-    height: 48px;
+    padding: 10px;
     background-color: rgba(219, 105, 0, 1);
     border-radius: 152px;
     margin-top: 5px;
@@ -84,7 +86,17 @@
       font-family: @font;
     }
     .shopIcon {
-      width: 35px;
+      width: 33px;
+    }
+  }
+  .carouselImagesButtons {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 9px;
+
+    img {
+      width: 10px;
     }
   }
 }

@@ -1,7 +1,12 @@
 import styles from "./product_card.module.css";
 import favouriteInactiveIcon from "../../images/favourite_inactive_icon.svg";
+import favouriteActiveIcon from "../../images/favourite_active_icon.svg";
 import shoppingIcon from "../../images/shopping_icon.svg";
+import currentImageIcon from "../../images/current_image.svg";
+import unCurrentImageIcon from "../../images/uncurrent_image.svg";
+
 import useWindowDimensions from "../hooks/windowDimensions";
+import { useState } from "react";
 
 const ProductCard = ({
   countProduct = "8 пар (опт)",
@@ -11,6 +16,11 @@ const ProductCard = ({
   model_name = "Gel Quantum Kinetic",
 }) => {
   const { width } = useWindowDimensions();
+
+  const [isPressed, setIsPressed] = useState(false);
+  const favouriteClick = () => {
+    setIsPressed(!isPressed);
+  };
   return (
     <div
       className={
@@ -35,9 +45,20 @@ const ProductCard = ({
           alt=""
           className={styles.imageProduct}
         />
-        <div className={styles.favouriteButton}>
-          <img src={favouriteInactiveIcon} alt="" />
+        <div
+          className={styles.favouriteButton}
+          onClick={() => favouriteClick()}
+        >
+          <img
+            src={isPressed ? favouriteActiveIcon : favouriteInactiveIcon}
+            alt=""
+          />
         </div>
+      </div>
+      <div className={styles.carouselImagesButtons}>
+        <img src={currentImageIcon} alt="" />
+        <img src={unCurrentImageIcon} alt="" />
+        <img src={unCurrentImageIcon} alt="" />
       </div>
       <p className={styles.countProductText}>{countProduct}</p>
       <div className={styles.priceField}>
@@ -48,7 +69,7 @@ const ProductCard = ({
       <p className={styles.modelNameText}>{model_name}</p>
       <div className={styles.addButton}>
         <p className={styles.addButtonText}>Добавить</p>
-        <img src={shoppingIcon} alt="" className={styles.shopIcon}/>
+        <img src={shoppingIcon} alt="" className={styles.shopIcon} />
       </div>
     </div>
   );

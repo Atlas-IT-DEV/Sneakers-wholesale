@@ -7,8 +7,8 @@
 .container585_600 .imageProduct {
   object-fit: cover;
   border-radius: 28px;
-  min-width: 180px;
-  height: 230px;
+  width: 263px;
+  height: 263px;
   cursor: pointer;
 }
 .container585_600 .favouriteButton {
@@ -16,8 +16,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  right: 12px;
-  top: 12px;
+  right: 17px;
+  top: 17px;
   background-color: white;
   width: 32px;
   height: 32px;
@@ -49,7 +49,7 @@
 .container585_600 .priceField .oldPriceText {
   color: #9b9b9b;
   text-decoration: line-through;
-  font-size: 23px;
+  font-size: 21px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
 }
@@ -68,9 +68,10 @@
 .container585_600 .addButton {
   display: flex;
   justify-content: center;
+  width: max-content;
   gap: 10px;
   align-items: center;
-  height: 48px;
+  padding: 10px;
   background-color: #db6900;
   border-radius: 152px;
   margin-top: 5px;
@@ -83,7 +84,16 @@
   font-family: TTForsTrialVariable;
 }
 .container585_600 .addButton .shopIcon {
-  width: 35px;
+  width: 33px;
+}
+.container585_600 .carouselImagesButtons {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 9px;
+}
+.container585_600 .carouselImagesButtons img {
+  width: 10px;
 }
 .container565_585 {
   margin-top: 20px;
