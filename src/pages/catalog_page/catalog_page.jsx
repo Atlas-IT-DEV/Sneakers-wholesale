@@ -1,11 +1,11 @@
 import BottomMenu from "../../components/bottom_menu/bottom_menu";
 import ProductCard from "../../components/product_card.jsx/product_card";
+import Categories from "../../components/categories/categories";
 import styles from "./catalog_page.module.css";
 
 import arrowBackIcon from "../../images/arrow_back_icon.svg";
 import sortIcon from "../../images/sort_icon.svg";
 import filterIcon from "../../images/filter_icon.svg";
-import Categories from "../../components/categories/categories";
 
 const CatalogPage = () => {
   return (
