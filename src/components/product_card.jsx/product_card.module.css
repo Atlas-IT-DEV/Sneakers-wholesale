@@ -1,5 +1,5 @@
 .container585_600 {
-  margin-top: 20px;
+  width: 263px;
 }
 .container585_600 .imageContainer {
   position: relative;
@@ -53,17 +53,14 @@
   font-weight: 500;
   font-family: TTForsTrialVariable;
 }
-.container585_600 .brandNameText {
-  color: white;
-  font-size: 20px;
-  font-weight: 500;
-  font-family: TTForsTrialVariable;
-}
 .container585_600 .modelNameText {
   color: white;
   font-size: 20px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .container585_600 .addButton {
   display: flex;

@@ -1,12 +1,11 @@
 @font: TTForsTrialVariable;
 
 .container585_600 {
-  margin-top: 20px;
+  width: 263px;
   .imageContainer {
     position: relative;
   }
   .imageProduct {
-    // position: relative;
     object-fit: cover;
     border-radius: 28px;
     width: 263px;
@@ -56,17 +55,15 @@
       font-family: @font;
     }
   }
-  .brandNameText {
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-    font-family: @font;
-  }
+
   .modelNameText {
     color: white;
     font-size: 20px;
     font-weight: 500;
     font-family: @font;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .addButton {
     display: flex;
@@ -102,7 +99,6 @@
     border-radius: 28px;
     min-width: 180px;
     height: 230px;
-
   }
   .favouriteButton {
     position: absolute;

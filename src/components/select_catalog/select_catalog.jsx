@@ -1,5 +1,6 @@
 import styles from "./select_catalog.module.css";
-import rightArrowIcon from "../../images/arrow_right_icon.svg";
+import rightArrowWhiteIcon from "../../images/arrow_select_white.svg";
+import rightArrowGrayIcon from "../../images/arrow_select_gray.svg";
 import AttentionModal from "../modals/attention_modal/attenction_modal";
 import { useState } from "react";
 import useWindowDimensions from "../hooks/windowDimensions";
@@ -37,11 +38,11 @@ const SelectCatalog = () => {
         <div className={styles.buttonsRow}>
           <div className={`${styles.button} ${styles.activeButton}`}>
             <p className={styles.buttonText}>Розничный магазин</p>
-            <img src={rightArrowIcon} alt="" />
+            <img src={rightArrowWhiteIcon} alt="" />
           </div>
           <div className={`${styles.button} ${styles.activeButton}`}>
             <p className={styles.buttonText}>Оптовый магазин</p>
-            <img src={rightArrowIcon} alt="" />
+            <img src={rightArrowWhiteIcon} alt="" />
           </div>
         </div>
         <div className={styles.buttonsRow}>
@@ -53,7 +54,7 @@ const SelectCatalog = () => {
             }}
           >
             <p className={styles.buttonText}>Дропшиппинг</p>
-            <img src={rightArrowIcon} alt="" />
+            <img src={rightArrowGrayIcon} alt="" />
           </div>
           <div
             className={`${styles.button} ${styles.unActiveButton}`}
@@ -63,7 +64,7 @@ const SelectCatalog = () => {
             }}
           >
             <p className={styles.buttonText}>Сборный опт</p>
-            <img src={rightArrowIcon} alt="" />
+            <img src={rightArrowGrayIcon} alt="" />
           </div>
         </div>
       </div>

@@ -10,8 +10,7 @@ const ProductCard = ({
   countProduct = "8 пар (опт)",
   price = 18400,
   oldPrice = 20000,
-  brand_name = "Asics",
-  model_name = "Gel Quantum Kinetic",
+  model_name = "",
 }) => {
   const { width } = useWindowDimensions();
 
@@ -58,7 +57,6 @@ const ProductCard = ({
         <p className={styles.priceText}>{price}₽</p>
         <p className={styles.oldPriceText}>{oldPrice}₽</p>
       </div>
-      <p className={styles.brandNameText}>{brand_name}</p>
       <p className={styles.modelNameText}>{model_name}</p>
       <div className={styles.addButton}>
         <p className={styles.addButtonText}>Добавить</p>

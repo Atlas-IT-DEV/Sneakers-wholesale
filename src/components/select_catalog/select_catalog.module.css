@@ -29,6 +29,10 @@
   align-items: center;
   height: 60px;
 }
+.container585_600 .buttonsBlock .buttonsRow .button img {
+  width: 9px;
+  height: 41px;
+}
 .container585_600 .buttonsBlock .buttonsRow .activeButton {
   background-color: #1c1c1c;
   cursor: pointer;
@@ -43,7 +47,6 @@
   font-size: 21px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
-  margin-bottom: 2%;
 }
 .container565_585 {
   padding: 20px;
@@ -90,7 +93,6 @@
   font-size: 20px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
-  margin-bottom: 2%;
 }
 .container525_565 {
   padding: 20px;
@@ -137,7 +139,6 @@
   font-size: 18px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
-  margin-bottom: 2%;
 }
 .container485_525 {
   padding: 20px;
@@ -184,7 +185,6 @@
   font-size: 16px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
-  margin-bottom: 2%;
   text-align: center;
 }
 .container450_485 {
@@ -232,7 +232,6 @@
   font-size: 15px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
-  margin-bottom: 2%;
   text-align: center;
 }
 .container410_450 {
@@ -280,7 +279,6 @@
   font-size: 14px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
-  margin-bottom: 2%;
   text-align: center;
 }
 .container375_410 {
@@ -329,6 +327,5 @@
   font-size: 14px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
-  margin-bottom: 2%;
   text-align: center;
 }

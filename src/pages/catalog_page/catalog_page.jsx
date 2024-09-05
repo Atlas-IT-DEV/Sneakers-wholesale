@@ -14,9 +14,9 @@ const CatalogPage = () => {
         <div className={styles.backButton}>
           <img src={arrowBackIcon} alt="" />
         </div>
-        <form className={styles.searchField}>
+        <div className={styles.searchField}>
           <input type="search" placeholder="Найти" />
-        </form>
+        </div>
         <div className={styles.sortButton}>
           <img src={sortIcon} alt="" />
         </div>
@@ -32,11 +32,11 @@ const CatalogPage = () => {
       </div>
       <div className={styles.productsField}>
         <div className={styles.productRow}>
-          <ProductCard />
-          <ProductCard />
+          <ProductCard model_name="Asics Gel Quantum Kinetic" />
+          <ProductCard model_name=" Under Armour Hovr Phantom 3 SE Elevate" />
         </div>
         <div className={styles.productRow}>
-          <ProductCard />
+          <ProductCard model_name=" Nike Air Jordan 5 Retro “Jade Horizon”" />
           {/* <ProductCard /> */}
         </div>
       </div>
