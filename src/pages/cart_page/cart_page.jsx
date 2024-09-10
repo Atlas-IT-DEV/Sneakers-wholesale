@@ -20,6 +20,10 @@ const CartPage = () => {
         <CartProductCard />
         <CartProductCard />
       </div>
+      <div className={styles.orderButton}>
+        <p className={styles.orderButtonText}>К оформлению</p>
+        <p className={styles.detailsdOrderText}>2шт, 18400₽</p>
+      </div>
       <BottomMenu />
     </div>
   );
