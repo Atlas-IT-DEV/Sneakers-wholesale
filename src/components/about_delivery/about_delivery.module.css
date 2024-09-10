@@ -16,6 +16,10 @@
   align-items: center;
   cursor: pointer;
 }
+.container585_600 .field img {
+  width: 11px;
+  height: 19px;
+}
 .container585_600 .fieldText {
   color: #f1f1f1;
   font-size: 21px;
