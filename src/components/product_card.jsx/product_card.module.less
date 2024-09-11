@@ -4,29 +4,38 @@
   width: 263px;
   .imageContainer {
     position: relative;
-  }
-  .imageProduct {
-    object-fit: cover;
-    border-radius: 28px;
-    width: 263px;
-    height: 263px;
-    cursor: pointer;
-  }
-  .favouriteButton {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 17px;
-    top: 17px;
-    background-color: white;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    cursor: pointer;
-    img {
-      width: 20px;
-      height: 18px;
+    .slider {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      .slideTrack {
+        display: flex;
+      }
+    }
+    .imageProduct {
+      object-fit: cover;
+      border-radius: 28px;
+      width: 263px;
+      height: 263px;
+      cursor: pointer;
+    }
+    .favouriteButton {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: 17px;
+      top: 17px;
+      background-color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      img {
+        width: 20px;
+        height: 18px;
+      }
     }
   }
 

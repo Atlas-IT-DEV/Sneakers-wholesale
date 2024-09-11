@@ -4,14 +4,23 @@
 .container585_600 .imageContainer {
   position: relative;
 }
-.container585_600 .imageProduct {
+.container585_600 .imageContainer .slider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.container585_600 .imageContainer .slider .slideTrack {
+  display: flex;
+}
+.container585_600 .imageContainer .imageProduct {
   object-fit: cover;
   border-radius: 28px;
   width: 263px;
   height: 263px;
   cursor: pointer;
 }
-.container585_600 .favouriteButton {
+.container585_600 .imageContainer .favouriteButton {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -24,7 +33,7 @@
   border-radius: 50%;
   cursor: pointer;
 }
-.container585_600 .favouriteButton img {
+.container585_600 .imageContainer .favouriteButton img {
   width: 20px;
   height: 18px;
 }

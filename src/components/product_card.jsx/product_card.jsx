@@ -2,7 +2,10 @@ import styles from "./product_card.module.css";
 import favouriteInactiveIcon from "../../images/favourite_inactive_icon.svg";
 import favouriteActiveIcon from "../../images/favourite_active_icon.svg";
 import shoppingIcon from "../../images/shopping_icon.svg";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import { FreeMode, Navigation, Pagination } from "swiper/modules";
 import useWindowDimensions from "../hooks/windowDimensions";
 import { useState } from "react";
 
@@ -37,20 +40,63 @@ const ProductCard = ({
       }
     >
       <div className={styles.imageContainer}>
-        <img
-          src="https://legacy.reactjs.org/logo-og.png"
-          alt=""
-          className={styles.imageProduct}
-        />
-        <div
-          className={styles.favouriteButton}
-          onClick={() => favouriteClick()}
+        <Swiper
+          className={styles.slideTrack}
+          modules={[FreeMode, Navigation, Pagination]}
+          spaceBetween={50}
+          freeMode={false}
+          navigation={true}
+          pagination={true}
         >
-          <img
-            src={isPressed ? favouriteActiveIcon : favouriteInactiveIcon}
-            alt=""
-          />
-        </div>
+          <SwiperSlide className={styles.slider}>
+            <img
+              src="https://legacy.reactjs.org/logo-og.png"
+              alt=""
+              className={styles.imageProduct}
+            />
+            <div
+              className={styles.favouriteButton}
+              onClick={() => favouriteClick()}
+            >
+              <img
+                src={isPressed ? favouriteActiveIcon : favouriteInactiveIcon}
+                alt=""
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className={styles.slider}>
+            <img
+              src="https://legacy.reactjs.org/logo-og.png"
+              alt=""
+              className={styles.imageProduct}
+            />
+            <div
+              className={styles.favouriteButton}
+              onClick={() => favouriteClick()}
+            >
+              <img
+                src={isPressed ? favouriteActiveIcon : favouriteInactiveIcon}
+                alt=""
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className={styles.slider}>
+            <img
+              src="https://legacy.reactjs.org/logo-og.png"
+              alt=""
+              className={styles.imageProduct}
+            />
+            <div
+              className={styles.favouriteButton}
+              onClick={() => favouriteClick()}
+            >
+              <img
+                src={isPressed ? favouriteActiveIcon : favouriteInactiveIcon}
+                alt=""
+              />
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
       <p className={styles.countProductText}>{countProduct}</p>
       <div className={styles.priceField}>
