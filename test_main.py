@@ -12,7 +12,6 @@ from src.utils.custom_logging import setup_logging
 log = setup_logging()
 client = TestClient(app)
 
-
 """
 
 Ошибка Not Found вероятно говорит о неправильно созданном роуте, или не правильно переданным параметрам в тесты
@@ -241,12 +240,13 @@ def teardown_entity(endpoint, entity_id, token):
 
 # Токен доступа администратора
 access_token = None
+admin_data = []
 
 
 def create_admin():
     global access_token
-    admin_data = generate_test_data("user")
-    response = api_request("POST", "/signup/", json_data=admin_data)
+    admin_data.append(generate_test_data("user"))
+    response = api_request("POST", "/signup/", json_data=admin_data[0])
     access_token = response.json()["access_token"]
 
 
@@ -320,3 +320,15 @@ def test_update_entity(entity_type, endpoint, update_data):
                            headers={"Authorization": f"Bearer {access_token}"})
     assert_response(response, 200)
     teardown_entity(endpoint, entity_id, access_token)
+
+
+# Удаление администратора
+def del_admin():
+    telegram_id = admin_data[0].get("telegram_id")
+    response = api_request("GET", f"/users/telegram_id/{telegram_id}",
+                           headers={"Authorization": f"Bearer {access_token}"})
+    admin = response.json()
+    teardown_entity("users", admin["id"], access_token)
+
+
+del_admin()
