@@ -19,10 +19,13 @@ from src.utils.jwt_bearer import JWTBearer
 from jwt import InvalidTokenError
 from src.utils.custom_logging import setup_logging
 from config import Config
+from fastapi.staticfiles import StaticFiles
 
 config = Config()
 log = setup_logging()
 app = FastAPI()
+
+app.mount("/public", StaticFiles(directory="public"), name="public")
 
 app.add_middleware(
     CORSMiddleware,

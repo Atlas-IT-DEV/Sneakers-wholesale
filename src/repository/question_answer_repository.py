@@ -1,6 +1,6 @@
 from src.database.my_connector import Database
 from src.database.models import QuestionAnswers
-db = Database()
+from src.database.my_connector import db
 
 
 def get_all_question_answers():

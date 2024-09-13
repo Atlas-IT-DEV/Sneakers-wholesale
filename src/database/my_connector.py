@@ -21,8 +21,8 @@ class Database:
 
     def check_and_reconnect(self):
         try:
-            if self.connection is None:
-                self.connection.ping(reconnect=True)
+            self.connection.close()
+            self.connection.ping(reconnect=True)
         except OperationalError as e:
             log.exception(e)
 
@@ -44,3 +44,6 @@ class Database:
         with self.connection.cursor() as cursor:
             cursor.execute(query, params)
             return cursor.fetchall()
+
+
+db = Database()

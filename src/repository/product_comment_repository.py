@@ -1,6 +1,6 @@
 from src.database.my_connector import Database
 from src.database.models import ProductComments
-db = Database()
+from src.database.my_connector import db
 
 
 def get_all_product_comments():
