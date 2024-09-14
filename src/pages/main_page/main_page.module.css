@@ -16,3 +16,8 @@
   flex-direction: column;
   gap: 12px;
 }
+.container main .doubleCard {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 10px;
+}

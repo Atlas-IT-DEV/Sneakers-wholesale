@@ -1,0 +1,189 @@
+.container585_600 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: black;
+  border-radius: 28px;
+  padding: 13px 0 27px 28px;
+}
+.container585_600 .headerButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.container585_600 .headerButton p {
+  color: white;
+  font-size: 23px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container585_600 .mainText {
+  color: #686868;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+}
+.container585_600 .mainText span {
+  color: white;
+}
+.container565_585 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: black;
+  border-radius: 28px;
+  padding: 13px 0 27px 28px;
+}
+.container565_585 .headerButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.container565_585 .headerButton p {
+  color: white;
+  font-size: 21px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container565_585 .mainText {
+  color: #686868;
+  font-size: 19px;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .mainText span {
+  color: white;
+}
+.container525_565 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: black;
+  border-radius: 28px;
+  padding: 13px 0 27px 28px;
+}
+.container525_565 .headerButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.container525_565 .headerButton p {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container525_565 .mainText {
+  color: #686868;
+  font-size: 17px;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .mainText span {
+  color: white;
+}
+.container485_525 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: black;
+  border-radius: 28px;
+  padding: 13px 0 27px 28px;
+}
+.container485_525 .headerButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.container485_525 .headerButton p {
+  color: white;
+  font-size: 18px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container485_525 .mainText {
+  color: #686868;
+  font-size: 15px;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .mainText span {
+  color: white;
+}
+.container450_485 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: black;
+  border-radius: 28px;
+  padding: 13px 0 27px 28px;
+}
+.container450_485 .headerButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.container450_485 .headerButton p {
+  color: white;
+  font-size: 17px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container450_485 .mainText {
+  color: #686868;
+  font-size: 14px;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .mainText span {
+  color: white;
+}
+.container410_450 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: black;
+  border-radius: 28px;
+  padding: 13px 0 27px 28px;
+}
+.container410_450 .headerButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.container410_450 .headerButton p {
+  color: white;
+  font-size: 16px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container410_450 .mainText {
+  color: #686868;
+  font-size: 13px;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .mainText span {
+  color: white;
+}
+.container375_410 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: black;
+  border-radius: 28px;
+  padding: 13px 0 27px 28px;
+}
+.container375_410 .headerButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.container375_410 .headerButton p {
+  color: white;
+  font-size: 16px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container375_410 .mainText {
+  color: #686868;
+  font-size: 13px;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .mainText span {
+  color: white;
+}
