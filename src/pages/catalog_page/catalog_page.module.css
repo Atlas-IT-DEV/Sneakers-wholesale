@@ -1,30 +1,30 @@
-.container {
+.container585_600 {
   width: 100%;
   height: 100vh;
   overflow: scroll;
   overflow-x: hidden;
 }
-.container .header {
+.container585_600 .header {
   display: flex;
   align-self: center;
   width: 100%;
   height: 165px;
   background-color: #db6900;
 }
-.container .header .backButton {
+.container585_600 .header .backButton {
   cursor: pointer;
   margin-top: 102px;
   margin-left: 24px;
   min-width: 14px;
 }
-.container .header .searchField {
+.container585_600 .header .searchField {
   border: none;
   width: 100%;
   padding: 0;
   margin-top: 94px;
   margin-left: 22px;
 }
-.container .header .searchField input {
+.container585_600 .header .searchField input {
   width: 100%;
   background-image: url("../../images/search_icon.svg");
   background-repeat: no-repeat;
@@ -33,32 +33,430 @@
   border-radius: 13px;
   height: 45px;
 }
-.container .header .sortButton {
+.container585_600 .header .sortButton {
   cursor: pointer;
   margin-left: 22px;
-  margin-top: 100px;
+  margin-top: 105px;
   min-width: 36px;
 }
-.container .header .filterButton {
+.container585_600 .header .filterButton {
   cursor: pointer;
   margin-left: 18px;
-  margin-top: 100px;
+  margin-top: 105px;
   margin-right: 30px;
   min-width: 30px;
 }
-.container .cateroriesField {
+.container585_600 .cateroriesField {
   display: flex;
+  overflow: scroll;
+  overflow-y: hidden;
   gap: 25px;
 }
-.container .productsField {
+.container585_600 .productsField {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
   gap: 33px;
   margin-bottom: 120px;
 }
-.container .productsField .productRow {
+.container585_600 .productsField .productRow {
   display: flex;
   justify-content: space-between;
-  margin: 0 22px 0 22px;
+  margin: 0 20px 0 20px;
+}
+.container565_585 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container565_585 .header {
+  display: flex;
+  align-self: center;
+  width: 100%;
+  height: 165px;
+  background-color: #db6900;
+}
+.container565_585 .header .backButton {
+  cursor: pointer;
+  margin-top: 105px;
+  margin-left: 24px;
+  min-width: 13px;
+}
+.container565_585 .header .searchField {
+  border: none;
+  width: 100%;
+  padding: 0;
+  margin-top: 94px;
+  margin-left: 22px;
+}
+.container565_585 .header .searchField input {
+  width: 100%;
+  background-image: url("../../images/search_icon.svg");
+  background-repeat: no-repeat;
+  background-position: 23px center;
+  padding-left: 42px;
+  border-radius: 13px;
+  height: 45px;
+}
+.container565_585 .header .sortButton {
+  cursor: pointer;
+  margin-left: 22px;
+  margin-top: 105px;
+  min-width: 34px;
+}
+.container565_585 .header .filterButton {
+  cursor: pointer;
+  margin-left: 18px;
+  margin-top: 105px;
+  margin-right: 30px;
+  min-width: 28px;
+}
+.container565_585 .cateroriesField {
+  display: flex;
+  overflow: scroll;
+  overflow-y: hidden;
+  gap: 22px;
+}
+.container565_585 .productsField {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 33px;
+  margin-bottom: 120px;
+}
+.container565_585 .productsField .productRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 18px 0 18px;
+}
+.container525_565 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container525_565 .header {
+  display: flex;
+  align-self: center;
+  width: 100%;
+  height: 165px;
+  background-color: #db6900;
+}
+.container525_565 .header .backButton {
+  cursor: pointer;
+  margin-top: 105px;
+  margin-left: 24px;
+  min-width: 12px;
+}
+.container525_565 .header .searchField {
+  border: none;
+  width: 100%;
+  padding: 0;
+  margin-top: 94px;
+  margin-left: 22px;
+}
+.container525_565 .header .searchField input {
+  width: 100%;
+  background-image: url("../../images/search_icon.svg");
+  background-repeat: no-repeat;
+  background-position: 23px center;
+  padding-left: 42px;
+  border-radius: 13px;
+  height: 45px;
+}
+.container525_565 .header .sortButton {
+  cursor: pointer;
+  margin-left: 22px;
+  margin-top: 105px;
+  min-width: 34px;
+}
+.container525_565 .header .filterButton {
+  cursor: pointer;
+  margin-left: 18px;
+  margin-top: 105px;
+  margin-right: 30px;
+  min-width: 28px;
+}
+.container525_565 .cateroriesField {
+  display: flex;
+  overflow: scroll;
+  overflow-y: hidden;
+  gap: 19px;
+}
+.container525_565 .productsField {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 33px;
+  margin-bottom: 120px;
+}
+.container525_565 .productsField .productRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 16px 0 16px;
+}
+.container485_525 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container485_525 .header {
+  display: flex;
+  align-self: center;
+  width: 100%;
+  height: 165px;
+  background-color: #db6900;
+}
+.container485_525 .header .backButton {
+  cursor: pointer;
+  margin-top: 105px;
+  margin-left: 24px;
+  min-width: 12px;
+}
+.container485_525 .header .searchField {
+  border: none;
+  width: 100%;
+  padding: 0;
+  margin-top: 94px;
+  margin-left: 22px;
+}
+.container485_525 .header .searchField input {
+  width: 100%;
+  background-image: url("../../images/search_icon.svg");
+  background-repeat: no-repeat;
+  background-position: 23px center;
+  padding-left: 42px;
+  border-radius: 13px;
+  height: 45px;
+}
+.container485_525 .header .sortButton {
+  cursor: pointer;
+  margin-left: 22px;
+  margin-top: 105px;
+  min-width: 32px;
+}
+.container485_525 .header .filterButton {
+  cursor: pointer;
+  margin-left: 18px;
+  margin-top: 105px;
+  margin-right: 30px;
+  min-width: 26px;
+}
+.container485_525 .cateroriesField {
+  display: flex;
+  overflow: scroll;
+  overflow-y: hidden;
+  gap: 16px;
+}
+.container485_525 .productsField {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 33px;
+  margin-bottom: 120px;
+}
+.container485_525 .productsField .productRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 14px 0 14px;
+}
+.container450_485 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container450_485 .header {
+  display: flex;
+  align-self: center;
+  width: 100%;
+  height: 165px;
+  background-color: #db6900;
+}
+.container450_485 .header .backButton {
+  cursor: pointer;
+  margin-top: 105px;
+  margin-left: 24px;
+  min-width: 12px;
+}
+.container450_485 .header .searchField {
+  border: none;
+  width: 100%;
+  padding: 0;
+  margin-top: 94px;
+  margin-left: 22px;
+}
+.container450_485 .header .searchField input {
+  width: 100%;
+  background-image: url("../../images/search_icon.svg");
+  background-repeat: no-repeat;
+  background-position: 23px center;
+  padding-left: 42px;
+  border-radius: 13px;
+  height: 45px;
+}
+.container450_485 .header .sortButton {
+  cursor: pointer;
+  margin-left: 22px;
+  margin-top: 105px;
+  min-width: 30px;
+}
+.container450_485 .header .filterButton {
+  cursor: pointer;
+  margin-left: 18px;
+  margin-top: 105px;
+  margin-right: 30px;
+  min-width: 26px;
+}
+.container450_485 .cateroriesField {
+  display: flex;
+  overflow: scroll;
+  overflow-y: hidden;
+  gap: 13px;
+}
+.container450_485 .productsField {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 33px;
+  margin-bottom: 120px;
+}
+.container450_485 .productsField .productRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 12px 0 12px;
+}
+.container410_450 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container410_450 .header {
+  display: flex;
+  align-self: center;
+  width: 100%;
+  height: 165px;
+  background-color: #db6900;
+}
+.container410_450 .header .backButton {
+  cursor: pointer;
+  margin-top: 107px;
+  margin-left: 24px;
+  min-width: 10px;
+}
+.container410_450 .header .searchField {
+  border: none;
+  width: 100%;
+  padding: 0;
+  margin-top: 94px;
+  margin-left: 22px;
+}
+.container410_450 .header .searchField input {
+  width: 100%;
+  background-image: url("../../images/search_icon.svg");
+  background-repeat: no-repeat;
+  background-position: 23px center;
+  padding-left: 42px;
+  border-radius: 13px;
+  height: 45px;
+}
+.container410_450 .header .sortButton {
+  cursor: pointer;
+  margin-left: 22px;
+  margin-top: 105px;
+  min-width: 28px;
+}
+.container410_450 .header .filterButton {
+  cursor: pointer;
+  margin-left: 18px;
+  margin-top: 105px;
+  margin-right: 30px;
+  min-width: 24px;
+}
+.container410_450 .cateroriesField {
+  display: flex;
+  overflow: scroll;
+  overflow-y: hidden;
+  gap: 10px;
+}
+.container410_450 .productsField {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 33px;
+  margin-bottom: 120px;
+}
+.container410_450 .productsField .productRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px 0 10px;
+}
+.container375_410 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container375_410 .header {
+  display: flex;
+  align-self: center;
+  width: 100%;
+  height: 165px;
+  background-color: #db6900;
+}
+.container375_410 .header .backButton {
+  cursor: pointer;
+  margin-top: 107px;
+  margin-left: 24px;
+  min-width: 10px;
+}
+.container375_410 .header .searchField {
+  border: none;
+  width: 100%;
+  padding: 0;
+  margin-top: 94px;
+  margin-left: 22px;
+}
+.container375_410 .header .searchField input {
+  width: 100%;
+  background-image: url("../../images/search_icon.svg");
+  background-repeat: no-repeat;
+  background-position: 23px center;
+  padding-left: 42px;
+  border-radius: 13px;
+  height: 45px;
+}
+.container375_410 .header .sortButton {
+  cursor: pointer;
+  margin-left: 22px;
+  margin-top: 105px;
+  min-width: 28px;
+}
+.container375_410 .header .filterButton {
+  cursor: pointer;
+  margin-left: 18px;
+  margin-top: 105px;
+  margin-right: 30px;
+  min-width: 24px;
+}
+.container375_410 .cateroriesField {
+  display: flex;
+  overflow: scroll;
+  overflow-y: hidden;
+  gap: 10px;
+}
+.container375_410 .productsField {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 33px;
+  margin-bottom: 120px;
+}
+.container375_410 .productsField .productRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10px 0 10px;
 }
