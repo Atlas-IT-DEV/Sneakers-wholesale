@@ -24,6 +24,13 @@ def get_product_characteristic_by_user_id(user_id: int):
     return [ProductCharacteristics(**product_characteristic) for product_characteristic in product_characteristics]
 
 
+def get_product_characteristic_by_product_id(product_id: int):
+    product_characteristics = product_characteristic_repository.get_product_characteristic_by_product_id(product_id)
+    if not product_characteristics:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f'Product Characteristic not found')
+    return [ProductCharacteristics(**product_characteristic) for product_characteristic in product_characteristics]
+
+
 def create_product_characteristic(product_characteristic: ProductCharacteristics):
     get_product_by_id(product_characteristic.ProductID)
     get_characteristic_by_id(product_characteristic.CharacteristicID)

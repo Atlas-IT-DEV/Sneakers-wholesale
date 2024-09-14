@@ -19,6 +19,11 @@ def get_product_characteristic_by_user_id(user_id: int):
     return db.fetch_all(query, (user_id,))
 
 
+def get_product_characteristic_by_product_id(product_id: int):
+    query = "SELECT * FROM product_characteristics WHERE product_id=%s"
+    return db.fetch_all(query, (product_id,))
+
+
 def create_product_characteristic(product_characteristic: ProductCharacteristics):
     query = "INSERT INTO product_characteristics (product_id, characteristic_id, value) VALUES (%s, %s, %s)"
     params = (product_characteristic.ProductID, product_characteristic.CharacteristicID, product_characteristic.Value)

@@ -922,7 +922,21 @@ async def get_all_products():
     :return: response model List[Products].
     """
     try:
-        return product_services.get_all_products()
+        return product_services.get_all_products(dirs=False)
+    except HTTPException as ex:
+        log.exception(f"Error", exc_info=ex)
+        raise ex
+
+
+@app.get("/products/full", response_model=list[Dict], tags=["Product"])
+async def get_all_products_full():
+    """
+    Route for getting all products from basedata.
+
+    :return: response model List[Dict].
+    """
+    try:
+        return product_services.get_all_products(dirs=True)
     except HTTPException as ex:
         log.exception(f"Error", exc_info=ex)
         raise ex
@@ -938,7 +952,23 @@ async def get_product_by_id(product_id: int):
     :return: response model Products.
     """
     try:
-        return product_services.get_product_by_id(product_id)
+        return product_services.get_product_by_id(product_id, dirs=False)
+    except HTTPException as ex:
+        log.exception(f"Error", exc_info=ex)
+        raise ex
+
+
+@app.get("/products/full/product_id/{product_id}", response_model=Dict, tags=["Product"])
+async def get_product_by_id_full(product_id: int):
+    """
+    Route for getting product by ProductID.
+
+    :param product_id: ID of the product. [int]
+
+    :return: response model Dict.
+    """
+    try:
+        return product_services.get_product_by_id(product_id, dirs=True)
     except HTTPException as ex:
         log.exception(f"Error", exc_info=ex)
         raise ex
