@@ -51,6 +51,7 @@
   overflow: scroll;
   overflow-y: hidden;
   gap: 25px;
+  padding-right: 25px;
 }
 .container585_600 .productsField {
   display: flex;
@@ -117,6 +118,7 @@
   overflow: scroll;
   overflow-y: hidden;
   gap: 22px;
+  padding-right: 25px;
 }
 .container565_585 .productsField {
   display: flex;
@@ -183,6 +185,7 @@
   overflow: scroll;
   overflow-y: hidden;
   gap: 19px;
+  padding-right: 25px;
 }
 .container525_565 .productsField {
   display: flex;
@@ -249,6 +252,7 @@
   overflow: scroll;
   overflow-y: hidden;
   gap: 16px;
+  padding-right: 25px;
 }
 .container485_525 .productsField {
   display: flex;
@@ -315,6 +319,7 @@
   overflow: scroll;
   overflow-y: hidden;
   gap: 13px;
+  padding-right: 25px;
 }
 .container450_485 .productsField {
   display: flex;
@@ -381,6 +386,7 @@
   overflow: scroll;
   overflow-y: hidden;
   gap: 10px;
+  padding-right: 25px;
 }
 .container410_450 .productsField {
   display: flex;
@@ -447,6 +453,7 @@
   overflow: scroll;
   overflow-y: hidden;
   gap: 10px;
+  padding-right: 25px;
 }
 .container375_410 .productsField {
   display: flex;
