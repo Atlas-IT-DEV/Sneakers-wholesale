@@ -1,61 +1,61 @@
-.container {
+.container585_600 {
   display: flex;
   position: relative;
   width: 100%;
   border: 1px solid #171717;
   padding: 20px;
 }
-.container .productImage img {
+.container585_600 .productImage img {
   width: 210px;
   height: 263px;
   object-fit: cover;
 }
-.container .aboutProduct {
+.container585_600 .aboutProduct {
   display: flex;
   flex-direction: column;
   margin-left: 24px;
 }
-.container .aboutProduct .brandText {
+.container585_600 .aboutProduct .brandText {
   color: white;
   font-size: 20px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
-.container .aboutProduct .modelText {
+.container585_600 .aboutProduct .modelText {
   color: white;
   font-size: 20px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
 }
-.container .aboutProduct .countText {
+.container585_600 .aboutProduct .countText {
   color: white;
   font-size: 20px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
 }
-.container .aboutProduct .sizeField {
+.container585_600 .aboutProduct .sizeField {
   display: flex;
   gap: 5px;
 }
-.container .aboutProduct .sizeField .sizeAttributeText {
+.container585_600 .aboutProduct .sizeField .sizeAttributeText {
   color: #9b9b9b;
   font-size: 20px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
 }
-.container .aboutProduct .sizeField .sizeText {
+.container585_600 .aboutProduct .sizeField .sizeText {
   color: white;
   font-size: 20px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
 }
-.container .aboutProduct .countProduct {
+.container585_600 .aboutProduct .countProduct {
   margin-top: 16px;
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.container .aboutProduct .countProduct .countActiveButton {
+.container585_600 .aboutProduct .countProduct .countActiveButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,7 +65,7 @@
   border-radius: 3px;
   cursor: pointer;
 }
-.container .aboutProduct .countProduct .countUnactiveButton {
+.container585_600 .aboutProduct .countProduct .countUnactiveButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,7 +75,7 @@
   border-radius: 3px;
   cursor: not-allowed;
 }
-.container .aboutProduct .countProduct .countProductText {
+.container585_600 .aboutProduct .countProduct .countProductText {
   color: white;
   min-width: 25px;
   font-size: 20px;
@@ -83,18 +83,18 @@
   font-family: TTForsTrialVariable;
   text-align: center;
 }
-.container .aboutProduct .priceProduct {
+.container585_600 .aboutProduct .priceProduct {
   display: flex;
   margin-top: 12px;
   gap: 13px;
 }
-.container .aboutProduct .priceProduct .newPriceText {
+.container585_600 .aboutProduct .priceProduct .newPriceText {
   color: #db6900;
   font-family: TTForsTrialVariable;
   font-size: 23px;
   font-weight: 600;
 }
-.container .aboutProduct .priceProduct .priceText {
+.container585_600 .aboutProduct .priceProduct .priceText {
   color: #9b9b9b;
   font-family: TTForsTrialVariable;
   font-size: 23px;
@@ -102,7 +102,7 @@
   text-decoration: line-through;
   text-decoration-color: #9b9b9b;
 }
-.container .aboutProduct .buyButton {
+.container585_600 .aboutProduct .buyButton {
   border: 1px solid #db6900;
   height: 44px;
   padding: 0 10px 0 10px;
@@ -112,15 +112,778 @@
   border-radius: 4px;
   cursor: pointer;
 }
-.container .aboutProduct .buyButton .buyText {
+.container585_600 .aboutProduct .buyButton .buyText {
   color: #db6900;
   font-size: 20px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
-.container .settingsButton {
+.container585_600 .settingsButton {
   position: absolute;
   right: 24px;
   top: 30px;
   cursor: pointer;
+  padding: 2px;
+}
+.container565_585 {
+  display: flex;
+  position: relative;
+  width: 100%;
+  border: 1px solid #171717;
+  padding: 20px;
+}
+.container565_585 .productImage img {
+  width: 205px;
+  height: 258px;
+  object-fit: cover;
+}
+.container565_585 .aboutProduct {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+}
+.container565_585 .aboutProduct .brandText {
+  color: white;
+  font-size: 19px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .aboutProduct .modelText {
+  color: white;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .aboutProduct .countText {
+  color: white;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .aboutProduct .sizeField {
+  display: flex;
+  gap: 5px;
+}
+.container565_585 .aboutProduct .sizeField .sizeAttributeText {
+  color: #9b9b9b;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .aboutProduct .sizeField .sizeText {
+  color: white;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .aboutProduct .countProduct {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.container565_585 .aboutProduct .countProduct .countActiveButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #db6900;
+  width: 38px;
+  height: 38px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.container565_585 .aboutProduct .countProduct .countUnactiveButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #939393;
+  width: 38px;
+  height: 38px;
+  border-radius: 3px;
+  cursor: not-allowed;
+}
+.container565_585 .aboutProduct .countProduct .countProductText {
+  color: white;
+  min-width: 25px;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+  text-align: center;
+}
+.container565_585 .aboutProduct .priceProduct {
+  display: flex;
+  margin-top: 12px;
+  gap: 13px;
+}
+.container565_585 .aboutProduct .priceProduct .newPriceText {
+  color: #db6900;
+  font-family: TTForsTrialVariable;
+  font-size: 21px;
+  font-weight: 600;
+}
+.container565_585 .aboutProduct .priceProduct .priceText {
+  color: #9b9b9b;
+  font-family: TTForsTrialVariable;
+  font-size: 21px;
+  font-weight: 600;
+  text-decoration: line-through;
+  text-decoration-color: #9b9b9b;
+}
+.container565_585 .aboutProduct .buyButton {
+  border: 1px solid #db6900;
+  height: 44px;
+  padding: 0 10px 0 10px;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container565_585 .aboutProduct .buyButton .buyText {
+  color: #db6900;
+  font-size: 19px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .settingsButton {
+  position: absolute;
+  right: 24px;
+  top: 30px;
+  cursor: pointer;
+  padding: 2px;
+}
+.container525_565 {
+  display: flex;
+  position: relative;
+  width: 100%;
+  border: 1px solid #171717;
+  padding: 20px;
+}
+.container525_565 .productImage img {
+  width: 190px;
+  height: 243px;
+  object-fit: cover;
+}
+.container525_565 .aboutProduct {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+}
+.container525_565 .aboutProduct .brandText {
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .aboutProduct .modelText {
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .aboutProduct .countText {
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .aboutProduct .sizeField {
+  display: flex;
+  gap: 5px;
+}
+.container525_565 .aboutProduct .sizeField .sizeAttributeText {
+  color: #9b9b9b;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .aboutProduct .sizeField .sizeText {
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .aboutProduct .countProduct {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.container525_565 .aboutProduct .countProduct .countActiveButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #db6900;
+  width: 38px;
+  height: 38px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.container525_565 .aboutProduct .countProduct .countUnactiveButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #939393;
+  width: 38px;
+  height: 38px;
+  border-radius: 3px;
+  cursor: not-allowed;
+}
+.container525_565 .aboutProduct .countProduct .countProductText {
+  color: white;
+  min-width: 25px;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+  text-align: center;
+}
+.container525_565 .aboutProduct .priceProduct {
+  display: flex;
+  margin-top: 12px;
+  gap: 13px;
+}
+.container525_565 .aboutProduct .priceProduct .newPriceText {
+  color: #db6900;
+  font-family: TTForsTrialVariable;
+  font-size: 20px;
+  font-weight: 600;
+}
+.container525_565 .aboutProduct .priceProduct .priceText {
+  color: #9b9b9b;
+  font-family: TTForsTrialVariable;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: line-through;
+  text-decoration-color: #9b9b9b;
+}
+.container525_565 .aboutProduct .buyButton {
+  border: 1px solid #db6900;
+  height: 44px;
+  padding: 0 10px 0 10px;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container525_565 .aboutProduct .buyButton .buyText {
+  color: #db6900;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .settingsButton {
+  position: absolute;
+  right: 24px;
+  top: 30px;
+  cursor: pointer;
+  padding: 2px;
+}
+.container485_525 {
+  display: flex;
+  position: relative;
+  width: 100%;
+  border: 1px solid #171717;
+  padding: 20px;
+}
+.container485_525 .productImage img {
+  width: 175px;
+  height: 233px;
+  object-fit: cover;
+}
+.container485_525 .aboutProduct {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+}
+.container485_525 .aboutProduct .brandText {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .aboutProduct .modelText {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .aboutProduct .countText {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .aboutProduct .sizeField {
+  display: flex;
+  gap: 5px;
+}
+.container485_525 .aboutProduct .sizeField .sizeAttributeText {
+  color: #9b9b9b;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .aboutProduct .sizeField .sizeText {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .aboutProduct .countProduct {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.container485_525 .aboutProduct .countProduct .countActiveButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #db6900;
+  width: 38px;
+  height: 38px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.container485_525 .aboutProduct .countProduct .countUnactiveButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #939393;
+  width: 38px;
+  height: 38px;
+  border-radius: 3px;
+  cursor: not-allowed;
+}
+.container485_525 .aboutProduct .countProduct .countProductText {
+  color: white;
+  min-width: 25px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+  text-align: center;
+}
+.container485_525 .aboutProduct .priceProduct {
+  display: flex;
+  margin-top: 12px;
+  gap: 13px;
+}
+.container485_525 .aboutProduct .priceProduct .newPriceText {
+  color: #db6900;
+  font-family: TTForsTrialVariable;
+  font-size: 18px;
+  font-weight: 600;
+}
+.container485_525 .aboutProduct .priceProduct .priceText {
+  color: #9b9b9b;
+  font-family: TTForsTrialVariable;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: line-through;
+  text-decoration-color: #9b9b9b;
+}
+.container485_525 .aboutProduct .buyButton {
+  border: 1px solid #db6900;
+  height: 44px;
+  padding: 0 10px 0 10px;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container485_525 .aboutProduct .buyButton .buyText {
+  color: #db6900;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .settingsButton {
+  position: absolute;
+  right: 24px;
+  top: 30px;
+  cursor: pointer;
+  padding: 2px;
+}
+.container450_485 {
+  display: flex;
+  position: relative;
+  width: 100%;
+  border: 1px solid #171717;
+  padding: 20px;
+}
+.container450_485 .productImage img {
+  width: 160px;
+  height: 223px;
+  object-fit: cover;
+}
+.container450_485 .aboutProduct {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+}
+.container450_485 .aboutProduct .brandText {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .aboutProduct .modelText {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .aboutProduct .countText {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .aboutProduct .sizeField {
+  display: flex;
+  gap: 5px;
+}
+.container450_485 .aboutProduct .sizeField .sizeAttributeText {
+  color: #9b9b9b;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .aboutProduct .sizeField .sizeText {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .aboutProduct .countProduct {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.container450_485 .aboutProduct .countProduct .countActiveButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #db6900;
+  width: 38px;
+  height: 38px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.container450_485 .aboutProduct .countProduct .countUnactiveButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #939393;
+  width: 38px;
+  height: 38px;
+  border-radius: 3px;
+  cursor: not-allowed;
+}
+.container450_485 .aboutProduct .countProduct .countProductText {
+  color: white;
+  min-width: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+  text-align: center;
+}
+.container450_485 .aboutProduct .priceProduct {
+  display: flex;
+  margin-top: 12px;
+  gap: 13px;
+}
+.container450_485 .aboutProduct .priceProduct .newPriceText {
+  color: #db6900;
+  font-family: TTForsTrialVariable;
+  font-size: 17px;
+  font-weight: 600;
+}
+.container450_485 .aboutProduct .priceProduct .priceText {
+  color: #9b9b9b;
+  font-family: TTForsTrialVariable;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: line-through;
+  text-decoration-color: #9b9b9b;
+}
+.container450_485 .aboutProduct .buyButton {
+  border: 1px solid #db6900;
+  height: 44px;
+  padding: 0 10px 0 10px;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container450_485 .aboutProduct .buyButton .buyText {
+  color: #db6900;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .settingsButton {
+  position: absolute;
+  right: 24px;
+  top: 30px;
+  cursor: pointer;
+  padding: 2px;
+}
+.container410_450 {
+  display: flex;
+  position: relative;
+  width: 100%;
+  border: 1px solid #171717;
+  padding: 20px;
+}
+.container410_450 .productImage img {
+  width: 145px;
+  height: 213px;
+  object-fit: cover;
+}
+.container410_450 .aboutProduct {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+}
+.container410_450 .aboutProduct .brandText {
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .aboutProduct .modelText {
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .aboutProduct .countText {
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .aboutProduct .sizeField {
+  display: flex;
+  gap: 5px;
+}
+.container410_450 .aboutProduct .sizeField .sizeAttributeText {
+  color: #9b9b9b;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .aboutProduct .sizeField .sizeText {
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .aboutProduct .countProduct {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.container410_450 .aboutProduct .countProduct .countActiveButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #db6900;
+  width: 38px;
+  height: 38px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.container410_450 .aboutProduct .countProduct .countUnactiveButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #939393;
+  width: 38px;
+  height: 38px;
+  border-radius: 3px;
+  cursor: not-allowed;
+}
+.container410_450 .aboutProduct .countProduct .countProductText {
+  color: white;
+  min-width: 25px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+  text-align: center;
+}
+.container410_450 .aboutProduct .priceProduct {
+  display: flex;
+  margin-top: 12px;
+  gap: 13px;
+}
+.container410_450 .aboutProduct .priceProduct .newPriceText {
+  color: #db6900;
+  font-family: TTForsTrialVariable;
+  font-size: 16px;
+  font-weight: 600;
+}
+.container410_450 .aboutProduct .priceProduct .priceText {
+  color: #9b9b9b;
+  font-family: TTForsTrialVariable;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: line-through;
+  text-decoration-color: #9b9b9b;
+}
+.container410_450 .aboutProduct .buyButton {
+  border: 1px solid #db6900;
+  height: 44px;
+  padding: 0 10px 0 10px;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container410_450 .aboutProduct .buyButton .buyText {
+  color: #db6900;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .settingsButton {
+  position: absolute;
+  right: 24px;
+  top: 30px;
+  cursor: pointer;
+  padding: 2px;
+}
+.container375_410 {
+  display: flex;
+  position: relative;
+  width: 100%;
+  border: 1px solid #171717;
+  padding: 20px;
+}
+.container375_410 .productImage img {
+  width: 130px;
+  height: 213px;
+  object-fit: cover;
+}
+.container375_410 .aboutProduct {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+}
+.container375_410 .aboutProduct .brandText {
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .aboutProduct .modelText {
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .aboutProduct .countText {
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .aboutProduct .sizeField {
+  display: flex;
+  gap: 5px;
+}
+.container375_410 .aboutProduct .sizeField .sizeAttributeText {
+  color: #9b9b9b;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .aboutProduct .sizeField .sizeText {
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .aboutProduct .countProduct {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.container375_410 .aboutProduct .countProduct .countActiveButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #db6900;
+  width: 38px;
+  height: 38px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.container375_410 .aboutProduct .countProduct .countUnactiveButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #939393;
+  width: 38px;
+  height: 38px;
+  border-radius: 3px;
+  cursor: not-allowed;
+}
+.container375_410 .aboutProduct .countProduct .countProductText {
+  color: white;
+  min-width: 25px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+  text-align: center;
+}
+.container375_410 .aboutProduct .priceProduct {
+  display: flex;
+  margin-top: 12px;
+  gap: 13px;
+}
+.container375_410 .aboutProduct .priceProduct .newPriceText {
+  color: #db6900;
+  font-family: TTForsTrialVariable;
+  font-size: 16px;
+  font-weight: 600;
+}
+.container375_410 .aboutProduct .priceProduct .priceText {
+  color: #9b9b9b;
+  font-family: TTForsTrialVariable;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: line-through;
+  text-decoration-color: #9b9b9b;
+}
+.container375_410 .aboutProduct .buyButton {
+  border: 1px solid #db6900;
+  height: 44px;
+  padding: 0 10px 0 10px;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container375_410 .aboutProduct .buyButton .buyText {
+  color: #db6900;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .settingsButton {
+  position: absolute;
+  right: 24px;
+  top: 30px;
+  cursor: pointer;
+  padding: 2px;
 }

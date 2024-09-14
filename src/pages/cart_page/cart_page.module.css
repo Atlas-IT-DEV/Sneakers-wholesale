@@ -1,16 +1,16 @@
-.container {
+.container585_600 {
   width: 100%;
   height: 100vh;
   overflow: scroll;
   overflow-x: hidden;
 }
-.container .header {
+.container585_600 .header {
   position: sticky;
   padding-top: 110px;
   padding-bottom: 14px;
   background-color: #db6900;
 }
-.container .header .namePageText {
+.container585_600 .header .namePageText {
   display: flex;
   justify-content: center;
   color: #fcfcfc;
@@ -18,28 +18,28 @@
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
-.container .header .selectButton {
+.container585_600 .header .selectButton {
   position: absolute;
   cursor: pointer;
   bottom: 14px;
   right: 24px;
 }
-.container .header .selectButton .selectButtonText {
+.container585_600 .header .selectButton .selectButtonText {
   color: #fcfcfc;
   font-size: 24px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
 }
-.container .discountContainer {
+.container585_600 .discountContainer {
   margin: 20px 16px 0 16px;
 }
-.container .productContainer {
+.container585_600 .productContainer {
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin: 12px 10px 0px 10px;
 }
-.container .orderButton {
+.container585_600 .orderButton {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -51,15 +51,405 @@
   padding: 0 40px 0 40px;
   cursor: pointer;
 }
-.container .orderButton .orderButtonText {
+.container585_600 .orderButton .orderButtonText {
   color: white;
   font-weight: 600;
   font-size: 26px;
   font-family: TTForsTrialVariable;
 }
-.container .orderButton .detailsdOrderText {
+.container585_600 .orderButton .detailsdOrderText {
   color: white;
   font-family: TTForsTrialVariable;
   font-weight: 500;
   font-size: 20px;
+}
+.container565_585 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container565_585 .header {
+  position: sticky;
+  padding-top: 110px;
+  padding-bottom: 14px;
+  background-color: #db6900;
+}
+.container565_585 .header .namePageText {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+  font-size: 23px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .header .selectButton {
+  position: absolute;
+  cursor: pointer;
+  bottom: 14px;
+  right: 24px;
+}
+.container565_585 .header .selectButton .selectButtonText {
+  color: #fcfcfc;
+  font-size: 23px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .discountContainer {
+  margin: 20px 16px 0 16px;
+}
+.container565_585 .productContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 12px 10px 0px 10px;
+}
+.container565_585 .orderButton {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 86px 110px 86px;
+  height: 78px;
+  background-color: #db6900;
+  border-radius: 21px;
+  padding: 0 40px 0 40px;
+  cursor: pointer;
+}
+.container565_585 .orderButton .orderButtonText {
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .orderButton .detailsdOrderText {
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 19px;
+}
+.container525_565 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container525_565 .header {
+  position: sticky;
+  padding-top: 110px;
+  padding-bottom: 14px;
+  background-color: #db6900;
+}
+.container525_565 .header .namePageText {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+  font-size: 21px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .header .selectButton {
+  position: absolute;
+  cursor: pointer;
+  bottom: 14px;
+  right: 24px;
+}
+.container525_565 .header .selectButton .selectButtonText {
+  color: #fcfcfc;
+  font-size: 21px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .discountContainer {
+  margin: 20px 16px 0 16px;
+}
+.container525_565 .productContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 12px 10px 0px 10px;
+}
+.container525_565 .orderButton {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 86px 110px 86px;
+  height: 78px;
+  background-color: #db6900;
+  border-radius: 21px;
+  padding: 0 40px 0 40px;
+  cursor: pointer;
+}
+.container525_565 .orderButton .orderButtonText {
+  color: white;
+  font-weight: 600;
+  font-size: 22px;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .orderButton .detailsdOrderText {
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 17px;
+}
+.container485_525 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container485_525 .header {
+  position: sticky;
+  padding-top: 110px;
+  padding-bottom: 14px;
+  background-color: #db6900;
+}
+.container485_525 .header .namePageText {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+  font-size: 19px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .header .selectButton {
+  position: absolute;
+  cursor: pointer;
+  bottom: 14px;
+  right: 24px;
+}
+.container485_525 .header .selectButton .selectButtonText {
+  color: #fcfcfc;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .discountContainer {
+  margin: 20px 16px 0 16px;
+}
+.container485_525 .productContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 12px 10px 0px 10px;
+}
+.container485_525 .orderButton {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 86px 110px 86px;
+  height: 78px;
+  background-color: #db6900;
+  border-radius: 21px;
+  padding: 0 40px 0 40px;
+  cursor: pointer;
+}
+.container485_525 .orderButton .orderButtonText {
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .orderButton .detailsdOrderText {
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 15px;
+}
+.container450_485 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container450_485 .header {
+  position: sticky;
+  padding-top: 110px;
+  padding-bottom: 14px;
+  background-color: #db6900;
+}
+.container450_485 .header .namePageText {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .header .selectButton {
+  position: absolute;
+  cursor: pointer;
+  bottom: 14px;
+  right: 24px;
+}
+.container450_485 .header .selectButton .selectButtonText {
+  color: #fcfcfc;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .discountContainer {
+  margin: 20px 16px 0 16px;
+}
+.container450_485 .productContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 12px 10px 0px 10px;
+}
+.container450_485 .orderButton {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 86px 110px 86px;
+  height: 78px;
+  background-color: #db6900;
+  border-radius: 21px;
+  padding: 0 40px 0 40px;
+  cursor: pointer;
+}
+.container450_485 .orderButton .orderButtonText {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .orderButton .detailsdOrderText {
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 14px;
+}
+.container375_410 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container375_410 .header {
+  position: sticky;
+  padding-top: 110px;
+  padding-bottom: 14px;
+  background-color: #db6900;
+}
+.container375_410 .header .namePageText {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .header .selectButton {
+  position: absolute;
+  cursor: pointer;
+  bottom: 14px;
+  right: 24px;
+}
+.container375_410 .header .selectButton .selectButtonText {
+  color: #fcfcfc;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .discountContainer {
+  margin: 20px 16px 0 16px;
+}
+.container375_410 .productContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 12px 10px 0px 10px;
+}
+.container375_410 .orderButton {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 86px 110px 86px;
+  height: 78px;
+  background-color: #db6900;
+  border-radius: 21px;
+  padding: 0 40px 0 40px;
+  cursor: pointer;
+}
+.container375_410 .orderButton .orderButtonText {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .orderButton .detailsdOrderText {
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 13px;
+}
+.container410_450 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container410_450 .header {
+  position: sticky;
+  padding-top: 110px;
+  padding-bottom: 14px;
+  background-color: #db6900;
+}
+.container410_450 .header .namePageText {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .header .selectButton {
+  position: absolute;
+  cursor: pointer;
+  bottom: 14px;
+  right: 24px;
+}
+.container410_450 .header .selectButton .selectButtonText {
+  color: #fcfcfc;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .discountContainer {
+  margin: 20px 16px 0 16px;
+}
+.container410_450 .productContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 12px 10px 0px 10px;
+}
+.container410_450 .orderButton {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 86px 110px 86px;
+  height: 78px;
+  background-color: #db6900;
+  border-radius: 21px;
+  padding: 0 40px 0 40px;
+  cursor: pointer;
+}
+.container410_450 .orderButton .orderButtonText {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .orderButton .detailsdOrderText {
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 13px;
 }

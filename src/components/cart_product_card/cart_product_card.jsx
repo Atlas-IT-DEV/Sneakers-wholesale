@@ -3,6 +3,7 @@ import minusIcon from "../../images/minus_icon.svg";
 import plusIcon from "../../images/plus_icon.svg";
 import settingProductIcon from "../../images/setting_product_icon.svg";
 import { useState } from "react";
+import useWindowDimensions from "../hooks/windowDimensions";
 
 const CartProductCard = ({
   brand = "Asics",
@@ -15,8 +16,25 @@ const CartProductCard = ({
   image = "https://legacy.reactjs.org/logo-og.png",
 }) => {
   const [countGoods, setCountGoods] = useState(1);
+  const { width } = useWindowDimensions();
   return (
-    <div className={styles.container}>
+    <div
+      className={
+        width >= 585
+          ? styles.container585_600
+          : width >= 565
+          ? styles.container565_585
+          : width >= 525
+          ? styles.container525_565
+          : width >= 485
+          ? styles.container485_525
+          : width >= 450
+          ? styles.container450_485
+          : width >= 410
+          ? styles.container410_450
+          : styles.container375_410
+      }
+    >
       <div className={styles.productImage}>
         <img src={image} alt="" />
       </div>
