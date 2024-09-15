@@ -1,5 +1,5 @@
 import BottomMenu from "../../components/bottom_menu/bottom_menu";
-import ProductCard from "../../components/product_card.jsx/product_card";
+import ProductCard from "../../components/product_card/product_card";
 import Categories from "../../components/categories/categories";
 import styles from "./catalog_page.module.css";
 
@@ -53,15 +53,15 @@ const CatalogPage = () => {
         <Categories name_category="Nike" />
         <Categories name_category="Adidas" />
       </div>
-      <div className={styles.productsField}>
-        <div className={styles.productRow}>
-          <ProductCard model_name="Asics Gel Quantum Kinetic" />
-          <ProductCard model_name=" Under Armour Hovr Phantom 3 SE Elevate" />
-        </div>
-        <div className={styles.productRow}>
-          <ProductCard model_name=" Nike Air Jordan 5 Retro “Jade Horizon”" />
+      <div className={styles.products}>
+        <div className={styles.productsField}>
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
         </div>
       </div>
+
       <BottomMenu />
     </div>
   );

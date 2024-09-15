@@ -19,6 +19,7 @@ const Filters = () => {
     [false, false],
   ]);
   let copyIsVisible = Array.from(isVisible);
+
   return (
     <div
       className={

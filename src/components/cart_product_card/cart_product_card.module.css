@@ -238,6 +238,7 @@
   width: max-content;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 2px;
 }
 .container565_585 .aboutProduct .buyButton .buyText {
   color: #db6900;
@@ -365,6 +366,7 @@
   width: max-content;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 3px;
 }
 .container525_565 .aboutProduct .buyButton .buyText {
   color: #db6900;
@@ -388,7 +390,7 @@
 }
 .container485_525 .productImage img {
   width: 175px;
-  height: 233px;
+  height: 228px;
   object-fit: cover;
 }
 .container485_525 .aboutProduct {
@@ -492,6 +494,7 @@
   width: max-content;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 5px;
 }
 .container485_525 .aboutProduct .buyButton .buyText {
   color: #db6900;
@@ -515,7 +518,7 @@
 }
 .container450_485 .productImage img {
   width: 160px;
-  height: 223px;
+  height: 213px;
   object-fit: cover;
 }
 .container450_485 .aboutProduct {
@@ -642,7 +645,7 @@
 }
 .container410_450 .productImage img {
   width: 145px;
-  height: 213px;
+  height: 198px;
   object-fit: cover;
 }
 .container410_450 .aboutProduct {
@@ -685,7 +688,7 @@
   font-family: TTForsTrialVariable;
 }
 .container410_450 .aboutProduct .countProduct {
-  margin-top: 16px;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -769,7 +772,7 @@
 }
 .container375_410 .productImage img {
   width: 130px;
-  height: 213px;
+  height: 183px;
   object-fit: cover;
 }
 .container375_410 .aboutProduct {
@@ -812,7 +815,7 @@
   font-family: TTForsTrialVariable;
 }
 .container375_410 .aboutProduct .countProduct {
-  margin-top: 16px;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -847,7 +850,7 @@
 }
 .container375_410 .aboutProduct .priceProduct {
   display: flex;
-  margin-top: 12px;
+  margin-top: 9px;
   gap: 13px;
 }
 .container375_410 .aboutProduct .priceProduct .newPriceText {
@@ -866,7 +869,7 @@
 }
 .container375_410 .aboutProduct .buyButton {
   border: 1px solid #db6900;
-  height: 44px;
+  height: 34px;
   padding: 0 10px 0 10px;
   display: flex;
   align-items: center;
