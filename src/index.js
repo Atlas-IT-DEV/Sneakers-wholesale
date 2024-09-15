@@ -9,6 +9,7 @@ import MainPage from "./pages/main_page/main_page";
 import CartPage from "./pages/cart_page/cart_page";
 import CatalogPage from "./pages/catalog_page/catalog_page";
 import FavouritesPage from "./pages/favourites_page/favourites_page";
+import FilterPage from "./pages/filter_page/filter_page";
 
 const router = createMemoryRouter([
   {
@@ -31,7 +32,7 @@ const router = createMemoryRouter([
     path: "/catalog",
     element: (
       <PageContainer>
-      <CatalogPage/>
+        <CatalogPage />
       </PageContainer>
     ),
   },
@@ -39,7 +40,15 @@ const router = createMemoryRouter([
     path: "/favourites",
     element: (
       <PageContainer>
-        <FavouritesPage/>
+        <FavouritesPage />
+      </PageContainer>
+    ),
+  },
+  {
+    path: "/filters",
+    element: (
+      <PageContainer>
+        <FilterPage />
       </PageContainer>
     ),
   },

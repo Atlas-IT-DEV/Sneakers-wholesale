@@ -7,9 +7,11 @@ import arrowBackIcon from "../../images/arrow_back_icon.svg";
 import sortIcon from "../../images/sort_icon.svg";
 import filterIcon from "../../images/filter_icon.svg";
 import useWindowDimensions from "../../components/hooks/windowDimensions";
+import { useNavigate } from "react-router";
 
 const CatalogPage = () => {
   const { width } = useWindowDimensions();
+  const navigate = useNavigate();
   return (
     <div
       className={
@@ -38,7 +40,10 @@ const CatalogPage = () => {
         <div className={styles.sortButton}>
           <img src={sortIcon} alt="" />
         </div>
-        <div className={styles.filterButton}>
+        <div
+          className={styles.filterButton}
+          onClick={() => navigate("/filters")}
+        >
           <img src={filterIcon} alt="" />
         </div>
       </div>

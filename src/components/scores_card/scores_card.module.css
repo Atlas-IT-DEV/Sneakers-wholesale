@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   gap: 7px;
+  cursor: pointer;
 }
 .container585_600 .headerButton p {
   font-size: 23px;
@@ -45,6 +46,7 @@
   display: flex;
   align-items: center;
   gap: 7px;
+  cursor: pointer;
 }
 .container565_585 .headerButton p {
   font-size: 21px;
@@ -80,6 +82,7 @@
   display: flex;
   align-items: center;
   gap: 7px;
+  cursor: pointer;
 }
 .container525_565 .headerButton p {
   font-size: 20px;
@@ -115,6 +118,7 @@
   display: flex;
   align-items: center;
   gap: 7px;
+  cursor: pointer;
 }
 .container485_525 .headerButton p {
   font-size: 19px;
@@ -150,6 +154,7 @@
   display: flex;
   align-items: center;
   gap: 7px;
+  cursor: pointer;
 }
 .container450_485 .headerButton p {
   font-size: 17px;
@@ -185,6 +190,7 @@
   display: flex;
   align-items: center;
   gap: 7px;
+  cursor: pointer;
 }
 .container410_450 .headerButton p {
   font-size: 16px;
@@ -220,6 +226,7 @@
   display: flex;
   align-items: center;
   gap: 7px;
+  cursor: pointer;
 }
 .container375_410 .headerButton p {
   font-size: 16px;

@@ -1,0 +1,39 @@
+import { useNavigate } from "react-router";
+import useWindowDimensions from "../../components/hooks/windowDimensions";
+import styles from "./filter_page.module.css";
+
+const FilterPage = () => {
+  const { width } = useWindowDimensions();
+  const navigate = useNavigate();
+  return (
+    <div
+      className={
+        width >= 585
+          ? styles.container585_600
+          : width >= 565
+          ? styles.container565_585
+          : width >= 525
+          ? styles.container525_565
+          : width >= 485
+          ? styles.container485_525
+          : width >= 450
+          ? styles.container450_485
+          : width >= 410
+          ? styles.container410_450
+          : styles.container375_410
+      }
+    >
+      <div className={styles.header}>
+        <div className={styles.closeButton} onClick={() => navigate("/catalog")}>
+          <p>Закрыть</p>
+        </div>
+        <p className={styles.namePageText}>Фильтры</p>
+        <div className={styles.selectButton}>
+          <p className={styles.selectButtonText}>Сбросить всё</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default FilterPage;
