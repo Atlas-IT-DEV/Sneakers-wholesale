@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router";
 import useWindowDimensions from "../../components/hooks/windowDimensions";
 import styles from "./filter_page.module.css";
+import Filters from "../../components/filters/filters";
 
 const FilterPage = () => {
   const { width } = useWindowDimensions();
@@ -24,13 +25,19 @@ const FilterPage = () => {
       }
     >
       <div className={styles.header}>
-        <div className={styles.closeButton} onClick={() => navigate("/catalog")}>
+        <div
+          className={styles.closeButton}
+          onClick={() => navigate("/catalog")}
+        >
           <p>Закрыть</p>
         </div>
         <p className={styles.namePageText}>Фильтры</p>
         <div className={styles.selectButton}>
           <p className={styles.selectButtonText}>Сбросить всё</p>
         </div>
+      </div>
+      <div className={styles.filters}>
+        <Filters />
       </div>
     </div>
   );

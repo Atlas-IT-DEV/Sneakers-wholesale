@@ -1,0 +1,49 @@
+.container585_600 {
+  background-color: black;
+  border-radius: 27px;
+  padding: 22px;
+}
+.container585_600 .priceText {
+  color: #f1f1f1;
+  font-family: TTForsTrialVariable;
+  font-size: 21px;
+  font-weight: 600;
+}
+.container585_600 .priceFilter {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+.container585_600 .priceFilter .inputPriceFilter {
+  background-color: #363636;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  color: #f1f1f1;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+}
+.container585_600 .mainFilters {
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+  gap: 10px;
+}
+.container585_600 .mainFilters .divideLine {
+  height: 2px;
+  background-color: #363636;
+}
+.container585_600 .mainFilters .filterRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container585_600 .mainFilters .filterRow .filterNameText {
+  color: #f1f1f1;
+  font-size: 21px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
