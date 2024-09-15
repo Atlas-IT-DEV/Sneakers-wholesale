@@ -25,11 +25,13 @@
   gap: 10px;
   align-items: center;
 }
+.container585_600 .buttonAdress img {
+  height: 30px;
+}
 .container585_600 .buttonAdress .buttonAdressText {
   color: #686868;
   font-size: 20px;
   font-family: TTForsTrialVariable;
-  margin-bottom: 2%;
 }
 .container565_585 {
   display: flex;
@@ -58,11 +60,13 @@
   gap: 10px;
   align-items: center;
 }
+.container565_585 .buttonAdress img {
+  height: 29px;
+}
 .container565_585 .buttonAdress .buttonAdressText {
   color: #686868;
   font-size: 19px;
   font-family: TTForsTrialVariable;
-  margin-bottom: 2%;
 }
 .container565_585 .geoIcon {
   width: 100px;
@@ -94,11 +98,13 @@
   gap: 10px;
   align-items: center;
 }
+.container525_565 .buttonAdress img {
+  height: 26px;
+}
 .container525_565 .buttonAdress .buttonAdressText {
   color: #686868;
   font-size: 17px;
   font-family: TTForsTrialVariable;
-  margin-bottom: 2%;
 }
 .container525_565 .geoIcon {
   width: 95px;
@@ -130,11 +136,13 @@
   gap: 10px;
   align-items: center;
 }
+.container485_525 .buttonAdress img {
+  height: 23px;
+}
 .container485_525 .buttonAdress .buttonAdressText {
   color: #686868;
   font-size: 15px;
   font-family: TTForsTrialVariable;
-  margin-bottom: 2%;
 }
 .container485_525 .geoIcon {
   width: 90px;
@@ -166,11 +174,13 @@
   gap: 10px;
   align-items: center;
 }
+.container450_485 .buttonAdress img {
+  height: 21px;
+}
 .container450_485 .buttonAdress .buttonAdressText {
   color: #686868;
   font-size: 14px;
   font-family: TTForsTrialVariable;
-  margin-bottom: 2%;
 }
 .container450_485 .geoIcon {
   width: 85px;
@@ -202,11 +212,13 @@
   gap: 10px;
   align-items: center;
 }
+.container410_450 .buttonAdress img {
+  height: 20px;
+}
 .container410_450 .buttonAdress .buttonAdressText {
   color: #686868;
   font-size: 13px;
   font-family: TTForsTrialVariable;
-  margin-bottom: 2%;
 }
 .container410_450 .geoIcon {
   width: 80px;
@@ -238,11 +250,13 @@
   gap: 10px;
   align-items: center;
 }
+.container375_410 .buttonAdress img {
+  height: 20px;
+}
 .container375_410 .buttonAdress .buttonAdressText {
   color: #686868;
   font-size: 13px;
   font-family: TTForsTrialVariable;
-  margin-bottom: 2%;
 }
 .container375_410 .geoIcon {
   width: 75px;

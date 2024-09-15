@@ -30,7 +30,6 @@
   height: 60px;
 }
 .container585_600 .buttonsBlock .buttonsRow .button img {
-  width: 9px;
   height: 41px;
 }
 .container585_600 .buttonsBlock .buttonsRow .activeButton {
@@ -79,6 +78,9 @@
   align-items: center;
   height: 60px;
 }
+.container565_585 .buttonsBlock .buttonsRow .button img {
+  height: 30px;
+}
 .container565_585 .buttonsBlock .buttonsRow .activeButton {
   background-color: #1c1c1c;
   cursor: pointer;
@@ -125,6 +127,9 @@
   align-items: center;
   height: 60px;
 }
+.container525_565 .buttonsBlock .buttonsRow .button img {
+  height: 27px;
+}
 .container525_565 .buttonsBlock .buttonsRow .activeButton {
   background-color: #1c1c1c;
   cursor: pointer;
@@ -170,6 +175,9 @@
   justify-content: center;
   align-items: center;
   height: 60px;
+}
+.container485_525 .buttonsBlock .buttonsRow .button img {
+  height: 24px;
 }
 .container485_525 .buttonsBlock .buttonsRow .activeButton {
   background-color: #1c1c1c;
@@ -218,6 +226,9 @@
   align-items: center;
   height: 60px;
 }
+.container450_485 .buttonsBlock .buttonsRow .button img {
+  height: 23px;
+}
 .container450_485 .buttonsBlock .buttonsRow .activeButton {
   background-color: #1c1c1c;
   cursor: pointer;
@@ -264,6 +275,9 @@
   justify-content: center;
   align-items: center;
   height: 60px;
+}
+.container410_450 .buttonsBlock .buttonsRow .button img {
+  height: 21px;
 }
 .container410_450 .buttonsBlock .buttonsRow .activeButton {
   background-color: #1c1c1c;
@@ -312,6 +326,9 @@
   align-items: center;
   height: 60px;
   padding: 0 5px 0 5px;
+}
+.container375_410 .buttonsBlock .buttonsRow .button img {
+  height: 21px;
 }
 .container375_410 .buttonsBlock .buttonsRow .activeButton {
   background-color: #1c1c1c;

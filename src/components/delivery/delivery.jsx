@@ -1,6 +1,7 @@
 import styles from "./delivery.module.css";
-import arrowRightIcon from "../../images/arrow_right_icon.svg";
 import useWindowDimensions from "../hooks/windowDimensions";
+
+import rightArrowGrayIcon from "../../images/arrow_select_gray.svg";
 
 const Delivery = () => {
   const { width } = useWindowDimensions();
@@ -25,14 +26,14 @@ const Delivery = () => {
       <div>
         <div className={styles.field}>
           <p className={styles.fieldText}>Доставка</p>
-          <img src={arrowRightIcon} alt="" />
+          <img src={rightArrowGrayIcon} alt="" />
         </div>
         <p className={styles.statusDeliveryText}>Узнать статус заказа</p>
       </div>
       <div className={styles.divideLine}></div>
       <div className={styles.field}>
         <p className={styles.fieldText}>Покупки</p>
-        <img src={arrowRightIcon} alt="" />
+        <img src={rightArrowGrayIcon} alt="" />
       </div>
     </div>
   );

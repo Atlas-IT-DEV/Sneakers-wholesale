@@ -1,7 +1,7 @@
 import styles from "./adress.module.css";
 import useWindowDimensions from "../hooks/windowDimensions";
 
-import arrowRightIcon from "../../images/arrow_right_icon.svg";
+import rightArrowGrayIcon from "../../images/arrow_select_gray.svg";
 import geolocationIcon from "../../images/geo.svg";
 
 const Adress = ({ adress = "ТЯК-Москва" }) => {
@@ -31,7 +31,7 @@ const Adress = ({ adress = "ТЯК-Москва" }) => {
           <p className={styles.buttonAdressText}>
             Адрес и подробный путеводитель
           </p>
-          <img src={arrowRightIcon} alt="" />
+          <img src={rightArrowGrayIcon} alt="" />
         </div>
       </div>
       <div className={styles.geoIcon}>

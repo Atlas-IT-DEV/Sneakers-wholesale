@@ -17,8 +17,7 @@
   cursor: pointer;
 }
 .container585_600 .field img {
-  width: 11px;
-  height: 19px;
+  height: 32px;
 }
 .container585_600 .fieldText {
   color: #f1f1f1;
@@ -49,6 +48,9 @@
   align-items: center;
   cursor: pointer;
 }
+.container565_585 .field img {
+  height: 30px;
+}
 .container565_585 .fieldText {
   color: #f1f1f1;
   font-size: 20px;
@@ -77,6 +79,9 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+}
+.container525_565 .field img {
+  height: 27px;
 }
 .container525_565 .fieldText {
   color: #f1f1f1;
@@ -107,6 +112,9 @@
   align-items: center;
   cursor: pointer;
 }
+.container485_525 .field img {
+  height: 24px;
+}
 .container485_525 .fieldText {
   color: #f1f1f1;
   font-size: 16px;
@@ -135,6 +143,9 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+}
+.container450_485 .field img {
+  height: 23px;
 }
 .container450_485 .fieldText {
   color: #f1f1f1;
@@ -165,6 +176,9 @@
   align-items: center;
   cursor: pointer;
 }
+.container410_450 .field img {
+  height: 21px;
+}
 .container410_450 .fieldText {
   color: #f1f1f1;
   font-size: 14px;
@@ -193,6 +207,9 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+}
+.container375_410 .field img {
+  height: 21px;
 }
 .container375_410 .fieldText {
   color: #f1f1f1;

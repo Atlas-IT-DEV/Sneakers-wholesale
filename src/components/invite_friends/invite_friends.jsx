@@ -1,6 +1,6 @@
 import useWindowDimensions from "../hooks/windowDimensions";
 import styles from "./invite_friends.module.css";
-import arrowWhite from "../../images/arrow_select_white.svg";
+import rightArrowWhiteIcon from "../../images/arrow_select_white.svg";
 
 const InviteFriends = () => {
   const { width } = useWindowDimensions();
@@ -24,7 +24,7 @@ const InviteFriends = () => {
     >
       <div className={styles.headerButton}>
         <p className={styles.headerButtonText}>Зови друзей</p>
-        <img src={arrowWhite} alt="" />
+        <img src={rightArrowWhiteIcon} alt="" />
       </div>
       <p className={styles.mainText}>
         Дарим по <span>500₽</span> тебе и приглашенному другу

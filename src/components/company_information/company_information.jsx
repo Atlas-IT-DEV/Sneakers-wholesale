@@ -1,5 +1,5 @@
 import styles from "./company_information.module.css";
-import arrowRightIcon from "../../images/arrow_right_icon.svg";
+import rightArrowGrayIcon from "../../images/arrow_select_gray.svg";
 import useWindowDimensions from "../hooks/windowDimensions";
 
 const CompanyInformation = () => {
@@ -24,18 +24,18 @@ const CompanyInformation = () => {
     >
       <div className={styles.field}>
         <p className={styles.fieldText}>Отзывы</p>
-        <img src={arrowRightIcon} alt="" />
+        <img src={rightArrowGrayIcon} alt="" />
       </div>
       <div className={styles.divideLine}></div>
       <div className={styles.field}>
         <p className={styles.fieldText}>Контакты</p>
-        <img src={arrowRightIcon} alt="" />
+        <img src={rightArrowGrayIcon} alt="" />
       </div>
       <div className={styles.divideLine}></div>
       <div>
         <div className={styles.field}>
           <p className={styles.fieldText}>FAQ</p>
-          <img src={arrowRightIcon} alt="" />
+          <img src={rightArrowGrayIcon} alt="" />
         </div>
         <p className={styles.aboutFaqtext}>
           Ответы на часто задаваемые вопросы

@@ -1,5 +1,5 @@
 import styles from "./about_delivery.module.css";
-import arrowRightIcon from "../../images/arrow_right_icon.svg";
+import rightArrowGrayIcon from "../../images/arrow_select_gray.svg";
 import useWindowDimensions from "../hooks/windowDimensions";
 
 const AboutDelivery = () => {
@@ -24,12 +24,12 @@ const AboutDelivery = () => {
     >
       <div className={styles.field}>
         <p className={styles.fieldText}>Условия доставки</p>
-        <img src={arrowRightIcon} alt="" />
+        <img src={rightArrowGrayIcon} alt="" />
       </div>
       <div className={styles.divideLine}></div>
       <div className={styles.field}>
         <p className={styles.fieldText}>Способы оплаты</p>
-        <img src={arrowRightIcon} alt="" />
+        <img src={rightArrowGrayIcon} alt="" />
       </div>
     </div>
   );
