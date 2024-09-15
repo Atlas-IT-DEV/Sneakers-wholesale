@@ -18,7 +18,7 @@
 }
 .container585_600 .header .closeButton p {
   color: #fcfcfc;
-  font-size: 24px;
+  font-size: 23px;
   font-family: TTForsTrialVariable;
   font-weight: 500;
 }
@@ -43,6 +43,300 @@
   font-family: TTForsTrialVariable;
 }
 .container585_600 .filters {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 0 22px 0 22px;
+}
+.container565_585 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container565_585 .header {
+  position: sticky;
+  padding-top: 70px;
+  padding-bottom: 14px;
+  background-color: #db6900;
+}
+.container565_585 .header .closeButton {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  cursor: pointer;
+}
+.container565_585 .header .closeButton p {
+  color: #fcfcfc;
+  font-size: 21px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container565_585 .header .namePageText {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+  font-size: 23px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .header .selectButton {
+  position: absolute;
+  cursor: pointer;
+  bottom: 14px;
+  right: 16px;
+}
+.container565_585 .header .selectButton .selectButtonText {
+  color: #fcfcfc;
+  font-size: 23px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .filters {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 0 22px 0 22px;
+}
+.container525_565 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container525_565 .header {
+  position: sticky;
+  padding-top: 70px;
+  padding-bottom: 14px;
+  background-color: #db6900;
+}
+.container525_565 .header .closeButton {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  cursor: pointer;
+}
+.container525_565 .header .closeButton p {
+  color: #fcfcfc;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container525_565 .header .namePageText {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+  font-size: 21px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .header .selectButton {
+  position: absolute;
+  cursor: pointer;
+  bottom: 14px;
+  right: 16px;
+}
+.container525_565 .header .selectButton .selectButtonText {
+  color: #fcfcfc;
+  font-size: 21px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .filters {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 0 22px 0 22px;
+}
+.container485_525 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container485_525 .header {
+  position: sticky;
+  padding-top: 70px;
+  padding-bottom: 14px;
+  background-color: #db6900;
+}
+.container485_525 .header .closeButton {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  cursor: pointer;
+}
+.container485_525 .header .closeButton p {
+  color: #fcfcfc;
+  font-size: 18px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container485_525 .header .namePageText {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+  font-size: 19px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .header .selectButton {
+  position: absolute;
+  cursor: pointer;
+  bottom: 14px;
+  right: 16px;
+}
+.container485_525 .header .selectButton .selectButtonText {
+  color: #fcfcfc;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .filters {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 0 22px 0 22px;
+}
+.container450_485 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container450_485 .header {
+  position: sticky;
+  padding-top: 70px;
+  padding-bottom: 14px;
+  background-color: #db6900;
+}
+.container450_485 .header .closeButton {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  cursor: pointer;
+}
+.container450_485 .header .closeButton p {
+  color: #fcfcfc;
+  font-size: 17px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container450_485 .header .namePageText {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .header .selectButton {
+  position: absolute;
+  cursor: pointer;
+  bottom: 14px;
+  right: 16px;
+}
+.container450_485 .header .selectButton .selectButtonText {
+  color: #fcfcfc;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .filters {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 0 22px 0 22px;
+}
+.container410_450 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container410_450 .header {
+  position: sticky;
+  padding-top: 70px;
+  padding-bottom: 14px;
+  background-color: #db6900;
+}
+.container410_450 .header .closeButton {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  cursor: pointer;
+}
+.container410_450 .header .closeButton p {
+  color: #fcfcfc;
+  font-size: 16px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container410_450 .header .namePageText {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .header .selectButton {
+  position: absolute;
+  cursor: pointer;
+  bottom: 14px;
+  right: 16px;
+}
+.container410_450 .header .selectButton .selectButtonText {
+  color: #fcfcfc;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .filters {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 0 22px 0 22px;
+}
+.container375_410 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container375_410 .header {
+  position: sticky;
+  padding-top: 70px;
+  padding-bottom: 14px;
+  background-color: #db6900;
+}
+.container375_410 .header .closeButton {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  cursor: pointer;
+}
+.container375_410 .header .closeButton p {
+  color: #fcfcfc;
+  font-size: 16px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container375_410 .header .namePageText {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .header .selectButton {
+  position: absolute;
+  cursor: pointer;
+  bottom: 14px;
+  right: 16px;
+}
+.container375_410 .header .selectButton .selectButtonText {
+  color: #fcfcfc;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .filters {
   margin-top: 15px;
   margin-bottom: 20px;
   padding: 0 22px 0 22px;

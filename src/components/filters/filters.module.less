@@ -63,7 +63,8 @@
         display: none;
       }
       .subFiltersOpen {
-        display: block;
+        display: flex;
+        flex-direction: column;
         opacity: 0;
         animation: fadeIn 0.5s forwards;
       }
@@ -96,19 +97,577 @@
 }
 
 .container565_585 {
+  background-color: black;
+  border-radius: 27px;
+  padding: 22px;
+  .priceText {
+    color: rgba(241, 241, 241, 1);
+    font-family: @font;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .priceFilter {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    .inputPriceFilter {
+      background-color: rgba(54, 54, 54, 1);
+      outline: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      color: rgba(241, 241, 241, 1);
+      font-size: 19px;
+      font-family: @font;
+    }
+  }
+  .mainFilters {
+    display: flex;
+    flex-direction: column;
+    margin-top: 22px;
+    gap: 10px;
+    .divideLine {
+      height: 2px;
+      background-color: rgba(54, 54, 54, 1);
+    }
+    .filterRow {
+      display: flex;
+      flex-direction: column;
+      .filterButton {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        .arrowClose {
+          transform: rotate(90deg);
+          transition: 0.1s;
+        }
+        .arrowOpen {
+          transform: rotate(0);
+          transition: 0.1s;
+        }
+        .filterNameText {
+          color: rgba(241, 241, 241, 1);
+          font-size: 20px;
+          font-family: @font;
+          font-weight: 600;
+        }
+      }
+      .subFiltersClose {
+        display: none;
+      }
+      .subFiltersOpen {
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        animation: fadeIn 0.5s forwards;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+      .subFilterRow {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        width: max-content;
+        .checkButton {
+          width: 18px;
+          height: 18px;
+          background-color: rgba(241, 241, 241, 1);
+          border-radius: 3px;
+        }
+        .checkButtonText {
+          font-family: @font;
+          font-size: 19px;
+          color: rgba(241, 241, 241, 1);
+        }
+      }
+    }
+  }
 }
 
 .container525_565 {
+  background-color: black;
+  border-radius: 27px;
+  padding: 22px;
+  .priceText {
+    color: rgba(241, 241, 241, 1);
+    font-family: @font;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .priceFilter {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    .inputPriceFilter {
+      background-color: rgba(54, 54, 54, 1);
+      outline: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      color: rgba(241, 241, 241, 1);
+      font-size: 17px;
+      font-family: @font;
+    }
+  }
+  .mainFilters {
+    display: flex;
+    flex-direction: column;
+    margin-top: 22px;
+    gap: 10px;
+    .divideLine {
+      height: 2px;
+      background-color: rgba(54, 54, 54, 1);
+    }
+    .filterRow {
+      display: flex;
+      flex-direction: column;
+      .filterButton {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        .arrowClose {
+          transform: rotate(90deg);
+          transition: 0.1s;
+        }
+        .arrowOpen {
+          transform: rotate(0);
+          transition: 0.1s;
+        }
+        .filterNameText {
+          color: rgba(241, 241, 241, 1);
+          font-size: 18px;
+          font-family: @font;
+          font-weight: 600;
+        }
+      }
+      .subFiltersClose {
+        display: none;
+      }
+      .subFiltersOpen {
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        animation: fadeIn 0.5s forwards;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+      .subFilterRow {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        width: max-content;
+        .checkButton {
+          width: 18px;
+          height: 18px;
+          background-color: rgba(241, 241, 241, 1);
+          border-radius: 3px;
+        }
+        .checkButtonText {
+          font-family: @font;
+          font-size: 17px;
+          color: rgba(241, 241, 241, 1);
+        }
+      }
+    }
+  }
 }
 
 .container485_525 {
+  background-color: black;
+  border-radius: 27px;
+  padding: 22px;
+  .priceText {
+    color: rgba(241, 241, 241, 1);
+    font-family: @font;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .priceFilter {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    .inputPriceFilter {
+      background-color: rgba(54, 54, 54, 1);
+      outline: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      color: rgba(241, 241, 241, 1);
+      font-size: 15px;
+      font-family: @font;
+    }
+  }
+  .mainFilters {
+    display: flex;
+    flex-direction: column;
+    margin-top: 22px;
+    gap: 10px;
+    .divideLine {
+      height: 2px;
+      background-color: rgba(54, 54, 54, 1);
+    }
+    .filterRow {
+      display: flex;
+      flex-direction: column;
+      .filterButton {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        .arrowClose {
+          transform: rotate(90deg);
+          transition: 0.1s;
+        }
+        .arrowOpen {
+          transform: rotate(0);
+          transition: 0.1s;
+        }
+        .filterNameText {
+          color: rgba(241, 241, 241, 1);
+          font-size: 16px;
+          font-family: @font;
+          font-weight: 600;
+        }
+      }
+      .subFiltersClose {
+        display: none;
+      }
+      .subFiltersOpen {
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        animation: fadeIn 0.5s forwards;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+      .subFilterRow {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        width: max-content;
+        .checkButton {
+          width: 18px;
+          height: 18px;
+          background-color: rgba(241, 241, 241, 1);
+          border-radius: 3px;
+        }
+        .checkButtonText {
+          font-family: @font;
+          font-size: 15px;
+          color: rgba(241, 241, 241, 1);
+        }
+      }
+    }
+  }
 }
 
 .container450_485 {
+  background-color: black;
+  border-radius: 27px;
+  padding: 22px;
+  .priceText {
+    color: rgba(241, 241, 241, 1);
+    font-family: @font;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .priceFilter {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    .inputPriceFilter {
+      background-color: rgba(54, 54, 54, 1);
+      outline: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      color: rgba(241, 241, 241, 1);
+      font-size: 14px;
+      font-family: @font;
+    }
+  }
+  .mainFilters {
+    display: flex;
+    flex-direction: column;
+    margin-top: 22px;
+    gap: 10px;
+    .divideLine {
+      height: 2px;
+      background-color: rgba(54, 54, 54, 1);
+    }
+    .filterRow {
+      display: flex;
+      flex-direction: column;
+      .filterButton {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        .arrowClose {
+          transform: rotate(90deg);
+          transition: 0.1s;
+        }
+        .arrowOpen {
+          transform: rotate(0);
+          transition: 0.1s;
+        }
+        .filterNameText {
+          color: rgba(241, 241, 241, 1);
+          font-size: 15px;
+          font-family: @font;
+          font-weight: 600;
+        }
+      }
+      .subFiltersClose {
+        display: none;
+      }
+      .subFiltersOpen {
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        animation: fadeIn 0.5s forwards;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+      .subFilterRow {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        width: max-content;
+        .checkButton {
+          width: 18px;
+          height: 18px;
+          background-color: rgba(241, 241, 241, 1);
+          border-radius: 3px;
+        }
+        .checkButtonText {
+          font-family: @font;
+          font-size: 14px;
+          color: rgba(241, 241, 241, 1);
+        }
+      }
+    }
+  }
 }
 
 .container410_450 {
+  background-color: black;
+  border-radius: 27px;
+  padding: 22px;
+  .priceText {
+    color: rgba(241, 241, 241, 1);
+    font-family: @font;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .priceFilter {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    .inputPriceFilter {
+      background-color: rgba(54, 54, 54, 1);
+      outline: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      color: rgba(241, 241, 241, 1);
+      font-size: 13px;
+      font-family: @font;
+    }
+  }
+  .mainFilters {
+    display: flex;
+    flex-direction: column;
+    margin-top: 22px;
+    gap: 10px;
+    .divideLine {
+      height: 2px;
+      background-color: rgba(54, 54, 54, 1);
+    }
+    .filterRow {
+      display: flex;
+      flex-direction: column;
+      .filterButton {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        .arrowClose {
+          transform: rotate(90deg);
+          transition: 0.1s;
+        }
+        .arrowOpen {
+          transform: rotate(0);
+          transition: 0.1s;
+        }
+        .filterNameText {
+          color: rgba(241, 241, 241, 1);
+          font-size: 14px;
+          font-family: @font;
+          font-weight: 600;
+        }
+      }
+      .subFiltersClose {
+        display: none;
+      }
+      .subFiltersOpen {
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        animation: fadeIn 0.5s forwards;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+      .subFilterRow {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        width: max-content;
+        .checkButton {
+          width: 18px;
+          height: 18px;
+          background-color: rgba(241, 241, 241, 1);
+          border-radius: 3px;
+        }
+        .checkButtonText {
+          font-family: @font;
+          font-size: 13px;
+          color: rgba(241, 241, 241, 1);
+        }
+      }
+    }
+  }
 }
 
 .container375_410 {
+  background-color: black;
+  border-radius: 27px;
+  padding: 22px;
+  .priceText {
+    color: rgba(241, 241, 241, 1);
+    font-family: @font;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .priceFilter {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    .inputPriceFilter {
+      background-color: rgba(54, 54, 54, 1);
+      outline: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      color: rgba(241, 241, 241, 1);
+      font-size: 13px;
+      font-family: @font;
+    }
+  }
+  .mainFilters {
+    display: flex;
+    flex-direction: column;
+    margin-top: 22px;
+    gap: 10px;
+    .divideLine {
+      height: 2px;
+      background-color: rgba(54, 54, 54, 1);
+    }
+    .filterRow {
+      display: flex;
+      flex-direction: column;
+      .filterButton {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        .arrowClose {
+          transform: rotate(90deg);
+          transition: 0.1s;
+        }
+        .arrowOpen {
+          transform: rotate(0);
+          transition: 0.1s;
+        }
+        .filterNameText {
+          color: rgba(241, 241, 241, 1);
+          font-size: 14px;
+          font-family: @font;
+          font-weight: 600;
+        }
+      }
+      .subFiltersClose {
+        display: none;
+      }
+      .subFiltersOpen {
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        animation: fadeIn 0.5s forwards;
+      }
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+      .subFilterRow {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        width: max-content;
+        .checkButton {
+          width: 18px;
+          height: 18px;
+          background-color: rgba(241, 241, 241, 1);
+          border-radius: 3px;
+        }
+        .checkButtonText {
+          font-family: @font;
+          font-size: 13px;
+          color: rgba(241, 241, 241, 1);
+        }
+      }
+    }
+  }
 }

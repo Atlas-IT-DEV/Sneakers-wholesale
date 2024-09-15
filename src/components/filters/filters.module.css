@@ -64,7 +64,8 @@
   display: none;
 }
 .container585_600 .mainFilters .filterRow .subFiltersOpen {
-  display: block;
+  display: flex;
+  flex-direction: column;
   opacity: 0;
   animation: fadeIn 0.5s forwards;
 }
@@ -90,5 +91,575 @@
 .container585_600 .mainFilters .filterRow .subFilterRow .checkButtonText {
   font-family: TTForsTrialVariable;
   font-size: 20px;
+  color: #f1f1f1;
+}
+.container565_585 {
+  background-color: black;
+  border-radius: 27px;
+  padding: 22px;
+}
+.container565_585 .priceText {
+  color: #f1f1f1;
+  font-family: TTForsTrialVariable;
+  font-size: 20px;
+  font-weight: 600;
+}
+.container565_585 .priceFilter {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+.container565_585 .priceFilter .inputPriceFilter {
+  background-color: #363636;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  color: #f1f1f1;
+  font-size: 19px;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .mainFilters {
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+  gap: 10px;
+}
+.container565_585 .mainFilters .divideLine {
+  height: 2px;
+  background-color: #363636;
+}
+.container565_585 .mainFilters .filterRow {
+  display: flex;
+  flex-direction: column;
+}
+.container565_585 .mainFilters .filterRow .filterButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.container565_585 .mainFilters .filterRow .filterButton .arrowClose {
+  transform: rotate(90deg);
+  transition: 0.1s;
+}
+.container565_585 .mainFilters .filterRow .filterButton .arrowOpen {
+  transform: rotate(0);
+  transition: 0.1s;
+}
+.container565_585 .mainFilters .filterRow .filterButton .filterNameText {
+  color: #f1f1f1;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container565_585 .mainFilters .filterRow .subFiltersClose {
+  display: none;
+}
+.container565_585 .mainFilters .filterRow .subFiltersOpen {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.container565_585 .mainFilters .filterRow .subFilterRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: max-content;
+}
+.container565_585 .mainFilters .filterRow .subFilterRow .checkButton {
+  width: 18px;
+  height: 18px;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+}
+.container565_585 .mainFilters .filterRow .subFilterRow .checkButtonText {
+  font-family: TTForsTrialVariable;
+  font-size: 19px;
+  color: #f1f1f1;
+}
+.container525_565 {
+  background-color: black;
+  border-radius: 27px;
+  padding: 22px;
+}
+.container525_565 .priceText {
+  color: #f1f1f1;
+  font-family: TTForsTrialVariable;
+  font-size: 18px;
+  font-weight: 600;
+}
+.container525_565 .priceFilter {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+.container525_565 .priceFilter .inputPriceFilter {
+  background-color: #363636;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  color: #f1f1f1;
+  font-size: 17px;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .mainFilters {
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+  gap: 10px;
+}
+.container525_565 .mainFilters .divideLine {
+  height: 2px;
+  background-color: #363636;
+}
+.container525_565 .mainFilters .filterRow {
+  display: flex;
+  flex-direction: column;
+}
+.container525_565 .mainFilters .filterRow .filterButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.container525_565 .mainFilters .filterRow .filterButton .arrowClose {
+  transform: rotate(90deg);
+  transition: 0.1s;
+}
+.container525_565 .mainFilters .filterRow .filterButton .arrowOpen {
+  transform: rotate(0);
+  transition: 0.1s;
+}
+.container525_565 .mainFilters .filterRow .filterButton .filterNameText {
+  color: #f1f1f1;
+  font-size: 18px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container525_565 .mainFilters .filterRow .subFiltersClose {
+  display: none;
+}
+.container525_565 .mainFilters .filterRow .subFiltersOpen {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.container525_565 .mainFilters .filterRow .subFilterRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: max-content;
+}
+.container525_565 .mainFilters .filterRow .subFilterRow .checkButton {
+  width: 18px;
+  height: 18px;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+}
+.container525_565 .mainFilters .filterRow .subFilterRow .checkButtonText {
+  font-family: TTForsTrialVariable;
+  font-size: 17px;
+  color: #f1f1f1;
+}
+.container485_525 {
+  background-color: black;
+  border-radius: 27px;
+  padding: 22px;
+}
+.container485_525 .priceText {
+  color: #f1f1f1;
+  font-family: TTForsTrialVariable;
+  font-size: 16px;
+  font-weight: 600;
+}
+.container485_525 .priceFilter {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+.container485_525 .priceFilter .inputPriceFilter {
+  background-color: #363636;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  color: #f1f1f1;
+  font-size: 15px;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .mainFilters {
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+  gap: 10px;
+}
+.container485_525 .mainFilters .divideLine {
+  height: 2px;
+  background-color: #363636;
+}
+.container485_525 .mainFilters .filterRow {
+  display: flex;
+  flex-direction: column;
+}
+.container485_525 .mainFilters .filterRow .filterButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.container485_525 .mainFilters .filterRow .filterButton .arrowClose {
+  transform: rotate(90deg);
+  transition: 0.1s;
+}
+.container485_525 .mainFilters .filterRow .filterButton .arrowOpen {
+  transform: rotate(0);
+  transition: 0.1s;
+}
+.container485_525 .mainFilters .filterRow .filterButton .filterNameText {
+  color: #f1f1f1;
+  font-size: 16px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container485_525 .mainFilters .filterRow .subFiltersClose {
+  display: none;
+}
+.container485_525 .mainFilters .filterRow .subFiltersOpen {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.container485_525 .mainFilters .filterRow .subFilterRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: max-content;
+}
+.container485_525 .mainFilters .filterRow .subFilterRow .checkButton {
+  width: 18px;
+  height: 18px;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+}
+.container485_525 .mainFilters .filterRow .subFilterRow .checkButtonText {
+  font-family: TTForsTrialVariable;
+  font-size: 15px;
+  color: #f1f1f1;
+}
+.container450_485 {
+  background-color: black;
+  border-radius: 27px;
+  padding: 22px;
+}
+.container450_485 .priceText {
+  color: #f1f1f1;
+  font-family: TTForsTrialVariable;
+  font-size: 15px;
+  font-weight: 600;
+}
+.container450_485 .priceFilter {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+.container450_485 .priceFilter .inputPriceFilter {
+  background-color: #363636;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  color: #f1f1f1;
+  font-size: 14px;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .mainFilters {
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+  gap: 10px;
+}
+.container450_485 .mainFilters .divideLine {
+  height: 2px;
+  background-color: #363636;
+}
+.container450_485 .mainFilters .filterRow {
+  display: flex;
+  flex-direction: column;
+}
+.container450_485 .mainFilters .filterRow .filterButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.container450_485 .mainFilters .filterRow .filterButton .arrowClose {
+  transform: rotate(90deg);
+  transition: 0.1s;
+}
+.container450_485 .mainFilters .filterRow .filterButton .arrowOpen {
+  transform: rotate(0);
+  transition: 0.1s;
+}
+.container450_485 .mainFilters .filterRow .filterButton .filterNameText {
+  color: #f1f1f1;
+  font-size: 15px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container450_485 .mainFilters .filterRow .subFiltersClose {
+  display: none;
+}
+.container450_485 .mainFilters .filterRow .subFiltersOpen {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.container450_485 .mainFilters .filterRow .subFilterRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: max-content;
+}
+.container450_485 .mainFilters .filterRow .subFilterRow .checkButton {
+  width: 18px;
+  height: 18px;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+}
+.container450_485 .mainFilters .filterRow .subFilterRow .checkButtonText {
+  font-family: TTForsTrialVariable;
+  font-size: 14px;
+  color: #f1f1f1;
+}
+.container410_450 {
+  background-color: black;
+  border-radius: 27px;
+  padding: 22px;
+}
+.container410_450 .priceText {
+  color: #f1f1f1;
+  font-family: TTForsTrialVariable;
+  font-size: 14px;
+  font-weight: 600;
+}
+.container410_450 .priceFilter {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+.container410_450 .priceFilter .inputPriceFilter {
+  background-color: #363636;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  color: #f1f1f1;
+  font-size: 13px;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .mainFilters {
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+  gap: 10px;
+}
+.container410_450 .mainFilters .divideLine {
+  height: 2px;
+  background-color: #363636;
+}
+.container410_450 .mainFilters .filterRow {
+  display: flex;
+  flex-direction: column;
+}
+.container410_450 .mainFilters .filterRow .filterButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.container410_450 .mainFilters .filterRow .filterButton .arrowClose {
+  transform: rotate(90deg);
+  transition: 0.1s;
+}
+.container410_450 .mainFilters .filterRow .filterButton .arrowOpen {
+  transform: rotate(0);
+  transition: 0.1s;
+}
+.container410_450 .mainFilters .filterRow .filterButton .filterNameText {
+  color: #f1f1f1;
+  font-size: 14px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container410_450 .mainFilters .filterRow .subFiltersClose {
+  display: none;
+}
+.container410_450 .mainFilters .filterRow .subFiltersOpen {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.container410_450 .mainFilters .filterRow .subFilterRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: max-content;
+}
+.container410_450 .mainFilters .filterRow .subFilterRow .checkButton {
+  width: 18px;
+  height: 18px;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+}
+.container410_450 .mainFilters .filterRow .subFilterRow .checkButtonText {
+  font-family: TTForsTrialVariable;
+  font-size: 13px;
+  color: #f1f1f1;
+}
+.container375_410 {
+  background-color: black;
+  border-radius: 27px;
+  padding: 22px;
+}
+.container375_410 .priceText {
+  color: #f1f1f1;
+  font-family: TTForsTrialVariable;
+  font-size: 14px;
+  font-weight: 600;
+}
+.container375_410 .priceFilter {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+.container375_410 .priceFilter .inputPriceFilter {
+  background-color: #363636;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  color: #f1f1f1;
+  font-size: 13px;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .mainFilters {
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+  gap: 10px;
+}
+.container375_410 .mainFilters .divideLine {
+  height: 2px;
+  background-color: #363636;
+}
+.container375_410 .mainFilters .filterRow {
+  display: flex;
+  flex-direction: column;
+}
+.container375_410 .mainFilters .filterRow .filterButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.container375_410 .mainFilters .filterRow .filterButton .arrowClose {
+  transform: rotate(90deg);
+  transition: 0.1s;
+}
+.container375_410 .mainFilters .filterRow .filterButton .arrowOpen {
+  transform: rotate(0);
+  transition: 0.1s;
+}
+.container375_410 .mainFilters .filterRow .filterButton .filterNameText {
+  color: #f1f1f1;
+  font-size: 14px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container375_410 .mainFilters .filterRow .subFiltersClose {
+  display: none;
+}
+.container375_410 .mainFilters .filterRow .subFiltersOpen {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.container375_410 .mainFilters .filterRow .subFilterRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: max-content;
+}
+.container375_410 .mainFilters .filterRow .subFilterRow .checkButton {
+  width: 18px;
+  height: 18px;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+}
+.container375_410 .mainFilters .filterRow .subFilterRow .checkButtonText {
+  font-family: TTForsTrialVariable;
+  font-size: 13px;
   color: #f1f1f1;
 }
