@@ -1,9 +1,440 @@
-.slider {
+.slideTrack {
+  display: flex;
+}
+.slideTrack .slider {
   width: 100%;
   display: flex;
   justify-content: center;
   cursor: pointer;
 }
-.slider .slideTrack {
+.slideTrack .slider .main_block1 {
+  width: 100vw;
   display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+.slideTrack .slider .main_block1 .container585_600 {
+  width: 80%;
+  height: 184px;
+  background-color: #e36e00;
+  padding: 20px 0 25px 35px;
+  border-radius: 25px;
+}
+.slideTrack .slider .main_block1 .container585_600 .nameCompany {
+  color: black;
+  font-weight: 800;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block1 .container585_600 .descriptionText {
+  color: #f1f1f1;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block1 .container585_600 .subDescriptionText {
+  color: #f1f1f1;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block1 .container565_585 {
+  width: 80%;
+  height: 184px;
+  background-color: #e36e00;
+  padding: 20px 0 25px 35px;
+  border-radius: 25px;
+}
+.slideTrack .slider .main_block1 .container565_585 .nameCompany {
+  color: black;
+  font-weight: 800;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block1 .container565_585 .descriptionText {
+  color: #f1f1f1;
+  font-size: 19px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block1 .container565_585 .subDescriptionText {
+  color: #f1f1f1;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block1 .container525_565 {
+  width: 80%;
+  height: 184px;
+  background-color: #e36e00;
+  padding: 20px 0 25px 35px;
+  border-radius: 25px;
+}
+.slideTrack .slider .main_block1 .container525_565 .nameCompany {
+  color: black;
+  font-weight: 800;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block1 .container525_565 .descriptionText {
+  color: #f1f1f1;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block1 .container525_565 .subDescriptionText {
+  color: #f1f1f1;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block1 .container485_525 {
+  width: 80%;
+  height: 184px;
+  background-color: #e36e00;
+  padding: 20px 0 25px 35px;
+  border-radius: 25px;
+}
+.slideTrack .slider .main_block1 .container485_525 .nameCompany {
+  color: black;
+  font-weight: 800;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block1 .container485_525 .descriptionText {
+  color: #f1f1f1;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block1 .container485_525 .subDescriptionText {
+  color: #f1f1f1;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block1 .container450_485 {
+  width: 80%;
+  height: 184px;
+  background-color: #e36e00;
+  padding: 20px 0 25px 35px;
+  border-radius: 25px;
+}
+.slideTrack .slider .main_block1 .container450_485 .nameCompany {
+  color: black;
+  font-weight: 800;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block1 .container450_485 .descriptionText {
+  color: #f1f1f1;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block1 .container450_485 .subDescriptionText {
+  color: #f1f1f1;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block1 .container410_450 {
+  width: 80%;
+  height: 184px;
+  background-color: #e36e00;
+  padding: 20px 0 25px 35px;
+  border-radius: 25px;
+}
+.slideTrack .slider .main_block1 .container410_450 .nameCompany {
+  color: black;
+  font-weight: 800;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block1 .container410_450 .descriptionText {
+  color: #f1f1f1;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block1 .container410_450 .subDescriptionText {
+  color: #f1f1f1;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block1 .container375_410 {
+  width: 80%;
+  height: 184px;
+  background-color: #e36e00;
+  padding: 20px 0 25px 35px;
+  border-radius: 25px;
+}
+.slideTrack .slider .main_block1 .container375_410 .nameCompany {
+  color: black;
+  font-weight: 800;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block1 .container375_410 .descriptionText {
+  color: #f1f1f1;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block1 .container375_410 .subDescriptionText {
+  color: #f1f1f1;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block2 {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+.slideTrack .slider .main_block2 .container585_600 {
+  position: relative;
+  width: 80%;
+  height: 184px;
+  background-color: #000000;
+  padding: 20px 0 25px 35px;
+  border-radius: 25px;
+}
+.slideTrack .slider .main_block2 .container585_600 .nameCompany {
+  color: #e36e00;
+  font-weight: 800;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block2 .container585_600 .descriptionText {
+  color: #f1f1f1;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block2 .container585_600 img:nth-child(3) {
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  right: 10%;
+  top: -10%;
+  transform: rotate(20deg);
+}
+.slideTrack .slider .main_block2 .container585_600 img:nth-child(4) {
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  right: 25%;
+  top: 50%;
+  transform: rotate(20deg);
+}
+.slideTrack .slider .main_block2 .container565_585 {
+  position: relative;
+  width: 80%;
+  height: 184px;
+  background-color: #000000;
+  padding: 20px 0 25px 35px;
+  border-radius: 25px;
+}
+.slideTrack .slider .main_block2 .container565_585 .nameCompany {
+  color: #e36e00;
+  font-weight: 800;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block2 .container565_585 .descriptionText {
+  color: #f1f1f1;
+  font-size: 19px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block2 .container565_585 img:nth-child(3) {
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  right: 10%;
+  top: -10%;
+  transform: rotate(20deg);
+}
+.slideTrack .slider .main_block2 .container565_585 img:nth-child(4) {
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  right: 25%;
+  top: 50%;
+  transform: rotate(20deg);
+}
+.slideTrack .slider .main_block2 .container525_565 {
+  position: relative;
+  width: 80%;
+  height: 184px;
+  background-color: #000000;
+  padding: 20px 0 25px 35px;
+  border-radius: 25px;
+}
+.slideTrack .slider .main_block2 .container525_565 .nameCompany {
+  color: #e36e00;
+  font-weight: 800;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block2 .container525_565 .descriptionText {
+  color: #f1f1f1;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block2 .container525_565 img:nth-child(3) {
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  right: 10%;
+  top: -10%;
+  transform: rotate(20deg);
+}
+.slideTrack .slider .main_block2 .container525_565 img:nth-child(4) {
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  right: 25%;
+  top: 50%;
+  transform: rotate(20deg);
+}
+.slideTrack .slider .main_block2 .container485_525 {
+  position: relative;
+  width: 80%;
+  height: 184px;
+  background-color: #000000;
+  padding: 20px 0 25px 35px;
+  border-radius: 25px;
+}
+.slideTrack .slider .main_block2 .container485_525 .nameCompany {
+  color: #e36e00;
+  font-weight: 800;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block2 .container485_525 .descriptionText {
+  color: #f1f1f1;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block2 .container485_525 img:nth-child(3) {
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  right: 10%;
+  top: -10%;
+  transform: rotate(20deg);
+}
+.slideTrack .slider .main_block2 .container485_525 img:nth-child(4) {
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  right: 25%;
+  top: 50%;
+  transform: rotate(20deg);
+}
+.slideTrack .slider .main_block2 .container450_485 {
+  position: relative;
+  width: 80%;
+  height: 184px;
+  background-color: #000000;
+  padding: 20px 0 25px 35px;
+  border-radius: 25px;
+}
+.slideTrack .slider .main_block2 .container450_485 .nameCompany {
+  color: #e36e00;
+  font-weight: 800;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block2 .container450_485 .descriptionText {
+  color: #f1f1f1;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block2 .container450_485 img:nth-child(3) {
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  right: 10%;
+  top: -10%;
+  transform: rotate(20deg);
+}
+.slideTrack .slider .main_block2 .container450_485 img:nth-child(4) {
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  right: 25%;
+  top: 50%;
+  transform: rotate(20deg);
+}
+.slideTrack .slider .main_block2 .container410_450 {
+  position: relative;
+  width: 80%;
+  height: 184px;
+  background-color: #000000;
+  padding: 20px 0 25px 35px;
+  border-radius: 25px;
+}
+.slideTrack .slider .main_block2 .container410_450 .nameCompany {
+  color: #e36e00;
+  font-weight: 800;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block2 .container410_450 .descriptionText {
+  color: #f1f1f1;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block2 .container410_450 img:nth-child(3) {
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  right: 10%;
+  top: -10%;
+  transform: rotate(20deg);
+}
+.slideTrack .slider .main_block2 .container410_450 img:nth-child(4) {
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  right: 25%;
+  top: 50%;
+  transform: rotate(20deg);
+}
+.slideTrack .slider .main_block2 .container375_410 {
+  position: relative;
+  width: 80%;
+  height: 184px;
+  background-color: #000000;
+  padding: 20px 0 25px 35px;
+  border-radius: 25px;
+}
+.slideTrack .slider .main_block2 .container375_410 .nameCompany {
+  color: #e36e00;
+  font-weight: 800;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block2 .container375_410 .descriptionText {
+  color: #f1f1f1;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.slideTrack .slider .main_block2 .container375_410 img:nth-child(3) {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: 10%;
+  top: -10%;
+  transform: rotate(20deg);
+}
+.slideTrack .slider .main_block2 .container375_410 img:nth-child(4) {
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  right: 25%;
+  top: 50%;
+  transform: rotate(20deg);
 }
