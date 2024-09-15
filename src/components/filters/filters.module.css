@@ -38,13 +38,57 @@
 }
 .container585_600 .mainFilters .filterRow {
   display: flex;
+  flex-direction: column;
+}
+.container585_600 .mainFilters .filterRow .filterButton {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
-.container585_600 .mainFilters .filterRow .filterNameText {
+.container585_600 .mainFilters .filterRow .filterButton .arrowClose {
+  transform: rotate(90deg);
+  transition: 0.1s;
+}
+.container585_600 .mainFilters .filterRow .filterButton .arrowOpen {
+  transform: rotate(0);
+  transition: 0.1s;
+}
+.container585_600 .mainFilters .filterRow .filterButton .filterNameText {
   color: #f1f1f1;
   font-size: 21px;
   font-family: TTForsTrialVariable;
   font-weight: 600;
+}
+.container585_600 .mainFilters .filterRow .subFiltersClose {
+  display: none;
+}
+.container585_600 .mainFilters .filterRow .subFiltersOpen {
+  display: block;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.container585_600 .mainFilters .filterRow .subFilterRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: max-content;
+}
+.container585_600 .mainFilters .filterRow .subFilterRow .checkButton {
+  width: 18px;
+  height: 18px;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+}
+.container585_600 .mainFilters .filterRow .subFilterRow .checkButtonText {
+  font-family: TTForsTrialVariable;
+  font-size: 20px;
+  color: #f1f1f1;
 }
