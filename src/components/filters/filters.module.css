@@ -46,6 +46,9 @@
   align-items: center;
   cursor: pointer;
 }
+.container585_600 .mainFilters .filterRow .filterButton img {
+  height: 31px;
+}
 .container585_600 .mainFilters .filterRow .filterButton .arrowClose {
   transform: rotate(90deg);
   transition: 0.1s;
@@ -140,6 +143,9 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+}
+.container565_585 .mainFilters .filterRow .filterButton img {
+  height: 30px;
 }
 .container565_585 .mainFilters .filterRow .filterButton .arrowClose {
   transform: rotate(90deg);
@@ -236,6 +242,9 @@
   align-items: center;
   cursor: pointer;
 }
+.container525_565 .mainFilters .filterRow .filterButton img {
+  height: 27px;
+}
 .container525_565 .mainFilters .filterRow .filterButton .arrowClose {
   transform: rotate(90deg);
   transition: 0.1s;
@@ -330,6 +339,9 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+}
+.container485_525 .mainFilters .filterRow .filterButton img {
+  height: 24px;
 }
 .container485_525 .mainFilters .filterRow .filterButton .arrowClose {
   transform: rotate(90deg);
@@ -426,6 +438,9 @@
   align-items: center;
   cursor: pointer;
 }
+.container450_485 .mainFilters .filterRow .filterButton img {
+  height: 23px;
+}
 .container450_485 .mainFilters .filterRow .filterButton .arrowClose {
   transform: rotate(90deg);
   transition: 0.1s;
@@ -521,6 +536,9 @@
   align-items: center;
   cursor: pointer;
 }
+.container410_450 .mainFilters .filterRow .filterButton img {
+  height: 21px;
+}
 .container410_450 .mainFilters .filterRow .filterButton .arrowClose {
   transform: rotate(90deg);
   transition: 0.1s;
@@ -615,6 +633,9 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+}
+.container375_410 .mainFilters .filterRow .filterButton img {
+  height: 21px;
 }
 .container375_410 .mainFilters .filterRow .filterButton .arrowClose {
   transform: rotate(90deg);
