@@ -5,7 +5,7 @@ import useWindowDimensions from "../hooks/windowDimensions";
 const Header = ({
   image = "https://legacy.reactjs.org/logo-og.png",
   user = "Имя Фамилия",
-  rank = "Новичок",
+  rank = "Бронза",
 }) => {
   const { width } = useWindowDimensions();
   return (
