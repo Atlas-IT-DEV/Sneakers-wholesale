@@ -1,31 +1,46 @@
 import styles from "./attention_modal.module.css";
+import rightArrowGrayIcon from "../../../images/arrow_select_gray.svg";
+import closeIcon from "../../../images/close_icon.svg";
+import { useState } from "react";
 
-import close_icon from "../../../images/close_icon.svg";
-import rightArrowIcon from "../../../images/arrow_right_icon.svg";
+import { Modal, ModalContent, ModalOverlay } from "@chakra-ui/react";
 
-const AttentionModal = ({ name_section = "", sum = "" }) => {
+const AttentionModal = ({ name_button = "" }) => {
+  const [modalVisible, setModalVisible] = useState(false);
   return (
-    <div className={styles.container}>
-      <div className={styles.modal}>
-        <div className={styles.closeButton} >
-          <img src={close_icon} alt="" />
-        </div>
-        <div className={styles.mainInfo}>
-          <div>
-            <p className={styles.mainText}>
-              Чтобы получить доступ <br /> к разделу {name_section} <br />
-              вам необходимо совершить <br />
-              покупки на сумму
-            </p>
-            <p className={styles.sumText}>{sum} ₽</p>
-          </div>
-          <div className={styles.conditionsButton}>
-            <p className={styles.conditionsText}>Ознакомиться с условиями</p>
-            <img src={rightArrowIcon} alt="" />
-          </div>
-        </div>
+    <>
+      <div
+        className={`${styles.button} ${styles.unActiveButton}`}
+        onClick={() => setModalVisible(true)}
+      >
+        <p className={styles.buttonText}>{name_button}</p>
+        <img src={rightArrowGrayIcon} alt="" />
       </div>
-    </div>
+      {modalVisible && (
+        <Modal isOpen={modalVisible} isCentered>
+          <ModalOverlay bg={"black"} closeOnOverlayClick={false} />
+          <ModalContent bg="rgba(28,28,28,1)" borderRadius={27} padding={25}>
+            <div className={styles.modalView}>
+              <div
+                className={styles.closeButton}
+                onClick={() => setModalVisible(false)}
+              >
+                <img src={closeIcon} alt="" />
+              </div>
+              <p className={styles.mainText}>
+                Чтобы получить доступ к разделу {name_button} Вам необходимо
+                совершить покупку на сумму <br />
+                <span>62 929 ₽</span>
+              </p>
+              <div className={styles.aboutButton}>
+                <p>Ознакомиться с условиями</p>
+                <img src={rightArrowGrayIcon} alt="" />
+              </div>
+            </div>
+          </ModalContent>
+        </Modal>
+      )}
+    </>
   );
 };
 export default AttentionModal;

@@ -11,17 +11,12 @@
   font-family: TTForsTrialVariable;
 }
 .container585_600 .buttonsBlock {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 12px;
   gap: 12px;
 }
-.container585_600 .buttonsBlock .buttonsRow {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-}
-.container585_600 .buttonsBlock .buttonsRow .button {
+.container585_600 .buttonsBlock .button {
   display: flex;
   width: 100%;
   gap: 5px;
@@ -29,23 +24,23 @@
   align-items: center;
   height: 60px;
 }
-.container585_600 .buttonsBlock .buttonsRow .button img {
+.container585_600 .buttonsBlock .button img {
   height: 41px;
 }
-.container585_600 .buttonsBlock .buttonsRow .activeButton {
+.container585_600 .buttonsBlock .button .buttonText {
+  font-size: 21px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container585_600 .buttonsBlock .activeButton {
   background-color: #1c1c1c;
   cursor: pointer;
   color: #f1f1f1;
 }
-.container585_600 .buttonsBlock .buttonsRow .unActiveButton {
+.container585_600 .buttonsBlock .unActiveButton {
   background-color: #0c0c0c;
   cursor: help;
   color: #9b9b9b;
-}
-.container585_600 .buttonsBlock .buttonsRow .buttonText {
-  font-size: 21px;
-  font-weight: 500;
-  font-family: TTForsTrialVariable;
 }
 .container565_585 {
   padding: 20px;
