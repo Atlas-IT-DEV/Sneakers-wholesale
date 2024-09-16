@@ -1,23 +1,5 @@
-.button {
-  display: flex;
-  width: 100%;
-  gap: 5px;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-  padding: 0 5px 0 5px;
-}
-.button img {
-  height: 41px;
-}
-.button .buttonText {
-  font-size: 21px;
-  font-weight: 500;
-  font-family: TTForsTrialVariable;
-  text-align: center;
-}
 .activeButton {
-  background-color: #1c1c1c;
+  background-color: #e41c1c;
   cursor: pointer;
   color: #f1f1f1;
 }
@@ -26,24 +8,145 @@
   cursor: help;
   color: #9b9b9b;
 }
-.modalView .closeButton {
+.button585_600 {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+.button585_600 img {
+  height: 41px;
+}
+.button585_600 .buttonText {
+  font-size: 21px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+  text-align: center;
+}
+.button565_585 {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+.button565_585 img {
+  height: 30px;
+}
+.button565_585 .buttonText {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+  text-align: center;
+}
+.button525_565 {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+.button525_565 img {
+  height: 27px;
+}
+.button525_565 .buttonText {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+  text-align: center;
+}
+.button485_525 {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+.button485_525 img {
+  height: 24px;
+}
+.button485_525 .buttonText {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+  text-align: center;
+}
+.button450_485 {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+.button450_485 img {
+  height: 23px;
+}
+.button450_485 .buttonText {
+  font-size: 15px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+  text-align: center;
+}
+.button410_450 {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 0 5px 0 5px;
+}
+.button410_450 img {
+  height: 21px;
+}
+.button410_450 .buttonText {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+  text-align: center;
+}
+.button375_410 {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 0 5px 0 5px;
+}
+.button375_410 img {
+  height: 21px;
+}
+.button375_410 .buttonText {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+  text-align: center;
+}
+.modal585_600 .closeButton {
   display: flex;
   justify-content: flex-end;
   cursor: pointer;
 }
-.modalView .mainText {
+.modal585_600 .mainText {
   color: #f1f1f1;
   text-align: center;
   padding: 0 38px 0 38px;
-  font-size: 22px;
+  font-size: 21px;
   font-family: TTForsTrialVariable;
   font-weight: 600;
   line-height: 28px;
 }
-.modalView .mainText span {
+.modal585_600 .mainText span {
   color: #e36e00;
 }
-.modalView .aboutButton {
+.modal585_600 .aboutButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,9 +154,222 @@
   gap: 8px;
   cursor: pointer;
 }
-.modalView .aboutButton p {
+.modal585_600 .aboutButton p {
   color: #7a7a7a;
+  font-family: TTForsTrialVariable;
+  font-size: 18px;
+  font-weight: 500;
 }
-.modalView .aboutButton img {
+.modal585_600 .aboutButton img {
+  height: 30px;
+}
+.modal565_585 .closeButton {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  height: 31px;
+}
+.modal565_585 .mainText {
+  color: #f1f1f1;
+  text-align: center;
+  padding: 0 38px 0 38px;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+  line-height: 28px;
+}
+.modal565_585 .mainText span {
+  color: #e36e00;
+}
+.modal565_585 .aboutButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+  gap: 8px;
+  cursor: pointer;
+}
+.modal565_585 .aboutButton p {
+  color: #7a7a7a;
+  font-family: TTForsTrialVariable;
+  font-size: 18px;
+  font-weight: 500;
+}
+.modal565_585 .aboutButton img {
+  height: 30px;
+}
+.modal525_565 .closeButton {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  height: 29px;
+}
+.modal525_565 .mainText {
+  color: #f1f1f1;
+  text-align: center;
+  padding: 0 38px 0 38px;
+  font-size: 18px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+  line-height: 28px;
+}
+.modal525_565 .mainText span {
+  color: #e36e00;
+}
+.modal525_565 .aboutButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+  gap: 8px;
+  cursor: pointer;
+}
+.modal525_565 .aboutButton p {
+  color: #7a7a7a;
+  font-family: TTForsTrialVariable;
+  font-size: 17px;
+  font-weight: 500;
+}
+.modal525_565 .aboutButton img {
+  height: 30px;
+}
+.modal485_525 .closeButton {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  height: 29px;
+}
+.modal485_525 .mainText {
+  color: #f1f1f1;
+  text-align: center;
+  padding: 0 33px 0 33px;
+  font-size: 16px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+  line-height: 28px;
+}
+.modal485_525 .mainText span {
+  color: #e36e00;
+}
+.modal485_525 .aboutButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+  gap: 8px;
+  cursor: pointer;
+}
+.modal485_525 .aboutButton p {
+  color: #7a7a7a;
+  font-family: TTForsTrialVariable;
+  font-size: 16px;
+  font-weight: 500;
+}
+.modal485_525 .aboutButton img {
+  height: 30px;
+}
+.modal450_485 .closeButton {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  height: 27px;
+}
+.modal450_485 .mainText {
+  color: #f1f1f1;
+  text-align: center;
+  padding: 0 33px 0 33px;
+  font-size: 15px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+  line-height: 28px;
+}
+.modal450_485 .mainText span {
+  color: #e36e00;
+}
+.modal450_485 .aboutButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+  gap: 8px;
+  cursor: pointer;
+}
+.modal450_485 .aboutButton p {
+  color: #7a7a7a;
+  font-family: TTForsTrialVariable;
+  font-size: 16px;
+  font-weight: 500;
+}
+.modal450_485 .aboutButton img {
+  height: 30px;
+}
+.modal410_450 .closeButton {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  height: 25px;
+}
+.modal410_450 .mainText {
+  color: #f1f1f1;
+  text-align: center;
+  padding: 0 38px 0 38px;
+  font-size: 14px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+  line-height: 28px;
+}
+.modal410_450 .mainText span {
+  color: #e36e00;
+}
+.modal410_450 .aboutButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+  gap: 8px;
+  cursor: pointer;
+}
+.modal410_450 .aboutButton p {
+  color: #7a7a7a;
+  font-family: TTForsTrialVariable;
+  font-size: 14px;
+  font-weight: 500;
+}
+.modal410_450 .aboutButton img {
+  height: 30px;
+}
+.modal375_410 .closeButton {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  height: 25px;
+}
+.modal375_410 .mainText {
+  color: #f1f1f1;
+  text-align: center;
+  padding: 0 38px 0 38px;
+  font-size: 14px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+  line-height: 28px;
+}
+.modal375_410 .mainText span {
+  color: #e36e00;
+}
+.modal375_410 .aboutButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+  gap: 8px;
+  cursor: pointer;
+}
+.modal375_410 .aboutButton p {
+  color: #7a7a7a;
+  font-family: TTForsTrialVariable;
+  font-size: 14px;
+  font-weight: 500;
+}
+.modal375_410 .aboutButton img {
   height: 30px;
 }

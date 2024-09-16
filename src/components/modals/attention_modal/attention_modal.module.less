@@ -1,13 +1,23 @@
 @font: TTForsTrialVariable;
 
-.button {
+.activeButton {
+  background-color: rgba(228, 28, 28, 1);
+  cursor: pointer;
+  color: rgba(241, 241, 241, 1);
+}
+.unActiveButton {
+  background-color: rgba(12, 12, 12, 1);
+  cursor: help;
+  color: rgba(155, 155, 155, 1);
+}
+
+.button585_600 {
   display: flex;
   width: 100%;
   gap: 5px;
   justify-content: center;
   align-items: center;
   height: 60px;
-  padding: 0 5px 0 5px;
   img {
     height: 41px;
   }
@@ -19,18 +29,117 @@
   }
 }
 
-.activeButton {
-  background-color: rgba(28, 28, 28, 1);
-  cursor: pointer;
-  color: rgba(241, 241, 241, 1);
-}
-.unActiveButton {
-  background-color: rgba(12, 12, 12, 1);
-  cursor: help;
-  color: rgba(155, 155, 155, 1);
+.button565_585 {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  img {
+    height: 30px;
+  }
+  .buttonText {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: @font;
+    text-align: center;
+  }
 }
 
-.modalView {
+.button525_565 {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  img {
+    height: 27px;
+  }
+  .buttonText {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: @font;
+    text-align: center;
+  }
+}
+
+.button485_525 {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  img {
+    height: 24px;
+  }
+  .buttonText {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: @font;
+    text-align: center;
+  }
+}
+
+.button450_485 {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  img {
+    height: 23px;
+  }
+  .buttonText {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: @font;
+    text-align: center;
+  }
+}
+
+.button410_450 {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 0 5px 0 5px;
+  img {
+    height: 21px;
+  }
+  .buttonText {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: @font;
+    text-align: center;
+  }
+}
+
+.button375_410 {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 0 5px 0 5px;
+  img {
+    height: 21px;
+  }
+  .buttonText {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: @font;
+    text-align: center;
+  }
+}
+
+.modal585_600 {
   .closeButton {
     display: flex;
     justify-content: flex-end;
@@ -40,7 +149,7 @@
     color: rgba(241, 241, 241, 1);
     text-align: center;
     padding: 0 38px 0 38px;
-    font-size: 22px;
+    font-size: 21px;
     font-family: @font;
     font-weight: 600;
     line-height: 28px;
@@ -57,6 +166,237 @@
     cursor: pointer;
     p {
       color: rgba(122, 122, 122, 1);
+      font-family: @font;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    img {
+      height: 30px;
+    }
+  }
+}
+
+.modal565_585 {
+  .closeButton {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    height: 31px;
+  }
+  .mainText {
+    color: rgba(241, 241, 241, 1);
+    text-align: center;
+    padding: 0 38px 0 38px;
+    font-size: 20px;
+    font-family: @font;
+    font-weight: 600;
+    line-height: 28px;
+    span {
+      color: rgba(227, 110, 0, 1);
+    }
+  }
+  .aboutButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+    gap: 8px;
+    cursor: pointer;
+    p {
+      color: rgba(122, 122, 122, 1);
+      font-family: @font;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    img {
+      height: 30px;
+    }
+  }
+}
+
+.modal525_565 {
+  .closeButton {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    height: 29px;
+  }
+  .mainText {
+    color: rgba(241, 241, 241, 1);
+    text-align: center;
+    padding: 0 38px 0 38px;
+    font-size: 18px;
+    font-family: @font;
+    font-weight: 600;
+    line-height: 28px;
+    span {
+      color: rgba(227, 110, 0, 1);
+    }
+  }
+  .aboutButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+    gap: 8px;
+    cursor: pointer;
+    p {
+      color: rgba(122, 122, 122, 1);
+      font-family: @font;
+      font-size: 17px;
+      font-weight: 500;
+    }
+    img {
+      height: 30px;
+    }
+  }
+}
+
+.modal485_525 {
+  .closeButton {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    height: 29px;
+  }
+  .mainText {
+    color: rgba(241, 241, 241, 1);
+    text-align: center;
+    padding: 0 33px 0 33px;
+    font-size: 16px;
+    font-family: @font;
+    font-weight: 600;
+    line-height: 28px;
+    span {
+      color: rgba(227, 110, 0, 1);
+    }
+  }
+  .aboutButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+    gap: 8px;
+    cursor: pointer;
+    p {
+      color: rgba(122, 122, 122, 1);
+      font-family: @font;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    img {
+      height: 30px;
+    }
+  }
+}
+
+.modal450_485 {
+  .closeButton {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    height: 27px;
+  }
+  .mainText {
+    color: rgba(241, 241, 241, 1);
+    text-align: center;
+    padding: 0 33px 0 33px;
+    font-size: 15px;
+    font-family: @font;
+    font-weight: 600;
+    line-height: 28px;
+    span {
+      color: rgba(227, 110, 0, 1);
+    }
+  }
+  .aboutButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+    gap: 8px;
+    cursor: pointer;
+    p {
+      color: rgba(122, 122, 122, 1);
+      font-family: @font;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    img {
+      height: 30px;
+    }
+  }
+}
+
+.modal410_450 {
+  .closeButton {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    height: 25px;
+  }
+  .mainText {
+    color: rgba(241, 241, 241, 1);
+    text-align: center;
+    padding: 0 38px 0 38px;
+    font-size: 14px;
+    font-family: @font;
+    font-weight: 600;
+    line-height: 28px;
+    span {
+      color: rgba(227, 110, 0, 1);
+    }
+  }
+  .aboutButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+    gap: 8px;
+    cursor: pointer;
+    p {
+      color: rgba(122, 122, 122, 1);
+      font-family: @font;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    img {
+      height: 30px;
+    }
+  }
+}
+
+.modal375_410 {
+  .closeButton {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    height: 25px;
+  }
+  .mainText {
+    color: rgba(241, 241, 241, 1);
+    text-align: center;
+    padding: 0 38px 0 38px;
+    font-size: 14px;
+    font-family: @font;
+    font-weight: 600;
+    line-height: 28px;
+    span {
+      color: rgba(227, 110, 0, 1);
+    }
+  }
+  .aboutButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+    gap: 8px;
+    cursor: pointer;
+    p {
+      color: rgba(122, 122, 122, 1);
+      font-family: @font;
+      font-size: 14px;
+      font-weight: 500;
     }
     img {
       height: 30px;

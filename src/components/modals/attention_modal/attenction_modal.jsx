@@ -2,15 +2,31 @@ import styles from "./attention_modal.module.css";
 import rightArrowGrayIcon from "../../../images/arrow_select_gray.svg";
 import closeIcon from "../../../images/close_icon.svg";
 import { useState } from "react";
+import useWindowDimensions from "../../hooks/windowDimensions";
 
 import { Modal, ModalContent, ModalOverlay } from "@chakra-ui/react";
 
 const AttentionModal = ({ name_button = "" }) => {
   const [modalVisible, setModalVisible] = useState(false);
+  const { width } = useWindowDimensions();
   return (
     <>
       <div
-        className={`${styles.button} ${styles.unActiveButton}`}
+        className={`${
+          width >= 585
+            ? styles.button585_600
+            : width >= 565
+            ? styles.button565_585
+            : width >= 525
+            ? styles.button525_565
+            : width >= 485
+            ? styles.button485_525
+            : width >= 450
+            ? styles.button450_485
+            : width >= 410
+            ? styles.button410_450
+            : styles.button375_410
+        } ${styles.unActiveButton}`}
         onClick={() => setModalVisible(true)}
       >
         <p className={styles.buttonText}>{name_button}</p>
@@ -20,7 +36,23 @@ const AttentionModal = ({ name_button = "" }) => {
         <Modal isOpen={modalVisible} isCentered>
           <ModalOverlay bg={"black"} closeOnOverlayClick={false} />
           <ModalContent bg="rgba(28,28,28,1)" borderRadius={27} padding={25}>
-            <div className={styles.modalView}>
+            <div
+              className={
+                width >= 585
+                  ? styles.modal585_600
+                  : width >= 565
+                  ? styles.modal565_585
+                  : width >= 525
+                  ? styles.modal525_565
+                  : width >= 485
+                  ? styles.modal485_525
+                  : width >= 450
+                  ? styles.modal450_485
+                  : width >= 410
+                  ? styles.modal410_450
+                  : styles.modal375_410
+              }
+            >
               <div
                 className={styles.closeButton}
                 onClick={() => setModalVisible(false)}

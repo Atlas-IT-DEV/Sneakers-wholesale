@@ -58,41 +58,36 @@
     font-family: @font;
   }
   .buttonsBlock {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin-top: 12px;
     gap: 12px;
-    .buttonsRow {
+    .button {
       display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      .button {
-        display: flex;
-        width: 100%;
-        gap: 5px;
-        justify-content: center;
-        align-items: center;
-        height: 60px;
-        img {
-          height: 30px;
-        }
+      width: 100%;
+      gap: 5px;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+      img {
+        height: 30px;
       }
 
-      .activeButton {
-        background-color: rgba(28, 28, 28, 1);
-        cursor: pointer;
-        color: rgba(241, 241, 241, 1);
-      }
-      .unActiveButton {
-        background-color: rgba(12, 12, 12, 1);
-        cursor: help;
-        color: rgba(155, 155, 155, 1);
-      }
       .buttonText {
         font-size: 20px;
         font-weight: 500;
         font-family: @font;
       }
+    }
+    .activeButton {
+      background-color: rgba(28, 28, 28, 1);
+      cursor: pointer;
+      color: rgba(241, 241, 241, 1);
+    }
+    .unActiveButton {
+      background-color: rgba(12, 12, 12, 1);
+      cursor: help;
+      color: rgba(155, 155, 155, 1);
     }
   }
 }
@@ -109,41 +104,36 @@
     font-family: @font;
   }
   .buttonsBlock {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin-top: 12px;
     gap: 12px;
-    .buttonsRow {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      .button {
-        display: flex;
-        width: 100%;
-        gap: 5px;
-        justify-content: center;
-        align-items: center;
-        height: 60px;
-        img {
-          height: 27px;
-        }
-      }
 
-      .activeButton {
-        background-color: rgba(28, 28, 28, 1);
-        cursor: pointer;
-        color: rgba(241, 241, 241, 1);
-      }
-      .unActiveButton {
-        background-color: rgba(12, 12, 12, 1);
-        cursor: help;
-        color: rgba(155, 155, 155, 1);
+    .button {
+      display: flex;
+      width: 100%;
+      gap: 5px;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+      img {
+        height: 27px;
       }
       .buttonText {
         font-size: 18px;
         font-weight: 500;
         font-family: @font;
       }
+    }
+    .activeButton {
+      background-color: rgba(28, 28, 28, 1);
+      cursor: pointer;
+      color: rgba(241, 241, 241, 1);
+    }
+    .unActiveButton {
+      background-color: rgba(12, 12, 12, 1);
+      cursor: help;
+      color: rgba(155, 155, 155, 1);
     }
   }
 }
@@ -160,43 +150,38 @@
     font-family: @font;
   }
   .buttonsBlock {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin-top: 12px;
     gap: 12px;
-    .buttonsRow {
+    .button {
       display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      .button {
-        display: flex;
-        width: 100%;
-        gap: 5px;
-        justify-content: center;
-        align-items: center;
-        height: 60px;
-        img {
-          height: 24px;
-        }
+      width: 100%;
+      gap: 5px;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+      img {
+        height: 24px;
       }
+    }
+    .buttonText {
+      font-size: 16px;
+      font-weight: 500;
+      font-family: @font;
 
-      .activeButton {
-        background-color: rgba(28, 28, 28, 1);
-        cursor: pointer;
-        color: rgba(241, 241, 241, 1);
-      }
-      .unActiveButton {
-        background-color: rgba(12, 12, 12, 1);
-        cursor: help;
-        color: rgba(155, 155, 155, 1);
-      }
-      .buttonText {
-        font-size: 16px;
-        font-weight: 500;
-        font-family: @font;
+      text-align: center;
+    }
 
-        text-align: center;
-      }
+    .activeButton {
+      background-color: rgba(28, 28, 28, 1);
+      cursor: pointer;
+      color: rgba(241, 241, 241, 1);
+    }
+    .unActiveButton {
+      background-color: rgba(12, 12, 12, 1);
+      cursor: help;
+      color: rgba(155, 155, 155, 1);
     }
   }
 }
@@ -213,43 +198,39 @@
     font-family: @font;
   }
   .buttonsBlock {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin-top: 12px;
     gap: 12px;
-    .buttonsRow {
+
+    .button {
       display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      .button {
-        display: flex;
-        width: 100%;
-        gap: 5px;
-        justify-content: center;
-        align-items: center;
-        height: 60px;
-        img {
-          height: 23px;
-        }
+      width: 100%;
+      gap: 5px;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+      img {
+        height: 23px;
       }
+    }
+    .buttonText {
+      font-size: 15px;
+      font-weight: 500;
+      font-family: @font;
 
-      .activeButton {
-        background-color: rgba(28, 28, 28, 1);
-        cursor: pointer;
-        color: rgba(241, 241, 241, 1);
-      }
-      .unActiveButton {
-        background-color: rgba(12, 12, 12, 1);
-        cursor: help;
-        color: rgba(155, 155, 155, 1);
-      }
-      .buttonText {
-        font-size: 15px;
-        font-weight: 500;
-        font-family: @font;
+      text-align: center;
+    }
 
-        text-align: center;
-      }
+    .activeButton {
+      background-color: rgba(28, 28, 28, 1);
+      cursor: pointer;
+      color: rgba(241, 241, 241, 1);
+    }
+    .unActiveButton {
+      background-color: rgba(12, 12, 12, 1);
+      cursor: help;
+      color: rgba(155, 155, 155, 1);
     }
   }
 }
@@ -266,43 +247,39 @@
     font-family: @font;
   }
   .buttonsBlock {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin-top: 12px;
     gap: 12px;
-    .buttonsRow {
+
+    .button {
       display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      .button {
-        display: flex;
-        width: 100%;
-        gap: 5px;
-        justify-content: center;
-        align-items: center;
-        height: 60px;
-        img {
-          height: 21px;
-        }
+      width: 100%;
+      gap: 5px;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+      img {
+        height: 21px;
       }
+    }
+    .buttonText {
+      font-size: 14px;
+      font-weight: 500;
+      font-family: @font;
 
-      .activeButton {
-        background-color: rgba(28, 28, 28, 1);
-        cursor: pointer;
-        color: rgba(241, 241, 241, 1);
-      }
-      .unActiveButton {
-        background-color: rgba(12, 12, 12, 1);
-        cursor: help;
-        color: rgba(155, 155, 155, 1);
-      }
-      .buttonText {
-        font-size: 14px;
-        font-weight: 500;
-        font-family: @font;
+      text-align: center;
+    }
 
-        text-align: center;
-      }
+    .activeButton {
+      background-color: rgba(28, 28, 28, 1);
+      cursor: pointer;
+      color: rgba(241, 241, 241, 1);
+    }
+    .unActiveButton {
+      background-color: rgba(12, 12, 12, 1);
+      cursor: help;
+      color: rgba(155, 155, 155, 1);
     }
   }
 }
@@ -319,44 +296,39 @@
     font-family: @font;
   }
   .buttonsBlock {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     margin-top: 12px;
     gap: 12px;
-    .buttonsRow {
+    .button {
       display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      .button {
-        display: flex;
-        width: 100%;
-        gap: 5px;
-        justify-content: center;
-        align-items: center;
-        height: 60px;
-        padding: 0 5px 0 5px;
-        img {
-          height: 21px;
-        }
+      width: 100%;
+      gap: 5px;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+      padding: 0 5px 0 5px;
+      img {
+        height: 21px;
       }
+    }
+    .buttonText {
+      font-size: 14px;
+      font-weight: 500;
+      font-family: @font;
 
-      .activeButton {
-        background-color: rgba(28, 28, 28, 1);
-        cursor: pointer;
-        color: rgba(241, 241, 241, 1);
-      }
-      .unActiveButton {
-        background-color: rgba(12, 12, 12, 1);
-        cursor: help;
-        color: rgba(155, 155, 155, 1);
-      }
-      .buttonText {
-        font-size: 14px;
-        font-weight: 500;
-        font-family: @font;
+      text-align: center;
+    }
 
-        text-align: center;
-      }
+    .activeButton {
+      background-color: rgba(28, 28, 28, 1);
+      cursor: pointer;
+      color: rgba(241, 241, 241, 1);
+    }
+    .unActiveButton {
+      background-color: rgba(12, 12, 12, 1);
+      cursor: help;
+      color: rgba(155, 155, 155, 1);
     }
   }
 }

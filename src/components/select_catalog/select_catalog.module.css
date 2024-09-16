@@ -55,17 +55,12 @@
   font-family: TTForsTrialVariable;
 }
 .container565_585 .buttonsBlock {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 12px;
   gap: 12px;
 }
-.container565_585 .buttonsBlock .buttonsRow {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-}
-.container565_585 .buttonsBlock .buttonsRow .button {
+.container565_585 .buttonsBlock .button {
   display: flex;
   width: 100%;
   gap: 5px;
@@ -73,23 +68,23 @@
   align-items: center;
   height: 60px;
 }
-.container565_585 .buttonsBlock .buttonsRow .button img {
+.container565_585 .buttonsBlock .button img {
   height: 30px;
 }
-.container565_585 .buttonsBlock .buttonsRow .activeButton {
+.container565_585 .buttonsBlock .button .buttonText {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .buttonsBlock .activeButton {
   background-color: #1c1c1c;
   cursor: pointer;
   color: #f1f1f1;
 }
-.container565_585 .buttonsBlock .buttonsRow .unActiveButton {
+.container565_585 .buttonsBlock .unActiveButton {
   background-color: #0c0c0c;
   cursor: help;
   color: #9b9b9b;
-}
-.container565_585 .buttonsBlock .buttonsRow .buttonText {
-  font-size: 20px;
-  font-weight: 500;
-  font-family: TTForsTrialVariable;
 }
 .container525_565 {
   padding: 20px;
@@ -104,17 +99,12 @@
   font-family: TTForsTrialVariable;
 }
 .container525_565 .buttonsBlock {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 12px;
   gap: 12px;
 }
-.container525_565 .buttonsBlock .buttonsRow {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-}
-.container525_565 .buttonsBlock .buttonsRow .button {
+.container525_565 .buttonsBlock .button {
   display: flex;
   width: 100%;
   gap: 5px;
@@ -122,23 +112,23 @@
   align-items: center;
   height: 60px;
 }
-.container525_565 .buttonsBlock .buttonsRow .button img {
+.container525_565 .buttonsBlock .button img {
   height: 27px;
 }
-.container525_565 .buttonsBlock .buttonsRow .activeButton {
+.container525_565 .buttonsBlock .button .buttonText {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .buttonsBlock .activeButton {
   background-color: #1c1c1c;
   cursor: pointer;
   color: #f1f1f1;
 }
-.container525_565 .buttonsBlock .buttonsRow .unActiveButton {
+.container525_565 .buttonsBlock .unActiveButton {
   background-color: #0c0c0c;
   cursor: help;
   color: #9b9b9b;
-}
-.container525_565 .buttonsBlock .buttonsRow .buttonText {
-  font-size: 18px;
-  font-weight: 500;
-  font-family: TTForsTrialVariable;
 }
 .container485_525 {
   padding: 20px;
@@ -153,17 +143,12 @@
   font-family: TTForsTrialVariable;
 }
 .container485_525 .buttonsBlock {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 12px;
   gap: 12px;
 }
-.container485_525 .buttonsBlock .buttonsRow {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-}
-.container485_525 .buttonsBlock .buttonsRow .button {
+.container485_525 .buttonsBlock .button {
   display: flex;
   width: 100%;
   gap: 5px;
@@ -171,24 +156,24 @@
   align-items: center;
   height: 60px;
 }
-.container485_525 .buttonsBlock .buttonsRow .button img {
+.container485_525 .buttonsBlock .button img {
   height: 24px;
 }
-.container485_525 .buttonsBlock .buttonsRow .activeButton {
-  background-color: #1c1c1c;
-  cursor: pointer;
-  color: #f1f1f1;
-}
-.container485_525 .buttonsBlock .buttonsRow .unActiveButton {
-  background-color: #0c0c0c;
-  cursor: help;
-  color: #9b9b9b;
-}
-.container485_525 .buttonsBlock .buttonsRow .buttonText {
+.container485_525 .buttonsBlock .buttonText {
   font-size: 16px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
   text-align: center;
+}
+.container485_525 .buttonsBlock .activeButton {
+  background-color: #1c1c1c;
+  cursor: pointer;
+  color: #f1f1f1;
+}
+.container485_525 .buttonsBlock .unActiveButton {
+  background-color: #0c0c0c;
+  cursor: help;
+  color: #9b9b9b;
 }
 .container450_485 {
   padding: 20px;
@@ -203,17 +188,12 @@
   font-family: TTForsTrialVariable;
 }
 .container450_485 .buttonsBlock {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 12px;
   gap: 12px;
 }
-.container450_485 .buttonsBlock .buttonsRow {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-}
-.container450_485 .buttonsBlock .buttonsRow .button {
+.container450_485 .buttonsBlock .button {
   display: flex;
   width: 100%;
   gap: 5px;
@@ -221,24 +201,24 @@
   align-items: center;
   height: 60px;
 }
-.container450_485 .buttonsBlock .buttonsRow .button img {
+.container450_485 .buttonsBlock .button img {
   height: 23px;
 }
-.container450_485 .buttonsBlock .buttonsRow .activeButton {
-  background-color: #1c1c1c;
-  cursor: pointer;
-  color: #f1f1f1;
-}
-.container450_485 .buttonsBlock .buttonsRow .unActiveButton {
-  background-color: #0c0c0c;
-  cursor: help;
-  color: #9b9b9b;
-}
-.container450_485 .buttonsBlock .buttonsRow .buttonText {
+.container450_485 .buttonsBlock .buttonText {
   font-size: 15px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
   text-align: center;
+}
+.container450_485 .buttonsBlock .activeButton {
+  background-color: #1c1c1c;
+  cursor: pointer;
+  color: #f1f1f1;
+}
+.container450_485 .buttonsBlock .unActiveButton {
+  background-color: #0c0c0c;
+  cursor: help;
+  color: #9b9b9b;
 }
 .container410_450 {
   padding: 20px;
@@ -253,17 +233,12 @@
   font-family: TTForsTrialVariable;
 }
 .container410_450 .buttonsBlock {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 12px;
   gap: 12px;
 }
-.container410_450 .buttonsBlock .buttonsRow {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-}
-.container410_450 .buttonsBlock .buttonsRow .button {
+.container410_450 .buttonsBlock .button {
   display: flex;
   width: 100%;
   gap: 5px;
@@ -271,24 +246,24 @@
   align-items: center;
   height: 60px;
 }
-.container410_450 .buttonsBlock .buttonsRow .button img {
+.container410_450 .buttonsBlock .button img {
   height: 21px;
 }
-.container410_450 .buttonsBlock .buttonsRow .activeButton {
-  background-color: #1c1c1c;
-  cursor: pointer;
-  color: #f1f1f1;
-}
-.container410_450 .buttonsBlock .buttonsRow .unActiveButton {
-  background-color: #0c0c0c;
-  cursor: help;
-  color: #9b9b9b;
-}
-.container410_450 .buttonsBlock .buttonsRow .buttonText {
+.container410_450 .buttonsBlock .buttonText {
   font-size: 14px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
   text-align: center;
+}
+.container410_450 .buttonsBlock .activeButton {
+  background-color: #1c1c1c;
+  cursor: pointer;
+  color: #f1f1f1;
+}
+.container410_450 .buttonsBlock .unActiveButton {
+  background-color: #0c0c0c;
+  cursor: help;
+  color: #9b9b9b;
 }
 .container375_410 {
   padding: 20px;
@@ -303,17 +278,12 @@
   font-family: TTForsTrialVariable;
 }
 .container375_410 .buttonsBlock {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 12px;
   gap: 12px;
 }
-.container375_410 .buttonsBlock .buttonsRow {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-}
-.container375_410 .buttonsBlock .buttonsRow .button {
+.container375_410 .buttonsBlock .button {
   display: flex;
   width: 100%;
   gap: 5px;
@@ -322,22 +292,22 @@
   height: 60px;
   padding: 0 5px 0 5px;
 }
-.container375_410 .buttonsBlock .buttonsRow .button img {
+.container375_410 .buttonsBlock .button img {
   height: 21px;
 }
-.container375_410 .buttonsBlock .buttonsRow .activeButton {
-  background-color: #1c1c1c;
-  cursor: pointer;
-  color: #f1f1f1;
-}
-.container375_410 .buttonsBlock .buttonsRow .unActiveButton {
-  background-color: #0c0c0c;
-  cursor: help;
-  color: #9b9b9b;
-}
-.container375_410 .buttonsBlock .buttonsRow .buttonText {
+.container375_410 .buttonsBlock .buttonText {
   font-size: 14px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
   text-align: center;
+}
+.container375_410 .buttonsBlock .activeButton {
+  background-color: #1c1c1c;
+  cursor: pointer;
+  color: #f1f1f1;
+}
+.container375_410 .buttonsBlock .unActiveButton {
+  background-color: #0c0c0c;
+  cursor: help;
+  color: #9b9b9b;
 }
