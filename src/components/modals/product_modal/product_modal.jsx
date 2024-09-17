@@ -1,54 +1,62 @@
-import styles from "./product_card.module.css";
-import favouriteInactiveIcon from "../../images/favourite_inactive_icon.svg";
-import favouriteActiveIcon from "../../images/favourite_active_icon.svg";
-import shoppingIcon from "../../images/shopping_icon.svg";
+import styles from "./product_modal.module.css";
+
+import favouriteInactiveIcon from "../../../images/favourite_inactive_icon.svg";
+import favouriteActiveIcon from "../../../images/favourite_active_icon.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
-import { FreeMode, Navigation, Pagination } from "swiper/modules";
-import useWindowDimensions from "../hooks/windowDimensions";
-import { useState } from "react";
-import ProductModal from "../modals/product_modal/product_modal";
+import "swiper/css/pagination";
 
-const ProductCard = ({
-  countProduct = "8 пар (опт)",
-  price = 18400,
-  oldPrice = 20000,
-  model_name = "",
-}) => {
+// import "swiper/css/navigation";
+import { FreeMode, Navigation, Pagination } from "swiper/modules";
+import { useState } from "react";
+import useWindowDimensions from "../../hooks/windowDimensions";
+
+const ProductModal = () => {
   const { width } = useWindowDimensions();
 
   const [isPressed, setIsPressed] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
   const favouriteClick = () => {
     setIsPressed(!isPressed);
   };
   return (
-    <div
-      className={
-        width >= 585
-          ? styles.container585_600
-          : width >= 565
-          ? styles.container565_585
-          : width >= 525
-          ? styles.container525_565
-          : width >= 485
-          ? styles.container485_525
-          : width >= 450
-          ? styles.container450_485
-          : width >= 410
-          ? styles.container410_450
-          : styles.container375_410
-      }
-    >
-      <ProductModal />
-      {/* <div className={styles.imageContainer}>
+    <div>
+      <div
+        className={
+          width >= 585
+            ? styles.imageContainer585_600
+            : width >= 565
+            ? styles.imageContainer565_585
+            : width >= 525
+            ? styles.imageContainer525_565
+            : width >= 485
+            ? styles.imageContainer485_525
+            : width >= 450
+            ? styles.imageContainer450_485
+            : width >= 410
+            ? styles.imageContainer410_450
+            : styles.imageContainer375_410
+        }
+      >
         <Swiper
+          style={{
+            "--swiper-pagination-color": "rgba(219, 105, 0, 1)",
+            "--swiper-pagination-bullet-inactive-color":
+              "rgba(224, 224, 224, 1)",
+            "--swiper-pagination-bullet-inactive-opacity": "1",
+            "--swiper-pagination-bullet-size": "9px",
+            "--swiper-pagination-bullet-horizontal-gap": "4px",
+          }}
           className={styles.slideTrack}
           modules={[FreeMode, Navigation, Pagination]}
           spaceBetween={50}
           freeMode={false}
           navigation={true}
           pagination={true}
+          onClick={() => {
+            setModalVisible(true);
+          }}
         >
           <SwiperSlide className={styles.slider}>
             <img
@@ -99,19 +107,21 @@ const ProductCard = ({
             </div>
           </SwiperSlide>
         </Swiper>
-      </div> */}
-      <p className={styles.countProductText}>{countProduct}</p>
-      <div className={styles.priceField}>
-        <p className={styles.priceText}>{price}₽</p>
-        <p className={styles.oldPriceText}>{oldPrice}₽</p>
       </div>
-      <p className={styles.modelNameText}>{model_name}</p>
-      <div className={styles.addButton}>
-        <p className={styles.addButtonText}>Добавить</p>
-        <img src={shoppingIcon} alt="" className={styles.shopIcon} />
-      </div>
+
+      {modalVisible && (
+        <div
+          className={
+            modalVisible ? styles.modalProductOpen : styles.modalProductClose
+          }
+        >
+          <p onClick={() => setModalVisible(false)} style={{ color: "white" }}>
+            Close
+          </p>
+        </div>
+      )}
     </div>
   );
 };
 
-export default ProductCard;
+export default ProductModal;

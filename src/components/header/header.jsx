@@ -2,6 +2,8 @@ import styles from "./header.module.css";
 import telegramIcon from "../../images/telegram_icon.svg";
 import useWindowDimensions from "../hooks/windowDimensions";
 
+import rightArrowWhiteIcon from "../../images/arrow_select_white.svg";
+
 const Header = ({
   image = "https://legacy.reactjs.org/logo-og.png",
   user = "Имя Фамилия",
@@ -29,8 +31,24 @@ const Header = ({
       <div className={styles.aboutUser}>
         <img src={image} alt="" className={styles.imageUser} />
         <div className={styles.attributes}>
-          <p className={styles.userValues}>{user}</p>
-          <p className={styles.rankUser}>{rank}</p>
+          <div className={styles.userButton}>
+            <p className={styles.userValues}>{user}</p>
+            <img src={rightArrowWhiteIcon} alt="" />
+          </div>
+
+          <p
+            className={`${styles.rankUser} ${
+              rank == "Бронза"
+                ? styles.bronzeRank
+                : rank == "Серебро"
+                ? styles.silverRank
+                : rank == "Золото"
+                ? styles.goldRank
+                : null
+            }`}
+          >
+            {rank}
+          </p>
         </div>
       </div>
       <a href="https://t.me/REEDshopp">

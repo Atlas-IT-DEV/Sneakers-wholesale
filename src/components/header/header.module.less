@@ -1,41 +1,61 @@
 @font: TTForsTrialVariable;
-
+@bronzeGragient: linear-gradient(90deg, #df7b42, #7a3e1c);
+@silverGradient: linear-gradient(90deg, #a9a9a9, #676767);
+@goldGradient: linear-gradient(90deg, #fdb220, #835b0d);
 .container585_600 {
   display: flex;
   justify-content: space-between;
   padding: 15px;
-  .imageUser {
-    width: 48px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
+
   .aboutUser {
     display: flex;
     gap: 13px;
+    cursor: pointer;
+    .imageUser {
+      width: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
     .attributes {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    }
-    .userValues {
-      color: white;
-      font-size: 18px;
-      font-weight: 600;
-      font-family: @font;
-    }
-    .rankUser {
-      display: flex;
-      align-items: center;
-      color: white;
-      font-size: 14px;
-      font-weight: 500;
-      height: 22px;
-      padding: 0 10px 0 10px;
-      background-color: black;
-      text-align: center;
-      border-radius: 90px;
-      width: max-content;
-      font-family: @font;
+      .userButton {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        img {
+          height: 27px;
+        }
+        .userValues {
+          color: white;
+          font-size: 18px;
+          font-weight: 600;
+          font-family: @font;
+        }
+      }
+      .rankUser {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        height: 22px;
+        padding: 0 10px 0 10px;
+        text-align: center;
+        border-radius: 90px;
+        width: max-content;
+        font-family: @font;
+      }
+      .bronzeRank {
+        background: @bronzeGragient;
+      }
+      .silverRank {
+        background: @silverGradient;
+      }
+      .goldRank {
+        background: @goldGradient;
+      }
     }
   }
   .telegramButton {
@@ -64,38 +84,56 @@
   display: flex;
   justify-content: space-between;
   padding: 15px;
-  .imageUser {
-    width: 47px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
+
   .aboutUser {
     display: flex;
     gap: 7px;
+    .imageUser {
+      width: 47px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
     .attributes {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    }
-    .userValues {
-      color: white;
-      font-size: 18px;
-      font-weight: 600;
-      font-family: @font;
-    }
-    .rankUser {
-      display: flex;
-      align-items: center;
-      color: white;
-      font-size: 16px;
-      font-weight: 500;
-      height: 22px;
-      padding: 0 10px 0 10px;
-      background-color: black;
-      text-align: center;
-      border-radius: 90px;
-      width: max-content;
-      font-family: @font;
+      .userButton {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        img {
+          height: 27px;
+        }
+      }
+      .userValues {
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: @font;
+      }
+      .rankUser {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        height: 22px;
+        padding: 0 10px 0 10px;
+        background-color: black;
+        text-align: center;
+        border-radius: 90px;
+        width: max-content;
+        font-family: @font;
+      }
+      .bronzeRank {
+        background: @bronzeGragient;
+      }
+      .silverRank {
+        background: @silverGradient;
+      }
+      .goldRank {
+        background: @goldGradient;
+      }
     }
   }
   .telegramButton {
@@ -123,38 +161,56 @@
   display: flex;
   justify-content: space-between;
   padding: 15px;
-  .imageUser {
-    width: 46px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
+
   .aboutUser {
     display: flex;
     gap: 7px;
+    .imageUser {
+      width: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
     .attributes {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    }
-    .userValues {
-      color: white;
-      font-size: 18px;
-      font-weight: 600;
-      font-family: @font;
-    }
-    .rankUser {
-      display: flex;
-      align-items: center;
-      color: white;
-      font-size: 16px;
-      font-weight: 500;
-      height: 22px;
-      padding: 0 10px 0 10px;
-      background-color: black;
-      text-align: center;
-      border-radius: 90px;
-      width: max-content;
-      font-family: @font;
+      .userButton {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        img {
+          height: 27px;
+        }
+      }
+      .userValues {
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: @font;
+      }
+      .rankUser {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        height: 22px;
+        padding: 0 10px 0 10px;
+        background-color: black;
+        text-align: center;
+        border-radius: 90px;
+        width: max-content;
+        font-family: @font;
+      }
+      .bronzeRank {
+        background: @bronzeGragient;
+      }
+      .silverRank {
+        background: @silverGradient;
+      }
+      .goldRank {
+        background: @goldGradient;
+      }
     }
   }
   .telegramButton {
@@ -183,38 +239,56 @@
   display: flex;
   justify-content: space-between;
   padding: 15px;
-  .imageUser {
-    width: 45px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
+
   .aboutUser {
     display: flex;
     gap: 7px;
+    .imageUser {
+      width: 45px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
     .attributes {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    }
-    .userValues {
-      color: white;
-      font-size: 16px;
-      font-weight: 600;
-      font-family: @font;
-    }
-    .rankUser {
-      display: flex;
-      align-items: center;
-      color: white;
-      font-size: 14px;
-      font-weight: 500;
-      height: 22px;
-      padding: 0 10px 0 10px;
-      background-color: black;
-      text-align: center;
-      border-radius: 90px;
-      width: max-content;
-      font-family: @font;
+      .userButton {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        img {
+          height: 24px;
+        }
+      }
+      .userValues {
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: @font;
+      }
+      .rankUser {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        height: 22px;
+        padding: 0 10px 0 10px;
+        background-color: black;
+        text-align: center;
+        border-radius: 90px;
+        width: max-content;
+        font-family: @font;
+      }
+      .bronzeRank {
+        background: @bronzeGragient;
+      }
+      .silverRank {
+        background: @silverGradient;
+      }
+      .goldRank {
+        background: @goldGradient;
+      }
     }
   }
   .telegramButton {
@@ -243,38 +317,55 @@
   display: flex;
   justify-content: space-between;
   padding: 15px;
-  .imageUser {
-    width: 44px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
   .aboutUser {
     display: flex;
     gap: 7px;
+    .imageUser {
+      width: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
     .attributes {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    }
-    .userValues {
-      color: white;
-      font-size: 16px;
-      font-weight: 600;
-      font-family: @font;
-    }
-    .rankUser {
-      display: flex;
-      align-items: center;
-      color: white;
-      font-size: 14px;
-      font-weight: 500;
-      height: 22px;
-      padding: 0 10px 0 10px;
-      background-color: black;
-      text-align: center;
-      border-radius: 90px;
-      width: max-content;
-      font-family: @font;
+      .userButton {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        img {
+          height: 24px;
+        }
+      }
+      .userValues {
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: @font;
+      }
+      .rankUser {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        height: 22px;
+        padding: 0 10px 0 10px;
+        background-color: black;
+        text-align: center;
+        border-radius: 90px;
+        width: max-content;
+        font-family: @font;
+      }
+      .bronzeRank {
+        background: @bronzeGragient;
+      }
+      .silverRank {
+        background: @silverGradient;
+      }
+      .goldRank {
+        background: @goldGradient;
+      }
     }
   }
   .telegramButton {
@@ -303,38 +394,56 @@
   display: flex;
   justify-content: space-between;
   padding: 15px;
-  .imageUser {
-    width: 43px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
+
   .aboutUser {
     display: flex;
     gap: 7px;
+    .imageUser {
+      width: 43px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
     .attributes {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    }
-    .userValues {
-      color: white;
-      font-size: 14px;
-      font-weight: 600;
-      font-family: @font;
-    }
-    .rankUser {
-      display: flex;
-      align-items: center;
-      color: white;
-      font-size: 12px;
-      font-weight: 500;
-      height: 22px;
-      padding: 0 10px 0 10px;
-      background-color: black;
-      text-align: center;
-      border-radius: 90px;
-      width: max-content;
-      font-family: @font;
+      .userButton {
+        display: flex;
+        gap: 3px;
+        align-items: center;
+        img {
+          height: 21px;
+        }
+      }
+      .userValues {
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+        font-family: @font;
+      }
+      .rankUser {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 12px;
+        font-weight: 500;
+        height: 22px;
+        padding: 0 10px 0 10px;
+        background-color: black;
+        text-align: center;
+        border-radius: 90px;
+        width: max-content;
+        font-family: @font;
+      }
+      .bronzeRank {
+        background: @bronzeGragient;
+      }
+      .silverRank {
+        background: @silverGradient;
+      }
+      .goldRank {
+        background: @goldGradient;
+      }
     }
   }
   .telegramButton {
@@ -363,40 +472,58 @@
   display: flex;
   justify-content: space-between;
   padding: 15px;
-  .imageUser {
-    width: 42px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
+
   .aboutUser {
     display: flex;
     gap: 7px;
+    .imageUser {
+      width: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
     .attributes {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    }
-    .userValues {
-      color: white;
-      font-size: 14px;
-      font-weight: 600;
-      font-family: @font;
-    }
-    .rankUser {
-      display: flex;
-      align-items: center;
-      display: flex;
-      align-items: center;
-      color: white;
-      font-size: 12px;
-      font-weight: 500;
-      height: 22px;
-      padding: 0 10px 0 10px;
-      background-color: black;
-      text-align: center;
-      border-radius: 90px;
-      width: max-content;
-      font-family: @font;
+      .userButton {
+        display: flex;
+        gap: 3px;
+        align-items: center;
+        img {
+          height: 21px;
+        }
+      }
+      .userValues {
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+        font-family: @font;
+      }
+      .rankUser {
+        display: flex;
+        align-items: center;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 12px;
+        font-weight: 500;
+        height: 22px;
+        padding: 0 10px 0 10px;
+        background-color: black;
+        text-align: center;
+        border-radius: 90px;
+        width: max-content;
+        font-family: @font;
+      }
+      .bronzeRank {
+        background: @bronzeGragient;
+      }
+      .silverRank {
+        background: @silverGradient;
+      }
+      .goldRank {
+        background: @goldGradient;
+      }
     }
   }
   .telegramButton {

@@ -1,47 +1,11 @@
 .container585_600 {
   width: 263px;
 }
-.container585_600 .imageContainer {
-  position: relative;
-}
-.container585_600 .imageContainer .slider {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-}
-.container585_600 .imageContainer .slider .slideTrack {
-  display: flex;
-}
-.container585_600 .imageContainer .imageProduct {
-  object-fit: cover;
-  border-radius: 28px;
-  width: 263px;
-  height: 263px;
-  cursor: pointer;
-}
-.container585_600 .imageContainer .favouriteButton {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  right: 17px;
-  top: 17px;
-  background-color: white;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.container585_600 .imageContainer .favouriteButton img {
-  width: 20px;
-  height: 18px;
-}
 .container585_600 .countProductText {
   color: #ffffff;
   font-size: 20px;
   font-weight: 500;
-  margin-top: 15px;
+  margin-top: 5px;
   font-family: TTForsTrialVariable;
 }
 .container585_600 .priceField {
@@ -95,47 +59,11 @@
 .container565_585 {
   width: 253px;
 }
-.container565_585 .imageContainer {
-  position: relative;
-}
-.container565_585 .imageContainer .slider {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-}
-.container565_585 .imageContainer .slider .slideTrack {
-  display: flex;
-}
-.container565_585 .imageContainer .imageProduct {
-  object-fit: cover;
-  border-radius: 28px;
-  width: 253px;
-  height: 253px;
-  cursor: pointer;
-}
-.container565_585 .imageContainer .favouriteButton {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  right: 17px;
-  top: 17px;
-  background-color: white;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.container565_585 .imageContainer .favouriteButton img {
-  width: 20px;
-  height: 18px;
-}
 .container565_585 .countProductText {
   color: #ffffff;
   font-size: 19px;
   font-weight: 500;
-  margin-top: 15px;
+  margin-top: 5px;
   font-family: TTForsTrialVariable;
 }
 .container565_585 .priceField {
@@ -189,47 +117,11 @@
 .container525_565 {
   width: 238px;
 }
-.container525_565 .imageContainer {
-  position: relative;
-}
-.container525_565 .imageContainer .slider {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-}
-.container525_565 .imageContainer .slider .slideTrack {
-  display: flex;
-}
-.container525_565 .imageContainer .imageProduct {
-  object-fit: cover;
-  border-radius: 28px;
-  width: 238px;
-  height: 238px;
-  cursor: pointer;
-}
-.container525_565 .imageContainer .favouriteButton {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  right: 17px;
-  top: 17px;
-  background-color: white;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.container525_565 .imageContainer .favouriteButton img {
-  width: 20px;
-  height: 18px;
-}
 .container525_565 .countProductText {
   color: #ffffff;
   font-size: 17px;
   font-weight: 500;
-  margin-top: 15px;
+  margin-top: 5px;
   font-family: TTForsTrialVariable;
 }
 .container525_565 .priceField {
@@ -283,47 +175,11 @@
 .container485_525 {
   width: 223px;
 }
-.container485_525 .imageContainer {
-  position: relative;
-}
-.container485_525 .imageContainer .slider {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-}
-.container485_525 .imageContainer .slider .slideTrack {
-  display: flex;
-}
-.container485_525 .imageContainer .imageProduct {
-  object-fit: cover;
-  border-radius: 28px;
-  width: 223px;
-  height: 223px;
-  cursor: pointer;
-}
-.container485_525 .imageContainer .favouriteButton {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  right: 17px;
-  top: 17px;
-  background-color: white;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.container485_525 .imageContainer .favouriteButton img {
-  width: 20px;
-  height: 18px;
-}
 .container485_525 .countProductText {
   color: #ffffff;
   font-size: 15px;
   font-weight: 500;
-  margin-top: 15px;
+  margin-top: 5px;
   font-family: TTForsTrialVariable;
 }
 .container485_525 .priceField {
@@ -377,47 +233,11 @@
 .container450_485 {
   width: 208px;
 }
-.container450_485 .imageContainer {
-  position: relative;
-}
-.container450_485 .imageContainer .slider {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-}
-.container450_485 .imageContainer .slider .slideTrack {
-  display: flex;
-}
-.container450_485 .imageContainer .imageProduct {
-  object-fit: cover;
-  border-radius: 28px;
-  width: 208px;
-  height: 208px;
-  cursor: pointer;
-}
-.container450_485 .imageContainer .favouriteButton {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  right: 17px;
-  top: 17px;
-  background-color: white;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.container450_485 .imageContainer .favouriteButton img {
-  width: 20px;
-  height: 18px;
-}
 .container450_485 .countProductText {
   color: #ffffff;
   font-size: 14px;
   font-weight: 500;
-  margin-top: 15px;
+  margin-top: 5px;
   font-family: TTForsTrialVariable;
 }
 .container450_485 .priceField {
@@ -471,47 +291,11 @@
 .container410_450 {
   width: 193px;
 }
-.container410_450 .imageContainer {
-  position: relative;
-}
-.container410_450 .imageContainer .slider {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-}
-.container410_450 .imageContainer .slider .slideTrack {
-  display: flex;
-}
-.container410_450 .imageContainer .imageProduct {
-  object-fit: cover;
-  border-radius: 28px;
-  width: 193px;
-  height: 193px;
-  cursor: pointer;
-}
-.container410_450 .imageContainer .favouriteButton {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  right: 17px;
-  top: 17px;
-  background-color: white;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.container410_450 .imageContainer .favouriteButton img {
-  width: 20px;
-  height: 18px;
-}
 .container410_450 .countProductText {
   color: #ffffff;
   font-size: 13px;
   font-weight: 500;
-  margin-top: 15px;
+  margin-top: 5px;
   font-family: TTForsTrialVariable;
 }
 .container410_450 .priceField {
@@ -565,47 +349,11 @@
 .container375_410 {
   width: 173px;
 }
-.container375_410 .imageContainer {
-  position: relative;
-}
-.container375_410 .imageContainer .slider {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-}
-.container375_410 .imageContainer .slider .slideTrack {
-  display: flex;
-}
-.container375_410 .imageContainer .imageProduct {
-  object-fit: cover;
-  border-radius: 28px;
-  width: 173px;
-  height: 173px;
-  cursor: pointer;
-}
-.container375_410 .imageContainer .favouriteButton {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  right: 17px;
-  top: 17px;
-  background-color: white;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.container375_410 .imageContainer .favouriteButton img {
-  width: 20px;
-  height: 18px;
-}
 .container375_410 .countProductText {
   color: #ffffff;
   font-size: 13px;
   font-weight: 500;
-  margin-top: 15px;
+  margin-top: 5px;
   font-family: TTForsTrialVariable;
 }
 .container375_410 .priceField {

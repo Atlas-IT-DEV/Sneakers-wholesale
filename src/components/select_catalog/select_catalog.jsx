@@ -2,7 +2,6 @@ import styles from "./select_catalog.module.css";
 import useWindowDimensions from "../hooks/windowDimensions";
 
 import rightArrowWhiteIcon from "../../images/arrow_select_white.svg";
-// import rightArrowGrayIcon from "../../images/arrow_select_gray.svg";
 import AttentionModal from "../modals/attention_modal/attenction_modal";
 
 const SelectCatalog = () => {

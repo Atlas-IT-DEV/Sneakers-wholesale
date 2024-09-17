@@ -3,39 +3,56 @@
   justify-content: space-between;
   padding: 15px;
 }
-.container585_600 .imageUser {
-  width: 48px;
-  border-radius: 50%;
-  object-fit: cover;
-}
 .container585_600 .aboutUser {
   display: flex;
   gap: 13px;
+  cursor: pointer;
+}
+.container585_600 .aboutUser .imageUser {
+  width: 48px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .container585_600 .aboutUser .attributes {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.container585_600 .aboutUser .userValues {
+.container585_600 .aboutUser .attributes .userButton {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.container585_600 .aboutUser .attributes .userButton img {
+  height: 27px;
+}
+.container585_600 .aboutUser .attributes .userButton .userValues {
   color: white;
   font-size: 18px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
-.container585_600 .aboutUser .rankUser {
+.container585_600 .aboutUser .attributes .rankUser {
   display: flex;
   align-items: center;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   height: 22px;
   padding: 0 10px 0 10px;
-  background-color: black;
   text-align: center;
   border-radius: 90px;
   width: max-content;
   font-family: TTForsTrialVariable;
+}
+.container585_600 .aboutUser .attributes .bronzeRank {
+  background: linear-gradient(90deg, #df7b42, #7a3e1c);
+}
+.container585_600 .aboutUser .attributes .silverRank {
+  background: linear-gradient(90deg, #a9a9a9, #676767);
+}
+.container585_600 .aboutUser .attributes .goldRank {
+  background: linear-gradient(90deg, #fdb220, #835b0d);
 }
 .container585_600 .telegramButton {
   display: flex;
@@ -62,27 +79,35 @@
   justify-content: space-between;
   padding: 15px;
 }
-.container565_585 .imageUser {
-  width: 47px;
-  border-radius: 50%;
-  object-fit: cover;
-}
 .container565_585 .aboutUser {
   display: flex;
   gap: 7px;
+}
+.container565_585 .aboutUser .imageUser {
+  width: 47px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .container565_585 .aboutUser .attributes {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.container565_585 .aboutUser .userValues {
+.container565_585 .aboutUser .attributes .userButton {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.container565_585 .aboutUser .attributes .userButton img {
+  height: 27px;
+}
+.container565_585 .aboutUser .attributes .userValues {
   color: white;
   font-size: 18px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
-.container565_585 .aboutUser .rankUser {
+.container565_585 .aboutUser .attributes .rankUser {
   display: flex;
   align-items: center;
   color: white;
@@ -95,6 +120,15 @@
   border-radius: 90px;
   width: max-content;
   font-family: TTForsTrialVariable;
+}
+.container565_585 .aboutUser .attributes .bronzeRank {
+  background: linear-gradient(90deg, #df7b42, #7a3e1c);
+}
+.container565_585 .aboutUser .attributes .silverRank {
+  background: linear-gradient(90deg, #a9a9a9, #676767);
+}
+.container565_585 .aboutUser .attributes .goldRank {
+  background: linear-gradient(90deg, #fdb220, #835b0d);
 }
 .container565_585 .telegramButton {
   display: flex;
@@ -121,27 +155,35 @@
   justify-content: space-between;
   padding: 15px;
 }
-.container525_565 .imageUser {
-  width: 46px;
-  border-radius: 50%;
-  object-fit: cover;
-}
 .container525_565 .aboutUser {
   display: flex;
   gap: 7px;
+}
+.container525_565 .aboutUser .imageUser {
+  width: 46px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .container525_565 .aboutUser .attributes {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.container525_565 .aboutUser .userValues {
+.container525_565 .aboutUser .attributes .userButton {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.container525_565 .aboutUser .attributes .userButton img {
+  height: 27px;
+}
+.container525_565 .aboutUser .attributes .userValues {
   color: white;
   font-size: 18px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
-.container525_565 .aboutUser .rankUser {
+.container525_565 .aboutUser .attributes .rankUser {
   display: flex;
   align-items: center;
   color: white;
@@ -154,6 +196,15 @@
   border-radius: 90px;
   width: max-content;
   font-family: TTForsTrialVariable;
+}
+.container525_565 .aboutUser .attributes .bronzeRank {
+  background: linear-gradient(90deg, #df7b42, #7a3e1c);
+}
+.container525_565 .aboutUser .attributes .silverRank {
+  background: linear-gradient(90deg, #a9a9a9, #676767);
+}
+.container525_565 .aboutUser .attributes .goldRank {
+  background: linear-gradient(90deg, #fdb220, #835b0d);
 }
 .container525_565 .telegramButton {
   display: flex;
@@ -180,27 +231,35 @@
   justify-content: space-between;
   padding: 15px;
 }
-.container485_525 .imageUser {
-  width: 45px;
-  border-radius: 50%;
-  object-fit: cover;
-}
 .container485_525 .aboutUser {
   display: flex;
   gap: 7px;
+}
+.container485_525 .aboutUser .imageUser {
+  width: 45px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .container485_525 .aboutUser .attributes {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.container485_525 .aboutUser .userValues {
+.container485_525 .aboutUser .attributes .userButton {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.container485_525 .aboutUser .attributes .userButton img {
+  height: 24px;
+}
+.container485_525 .aboutUser .attributes .userValues {
   color: white;
   font-size: 16px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
-.container485_525 .aboutUser .rankUser {
+.container485_525 .aboutUser .attributes .rankUser {
   display: flex;
   align-items: center;
   color: white;
@@ -213,6 +272,15 @@
   border-radius: 90px;
   width: max-content;
   font-family: TTForsTrialVariable;
+}
+.container485_525 .aboutUser .attributes .bronzeRank {
+  background: linear-gradient(90deg, #df7b42, #7a3e1c);
+}
+.container485_525 .aboutUser .attributes .silverRank {
+  background: linear-gradient(90deg, #a9a9a9, #676767);
+}
+.container485_525 .aboutUser .attributes .goldRank {
+  background: linear-gradient(90deg, #fdb220, #835b0d);
 }
 .container485_525 .telegramButton {
   display: flex;
@@ -239,27 +307,35 @@
   justify-content: space-between;
   padding: 15px;
 }
-.container450_485 .imageUser {
-  width: 44px;
-  border-radius: 50%;
-  object-fit: cover;
-}
 .container450_485 .aboutUser {
   display: flex;
   gap: 7px;
+}
+.container450_485 .aboutUser .imageUser {
+  width: 44px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .container450_485 .aboutUser .attributes {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.container450_485 .aboutUser .userValues {
+.container450_485 .aboutUser .attributes .userButton {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.container450_485 .aboutUser .attributes .userButton img {
+  height: 24px;
+}
+.container450_485 .aboutUser .attributes .userValues {
   color: white;
   font-size: 16px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
-.container450_485 .aboutUser .rankUser {
+.container450_485 .aboutUser .attributes .rankUser {
   display: flex;
   align-items: center;
   color: white;
@@ -272,6 +348,15 @@
   border-radius: 90px;
   width: max-content;
   font-family: TTForsTrialVariable;
+}
+.container450_485 .aboutUser .attributes .bronzeRank {
+  background: linear-gradient(90deg, #df7b42, #7a3e1c);
+}
+.container450_485 .aboutUser .attributes .silverRank {
+  background: linear-gradient(90deg, #a9a9a9, #676767);
+}
+.container450_485 .aboutUser .attributes .goldRank {
+  background: linear-gradient(90deg, #fdb220, #835b0d);
 }
 .container450_485 .telegramButton {
   display: flex;
@@ -298,27 +383,35 @@
   justify-content: space-between;
   padding: 15px;
 }
-.container410_450 .imageUser {
-  width: 43px;
-  border-radius: 50%;
-  object-fit: cover;
-}
 .container410_450 .aboutUser {
   display: flex;
   gap: 7px;
+}
+.container410_450 .aboutUser .imageUser {
+  width: 43px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .container410_450 .aboutUser .attributes {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.container410_450 .aboutUser .userValues {
+.container410_450 .aboutUser .attributes .userButton {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+.container410_450 .aboutUser .attributes .userButton img {
+  height: 21px;
+}
+.container410_450 .aboutUser .attributes .userValues {
   color: white;
   font-size: 14px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
-.container410_450 .aboutUser .rankUser {
+.container410_450 .aboutUser .attributes .rankUser {
   display: flex;
   align-items: center;
   color: white;
@@ -331,6 +424,15 @@
   border-radius: 90px;
   width: max-content;
   font-family: TTForsTrialVariable;
+}
+.container410_450 .aboutUser .attributes .bronzeRank {
+  background: linear-gradient(90deg, #df7b42, #7a3e1c);
+}
+.container410_450 .aboutUser .attributes .silverRank {
+  background: linear-gradient(90deg, #a9a9a9, #676767);
+}
+.container410_450 .aboutUser .attributes .goldRank {
+  background: linear-gradient(90deg, #fdb220, #835b0d);
 }
 .container410_450 .telegramButton {
   display: flex;
@@ -357,27 +459,35 @@
   justify-content: space-between;
   padding: 15px;
 }
-.container375_410 .imageUser {
-  width: 42px;
-  border-radius: 50%;
-  object-fit: cover;
-}
 .container375_410 .aboutUser {
   display: flex;
   gap: 7px;
+}
+.container375_410 .aboutUser .imageUser {
+  width: 42px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .container375_410 .aboutUser .attributes {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.container375_410 .aboutUser .userValues {
+.container375_410 .aboutUser .attributes .userButton {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+.container375_410 .aboutUser .attributes .userButton img {
+  height: 21px;
+}
+.container375_410 .aboutUser .attributes .userValues {
   color: white;
   font-size: 14px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
-.container375_410 .aboutUser .rankUser {
+.container375_410 .aboutUser .attributes .rankUser {
   display: flex;
   align-items: center;
   color: white;
@@ -390,6 +500,15 @@
   border-radius: 90px;
   width: max-content;
   font-family: TTForsTrialVariable;
+}
+.container375_410 .aboutUser .attributes .bronzeRank {
+  background: linear-gradient(90deg, #df7b42, #7a3e1c);
+}
+.container375_410 .aboutUser .attributes .silverRank {
+  background: linear-gradient(90deg, #a9a9a9, #676767);
+}
+.container375_410 .aboutUser .attributes .goldRank {
+  background: linear-gradient(90deg, #fdb220, #835b0d);
 }
 .container375_410 .telegramButton {
   display: flex;
