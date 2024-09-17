@@ -82,6 +82,7 @@
 .container565_585 .aboutUser {
   display: flex;
   gap: 7px;
+  cursor: pointer;
 }
 .container565_585 .aboutUser .imageUser {
   width: 47px;
@@ -158,6 +159,7 @@
 .container525_565 .aboutUser {
   display: flex;
   gap: 7px;
+  cursor: pointer;
 }
 .container525_565 .aboutUser .imageUser {
   width: 46px;
@@ -234,6 +236,7 @@
 .container485_525 .aboutUser {
   display: flex;
   gap: 7px;
+  cursor: pointer;
 }
 .container485_525 .aboutUser .imageUser {
   width: 45px;
@@ -310,6 +313,7 @@
 .container450_485 .aboutUser {
   display: flex;
   gap: 7px;
+  cursor: pointer;
 }
 .container450_485 .aboutUser .imageUser {
   width: 44px;
@@ -386,6 +390,7 @@
 .container410_450 .aboutUser {
   display: flex;
   gap: 7px;
+  cursor: pointer;
 }
 .container410_450 .aboutUser .imageUser {
   width: 43px;
@@ -462,6 +467,7 @@
 .container375_410 .aboutUser {
   display: flex;
   gap: 7px;
+  cursor: pointer;
 }
 .container375_410 .aboutUser .imageUser {
   width: 42px;
