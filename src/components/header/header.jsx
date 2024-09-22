@@ -3,6 +3,7 @@ import telegramIcon from "../../images/telegram_icon.svg";
 import useWindowDimensions from "../hooks/windowDimensions";
 
 import rightArrowWhiteIcon from "../../images/arrow_select_white.svg";
+import { useNavigate } from "react-router";
 
 const Header = ({
   image = "https://legacy.reactjs.org/logo-og.png",
@@ -10,6 +11,7 @@ const Header = ({
   rank = "Бронза",
 }) => {
   const { width } = useWindowDimensions();
+  const navigate = useNavigate();
   return (
     <div
       className={
@@ -27,6 +29,7 @@ const Header = ({
           ? styles.container410_450
           : styles.container375_410
       }
+      onClick={() => navigate("/profile")}
     >
       <div className={styles.aboutUser}>
         <img src={image} alt="" className={styles.imageUser} />

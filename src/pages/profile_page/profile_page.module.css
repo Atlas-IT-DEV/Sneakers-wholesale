@@ -1,0 +1,173 @@
+.container585_600 {
+  width: 100%;
+}
+.container585_600 .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px 0 30px;
+}
+.container585_600 .header .aboutUser {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+.container585_600 .header .aboutUser .imageUser {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.container585_600 .header .aboutUser .attributes {
+  display: flex;
+}
+.container585_600 .header .aboutUser .attributes img {
+  height: 27px;
+}
+.container585_600 .header .aboutUser .attributes .userValues {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container585_600 .header .telegramButton {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  background-color: white;
+  width: max-content;
+  padding: 0 15px 0 15px;
+  border-radius: 79px;
+}
+.container585_600 .header .tgIcon {
+  width: 31px;
+}
+.container585_600 .header .telegramText {
+  font-family: TTForsTrialVariable;
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+}
+.container585_600 .rankUser {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  height: 35px;
+  padding: 0 18px 0 18px;
+  text-align: center;
+  border-radius: 90px;
+  width: max-content;
+  font-family: TTForsTrialVariable;
+  margin: 30px 30px 0 30px;
+}
+.container585_600 .bronzeRank {
+  background: linear-gradient(90deg, #df7b42, #7a3e1c);
+}
+.container585_600 .silverRank {
+  background: linear-gradient(90deg, #a9a9a9, #676767);
+}
+.container585_600 .goldRank {
+  background: linear-gradient(90deg, #fdb220, #835b0d);
+}
+.container585_600 .discountText {
+  margin: 30px 30px 0 30px;
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-size: 21px;
+  font-weight: 600;
+}
+.container585_600 .countPurchase {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #080808;
+  padding: 30px;
+  margin: 30px 15px 0 15px;
+  border-radius: 27px;
+}
+.container585_600 .countPurchase p {
+  color: white;
+  font-size: 21px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container585_600 .countPurchase p span {
+  color: #f07a0a;
+}
+.container585_600 .loyalityProgram {
+  display: flex;
+  flex-direction: column;
+  background-color: #080808;
+  padding: 30px;
+  margin: 30px 15px 30px 15px;
+  border-radius: 27px;
+}
+.container585_600 .loyalityProgram .headerLoyality {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.container585_600 .loyalityProgram .headerLoyality p {
+  color: #f1f1f1;
+  font-size: 21px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container585_600 .loyalityProgram .headerLoyality img {
+  height: 32px;
+}
+.container585_600 .loyalityProgram .headerLoyality .arrowClose {
+  transform: rotate(0deg);
+  transition: 0.2s;
+}
+.container585_600 .loyalityProgram .headerLoyality .arrowOpen {
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+.container585_600 .subFiltersClose {
+  display: none;
+}
+.container585_600 .subFiltersOpen {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+.container585_600 .subFiltersOpen .statusLoyality {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 15px;
+  padding-right: 80px;
+}
+.container585_600 .subFiltersOpen .statusLoyality .headerStatus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container585_600 .subFiltersOpen .statusLoyality .statusText {
+  color: #686868;
+  font-family: TTForsTrialVariable;
+  font-size: 22px;
+}
+.container585_600 .subFiltersOpen .statusLoyality .sumText {
+  font-size: 20px;
+}
+.container585_600 .subFiltersOpen .rulesText {
+  text-decoration: underline;
+  margin-top: 15px;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  color: #686868;
+  cursor: pointer;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

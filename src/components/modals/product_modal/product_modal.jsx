@@ -66,7 +66,10 @@ const ProductModal = () => {
             />
             <div
               className={styles.favouriteButton}
-              onClick={() => favouriteClick()}
+              onClick={() => {
+                favouriteClick();
+                setModalVisible(false);
+              }}
             >
               <img
                 src={isPressed ? favouriteActiveIcon : favouriteInactiveIcon}
@@ -82,7 +85,10 @@ const ProductModal = () => {
             />
             <div
               className={styles.favouriteButton}
-              onClick={() => favouriteClick()}
+              onClick={() => {
+                favouriteClick();
+                setModalVisible(false);
+              }}
             >
               <img
                 src={isPressed ? favouriteActiveIcon : favouriteInactiveIcon}
@@ -98,7 +104,10 @@ const ProductModal = () => {
             />
             <div
               className={styles.favouriteButton}
-              onClick={() => favouriteClick()}
+              onClick={() => {
+                favouriteClick();
+                setModalVisible(false);
+              }}
             >
               <img
                 src={isPressed ? favouriteActiveIcon : favouriteInactiveIcon}

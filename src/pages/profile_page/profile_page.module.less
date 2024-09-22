@@ -1,0 +1,178 @@
+@font: TTForsTrialVariable;
+@bronzeGragient: linear-gradient(90deg, #df7b42, #7a3e1c);
+@silverGradient: linear-gradient(90deg, #a9a9a9, #676767);
+@goldGradient: linear-gradient(90deg, #fdb220, #835b0d);
+.container585_600 {
+  width: 100%;
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px 0 30px;
+    .aboutUser {
+      display: flex;
+      gap: 13px;
+      align-items: center;
+      .imageUser {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .attributes {
+        display: flex;
+
+        img {
+          height: 27px;
+        }
+        .userValues {
+          color: white;
+          font-size: 18px;
+          font-weight: 600;
+          font-family: @font;
+        }
+      }
+    }
+    .telegramButton {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
+      height: 45px;
+      background-color: white;
+      width: max-content;
+      padding: 0 15px 0 15px;
+      border-radius: 79px;
+    }
+    .tgIcon {
+      width: 31px;
+    }
+    .telegramText {
+      font-family: @font;
+      color: black;
+      font-weight: 500;
+      font-size: 18px;
+    }
+  }
+  .rankUser {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    height: 35px;
+    padding: 0 18px 0 18px;
+    text-align: center;
+    border-radius: 90px;
+    width: max-content;
+    font-family: @font;
+    margin: 30px 30px 0 30px;
+  }
+  .bronzeRank {
+    background: @bronzeGragient;
+  }
+  .silverRank {
+    background: @silverGradient;
+  }
+  .goldRank {
+    background: @goldGradient;
+  }
+  .discountText {
+    margin: 30px 30px 0 30px;
+    color: white;
+    font-family: @font;
+    font-size: 21px;
+    font-weight: 600;
+  }
+  .countPurchase {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(8, 8, 8, 1);
+    padding: 30px;
+    margin: 30px 15px 0 15px;
+    border-radius: 27px;
+    p {
+      color: white;
+      font-size: 21px;
+      font-weight: 600;
+      font-family: @font;
+      span {
+        color: rgba(240, 122, 10, 1);
+      }
+    }
+  }
+  .loyalityProgram {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(8, 8, 8, 1);
+    padding: 30px;
+    margin: 30px 15px 30px 15px;
+    border-radius: 27px;
+    .headerLoyality {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      p {
+        color: rgba(241, 241, 241, 1);
+        font-size: 21px;
+        font-family: @font;
+        font-weight: 600;
+      }
+      img {
+        height: 32px;
+      }
+      .arrowClose {
+        transform: rotate(0deg);
+        transition: 0.2s;
+      }
+      .arrowOpen {
+        transform: rotate(90deg);
+        transition: 0.2s;
+      }
+    }
+  }
+  .subFiltersClose {
+    display: none;
+  }
+  .subFiltersOpen {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    .statusLoyality {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      gap: 15px;
+      padding-right: 80px;
+      .headerStatus {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .statusText {
+        color: rgba(104, 104, 104, 1);
+        font-family: @font;
+        font-size: 22px;
+      }
+      .sumText {
+        font-size: 20px;
+      }
+    }
+    .rulesText {
+      text-decoration: underline;
+      margin-top: 15px;
+      font-size: 20px;
+      font-family: @font;
+      color: rgba(104, 104, 104, 1);
+      cursor: pointer;
+    }
+  }
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+}

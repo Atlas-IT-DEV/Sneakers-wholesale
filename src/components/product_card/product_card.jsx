@@ -41,65 +41,6 @@ const ProductCard = ({
       }
     >
       <ProductModal />
-      {/* <div className={styles.imageContainer}>
-        <Swiper
-          className={styles.slideTrack}
-          modules={[FreeMode, Navigation, Pagination]}
-          spaceBetween={50}
-          freeMode={false}
-          navigation={true}
-          pagination={true}
-        >
-          <SwiperSlide className={styles.slider}>
-            <img
-              src="https://legacy.reactjs.org/logo-og.png"
-              alt=""
-              className={styles.imageProduct}
-            />
-            <div
-              className={styles.favouriteButton}
-              onClick={() => favouriteClick()}
-            >
-              <img
-                src={isPressed ? favouriteActiveIcon : favouriteInactiveIcon}
-                alt=""
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className={styles.slider}>
-            <img
-              src="https://legacy.reactjs.org/logo-og.png"
-              alt=""
-              className={styles.imageProduct}
-            />
-            <div
-              className={styles.favouriteButton}
-              onClick={() => favouriteClick()}
-            >
-              <img
-                src={isPressed ? favouriteActiveIcon : favouriteInactiveIcon}
-                alt=""
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className={styles.slider}>
-            <img
-              src="https://legacy.reactjs.org/logo-og.png"
-              alt=""
-              className={styles.imageProduct}
-            />
-            <div
-              className={styles.favouriteButton}
-              onClick={() => favouriteClick()}
-            >
-              <img
-                src={isPressed ? favouriteActiveIcon : favouriteInactiveIcon}
-                alt=""
-              />
-            </div>
-          </SwiperSlide>
-        </Swiper>
-      </div> */}
       <p className={styles.countProductText}>{countProduct}</p>
       <div className={styles.priceField}>
         <p className={styles.priceText}>{price}₽</p>
