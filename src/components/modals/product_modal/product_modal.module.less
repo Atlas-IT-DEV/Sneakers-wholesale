@@ -394,6 +394,55 @@
       cursor: pointer;
     }
   }
+  .sizesView {
+    display: flex;
+    margin: 15px 26px 0 26px;
+    overflow: scroll;
+    overflow-y: hidden;
+    gap: 25px;
+    padding: 10px 0 10px 0;
+    .sizeButton {
+      min-width: 50px;
+      height: 60px;
+      // background-color: red;
+      border-radius: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-family: @font;
+        font-size: 23px;
+        font-weight: 500;
+        color: white;
+      }
+    }
+    .activeSizeButton {
+      background-color: rgba(219, 105, 0, 1);
+      cursor: pointer;
+    }
+    .inActiveSizeButton {
+      background-color: rgba(36, 36, 36, 1);
+      cursor: pointer;
+      border: 2px solid rgba(219, 105, 0, 1);
+    }
+    .lockSizeButton {
+      border: 2px solid rgba(49, 49, 49, 1);
+      background-color: rgba(36, 36, 36, 1);
+      position: relative;
+      cursor: no-drop;
+      p {
+        color: rgba(69, 69, 69, 1);
+      }
+      .line {
+        height: 3px;
+        width: 142%;
+        position: absolute;
+        margin: auto 0 auto 0;
+        background-color: rgba(49, 49, 49, 1);
+        transform: rotateZ(52deg);
+      }
+    }
+  }
 }
 @keyframes slideUp {
   from {

@@ -208,7 +208,50 @@ const ProductModal = ({
             <p className={styles.sizeHeaderText}>Размеры (EU)</p>
             <p className={styles.gridText}>Размерная сетка</p>
           </div>
-          <div className={styles.sizesView}></div>
+          <div className={styles.sizesView}>
+            <div className={`${styles.sizeButton} ${styles.lockSizeButton}`}>
+              <div className={styles.line} />
+              <p>36</p>
+            </div>
+            <div className={`${styles.sizeButton} ${styles.activeSizeButton}`}>
+              <p>37</p>
+            </div>
+            <div
+              className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
+            >
+              <p>38</p>
+            </div>
+            <div
+              className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
+            >
+              <p>38</p>
+            </div>
+            <div
+              className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
+            >
+              <p>38</p>
+            </div>
+            <div
+              className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
+            >
+              <p>38</p>
+            </div>
+            <div
+              className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
+            >
+              <p>38</p>
+            </div>
+            <div
+              className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
+            >
+              <p>38</p>
+            </div>
+            <div
+              className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
+            >
+              <p>38</p>
+            </div>
+          </div>
         </div>
       )}
     </div>

@@ -386,6 +386,54 @@
   font-size: 20px;
   cursor: pointer;
 }
+.modalProductOpen .sizesView {
+  display: flex;
+  margin: 15px 26px 0 26px;
+  overflow: scroll;
+  overflow-y: hidden;
+  gap: 25px;
+  padding: 10px 0 10px 0;
+}
+.modalProductOpen .sizesView .sizeButton {
+  min-width: 50px;
+  height: 60px;
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalProductOpen .sizesView .sizeButton p {
+  font-family: TTForsTrialVariable;
+  font-size: 23px;
+  font-weight: 500;
+  color: white;
+}
+.modalProductOpen .sizesView .activeSizeButton {
+  background-color: #db6900;
+  cursor: pointer;
+}
+.modalProductOpen .sizesView .inActiveSizeButton {
+  background-color: #242424;
+  cursor: pointer;
+  border: 2px solid #db6900;
+}
+.modalProductOpen .sizesView .lockSizeButton {
+  border: 2px solid #313131;
+  background-color: #242424;
+  position: relative;
+  cursor: no-drop;
+}
+.modalProductOpen .sizesView .lockSizeButton p {
+  color: #454545;
+}
+.modalProductOpen .sizesView .lockSizeButton .line {
+  height: 3px;
+  width: 142%;
+  position: absolute;
+  margin: auto 0 auto 0;
+  background-color: #313131;
+  transform: rotateZ(52deg);
+}
 @keyframes slideUp {
   from {
     bottom: -100%;
