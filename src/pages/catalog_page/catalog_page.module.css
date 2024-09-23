@@ -6,7 +6,9 @@
 }
 .container585_600 .header {
   display: flex;
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
   padding-bottom: 14px;
   background-color: #db6900;
 }
@@ -52,6 +54,7 @@
   overflow-y: hidden;
   gap: 25px;
   padding-right: 25px;
+  margin-top: 80px;
 }
 .container585_600 .products {
   display: flex;
@@ -72,7 +75,9 @@
 }
 .container565_585 .header {
   display: flex;
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
   padding-bottom: 14px;
   background-color: #db6900;
 }
@@ -118,6 +123,7 @@
   overflow-y: hidden;
   gap: 22px;
   padding-right: 25px;
+  margin-top: 80px;
 }
 .container565_585 .products {
   display: flex;
@@ -138,7 +144,9 @@
 }
 .container525_565 .header {
   display: flex;
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
   padding-bottom: 14px;
   background-color: #db6900;
 }
@@ -184,6 +192,7 @@
   overflow-y: hidden;
   gap: 19px;
   padding-right: 25px;
+  margin-top: 80px;
 }
 .container525_565 .products {
   display: flex;
@@ -204,7 +213,9 @@
 }
 .container485_525 .header {
   display: flex;
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
   padding-bottom: 14px;
   background-color: #db6900;
 }
@@ -250,6 +261,7 @@
   overflow-y: hidden;
   gap: 16px;
   padding-right: 25px;
+  margin-top: 80px;
 }
 .container485_525 .products {
   display: flex;
@@ -270,7 +282,9 @@
 }
 .container450_485 .header {
   display: flex;
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
   padding-bottom: 14px;
   background-color: #db6900;
 }
@@ -316,6 +330,7 @@
   overflow-y: hidden;
   gap: 13px;
   padding-right: 25px;
+  margin-top: 80px;
 }
 .container450_485 .products {
   display: flex;
@@ -336,7 +351,9 @@
 }
 .container410_450 .header {
   display: flex;
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
   padding-bottom: 14px;
   background-color: #db6900;
 }
@@ -382,6 +399,7 @@
   overflow-y: hidden;
   gap: 10px;
   padding-right: 25px;
+  margin-top: 80px;
 }
 .container410_450 .products {
   display: flex;
@@ -402,7 +420,9 @@
 }
 .container375_410 .header {
   display: flex;
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
   padding-bottom: 14px;
   background-color: #db6900;
 }
@@ -448,6 +468,7 @@
   overflow-y: hidden;
   gap: 10px;
   padding-right: 25px;
+  margin-top: 80px;
 }
 .container375_410 .products {
   display: flex;

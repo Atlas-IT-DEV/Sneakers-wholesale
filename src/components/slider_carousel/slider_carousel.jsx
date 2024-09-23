@@ -18,6 +18,7 @@ const SliderCarousel = () => {
         modules={[FreeMode, Autoplay]}
         freeMode={false}
         autoplay={{ delay: 30000, disableOnInteraction: false }}
+        spaceBetween={40}
       >
         <SwiperSlide className={styles.slider}>
           <div className={styles.main_block1}>

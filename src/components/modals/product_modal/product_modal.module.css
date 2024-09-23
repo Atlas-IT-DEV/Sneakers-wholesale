@@ -269,6 +269,16 @@
   background-color: #1c1c1c;
   animation: slideUp 0.2s linear;
 }
+.modalProductOpen .sliderProduct {
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+}
+.modalProductOpen .sliderProduct .slideProduct {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
 @keyframes slideUp {
   from {
     bottom: -100%;

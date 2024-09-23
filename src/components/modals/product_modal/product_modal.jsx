@@ -124,9 +124,64 @@ const ProductModal = () => {
             modalVisible ? styles.modalProductOpen : styles.modalProductClose
           }
         >
-          <p onClick={() => setModalVisible(false)} style={{ color: "white" }}>
+          <p
+            onClick={() => setModalVisible(false)}
+            style={{ color: "white", position: "absolute", right: 0, top: 0 }}
+          >
             Close
           </p>
+          <Swiper
+            style={{
+              "--swiper-pagination-color": "rgba(219, 105, 0, 1)",
+              "--swiper-pagination-bullet-inactive-color":
+                "rgba(224, 224, 224, 1)",
+              "--swiper-pagination-bullet-inactive-opacity": "1",
+              "--swiper-pagination-bullet-size": "9px",
+              "--swiper-pagination-bullet-horizontal-gap": "4px",
+            }}
+            className={styles.sliderProduct}
+            modules={[FreeMode, Navigation, Pagination]}
+            spaceBetween={10}
+            freeMode={false}
+            navigation={true}
+            pagination={true}
+            onClick={() => {
+              setModalVisible(true);
+            }}
+          >
+            <div
+              className={styles.favouriteButton}
+              onClick={() => {
+                favouriteClick();
+              }}
+            >
+              <img
+                src={isPressed ? favouriteActiveIcon : favouriteInactiveIcon}
+                alt=""
+              />
+            </div>
+            <SwiperSlide className={styles.slideProduct}>
+              <img
+                src="https://legacy.reactjs.org/logo-og.png"
+                alt=""
+                className={styles.imageProduct}
+              />
+            </SwiperSlide>
+            <SwiperSlide className={styles.slideProduct}>
+              <img
+                src="https://legacy.reactjs.org/logo-og.png"
+                alt=""
+                className={styles.imageProduct}
+              />
+            </SwiperSlide>
+            <SwiperSlide className={styles.slideProduct}>
+              <img
+                src="https://legacy.reactjs.org/logo-og.png"
+                alt=""
+                className={styles.imageProduct}
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
       )}
     </div>

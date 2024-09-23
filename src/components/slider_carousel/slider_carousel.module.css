@@ -1,5 +1,6 @@
 .slideTrack {
   display: flex;
+  padding: 0 15% 0 15% !important;
 }
 .slideTrack .slider {
   width: 100%;
@@ -17,10 +18,10 @@
   justify-items: center;
 }
 .slideTrack .slider .main_block1 .container585_600 {
-  width: 80%;
+  width: 100%;
   height: 184px;
   background-color: #e36e00;
-  padding: 20px 0 25px 35px;
+  padding: 20px 35px 25px 35px;
   border-radius: 25px;
 }
 .slideTrack .slider .main_block1 .container585_600 .nameCompany {
@@ -40,7 +41,7 @@
   font-family: TTForsTrialVariable;
 }
 .slideTrack .slider .main_block1 .container565_585 {
-  width: 80%;
+  width: 100%;
   height: 184px;
   background-color: #e36e00;
   padding: 20px 0 25px 35px;
@@ -63,10 +64,10 @@
   font-family: TTForsTrialVariable;
 }
 .slideTrack .slider .main_block1 .container525_565 {
-  width: 80%;
+  width: 100%;
   height: 184px;
   background-color: #e36e00;
-  padding: 20px 0 25px 35px;
+  padding: 20px 35px 25px 35px;
   border-radius: 25px;
 }
 .slideTrack .slider .main_block1 .container525_565 .nameCompany {
@@ -86,7 +87,7 @@
   font-family: TTForsTrialVariable;
 }
 .slideTrack .slider .main_block1 .container485_525 {
-  width: 80%;
+  width: 100%;
   height: 184px;
   background-color: #e36e00;
   padding: 20px 0 25px 35px;
@@ -109,10 +110,10 @@
   font-family: TTForsTrialVariable;
 }
 .slideTrack .slider .main_block1 .container450_485 {
-  width: 80%;
+  width: 100%;
   height: 184px;
   background-color: #e36e00;
-  padding: 20px 0 25px 35px;
+  padding: 20px 35px 25px 35px;
   border-radius: 25px;
 }
 .slideTrack .slider .main_block1 .container450_485 .nameCompany {
@@ -132,10 +133,10 @@
   font-family: TTForsTrialVariable;
 }
 .slideTrack .slider .main_block1 .container410_450 {
-  width: 80%;
+  width: 100%;
   height: 184px;
   background-color: #e36e00;
-  padding: 20px 0 25px 35px;
+  padding: 20px 35px 25px 35px;
   border-radius: 25px;
 }
 .slideTrack .slider .main_block1 .container410_450 .nameCompany {
@@ -155,10 +156,10 @@
   font-family: TTForsTrialVariable;
 }
 .slideTrack .slider .main_block1 .container375_410 {
-  width: 80%;
+  width: 100%;
   height: 184px;
   background-color: #e36e00;
-  padding: 20px 0 25px 35px;
+  padding: 20px 35px 25px 35px;
   border-radius: 25px;
 }
 .slideTrack .slider .main_block1 .container375_410 .nameCompany {
@@ -188,7 +189,7 @@
 }
 .slideTrack .slider .main_block2 .container585_600 {
   position: relative;
-  width: 80%;
+  width: 100%;
   height: 184px;
   background-color: #000000;
   padding: 20px 0 25px 35px;
@@ -224,7 +225,7 @@
 }
 .slideTrack .slider .main_block2 .container565_585 {
   position: relative;
-  width: 80%;
+  width: 100%;
   height: 184px;
   background-color: #000000;
   padding: 20px 0 25px 35px;
@@ -260,7 +261,7 @@
 }
 .slideTrack .slider .main_block2 .container525_565 {
   position: relative;
-  width: 80%;
+  width: 100%;
   height: 184px;
   background-color: #000000;
   padding: 20px 0 25px 35px;
@@ -296,7 +297,7 @@
 }
 .slideTrack .slider .main_block2 .container485_525 {
   position: relative;
-  width: 80%;
+  width: 100%;
   height: 184px;
   background-color: #000000;
   padding: 20px 0 25px 35px;
@@ -332,7 +333,7 @@
 }
 .slideTrack .slider .main_block2 .container450_485 {
   position: relative;
-  width: 80%;
+  width: 100%;
   height: 184px;
   background-color: #000000;
   padding: 20px 0 25px 35px;
@@ -368,7 +369,7 @@
 }
 .slideTrack .slider .main_block2 .container410_450 {
   position: relative;
-  width: 80%;
+  width: 100%;
   height: 184px;
   background-color: #000000;
   padding: 20px 0 25px 35px;
@@ -404,7 +405,7 @@
 }
 .slideTrack .slider .main_block2 .container375_410 {
   position: relative;
-  width: 80%;
+  width: 100%;
   height: 184px;
   background-color: #000000;
   padding: 20px 0 25px 35px;
