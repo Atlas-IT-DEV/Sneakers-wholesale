@@ -12,7 +12,7 @@
   cursor: pointer;
 }
 .imageContainer585_600 .slideTrack .imageProduct {
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 28px;
   width: 263px;
   height: 263px;
@@ -49,7 +49,7 @@
   cursor: pointer;
 }
 .imageContainer565_585 .slideTrack .imageProduct {
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 28px;
   width: 253px;
   height: 253px;
@@ -86,7 +86,7 @@
   cursor: pointer;
 }
 .imageContainer525_565 .slideTrack .imageProduct {
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 28px;
   width: 238px;
   height: 238px;
@@ -123,7 +123,7 @@
   cursor: pointer;
 }
 .imageContainer485_525 .slideTrack .imageProduct {
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 28px;
   width: 223px;
   height: 223px;
@@ -160,7 +160,7 @@
   cursor: pointer;
 }
 .imageContainer450_485 .slideTrack .imageProduct {
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 28px;
   width: 208px;
   height: 208px;
@@ -197,7 +197,7 @@
   cursor: pointer;
 }
 .imageContainer410_450 .slideTrack .imageProduct {
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 28px;
   width: 193px;
   height: 193px;
@@ -234,7 +234,7 @@
   cursor: pointer;
 }
 .imageContainer375_410 .slideTrack .imageProduct {
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 28px;
   width: 173px;
   height: 173px;
@@ -264,12 +264,12 @@
   left: 0;
   bottom: 0%;
   width: 100%;
-  height: 96vh;
+  height: 98vh;
   z-index: 99999;
   background-color: #1c1c1c;
   animation: slideUp 0.2s linear;
   overflow: scroll;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 .modalProductOpen .sliderProduct {
   border-top-left-radius: 38px;
@@ -280,7 +280,12 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
+}
+.modalProductOpen .sliderProduct .slideProduct .imageProductModal {
+  height: 462px;
+  object-fit: contain;
 }
 .modalProductOpen .sliderProduct .addFavouriveButton {
   position: absolute;
@@ -433,6 +438,75 @@
   margin: auto 0 auto 0;
   background-color: #313131;
   transform: rotateZ(52deg);
+}
+.modalProductOpen footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 30px 15px 0 15px;
+}
+.modalProductOpen footer .hideView {
+  background-color: #080808;
+  padding: 20px 40px 20px 40px;
+  border-radius: 27px;
+}
+.modalProductOpen footer .hideView .hideButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen footer .hideView .hideButton p {
+  color: #f1f1f1;
+  font-size: 21px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.modalProductOpen footer .hideView .hideButton img {
+  height: 32px;
+}
+.modalProductOpen footer .hideView .hideButton .arrowClose {
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+.modalProductOpen footer .hideView .hideButton .arrowOpen {
+  transform: rotate(-90deg);
+  transition: 0.2s;
+}
+.modalProductOpen .actionButtons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 25px;
+  margin: 50px 44px 40px 44px;
+}
+.modalProductOpen .actionButtons .buyButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #db6900;
+  border-radius: 20px;
+  height: 60px;
+  cursor: pointer;
+}
+.modalProductOpen .actionButtons .buyButton p {
+  color: white;
+  font-size: 24px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.modalProductOpen .actionButtons .addButton {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.modalProductOpen .actionButtons .addButton p {
+  color: white;
+  font-size: 24px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
 }
 @keyframes slideUp {
   from {

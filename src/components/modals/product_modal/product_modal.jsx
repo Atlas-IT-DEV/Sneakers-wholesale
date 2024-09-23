@@ -22,10 +22,12 @@ const ProductModal = ({
 }) => {
   const { width } = useWindowDimensions();
 
-  const [isPressed, setIsPressed] = useState(false);
+  const [isPressed, setIsPressed] = useState([false, false, false, false]);
+  const copyIsPressed = Array.from(isPressed);
   const [modalVisible, setModalVisible] = useState(false);
   const favouriteClick = () => {
-    setIsPressed(!isPressed);
+    copyIsPressed[0] = !copyIsPressed[0];
+    setIsPressed(copyIsPressed);
   };
   return (
     <div>
@@ -67,7 +69,7 @@ const ProductModal = ({
         >
           <SwiperSlide className={styles.slider}>
             <img
-              src="https://legacy.reactjs.org/logo-og.png"
+              src="https://avatars.mds.yandex.net/i?id=9abb78b2620653cf366076b57cbdc214_l-5858783-images-thumbs&n=13"
               alt=""
               className={styles.imageProduct}
             />
@@ -79,7 +81,7 @@ const ProductModal = ({
               }}
             >
               <img
-                src={isPressed ? favouriteActiveIcon : favouriteInactiveIcon}
+                src={isPressed[0] ? favouriteActiveIcon : favouriteInactiveIcon}
                 alt=""
               />
             </div>
@@ -98,7 +100,7 @@ const ProductModal = ({
               }}
             >
               <img
-                src={isPressed ? favouriteActiveIcon : favouriteInactiveIcon}
+                src={isPressed[0] ? favouriteActiveIcon : favouriteInactiveIcon}
                 alt=""
               />
             </div>
@@ -117,7 +119,7 @@ const ProductModal = ({
               }}
             >
               <img
-                src={isPressed ? favouriteActiveIcon : favouriteInactiveIcon}
+                src={isPressed[0] ? favouriteActiveIcon : favouriteInactiveIcon}
                 alt=""
               />
             </div>
@@ -165,29 +167,29 @@ const ProductModal = ({
               }}
             >
               <img
-                src={isPressed ? favouriteActiveIcon : favouriteInactiveIcon}
+                src={isPressed[0] ? favouriteActiveIcon : favouriteInactiveIcon}
                 alt=""
               />
             </div>
             <SwiperSlide className={styles.slideProduct}>
               <img
-                src="https://legacy.reactjs.org/logo-og.png"
+                src="https://avatars.mds.yandex.net/i?id=9abb78b2620653cf366076b57cbdc214_l-5858783-images-thumbs&n=13"
                 alt=""
-                className={styles.imageProduct}
+                className={styles.imageProductModal}
               />
             </SwiperSlide>
             <SwiperSlide className={styles.slideProduct}>
               <img
                 src="https://legacy.reactjs.org/logo-og.png"
                 alt=""
-                className={styles.imageProduct}
+                className={styles.imageProductModal}
               />
             </SwiperSlide>
             <SwiperSlide className={styles.slideProduct}>
               <img
                 src="https://legacy.reactjs.org/logo-og.png"
                 alt=""
-                className={styles.imageProduct}
+                className={styles.imageProductModal}
               />
             </SwiperSlide>
           </Swiper>
@@ -250,6 +252,71 @@ const ProductModal = ({
               className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
             >
               <p>38</p>
+            </div>
+          </div>
+          <footer>
+            <div className={styles.hideView}>
+              <div
+                className={styles.hideButton}
+                onClick={() => {
+                  copyIsPressed[1] = !copyIsPressed[1];
+                  setIsPressed(copyIsPressed);
+                }}
+              >
+                <p>Доставка</p>
+                <img
+                  src={whiteArrow}
+                  alt=""
+                  className={
+                    isPressed[1] ? styles.arrowOpen : styles.arrowClose
+                  }
+                />
+              </div>
+            </div>
+            <div className={styles.hideView}>
+              <div
+                className={styles.hideButton}
+                onClick={() => {
+                  copyIsPressed[2] = !copyIsPressed[2];
+                  setIsPressed(copyIsPressed);
+                }}
+              >
+                <p>Детали</p>
+                <img
+                  src={whiteArrow}
+                  alt=""
+                  className={
+                    isPressed[2] ? styles.arrowOpen : styles.arrowClose
+                  }
+                />
+              </div>
+            </div>
+            <div className={styles.hideView}>
+              <div
+                className={styles.hideButton}
+                onClick={() => {
+                  copyIsPressed[3] = !copyIsPressed[3];
+                  setIsPressed(copyIsPressed);
+                }}
+              >
+                <p>Гарантия</p>
+                <img
+                  src={whiteArrow}
+                  alt=""
+                  className={
+                    isPressed[3] ? styles.arrowOpen : styles.arrowClose
+                  }
+                />
+              </div>
+            </div>
+          </footer>
+
+          <div className={styles.actionButtons}>
+            <div className={styles.buyButton}>
+              <p>Купить сейчас</p>
+            </div>
+            <div className={styles.addButton}>
+              <p>В корзину</p>
             </div>
           </div>
         </div>

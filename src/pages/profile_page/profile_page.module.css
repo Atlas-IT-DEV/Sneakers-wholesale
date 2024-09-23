@@ -122,11 +122,11 @@
   height: 32px;
 }
 .container585_600 .loyalityProgram .headerLoyality .arrowClose {
-  transform: rotate(0deg);
+  transform: rotate(90deg);
   transition: 0.2s;
 }
 .container585_600 .loyalityProgram .headerLoyality .arrowOpen {
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
   transition: 0.2s;
 }
 .container585_600 .subFiltersClose {
@@ -143,17 +143,16 @@
   flex-direction: column;
   margin-top: 10px;
   gap: 15px;
-  padding-right: 80px;
 }
 .container585_600 .subFiltersOpen .statusLoyality .headerStatus {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .container585_600 .subFiltersOpen .statusLoyality .statusText {
   color: #686868;
   font-family: TTForsTrialVariable;
-  font-size: 22px;
+  font-size: 23px;
+  padding-right: 30px;
 }
 .container585_600 .subFiltersOpen .statusLoyality .sumText {
   font-size: 20px;
@@ -162,6 +161,1038 @@
   text-decoration: underline;
   margin-top: 15px;
   font-size: 20px;
+  font-family: TTForsTrialVariable;
+  color: #686868;
+  cursor: pointer;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.container565_585 {
+  width: 100%;
+}
+.container565_585 .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px 0 30px;
+}
+.container565_585 .header .aboutUser {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+.container565_585 .header .aboutUser .imageUser {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.container565_585 .header .aboutUser .attributes {
+  display: flex;
+}
+.container565_585 .header .aboutUser .attributes img {
+  height: 27px;
+}
+.container565_585 .header .aboutUser .attributes .userValues {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .header .telegramButton {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  background-color: white;
+  width: max-content;
+  padding: 0 15px 0 15px;
+  border-radius: 79px;
+}
+.container565_585 .header .tgIcon {
+  width: 30px;
+}
+.container565_585 .header .telegramText {
+  font-family: TTForsTrialVariable;
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+}
+.container565_585 .rankUser {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  height: 35px;
+  padding: 0 18px 0 18px;
+  text-align: center;
+  border-radius: 90px;
+  width: max-content;
+  font-family: TTForsTrialVariable;
+  margin: 30px 30px 0 30px;
+}
+.container565_585 .bronzeRank {
+  background: linear-gradient(90deg, #df7b42, #7a3e1c);
+}
+.container565_585 .silverRank {
+  background: linear-gradient(90deg, #a9a9a9, #676767);
+}
+.container565_585 .goldRank {
+  background: linear-gradient(90deg, #fdb220, #835b0d);
+}
+.container565_585 .discountText {
+  margin: 30px 30px 0 30px;
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-size: 20px;
+  font-weight: 600;
+}
+.container565_585 .countPurchase {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #080808;
+  padding: 30px;
+  margin: 30px 15px 0 15px;
+  border-radius: 27px;
+}
+.container565_585 .countPurchase p {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .countPurchase p span {
+  color: #f07a0a;
+}
+.container565_585 .loyalityProgram {
+  display: flex;
+  flex-direction: column;
+  background-color: #080808;
+  padding: 30px;
+  margin: 30px 15px 30px 15px;
+  border-radius: 27px;
+}
+.container565_585 .loyalityProgram .headerLoyality {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.container565_585 .loyalityProgram .headerLoyality p {
+  color: #f1f1f1;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container565_585 .loyalityProgram .headerLoyality img {
+  height: 32px;
+}
+.container565_585 .loyalityProgram .headerLoyality .arrowClose {
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+.container565_585 .loyalityProgram .headerLoyality .arrowOpen {
+  transform: rotate(-90deg);
+  transition: 0.2s;
+}
+.container565_585 .subFiltersClose {
+  display: none;
+}
+.container565_585 .subFiltersOpen {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+.container565_585 .subFiltersOpen .statusLoyality {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 15px;
+}
+.container565_585 .subFiltersOpen .statusLoyality .headerStatus {
+  display: flex;
+  justify-content: space-between;
+}
+.container565_585 .subFiltersOpen .statusLoyality .statusText {
+  color: #686868;
+  font-family: TTForsTrialVariable;
+  font-size: 21px;
+  padding-right: 30px;
+}
+.container565_585 .subFiltersOpen .statusLoyality .sumText {
+  font-size: 19px;
+}
+.container565_585 .subFiltersOpen .rulesText {
+  text-decoration: underline;
+  margin-top: 15px;
+  font-size: 19px;
+  font-family: TTForsTrialVariable;
+  color: #686868;
+  cursor: pointer;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.container525_565 {
+  width: 100%;
+}
+.container525_565 .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px 0 30px;
+}
+.container525_565 .header .aboutUser {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+.container525_565 .header .aboutUser .imageUser {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.container525_565 .header .aboutUser .attributes {
+  display: flex;
+}
+.container525_565 .header .aboutUser .attributes img {
+  height: 27px;
+}
+.container525_565 .header .aboutUser .attributes .userValues {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .header .telegramButton {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  background-color: white;
+  width: max-content;
+  padding: 0 15px 0 15px;
+  border-radius: 79px;
+}
+.container525_565 .header .tgIcon {
+  width: 29px;
+}
+.container525_565 .header .telegramText {
+  font-family: TTForsTrialVariable;
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+}
+.container525_565 .rankUser {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  height: 35px;
+  padding: 0 18px 0 18px;
+  text-align: center;
+  border-radius: 90px;
+  width: max-content;
+  font-family: TTForsTrialVariable;
+  margin: 30px 30px 0 30px;
+}
+.container525_565 .bronzeRank {
+  background: linear-gradient(90deg, #df7b42, #7a3e1c);
+}
+.container525_565 .silverRank {
+  background: linear-gradient(90deg, #a9a9a9, #676767);
+}
+.container525_565 .goldRank {
+  background: linear-gradient(90deg, #fdb220, #835b0d);
+}
+.container525_565 .discountText {
+  margin: 30px 30px 0 30px;
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-size: 18px;
+  font-weight: 600;
+}
+.container525_565 .countPurchase {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #080808;
+  padding: 30px;
+  margin: 30px 15px 0 15px;
+  border-radius: 27px;
+}
+.container525_565 .countPurchase p {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .countPurchase p span {
+  color: #f07a0a;
+}
+.container525_565 .loyalityProgram {
+  display: flex;
+  flex-direction: column;
+  background-color: #080808;
+  padding: 30px;
+  margin: 30px 15px 30px 15px;
+  border-radius: 27px;
+}
+.container525_565 .loyalityProgram .headerLoyality {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.container525_565 .loyalityProgram .headerLoyality p {
+  color: #f1f1f1;
+  font-size: 18px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container525_565 .loyalityProgram .headerLoyality img {
+  height: 32px;
+}
+.container525_565 .loyalityProgram .headerLoyality .arrowClose {
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+.container525_565 .loyalityProgram .headerLoyality .arrowOpen {
+  transform: rotate(-90deg);
+  transition: 0.2s;
+}
+.container525_565 .subFiltersClose {
+  display: none;
+}
+.container525_565 .subFiltersOpen {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+.container525_565 .subFiltersOpen .statusLoyality {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 15px;
+}
+.container525_565 .subFiltersOpen .statusLoyality .headerStatus {
+  display: flex;
+  justify-content: space-between;
+}
+.container525_565 .subFiltersOpen .statusLoyality .statusText {
+  color: #686868;
+  font-family: TTForsTrialVariable;
+  font-size: 20px;
+  padding-right: 30px;
+}
+.container525_565 .subFiltersOpen .statusLoyality .sumText {
+  font-size: 17px;
+}
+.container525_565 .subFiltersOpen .rulesText {
+  text-decoration: underline;
+  margin-top: 15px;
+  font-size: 17px;
+  font-family: TTForsTrialVariable;
+  color: #686868;
+  cursor: pointer;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.container485_525 {
+  width: 100%;
+}
+.container485_525 .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px 0 30px;
+}
+.container485_525 .header .aboutUser {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+.container485_525 .header .aboutUser .imageUser {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.container485_525 .header .aboutUser .attributes {
+  display: flex;
+}
+.container485_525 .header .aboutUser .attributes img {
+  height: 27px;
+}
+.container485_525 .header .aboutUser .attributes .userValues {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .header .telegramButton {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  background-color: white;
+  width: max-content;
+  padding: 0 15px 0 15px;
+  border-radius: 79px;
+}
+.container485_525 .header .tgIcon {
+  width: 28px;
+}
+.container485_525 .header .telegramText {
+  font-family: TTForsTrialVariable;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+}
+.container485_525 .rankUser {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  height: 35px;
+  padding: 0 18px 0 18px;
+  text-align: center;
+  border-radius: 90px;
+  width: max-content;
+  font-family: TTForsTrialVariable;
+  margin: 30px 30px 0 30px;
+}
+.container485_525 .bronzeRank {
+  background: linear-gradient(90deg, #df7b42, #7a3e1c);
+}
+.container485_525 .silverRank {
+  background: linear-gradient(90deg, #a9a9a9, #676767);
+}
+.container485_525 .goldRank {
+  background: linear-gradient(90deg, #fdb220, #835b0d);
+}
+.container485_525 .discountText {
+  margin: 30px 30px 0 30px;
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-size: 16px;
+  font-weight: 600;
+}
+.container485_525 .countPurchase {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #080808;
+  padding: 30px;
+  margin: 30px 15px 0 15px;
+  border-radius: 27px;
+}
+.container485_525 .countPurchase p {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .countPurchase p span {
+  color: #f07a0a;
+}
+.container485_525 .loyalityProgram {
+  display: flex;
+  flex-direction: column;
+  background-color: #080808;
+  padding: 30px;
+  margin: 30px 15px 30px 15px;
+  border-radius: 27px;
+}
+.container485_525 .loyalityProgram .headerLoyality {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.container485_525 .loyalityProgram .headerLoyality p {
+  color: #f1f1f1;
+  font-size: 16px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container485_525 .loyalityProgram .headerLoyality img {
+  height: 32px;
+}
+.container485_525 .loyalityProgram .headerLoyality .arrowClose {
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+.container485_525 .loyalityProgram .headerLoyality .arrowOpen {
+  transform: rotate(-90deg);
+  transition: 0.2s;
+}
+.container485_525 .subFiltersClose {
+  display: none;
+}
+.container485_525 .subFiltersOpen {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+.container485_525 .subFiltersOpen .statusLoyality {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 15px;
+}
+.container485_525 .subFiltersOpen .statusLoyality .headerStatus {
+  display: flex;
+  justify-content: space-between;
+}
+.container485_525 .subFiltersOpen .statusLoyality .statusText {
+  color: #686868;
+  font-family: TTForsTrialVariable;
+  font-size: 18px;
+  padding-right: 30px;
+}
+.container485_525 .subFiltersOpen .statusLoyality .sumText {
+  font-size: 15px;
+}
+.container485_525 .subFiltersOpen .rulesText {
+  text-decoration: underline;
+  margin-top: 15px;
+  font-size: 15px;
+  font-family: TTForsTrialVariable;
+  color: #686868;
+  cursor: pointer;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.container450_485 {
+  width: 100%;
+}
+.container450_485 .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px 0 30px;
+}
+.container450_485 .header .aboutUser {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+.container450_485 .header .aboutUser .imageUser {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.container450_485 .header .aboutUser .attributes {
+  display: flex;
+}
+.container450_485 .header .aboutUser .attributes img {
+  height: 27px;
+}
+.container450_485 .header .aboutUser .attributes .userValues {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .header .telegramButton {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  background-color: white;
+  width: max-content;
+  padding: 0 15px 0 15px;
+  border-radius: 79px;
+}
+.container450_485 .header .tgIcon {
+  width: 27px;
+}
+.container450_485 .header .telegramText {
+  font-family: TTForsTrialVariable;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+}
+.container450_485 .rankUser {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  height: 35px;
+  padding: 0 18px 0 18px;
+  text-align: center;
+  border-radius: 90px;
+  width: max-content;
+  font-family: TTForsTrialVariable;
+  margin: 30px 30px 0 30px;
+}
+.container450_485 .bronzeRank {
+  background: linear-gradient(90deg, #df7b42, #7a3e1c);
+}
+.container450_485 .silverRank {
+  background: linear-gradient(90deg, #a9a9a9, #676767);
+}
+.container450_485 .goldRank {
+  background: linear-gradient(90deg, #fdb220, #835b0d);
+}
+.container450_485 .discountText {
+  margin: 30px 30px 0 30px;
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-size: 15px;
+  font-weight: 600;
+}
+.container450_485 .countPurchase {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #080808;
+  padding: 30px;
+  margin: 30px 15px 0 15px;
+  border-radius: 27px;
+}
+.container450_485 .countPurchase p {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .countPurchase p span {
+  color: #f07a0a;
+}
+.container450_485 .loyalityProgram {
+  display: flex;
+  flex-direction: column;
+  background-color: #080808;
+  padding: 30px;
+  margin: 30px 15px 30px 15px;
+  border-radius: 27px;
+}
+.container450_485 .loyalityProgram .headerLoyality {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.container450_485 .loyalityProgram .headerLoyality p {
+  color: #f1f1f1;
+  font-size: 15px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container450_485 .loyalityProgram .headerLoyality img {
+  height: 32px;
+}
+.container450_485 .loyalityProgram .headerLoyality .arrowClose {
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+.container450_485 .loyalityProgram .headerLoyality .arrowOpen {
+  transform: rotate(-90deg);
+  transition: 0.2s;
+}
+.container450_485 .subFiltersClose {
+  display: none;
+}
+.container450_485 .subFiltersOpen {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+.container450_485 .subFiltersOpen .statusLoyality {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 15px;
+}
+.container450_485 .subFiltersOpen .statusLoyality .headerStatus {
+  display: flex;
+  justify-content: space-between;
+}
+.container450_485 .subFiltersOpen .statusLoyality .statusText {
+  color: #686868;
+  font-family: TTForsTrialVariable;
+  font-size: 17px;
+  padding-right: 30px;
+}
+.container450_485 .subFiltersOpen .statusLoyality .sumText {
+  font-size: 14px;
+}
+.container450_485 .subFiltersOpen .rulesText {
+  text-decoration: underline;
+  margin-top: 15px;
+  font-size: 14px;
+  font-family: TTForsTrialVariable;
+  color: #686868;
+  cursor: pointer;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.container410_450 {
+  width: 100%;
+}
+.container410_450 .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px 0 30px;
+}
+.container410_450 .header .aboutUser {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+.container410_450 .header .aboutUser .imageUser {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.container410_450 .header .aboutUser .attributes {
+  display: flex;
+}
+.container410_450 .header .aboutUser .attributes img {
+  height: 27px;
+}
+.container410_450 .header .aboutUser .attributes .userValues {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .header .telegramButton {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  background-color: white;
+  width: max-content;
+  padding: 0 10px 0 10px;
+  border-radius: 79px;
+}
+.container410_450 .header .tgIcon {
+  width: 26px;
+}
+.container410_450 .header .telegramText {
+  font-family: TTForsTrialVariable;
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+}
+.container410_450 .rankUser {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  height: 35px;
+  padding: 0 18px 0 18px;
+  text-align: center;
+  border-radius: 90px;
+  width: max-content;
+  font-family: TTForsTrialVariable;
+  margin: 30px 30px 0 30px;
+}
+.container410_450 .bronzeRank {
+  background: linear-gradient(90deg, #df7b42, #7a3e1c);
+}
+.container410_450 .silverRank {
+  background: linear-gradient(90deg, #a9a9a9, #676767);
+}
+.container410_450 .goldRank {
+  background: linear-gradient(90deg, #fdb220, #835b0d);
+}
+.container410_450 .discountText {
+  margin: 30px 30px 0 30px;
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-size: 14px;
+  font-weight: 600;
+}
+.container410_450 .countPurchase {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #080808;
+  padding: 30px;
+  margin: 30px 15px 0 15px;
+  border-radius: 27px;
+}
+.container410_450 .countPurchase p {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .countPurchase p span {
+  color: #f07a0a;
+}
+.container410_450 .loyalityProgram {
+  display: flex;
+  flex-direction: column;
+  background-color: #080808;
+  padding: 30px;
+  margin: 30px 15px 30px 15px;
+  border-radius: 27px;
+}
+.container410_450 .loyalityProgram .headerLoyality {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.container410_450 .loyalityProgram .headerLoyality p {
+  color: #f1f1f1;
+  font-size: 14px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container410_450 .loyalityProgram .headerLoyality img {
+  height: 32px;
+}
+.container410_450 .loyalityProgram .headerLoyality .arrowClose {
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+.container410_450 .loyalityProgram .headerLoyality .arrowOpen {
+  transform: rotate(-90deg);
+  transition: 0.2s;
+}
+.container410_450 .subFiltersClose {
+  display: none;
+}
+.container410_450 .subFiltersOpen {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+.container410_450 .subFiltersOpen .statusLoyality {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 15px;
+}
+.container410_450 .subFiltersOpen .statusLoyality .headerStatus {
+  display: flex;
+  justify-content: space-between;
+}
+.container410_450 .subFiltersOpen .statusLoyality .statusText {
+  color: #686868;
+  font-family: TTForsTrialVariable;
+  font-size: 16px;
+  padding-right: 30px;
+}
+.container410_450 .subFiltersOpen .statusLoyality .sumText {
+  font-size: 13px;
+}
+.container410_450 .subFiltersOpen .rulesText {
+  text-decoration: underline;
+  margin-top: 15px;
+  font-size: 13px;
+  font-family: TTForsTrialVariable;
+  color: #686868;
+  cursor: pointer;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.container375_410 {
+  width: 100%;
+}
+.container375_410 .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px 0 30px;
+}
+.container375_410 .header .aboutUser {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+.container375_410 .header .aboutUser .imageUser {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.container375_410 .header .aboutUser .attributes {
+  display: flex;
+}
+.container375_410 .header .aboutUser .attributes img {
+  height: 27px;
+}
+.container375_410 .header .aboutUser .attributes .userValues {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .header .telegramButton {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  background-color: white;
+  width: max-content;
+  padding: 0 5px 0 5px;
+  border-radius: 79px;
+}
+.container375_410 .header .tgIcon {
+  width: 25px;
+}
+.container375_410 .header .telegramText {
+  font-family: TTForsTrialVariable;
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+}
+.container375_410 .rankUser {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  height: 35px;
+  padding: 0 18px 0 18px;
+  text-align: center;
+  border-radius: 90px;
+  width: max-content;
+  font-family: TTForsTrialVariable;
+  margin: 30px 30px 0 30px;
+}
+.container375_410 .bronzeRank {
+  background: linear-gradient(90deg, #df7b42, #7a3e1c);
+}
+.container375_410 .silverRank {
+  background: linear-gradient(90deg, #a9a9a9, #676767);
+}
+.container375_410 .goldRank {
+  background: linear-gradient(90deg, #fdb220, #835b0d);
+}
+.container375_410 .discountText {
+  margin: 30px 30px 0 30px;
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-size: 14px;
+  font-weight: 600;
+}
+.container375_410 .countPurchase {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #080808;
+  padding: 30px;
+  margin: 30px 15px 0 15px;
+  border-radius: 27px;
+}
+.container375_410 .countPurchase p {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .countPurchase p span {
+  color: #f07a0a;
+}
+.container375_410 .loyalityProgram {
+  display: flex;
+  flex-direction: column;
+  background-color: #080808;
+  padding: 30px;
+  margin: 30px 15px 30px 15px;
+  border-radius: 27px;
+}
+.container375_410 .loyalityProgram .headerLoyality {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.container375_410 .loyalityProgram .headerLoyality p {
+  color: #f1f1f1;
+  font-size: 14px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container375_410 .loyalityProgram .headerLoyality img {
+  height: 32px;
+}
+.container375_410 .loyalityProgram .headerLoyality .arrowClose {
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+.container375_410 .loyalityProgram .headerLoyality .arrowOpen {
+  transform: rotate(-90deg);
+  transition: 0.2s;
+}
+.container375_410 .subFiltersClose {
+  display: none;
+}
+.container375_410 .subFiltersOpen {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+.container375_410 .subFiltersOpen .statusLoyality {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 15px;
+}
+.container375_410 .subFiltersOpen .statusLoyality .headerStatus {
+  display: flex;
+  justify-content: space-between;
+}
+.container375_410 .subFiltersOpen .statusLoyality .statusText {
+  color: #686868;
+  font-family: TTForsTrialVariable;
+  font-size: 16px;
+  padding-right: 30px;
+}
+.container375_410 .subFiltersOpen .statusLoyality .sumText {
+  font-size: 13px;
+}
+.container375_410 .subFiltersOpen .rulesText {
+  text-decoration: underline;
+  margin-top: 15px;
+  font-size: 13px;
   font-family: TTForsTrialVariable;
   color: #686868;
   cursor: pointer;
