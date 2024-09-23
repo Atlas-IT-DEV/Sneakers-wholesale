@@ -2,6 +2,7 @@ import styles from "./product_modal.module.css";
 
 import favouriteInactiveIcon from "../../../images/favourite_inactive_icon.svg";
 import favouriteActiveIcon from "../../../images/favourite_active_icon.svg";
+import whiteArrow from "../../../images/arrow_select_white.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
@@ -12,7 +13,13 @@ import { FreeMode, Navigation, Pagination } from "swiper/modules";
 import { useState } from "react";
 import useWindowDimensions from "../../hooks/windowDimensions";
 
-const ProductModal = () => {
+const ProductModal = ({
+  price = 18400,
+  old_price = 18400,
+  count = "8 пар (опт)",
+  model_name = "Gel Quantum Kinetic",
+  brand_name = "Asics",
+}) => {
   const { width } = useWindowDimensions();
 
   const [isPressed, setIsPressed] = useState(false);
@@ -124,12 +131,6 @@ const ProductModal = () => {
             modalVisible ? styles.modalProductOpen : styles.modalProductClose
           }
         >
-          <p
-            onClick={() => setModalVisible(false)}
-            style={{ color: "white", position: "absolute", right: 0, top: 0 }}
-          >
-            Close
-          </p>
           <Swiper
             style={{
               "--swiper-pagination-color": "rgba(219, 105, 0, 1)",
@@ -150,7 +151,15 @@ const ProductModal = () => {
             }}
           >
             <div
-              className={styles.favouriteButton}
+              className={styles.backButton}
+              onClick={() => {
+                setModalVisible(false);
+              }}
+            >
+              <img src={whiteArrow} alt="" />
+            </div>
+            <div
+              className={styles.addFavouriveButton}
               onClick={() => {
                 favouriteClick();
               }}
@@ -182,6 +191,24 @@ const ProductModal = () => {
               />
             </SwiperSlide>
           </Swiper>
+
+          <div className={styles.priceCountView}>
+            <div className={styles.priceView}>
+              <p className={styles.priceText}>{price}₽</p>
+              <p className={styles.oldPriceText}>{old_price}₽</p>
+            </div>
+            <p className={styles.countText}>{count}</p>
+          </div>
+          <p className={styles.modelNameText}>{model_name}</p>
+          <div className={styles.brandButton}>
+            <p>{brand_name}</p>
+            <img src={whiteArrow} alt="" />
+          </div>
+          <div className={styles.sizesHeader}>
+            <p className={styles.sizeHeaderText}>Размеры (EU)</p>
+            <p className={styles.gridText}>Размерная сетка</p>
+          </div>
+          <div className={styles.sizesView}></div>
         </div>
       )}
     </div>
