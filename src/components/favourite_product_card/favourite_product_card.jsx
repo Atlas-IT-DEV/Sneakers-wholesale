@@ -5,6 +5,7 @@ import minusIcon from "../../images/minus_icon.svg";
 import plusIcon from "../../images/plus_icon.svg";
 
 import { useEffect, useState } from "react";
+import useWindowDimensions from "../hooks/windowDimensions";
 
 const FavouriteProductCard = ({
   name = "Asics",
@@ -19,8 +20,26 @@ const FavouriteProductCard = ({
   useEffect(() => {
     setCount(num);
   }, [num]);
+
+  const { width } = useWindowDimensions();
   return (
-    <div className={styles.container}>
+    <div
+      className={
+        width >= 585
+          ? styles.container585_600
+          : width >= 565
+          ? styles.container565_585
+          : width >= 525
+          ? styles.container525_565
+          : width >= 485
+          ? styles.container485_525
+          : width >= 450
+          ? styles.container450_485
+          : width >= 410
+          ? styles.container410_450
+          : styles.container375_410
+      }
+    >
       <div className={styles.imageContainer}>
         <img
           src="https://cache3.youla.io/files/images/780_780/5d/57/5d577bb2074b3e6c3359dfd6.jpg"

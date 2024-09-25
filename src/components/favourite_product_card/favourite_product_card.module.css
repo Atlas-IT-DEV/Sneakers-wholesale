@@ -1,4 +1,4 @@
-.container {
+.container585_600 {
   width: 100%;
   background-color: #080808;
   height: 360px;
@@ -7,80 +7,80 @@
   border-radius: 30px;
   column-gap: 26px;
 }
-.container .imageContainer {
+.container585_600 .imageContainer {
   min-width: 209px;
 }
-.container .imageContainer img {
+.container585_600 .imageContainer img {
   width: 209px;
   height: 302px;
   object-fit: contain;
 }
-.container .infoCard {
+.container585_600 .infoCard {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.container .infoCard .headerCard {
+.container585_600 .infoCard .headerCard {
   width: 278px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.container .infoCard .headerCard .catalogButton {
+.container585_600 .infoCard .headerCard .catalogButton {
   display: flex;
   align-items: center;
   gap: 8px;
   cursor: pointer;
 }
-.container .infoCard .headerCard .catalogButton p {
+.container585_600 .infoCard .headerCard .catalogButton p {
   font-size: 20px;
   color: #db6900;
   font-family: TTForsTrialVariable;
   font-weight: 500;
   text-decoration: underline;
 }
-.container .infoCard .headerCard .catalogButton img {
+.container585_600 .infoCard .headerCard .catalogButton img {
   height: 30px;
 }
-.container .infoCard .headerCard .settingsProductButton {
+.container585_600 .infoCard .headerCard .settingsProductButton {
   display: flex;
   align-items: center;
   cursor: pointer;
   height: 20px;
 }
-.container .infoCard .nameProductText {
+.container585_600 .infoCard .nameProductText {
   color: white;
   font-size: 20px;
   font-family: TTForsTrialVariable;
   font-weight: 600;
 }
-.container .infoCard .modelNameText {
+.container585_600 .infoCard .modelNameText {
   color: white;
   font-size: 20px;
   font-family: TTForsTrialVariable;
   font-weight: 500;
 }
-.container .infoCard .countProductText {
+.container585_600 .infoCard .countProductText {
   color: white;
   font-size: 20px;
   font-family: TTForsTrialVariable;
   font-weight: 500;
 }
-.container .infoCard .sizeText {
+.container585_600 .infoCard .sizeText {
   font-family: TTForsTrialVariable;
   font-weight: 500;
   font-size: 20px;
   color: #9b9b9b;
 }
-.container .infoCard .sizeText span {
+.container585_600 .infoCard .sizeText span {
   color: white;
 }
-.container .infoCard .counterProduct {
+.container585_600 .infoCard .counterProduct {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.container .infoCard .counterProduct p {
+.container585_600 .infoCard .counterProduct p {
   color: white;
   font-size: 20px;
   font-family: TTForsTrialVariable;
@@ -88,15 +88,15 @@
   width: 30px;
   text-align: center;
 }
-.container .infoCard .counterProduct .buttonLock {
+.container585_600 .infoCard .counterProduct .buttonLock {
   background-color: #939393;
   cursor: no-drop;
 }
-.container .infoCard .counterProduct .buttonUnlock {
+.container585_600 .infoCard .counterProduct .buttonUnlock {
   cursor: pointer;
   background-color: #db6900;
 }
-.container .infoCard .counterProduct .button {
+.container585_600 .infoCard .counterProduct .button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,25 +104,25 @@
   height: 38px;
   border-radius: 3px;
 }
-.container .infoCard .costsView {
+.container585_600 .infoCard .costsView {
   display: flex;
   gap: 12px;
   align-items: end;
 }
-.container .infoCard .costsView .priceText {
+.container585_600 .infoCard .costsView .priceText {
   font-size: 23px;
   font-family: TTForsTrialVariable;
   font-weight: 600;
   color: #db6900;
 }
-.container .infoCard .costsView .oldPriceText {
+.container585_600 .infoCard .costsView .oldPriceText {
   font-size: 21px;
   font-weight: 500;
   font-family: TTForsTrialVariable;
   color: #9b9b9b;
   text-decoration: line-through;
 }
-.container .infoCard .buyButton {
+.container585_600 .infoCard .buyButton {
   height: 45px;
   padding: 0 10px 0 10px;
   display: flex;
@@ -133,7 +133,853 @@
   border-radius: 4px;
   cursor: pointer;
 }
-.container .infoCard .buyButton p {
+.container585_600 .infoCard .buyButton p {
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  color: #db6900;
+  font-weight: 600;
+}
+.container565_585 {
+  width: 100%;
+  background-color: #080808;
+  height: 360px;
+  padding: 20px;
+  display: flex;
+  border-radius: 30px;
+  column-gap: 26px;
+}
+.container565_585 .imageContainer {
+  min-width: 209px;
+}
+.container565_585 .imageContainer img {
+  width: 209px;
+  height: 302px;
+  object-fit: contain;
+}
+.container565_585 .infoCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container565_585 .infoCard .headerCard {
+  width: 278px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container565_585 .infoCard .headerCard .catalogButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.container565_585 .infoCard .headerCard .catalogButton p {
+  font-size: 20px;
+  color: #db6900;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.container565_585 .infoCard .headerCard .catalogButton img {
+  height: 30px;
+}
+.container565_585 .infoCard .headerCard .settingsProductButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 20px;
+}
+.container565_585 .infoCard .nameProductText {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container565_585 .infoCard .modelNameText {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container565_585 .infoCard .countProductText {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container565_585 .infoCard .sizeText {
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 20px;
+  color: #9b9b9b;
+}
+.container565_585 .infoCard .sizeText span {
+  color: white;
+}
+.container565_585 .infoCard .counterProduct {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.container565_585 .infoCard .counterProduct p {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  width: 30px;
+  text-align: center;
+}
+.container565_585 .infoCard .counterProduct .buttonLock {
+  background-color: #939393;
+  cursor: no-drop;
+}
+.container565_585 .infoCard .counterProduct .buttonUnlock {
+  cursor: pointer;
+  background-color: #db6900;
+}
+.container565_585 .infoCard .counterProduct .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 3px;
+}
+.container565_585 .infoCard .costsView {
+  display: flex;
+  gap: 12px;
+  align-items: end;
+}
+.container565_585 .infoCard .costsView .priceText {
+  font-size: 23px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+  color: #db6900;
+}
+.container565_585 .infoCard .costsView .oldPriceText {
+  font-size: 21px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+  color: #9b9b9b;
+  text-decoration: line-through;
+}
+.container565_585 .infoCard .buyButton {
+  height: 45px;
+  padding: 0 10px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  border: 1px solid #db6900;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container565_585 .infoCard .buyButton p {
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  color: #db6900;
+  font-weight: 600;
+}
+.container525_565 {
+  width: 100%;
+  background-color: #080808;
+  height: 360px;
+  padding: 20px;
+  display: flex;
+  border-radius: 30px;
+  column-gap: 26px;
+}
+.container525_565 .imageContainer {
+  min-width: 209px;
+}
+.container525_565 .imageContainer img {
+  width: 209px;
+  height: 302px;
+  object-fit: contain;
+}
+.container525_565 .infoCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container525_565 .infoCard .headerCard {
+  width: 278px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container525_565 .infoCard .headerCard .catalogButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.container525_565 .infoCard .headerCard .catalogButton p {
+  font-size: 20px;
+  color: #db6900;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.container525_565 .infoCard .headerCard .catalogButton img {
+  height: 30px;
+}
+.container525_565 .infoCard .headerCard .settingsProductButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 20px;
+}
+.container525_565 .infoCard .nameProductText {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container525_565 .infoCard .modelNameText {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container525_565 .infoCard .countProductText {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container525_565 .infoCard .sizeText {
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 20px;
+  color: #9b9b9b;
+}
+.container525_565 .infoCard .sizeText span {
+  color: white;
+}
+.container525_565 .infoCard .counterProduct {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.container525_565 .infoCard .counterProduct p {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  width: 30px;
+  text-align: center;
+}
+.container525_565 .infoCard .counterProduct .buttonLock {
+  background-color: #939393;
+  cursor: no-drop;
+}
+.container525_565 .infoCard .counterProduct .buttonUnlock {
+  cursor: pointer;
+  background-color: #db6900;
+}
+.container525_565 .infoCard .counterProduct .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 3px;
+}
+.container525_565 .infoCard .costsView {
+  display: flex;
+  gap: 12px;
+  align-items: end;
+}
+.container525_565 .infoCard .costsView .priceText {
+  font-size: 23px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+  color: #db6900;
+}
+.container525_565 .infoCard .costsView .oldPriceText {
+  font-size: 21px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+  color: #9b9b9b;
+  text-decoration: line-through;
+}
+.container525_565 .infoCard .buyButton {
+  height: 45px;
+  padding: 0 10px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  border: 1px solid #db6900;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container525_565 .infoCard .buyButton p {
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  color: #db6900;
+  font-weight: 600;
+}
+.container485_525 {
+  width: 100%;
+  background-color: #080808;
+  height: 360px;
+  padding: 20px;
+  display: flex;
+  border-radius: 30px;
+  column-gap: 26px;
+}
+.container485_525 .imageContainer {
+  min-width: 209px;
+}
+.container485_525 .imageContainer img {
+  width: 209px;
+  height: 302px;
+  object-fit: contain;
+}
+.container485_525 .infoCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container485_525 .infoCard .headerCard {
+  width: 278px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container485_525 .infoCard .headerCard .catalogButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.container485_525 .infoCard .headerCard .catalogButton p {
+  font-size: 20px;
+  color: #db6900;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.container485_525 .infoCard .headerCard .catalogButton img {
+  height: 30px;
+}
+.container485_525 .infoCard .headerCard .settingsProductButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 20px;
+}
+.container485_525 .infoCard .nameProductText {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container485_525 .infoCard .modelNameText {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container485_525 .infoCard .countProductText {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container485_525 .infoCard .sizeText {
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 20px;
+  color: #9b9b9b;
+}
+.container485_525 .infoCard .sizeText span {
+  color: white;
+}
+.container485_525 .infoCard .counterProduct {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.container485_525 .infoCard .counterProduct p {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  width: 30px;
+  text-align: center;
+}
+.container485_525 .infoCard .counterProduct .buttonLock {
+  background-color: #939393;
+  cursor: no-drop;
+}
+.container485_525 .infoCard .counterProduct .buttonUnlock {
+  cursor: pointer;
+  background-color: #db6900;
+}
+.container485_525 .infoCard .counterProduct .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 3px;
+}
+.container485_525 .infoCard .costsView {
+  display: flex;
+  gap: 12px;
+  align-items: end;
+}
+.container485_525 .infoCard .costsView .priceText {
+  font-size: 23px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+  color: #db6900;
+}
+.container485_525 .infoCard .costsView .oldPriceText {
+  font-size: 21px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+  color: #9b9b9b;
+  text-decoration: line-through;
+}
+.container485_525 .infoCard .buyButton {
+  height: 45px;
+  padding: 0 10px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  border: 1px solid #db6900;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container485_525 .infoCard .buyButton p {
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  color: #db6900;
+  font-weight: 600;
+}
+.container450_485 {
+  width: 100%;
+  background-color: #080808;
+  height: 360px;
+  padding: 20px;
+  display: flex;
+  border-radius: 30px;
+  column-gap: 26px;
+}
+.container450_485 .imageContainer {
+  min-width: 209px;
+}
+.container450_485 .imageContainer img {
+  width: 209px;
+  height: 302px;
+  object-fit: contain;
+}
+.container450_485 .infoCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container450_485 .infoCard .headerCard {
+  width: 278px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container450_485 .infoCard .headerCard .catalogButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.container450_485 .infoCard .headerCard .catalogButton p {
+  font-size: 20px;
+  color: #db6900;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.container450_485 .infoCard .headerCard .catalogButton img {
+  height: 30px;
+}
+.container450_485 .infoCard .headerCard .settingsProductButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 20px;
+}
+.container450_485 .infoCard .nameProductText {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container450_485 .infoCard .modelNameText {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container450_485 .infoCard .countProductText {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container450_485 .infoCard .sizeText {
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 20px;
+  color: #9b9b9b;
+}
+.container450_485 .infoCard .sizeText span {
+  color: white;
+}
+.container450_485 .infoCard .counterProduct {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.container450_485 .infoCard .counterProduct p {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  width: 30px;
+  text-align: center;
+}
+.container450_485 .infoCard .counterProduct .buttonLock {
+  background-color: #939393;
+  cursor: no-drop;
+}
+.container450_485 .infoCard .counterProduct .buttonUnlock {
+  cursor: pointer;
+  background-color: #db6900;
+}
+.container450_485 .infoCard .counterProduct .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 3px;
+}
+.container450_485 .infoCard .costsView {
+  display: flex;
+  gap: 12px;
+  align-items: end;
+}
+.container450_485 .infoCard .costsView .priceText {
+  font-size: 23px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+  color: #db6900;
+}
+.container450_485 .infoCard .costsView .oldPriceText {
+  font-size: 21px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+  color: #9b9b9b;
+  text-decoration: line-through;
+}
+.container450_485 .infoCard .buyButton {
+  height: 45px;
+  padding: 0 10px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  border: 1px solid #db6900;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container450_485 .infoCard .buyButton p {
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  color: #db6900;
+  font-weight: 600;
+}
+.container410_450 {
+  width: 100%;
+  background-color: #080808;
+  height: 360px;
+  padding: 20px;
+  display: flex;
+  border-radius: 30px;
+  column-gap: 26px;
+}
+.container410_450 .imageContainer {
+  min-width: 209px;
+}
+.container410_450 .imageContainer img {
+  width: 209px;
+  height: 302px;
+  object-fit: contain;
+}
+.container410_450 .infoCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container410_450 .infoCard .headerCard {
+  width: 278px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container410_450 .infoCard .headerCard .catalogButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.container410_450 .infoCard .headerCard .catalogButton p {
+  font-size: 20px;
+  color: #db6900;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.container410_450 .infoCard .headerCard .catalogButton img {
+  height: 30px;
+}
+.container410_450 .infoCard .headerCard .settingsProductButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 20px;
+}
+.container410_450 .infoCard .nameProductText {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container410_450 .infoCard .modelNameText {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container410_450 .infoCard .countProductText {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container410_450 .infoCard .sizeText {
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 20px;
+  color: #9b9b9b;
+}
+.container410_450 .infoCard .sizeText span {
+  color: white;
+}
+.container410_450 .infoCard .counterProduct {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.container410_450 .infoCard .counterProduct p {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  width: 30px;
+  text-align: center;
+}
+.container410_450 .infoCard .counterProduct .buttonLock {
+  background-color: #939393;
+  cursor: no-drop;
+}
+.container410_450 .infoCard .counterProduct .buttonUnlock {
+  cursor: pointer;
+  background-color: #db6900;
+}
+.container410_450 .infoCard .counterProduct .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 3px;
+}
+.container410_450 .infoCard .costsView {
+  display: flex;
+  gap: 12px;
+  align-items: end;
+}
+.container410_450 .infoCard .costsView .priceText {
+  font-size: 23px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+  color: #db6900;
+}
+.container410_450 .infoCard .costsView .oldPriceText {
+  font-size: 21px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+  color: #9b9b9b;
+  text-decoration: line-through;
+}
+.container410_450 .infoCard .buyButton {
+  height: 45px;
+  padding: 0 10px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  border: 1px solid #db6900;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container410_450 .infoCard .buyButton p {
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  color: #db6900;
+  font-weight: 600;
+}
+.container375_410 {
+  width: 100%;
+  background-color: #080808;
+  height: 360px;
+  padding: 20px;
+  display: flex;
+  border-radius: 30px;
+  column-gap: 26px;
+}
+.container375_410 .imageContainer {
+  min-width: 209px;
+}
+.container375_410 .imageContainer img {
+  width: 209px;
+  height: 302px;
+  object-fit: contain;
+}
+.container375_410 .infoCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container375_410 .infoCard .headerCard {
+  width: 278px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container375_410 .infoCard .headerCard .catalogButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.container375_410 .infoCard .headerCard .catalogButton p {
+  font-size: 20px;
+  color: #db6900;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  text-decoration: underline;
+}
+.container375_410 .infoCard .headerCard .catalogButton img {
+  height: 30px;
+}
+.container375_410 .infoCard .headerCard .settingsProductButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 20px;
+}
+.container375_410 .infoCard .nameProductText {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.container375_410 .infoCard .modelNameText {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container375_410 .infoCard .countProductText {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container375_410 .infoCard .sizeText {
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 20px;
+  color: #9b9b9b;
+}
+.container375_410 .infoCard .sizeText span {
+  color: white;
+}
+.container375_410 .infoCard .counterProduct {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.container375_410 .infoCard .counterProduct p {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  width: 30px;
+  text-align: center;
+}
+.container375_410 .infoCard .counterProduct .buttonLock {
+  background-color: #939393;
+  cursor: no-drop;
+}
+.container375_410 .infoCard .counterProduct .buttonUnlock {
+  cursor: pointer;
+  background-color: #db6900;
+}
+.container375_410 .infoCard .counterProduct .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 3px;
+}
+.container375_410 .infoCard .costsView {
+  display: flex;
+  gap: 12px;
+  align-items: end;
+}
+.container375_410 .infoCard .costsView .priceText {
+  font-size: 23px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+  color: #db6900;
+}
+.container375_410 .infoCard .costsView .oldPriceText {
+  font-size: 21px;
+  font-weight: 500;
+  font-family: TTForsTrialVariable;
+  color: #9b9b9b;
+  text-decoration: line-through;
+}
+.container375_410 .infoCard .buyButton {
+  height: 45px;
+  padding: 0 10px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  border: 1px solid #db6900;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container375_410 .infoCard .buyButton p {
   font-size: 20px;
   font-family: TTForsTrialVariable;
   color: #db6900;

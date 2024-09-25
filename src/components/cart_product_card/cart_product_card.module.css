@@ -119,11 +119,11 @@
   font-family: TTForsTrialVariable;
 }
 .container585_600 .settingsButton {
+  display: flex;
   position: absolute;
   right: 24px;
-  top: 30px;
   cursor: pointer;
-  padding: 2px;
+  height: 30px;
 }
 .container565_585 {
   display: flex;
@@ -247,11 +247,11 @@
   font-family: TTForsTrialVariable;
 }
 .container565_585 .settingsButton {
+  display: flex;
   position: absolute;
   right: 24px;
-  top: 30px;
   cursor: pointer;
-  padding: 2px;
+  height: 29px;
 }
 .container525_565 {
   display: flex;
@@ -375,11 +375,11 @@
   font-family: TTForsTrialVariable;
 }
 .container525_565 .settingsButton {
+  display: flex;
   position: absolute;
-  right: 24px;
-  top: 30px;
+  right: 20px;
   cursor: pointer;
-  padding: 2px;
+  height: 26px;
 }
 .container485_525 {
   display: flex;
@@ -504,10 +504,10 @@
 }
 .container485_525 .settingsButton {
   position: absolute;
-  right: 24px;
-  top: 30px;
+  right: 18px;
+  display: flex;
   cursor: pointer;
-  padding: 2px;
+  height: 23px;
 }
 .container450_485 {
   display: flex;
@@ -631,10 +631,10 @@
 }
 .container450_485 .settingsButton {
   position: absolute;
-  right: 24px;
-  top: 30px;
+  right: 16px;
   cursor: pointer;
-  padding: 2px;
+  display: flex;
+  height: 24px;
 }
 .container410_450 {
   display: flex;
@@ -758,10 +758,10 @@
 }
 .container410_450 .settingsButton {
   position: absolute;
-  right: 24px;
-  top: 30px;
+  right: 14px;
+  display: flex;
   cursor: pointer;
-  padding: 2px;
+  height: 20px;
 }
 .container375_410 {
   display: flex;
@@ -885,8 +885,8 @@
 }
 .container375_410 .settingsButton {
   position: absolute;
-  right: 24px;
-  top: 30px;
+  right: 10px;
   cursor: pointer;
-  padding: 2px;
+  display: flex;
+  height: 20px;
 }

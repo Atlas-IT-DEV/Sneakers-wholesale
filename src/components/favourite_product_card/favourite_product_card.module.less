@@ -1,6 +1,858 @@
 @font: TTForsTrialVariable;
 
-.container {
+.container585_600 {
+  width: 100%;
+  background-color: rgba(8, 8, 8, 1);
+  height: 360px;
+  padding: 20px;
+  display: flex;
+  border-radius: 30px;
+  column-gap: 26px;
+  .imageContainer {
+    min-width: 209px;
+    img {
+      width: 209px;
+      height: 302px;
+      object-fit: contain;
+    }
+  }
+  .infoCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .headerCard {
+      width: 278px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .catalogButton {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        p {
+          font-size: 20px;
+          color: rgba(219, 105, 0, 1);
+          font-family: @font;
+          font-weight: 500;
+          text-decoration: underline;
+        }
+        img {
+          height: 30px;
+        }
+      }
+      .settingsProductButton {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        height: 20px;
+      }
+    }
+    .nameProductText {
+      color: white;
+      font-size: 20px;
+      font-family: @font;
+      font-weight: 600;
+    }
+    .modelNameText {
+      color: white;
+      font-size: 20px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .countProductText {
+      color: white;
+      font-size: 20px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .sizeText {
+      font-family: @font;
+      font-weight: 500;
+      font-size: 20px;
+      color: rgba(155, 155, 155, 1);
+      span {
+        color: white;
+      }
+    }
+    .counterProduct {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      p {
+        color: white;
+        font-size: 20px;
+        font-family: @font;
+        font-weight: 500;
+        width: 30px;
+        text-align: center;
+      }
+      .buttonLock {
+        background-color: rgba(147, 147, 147, 1);
+        cursor: no-drop;
+      }
+      .buttonUnlock {
+        cursor: pointer;
+        background-color: rgba(219, 105, 0, 1);
+      }
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 3px;
+      }
+    }
+    .costsView {
+      display: flex;
+      gap: 12px;
+      align-items: end;
+      .priceText {
+        font-size: 23px;
+        font-family: @font;
+        font-weight: 600;
+        color: rgba(219, 105, 0, 1);
+      }
+      .oldPriceText {
+        font-size: 21px;
+        font-weight: 500;
+        font-family: @font;
+        color: rgba(155, 155, 155, 1);
+        text-decoration: line-through;
+      }
+    }
+    .buyButton {
+      height: 45px;
+      padding: 0 10px 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: max-content;
+      border: 1px solid rgba(219, 105, 0, 1);
+      border-radius: 4px;
+      cursor: pointer;
+      p {
+        font-size: 20px;
+        font-family: @font;
+        color: rgba(219, 105, 0, 1);
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.container565_585 {
+  width: 100%;
+  background-color: rgba(8, 8, 8, 1);
+  height: 360px;
+  padding: 20px;
+  display: flex;
+  border-radius: 30px;
+  column-gap: 26px;
+  .imageContainer {
+    min-width: 209px;
+    img {
+      width: 209px;
+      height: 302px;
+      object-fit: contain;
+    }
+  }
+  .infoCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .headerCard {
+      width: 278px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .catalogButton {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        p {
+          font-size: 20px;
+          color: rgba(219, 105, 0, 1);
+          font-family: @font;
+          font-weight: 500;
+          text-decoration: underline;
+        }
+        img {
+          height: 30px;
+        }
+      }
+      .settingsProductButton {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        height: 20px;
+      }
+    }
+    .nameProductText {
+      color: white;
+      font-size: 20px;
+      font-family: @font;
+      font-weight: 600;
+    }
+    .modelNameText {
+      color: white;
+      font-size: 20px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .countProductText {
+      color: white;
+      font-size: 20px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .sizeText {
+      font-family: @font;
+      font-weight: 500;
+      font-size: 20px;
+      color: rgba(155, 155, 155, 1);
+      span {
+        color: white;
+      }
+    }
+    .counterProduct {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      p {
+        color: white;
+        font-size: 20px;
+        font-family: @font;
+        font-weight: 500;
+        width: 30px;
+        text-align: center;
+      }
+      .buttonLock {
+        background-color: rgba(147, 147, 147, 1);
+        cursor: no-drop;
+      }
+      .buttonUnlock {
+        cursor: pointer;
+        background-color: rgba(219, 105, 0, 1);
+      }
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 3px;
+      }
+    }
+    .costsView {
+      display: flex;
+      gap: 12px;
+      align-items: end;
+      .priceText {
+        font-size: 23px;
+        font-family: @font;
+        font-weight: 600;
+        color: rgba(219, 105, 0, 1);
+      }
+      .oldPriceText {
+        font-size: 21px;
+        font-weight: 500;
+        font-family: @font;
+        color: rgba(155, 155, 155, 1);
+        text-decoration: line-through;
+      }
+    }
+    .buyButton {
+      height: 45px;
+      padding: 0 10px 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: max-content;
+      border: 1px solid rgba(219, 105, 0, 1);
+      border-radius: 4px;
+      cursor: pointer;
+      p {
+        font-size: 20px;
+        font-family: @font;
+        color: rgba(219, 105, 0, 1);
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.container525_565 {
+  width: 100%;
+  background-color: rgba(8, 8, 8, 1);
+  height: 360px;
+  padding: 20px;
+  display: flex;
+  border-radius: 30px;
+  column-gap: 26px;
+  .imageContainer {
+    min-width: 209px;
+    img {
+      width: 209px;
+      height: 302px;
+      object-fit: contain;
+    }
+  }
+  .infoCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .headerCard {
+      width: 278px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .catalogButton {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        p {
+          font-size: 20px;
+          color: rgba(219, 105, 0, 1);
+          font-family: @font;
+          font-weight: 500;
+          text-decoration: underline;
+        }
+        img {
+          height: 30px;
+        }
+      }
+      .settingsProductButton {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        height: 20px;
+      }
+    }
+    .nameProductText {
+      color: white;
+      font-size: 20px;
+      font-family: @font;
+      font-weight: 600;
+    }
+    .modelNameText {
+      color: white;
+      font-size: 20px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .countProductText {
+      color: white;
+      font-size: 20px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .sizeText {
+      font-family: @font;
+      font-weight: 500;
+      font-size: 20px;
+      color: rgba(155, 155, 155, 1);
+      span {
+        color: white;
+      }
+    }
+    .counterProduct {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      p {
+        color: white;
+        font-size: 20px;
+        font-family: @font;
+        font-weight: 500;
+        width: 30px;
+        text-align: center;
+      }
+      .buttonLock {
+        background-color: rgba(147, 147, 147, 1);
+        cursor: no-drop;
+      }
+      .buttonUnlock {
+        cursor: pointer;
+        background-color: rgba(219, 105, 0, 1);
+      }
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 3px;
+      }
+    }
+    .costsView {
+      display: flex;
+      gap: 12px;
+      align-items: end;
+      .priceText {
+        font-size: 23px;
+        font-family: @font;
+        font-weight: 600;
+        color: rgba(219, 105, 0, 1);
+      }
+      .oldPriceText {
+        font-size: 21px;
+        font-weight: 500;
+        font-family: @font;
+        color: rgba(155, 155, 155, 1);
+        text-decoration: line-through;
+      }
+    }
+    .buyButton {
+      height: 45px;
+      padding: 0 10px 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: max-content;
+      border: 1px solid rgba(219, 105, 0, 1);
+      border-radius: 4px;
+      cursor: pointer;
+      p {
+        font-size: 20px;
+        font-family: @font;
+        color: rgba(219, 105, 0, 1);
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.container485_525 {
+  width: 100%;
+  background-color: rgba(8, 8, 8, 1);
+  height: 360px;
+  padding: 20px;
+  display: flex;
+  border-radius: 30px;
+  column-gap: 26px;
+  .imageContainer {
+    min-width: 209px;
+    img {
+      width: 209px;
+      height: 302px;
+      object-fit: contain;
+    }
+  }
+  .infoCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .headerCard {
+      width: 278px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .catalogButton {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        p {
+          font-size: 20px;
+          color: rgba(219, 105, 0, 1);
+          font-family: @font;
+          font-weight: 500;
+          text-decoration: underline;
+        }
+        img {
+          height: 30px;
+        }
+      }
+      .settingsProductButton {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        height: 20px;
+      }
+    }
+    .nameProductText {
+      color: white;
+      font-size: 20px;
+      font-family: @font;
+      font-weight: 600;
+    }
+    .modelNameText {
+      color: white;
+      font-size: 20px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .countProductText {
+      color: white;
+      font-size: 20px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .sizeText {
+      font-family: @font;
+      font-weight: 500;
+      font-size: 20px;
+      color: rgba(155, 155, 155, 1);
+      span {
+        color: white;
+      }
+    }
+    .counterProduct {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      p {
+        color: white;
+        font-size: 20px;
+        font-family: @font;
+        font-weight: 500;
+        width: 30px;
+        text-align: center;
+      }
+      .buttonLock {
+        background-color: rgba(147, 147, 147, 1);
+        cursor: no-drop;
+      }
+      .buttonUnlock {
+        cursor: pointer;
+        background-color: rgba(219, 105, 0, 1);
+      }
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 3px;
+      }
+    }
+    .costsView {
+      display: flex;
+      gap: 12px;
+      align-items: end;
+      .priceText {
+        font-size: 23px;
+        font-family: @font;
+        font-weight: 600;
+        color: rgba(219, 105, 0, 1);
+      }
+      .oldPriceText {
+        font-size: 21px;
+        font-weight: 500;
+        font-family: @font;
+        color: rgba(155, 155, 155, 1);
+        text-decoration: line-through;
+      }
+    }
+    .buyButton {
+      height: 45px;
+      padding: 0 10px 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: max-content;
+      border: 1px solid rgba(219, 105, 0, 1);
+      border-radius: 4px;
+      cursor: pointer;
+      p {
+        font-size: 20px;
+        font-family: @font;
+        color: rgba(219, 105, 0, 1);
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.container450_485 {
+  width: 100%;
+  background-color: rgba(8, 8, 8, 1);
+  height: 360px;
+  padding: 20px;
+  display: flex;
+  border-radius: 30px;
+  column-gap: 26px;
+  .imageContainer {
+    min-width: 209px;
+    img {
+      width: 209px;
+      height: 302px;
+      object-fit: contain;
+    }
+  }
+  .infoCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .headerCard {
+      width: 278px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .catalogButton {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        p {
+          font-size: 20px;
+          color: rgba(219, 105, 0, 1);
+          font-family: @font;
+          font-weight: 500;
+          text-decoration: underline;
+        }
+        img {
+          height: 30px;
+        }
+      }
+      .settingsProductButton {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        height: 20px;
+      }
+    }
+    .nameProductText {
+      color: white;
+      font-size: 20px;
+      font-family: @font;
+      font-weight: 600;
+    }
+    .modelNameText {
+      color: white;
+      font-size: 20px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .countProductText {
+      color: white;
+      font-size: 20px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .sizeText {
+      font-family: @font;
+      font-weight: 500;
+      font-size: 20px;
+      color: rgba(155, 155, 155, 1);
+      span {
+        color: white;
+      }
+    }
+    .counterProduct {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      p {
+        color: white;
+        font-size: 20px;
+        font-family: @font;
+        font-weight: 500;
+        width: 30px;
+        text-align: center;
+      }
+      .buttonLock {
+        background-color: rgba(147, 147, 147, 1);
+        cursor: no-drop;
+      }
+      .buttonUnlock {
+        cursor: pointer;
+        background-color: rgba(219, 105, 0, 1);
+      }
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 3px;
+      }
+    }
+    .costsView {
+      display: flex;
+      gap: 12px;
+      align-items: end;
+      .priceText {
+        font-size: 23px;
+        font-family: @font;
+        font-weight: 600;
+        color: rgba(219, 105, 0, 1);
+      }
+      .oldPriceText {
+        font-size: 21px;
+        font-weight: 500;
+        font-family: @font;
+        color: rgba(155, 155, 155, 1);
+        text-decoration: line-through;
+      }
+    }
+    .buyButton {
+      height: 45px;
+      padding: 0 10px 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: max-content;
+      border: 1px solid rgba(219, 105, 0, 1);
+      border-radius: 4px;
+      cursor: pointer;
+      p {
+        font-size: 20px;
+        font-family: @font;
+        color: rgba(219, 105, 0, 1);
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.container410_450 {
+  width: 100%;
+  background-color: rgba(8, 8, 8, 1);
+  height: 360px;
+  padding: 20px;
+  display: flex;
+  border-radius: 30px;
+  column-gap: 26px;
+  .imageContainer {
+    min-width: 209px;
+    img {
+      width: 209px;
+      height: 302px;
+      object-fit: contain;
+    }
+  }
+  .infoCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .headerCard {
+      width: 278px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .catalogButton {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        p {
+          font-size: 20px;
+          color: rgba(219, 105, 0, 1);
+          font-family: @font;
+          font-weight: 500;
+          text-decoration: underline;
+        }
+        img {
+          height: 30px;
+        }
+      }
+      .settingsProductButton {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        height: 20px;
+      }
+    }
+    .nameProductText {
+      color: white;
+      font-size: 20px;
+      font-family: @font;
+      font-weight: 600;
+    }
+    .modelNameText {
+      color: white;
+      font-size: 20px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .countProductText {
+      color: white;
+      font-size: 20px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .sizeText {
+      font-family: @font;
+      font-weight: 500;
+      font-size: 20px;
+      color: rgba(155, 155, 155, 1);
+      span {
+        color: white;
+      }
+    }
+    .counterProduct {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      p {
+        color: white;
+        font-size: 20px;
+        font-family: @font;
+        font-weight: 500;
+        width: 30px;
+        text-align: center;
+      }
+      .buttonLock {
+        background-color: rgba(147, 147, 147, 1);
+        cursor: no-drop;
+      }
+      .buttonUnlock {
+        cursor: pointer;
+        background-color: rgba(219, 105, 0, 1);
+      }
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 3px;
+      }
+    }
+    .costsView {
+      display: flex;
+      gap: 12px;
+      align-items: end;
+      .priceText {
+        font-size: 23px;
+        font-family: @font;
+        font-weight: 600;
+        color: rgba(219, 105, 0, 1);
+      }
+      .oldPriceText {
+        font-size: 21px;
+        font-weight: 500;
+        font-family: @font;
+        color: rgba(155, 155, 155, 1);
+        text-decoration: line-through;
+      }
+    }
+    .buyButton {
+      height: 45px;
+      padding: 0 10px 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: max-content;
+      border: 1px solid rgba(219, 105, 0, 1);
+      border-radius: 4px;
+      cursor: pointer;
+      p {
+        font-size: 20px;
+        font-family: @font;
+        color: rgba(219, 105, 0, 1);
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.container375_410 {
   width: 100%;
   background-color: rgba(8, 8, 8, 1);
   height: 360px;
