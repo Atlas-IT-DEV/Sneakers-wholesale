@@ -130,7 +130,21 @@ const ProductModal = ({
       {modalVisible && (
         <div
           className={
-            modalVisible ? styles.modalProductOpen : styles.modalProductClose
+            modalVisible && width >= 585
+              ? styles.modalProductOpen585_600
+              : modalVisible && width >= 565
+              ? styles.modalProductOpen565_585
+              : modalVisible && width >= 525
+              ? styles.modalProductOpen525_565
+              : modalVisible && width >= 485
+              ? styles.modalProductOpen485_525
+              : modalVisible && width >= 450
+              ? styles.modalProductOpen450_485
+              : modalVisible && width >= 410
+              ? styles.modalProductOpen410_450
+              : modalVisible && width >= 375
+              ? styles.modalProductOpen375_410
+              : styles.modalProductClose
           }
         >
           <Swiper

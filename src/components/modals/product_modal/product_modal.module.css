@@ -257,7 +257,7 @@
   width: 20px;
   height: 18px;
 }
-.modalProductOpen {
+.modalProductOpen585_600 {
   position: absolute;
   border-top-left-radius: 38px;
   border-top-right-radius: 38px;
@@ -271,23 +271,23 @@
   overflow: scroll;
   overflow-x: hidden;
 }
-.modalProductOpen .sliderProduct {
+.modalProductOpen585_600 .sliderProduct {
   border-top-left-radius: 38px;
   border-top-right-radius: 38px;
   position: relative;
 }
-.modalProductOpen .sliderProduct .slideProduct {
+.modalProductOpen585_600 .sliderProduct .slideProduct {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-.modalProductOpen .sliderProduct .slideProduct .imageProductModal {
+.modalProductOpen585_600 .sliderProduct .slideProduct .imageProductModal {
   height: 462px;
   object-fit: contain;
 }
-.modalProductOpen .sliderProduct .addFavouriveButton {
+.modalProductOpen585_600 .sliderProduct .addFavouriveButton {
   position: absolute;
   right: 20px;
   top: 20px;
@@ -301,10 +301,10 @@
   align-items: center;
   cursor: pointer;
 }
-.modalProductOpen .sliderProduct .addFavouriveButton img {
+.modalProductOpen585_600 .sliderProduct .addFavouriveButton img {
   width: 30px;
 }
-.modalProductOpen .sliderProduct .backButton {
+.modalProductOpen585_600 .sliderProduct .backButton {
   position: absolute;
   display: flex;
   align-items: center;
@@ -315,83 +315,83 @@
   cursor: pointer;
   width: 20px;
 }
-.modalProductOpen .sliderProduct .backButton img {
+.modalProductOpen585_600 .sliderProduct .backButton img {
   height: 47px;
   transform: rotateY(180deg);
 }
-.modalProductOpen .priceCountView {
+.modalProductOpen585_600 .priceCountView {
   display: flex;
   justify-content: space-between;
   align-items: end;
   margin: 14px 26px 0 26px;
 }
-.modalProductOpen .priceCountView .priceView {
+.modalProductOpen585_600 .priceCountView .priceView {
   display: flex;
   gap: 15px;
   align-items: end;
 }
-.modalProductOpen .priceCountView .priceView .priceText {
+.modalProductOpen585_600 .priceCountView .priceView .priceText {
   color: #db6900;
   font-family: TTForsTrialVariable;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 23px;
 }
-.modalProductOpen .priceCountView .priceView .oldPriceText {
+.modalProductOpen585_600 .priceCountView .priceView .oldPriceText {
   font-family: TTForsTrialVariable;
   font-size: 21px;
   color: #9b9b9b;
   font-weight: 500;
   text-decoration: line-through;
 }
-.modalProductOpen .priceCountView .countText {
+.modalProductOpen585_600 .priceCountView .countText {
   color: white;
   font-size: 20px;
   font-family: TTForsTrialVariable;
   font-weight: 500;
 }
-.modalProductOpen .modelNameText {
+.modalProductOpen585_600 .modelNameText {
   margin: 10px 26px 0 26px;
   color: white;
   font-size: 20px;
   font-family: TTForsTrialVariable;
   font-weight: 500;
 }
-.modalProductOpen .brandButton {
+.modalProductOpen585_600 .brandButton {
   margin: 10px 26px 0 26px;
   display: flex;
   gap: 5px;
   align-items: center;
   cursor: pointer;
 }
-.modalProductOpen .brandButton p {
+.modalProductOpen585_600 .brandButton p {
   color: white;
   font-weight: 700;
   font-family: TTForsTrialVariable;
-  font-size: 24px;
+  font-size: 23px;
 }
-.modalProductOpen .brandButton img {
-  height: 36px;
+.modalProductOpen585_600 .brandButton img {
+  height: 35px;
 }
-.modalProductOpen .sizesHeader {
+.modalProductOpen585_600 .sizesHeader {
   display: flex;
   margin: 20px 26px 0 26px;
   justify-content: space-between;
   align-items: end;
 }
-.modalProductOpen .sizesHeader .sizeHeaderText {
+.modalProductOpen585_600 .sizesHeader .sizeHeaderText {
   color: white;
   font-size: 23px;
   font-family: TTForsTrialVariable;
   font-weight: 500;
 }
-.modalProductOpen .sizesHeader .gridText {
+.modalProductOpen585_600 .sizesHeader .gridText {
   color: #9b9b9b;
   font-family: TTForsTrialVariable;
   font-weight: 500;
   font-size: 20px;
   cursor: pointer;
 }
-.modalProductOpen .sizesView {
+.modalProductOpen585_600 .sizesView {
   display: flex;
   margin: 15px 26px 0 26px;
   overflow: scroll;
@@ -399,7 +399,7 @@
   gap: 25px;
   padding: 10px 0 10px 0;
 }
-.modalProductOpen .sizesView .sizeButton {
+.modalProductOpen585_600 .sizesView .sizeButton {
   min-width: 50px;
   height: 60px;
   border-radius: 13px;
@@ -407,31 +407,31 @@
   justify-content: center;
   align-items: center;
 }
-.modalProductOpen .sizesView .sizeButton p {
+.modalProductOpen585_600 .sizesView .sizeButton p {
   font-family: TTForsTrialVariable;
   font-size: 23px;
   font-weight: 500;
   color: white;
 }
-.modalProductOpen .sizesView .activeSizeButton {
+.modalProductOpen585_600 .sizesView .activeSizeButton {
   background-color: #db6900;
   cursor: pointer;
 }
-.modalProductOpen .sizesView .inActiveSizeButton {
+.modalProductOpen585_600 .sizesView .inActiveSizeButton {
   background-color: #242424;
   cursor: pointer;
   border: 2px solid #db6900;
 }
-.modalProductOpen .sizesView .lockSizeButton {
+.modalProductOpen585_600 .sizesView .lockSizeButton {
   border: 2px solid #313131;
   background-color: #242424;
   position: relative;
   cursor: no-drop;
 }
-.modalProductOpen .sizesView .lockSizeButton p {
+.modalProductOpen585_600 .sizesView .lockSizeButton p {
   color: #454545;
 }
-.modalProductOpen .sizesView .lockSizeButton .line {
+.modalProductOpen585_600 .sizesView .lockSizeButton .line {
   height: 3px;
   width: 142%;
   position: absolute;
@@ -439,47 +439,47 @@
   background-color: #313131;
   transform: rotateZ(52deg);
 }
-.modalProductOpen footer {
+.modalProductOpen585_600 footer {
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin: 30px 15px 0 15px;
 }
-.modalProductOpen footer .hideView {
+.modalProductOpen585_600 footer .hideView {
   background-color: #080808;
   padding: 20px 40px 20px 40px;
   border-radius: 27px;
 }
-.modalProductOpen footer .hideView .hideButton {
+.modalProductOpen585_600 footer .hideView .hideButton {
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
-.modalProductOpen footer .hideView .hideButton p {
+.modalProductOpen585_600 footer .hideView .hideButton p {
   color: #f1f1f1;
   font-size: 21px;
   font-family: TTForsTrialVariable;
   font-weight: 600;
 }
-.modalProductOpen footer .hideView .hideButton img {
+.modalProductOpen585_600 footer .hideView .hideButton img {
   height: 32px;
 }
-.modalProductOpen footer .hideView .hideButton .arrowClose {
+.modalProductOpen585_600 footer .hideView .hideButton .arrowClose {
   transform: rotate(90deg);
   transition: 0.2s;
 }
-.modalProductOpen footer .hideView .hideButton .arrowOpen {
+.modalProductOpen585_600 footer .hideView .hideButton .arrowOpen {
   transform: rotate(-90deg);
   transition: 0.2s;
 }
-.modalProductOpen .actionButtons {
+.modalProductOpen585_600 .actionButtons {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 25px;
   margin: 50px 44px 40px 44px;
 }
-.modalProductOpen .actionButtons .buyButton {
+.modalProductOpen585_600 .actionButtons .buyButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -488,13 +488,13 @@
   height: 60px;
   cursor: pointer;
 }
-.modalProductOpen .actionButtons .buyButton p {
+.modalProductOpen585_600 .actionButtons .buyButton p {
   color: white;
-  font-size: 24px;
+  font-size: 23px;
   font-family: TTForsTrialVariable;
   font-weight: 600;
 }
-.modalProductOpen .actionButtons .addButton {
+.modalProductOpen585_600 .actionButtons .addButton {
   background-color: black;
   display: flex;
   justify-content: center;
@@ -502,9 +502,1515 @@
   border-radius: 20px;
   cursor: pointer;
 }
-.modalProductOpen .actionButtons .addButton p {
+.modalProductOpen585_600 .actionButtons .addButton p {
   color: white;
-  font-size: 24px;
+  font-size: 23px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.modalProductOpen565_585 {
+  position: absolute;
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  left: 0;
+  bottom: 0%;
+  width: 100%;
+  height: 98vh;
+  z-index: 99999;
+  background-color: #1c1c1c;
+  animation: slideUp 0.2s linear;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.modalProductOpen565_585 .sliderProduct {
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  position: relative;
+}
+.modalProductOpen565_585 .sliderProduct .slideProduct {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen565_585 .sliderProduct .slideProduct .imageProductModal {
+  height: 462px;
+  object-fit: contain;
+}
+.modalProductOpen565_585 .sliderProduct .addFavouriveButton {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 100;
+  background-color: white;
+  border-radius: 50px;
+  width: 47px;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen565_585 .sliderProduct .addFavouriveButton img {
+  width: 30px;
+}
+.modalProductOpen565_585 .sliderProduct .backButton {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 30px;
+  top: 20px;
+  z-index: 100;
+  cursor: pointer;
+  width: 20px;
+}
+.modalProductOpen565_585 .sliderProduct .backButton img {
+  height: 47px;
+  transform: rotateY(180deg);
+}
+.modalProductOpen565_585 .priceCountView {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 14px 26px 0 26px;
+}
+.modalProductOpen565_585 .priceCountView .priceView {
+  display: flex;
+  gap: 15px;
+  align-items: end;
+}
+.modalProductOpen565_585 .priceCountView .priceView .priceText {
+  color: #db6900;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+  font-size: 21px;
+}
+.modalProductOpen565_585 .priceCountView .priceView .oldPriceText {
+  font-family: TTForsTrialVariable;
+  font-size: 20px;
+  color: #9b9b9b;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+.modalProductOpen565_585 .priceCountView .countText {
+  color: white;
+  font-size: 19px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.modalProductOpen565_585 .modelNameText {
+  margin: 10px 26px 0 26px;
+  color: white;
+  font-size: 19px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.modalProductOpen565_585 .brandButton {
+  margin: 10px 26px 0 26px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen565_585 .brandButton p {
+  color: white;
+  font-weight: 700;
+  font-family: TTForsTrialVariable;
+  font-size: 21px;
+}
+.modalProductOpen565_585 .brandButton img {
+  height: 32px;
+}
+.modalProductOpen565_585 .sizesHeader {
+  display: flex;
+  margin: 20px 26px 0 26px;
+  justify-content: space-between;
+  align-items: end;
+}
+.modalProductOpen565_585 .sizesHeader .sizeHeaderText {
+  color: white;
+  font-size: 21px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.modalProductOpen565_585 .sizesHeader .gridText {
+  color: #9b9b9b;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 19px;
+  cursor: pointer;
+}
+.modalProductOpen565_585 .sizesView {
+  display: flex;
+  margin: 15px 26px 0 26px;
+  overflow: scroll;
+  overflow-y: hidden;
+  gap: 25px;
+  padding: 10px 0 10px 0;
+}
+.modalProductOpen565_585 .sizesView .sizeButton {
+  min-width: 50px;
+  height: 60px;
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalProductOpen565_585 .sizesView .sizeButton p {
+  font-family: TTForsTrialVariable;
+  font-size: 21px;
+  font-weight: 500;
+  color: white;
+}
+.modalProductOpen565_585 .sizesView .activeSizeButton {
+  background-color: #db6900;
+  cursor: pointer;
+}
+.modalProductOpen565_585 .sizesView .inActiveSizeButton {
+  background-color: #242424;
+  cursor: pointer;
+  border: 2px solid #db6900;
+}
+.modalProductOpen565_585 .sizesView .lockSizeButton {
+  border: 2px solid #313131;
+  background-color: #242424;
+  position: relative;
+  cursor: no-drop;
+}
+.modalProductOpen565_585 .sizesView .lockSizeButton p {
+  color: #454545;
+}
+.modalProductOpen565_585 .sizesView .lockSizeButton .line {
+  height: 3px;
+  width: 142%;
+  position: absolute;
+  margin: auto 0 auto 0;
+  background-color: #313131;
+  transform: rotateZ(52deg);
+}
+.modalProductOpen565_585 footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 30px 15px 0 15px;
+}
+.modalProductOpen565_585 footer .hideView {
+  background-color: #080808;
+  padding: 20px 40px 20px 40px;
+  border-radius: 27px;
+}
+.modalProductOpen565_585 footer .hideView .hideButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen565_585 footer .hideView .hideButton p {
+  color: #f1f1f1;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.modalProductOpen565_585 footer .hideView .hideButton img {
+  height: 32px;
+}
+.modalProductOpen565_585 footer .hideView .hideButton .arrowClose {
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+.modalProductOpen565_585 footer .hideView .hideButton .arrowOpen {
+  transform: rotate(-90deg);
+  transition: 0.2s;
+}
+.modalProductOpen565_585 .actionButtons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 25px;
+  margin: 50px 44px 40px 44px;
+}
+.modalProductOpen565_585 .actionButtons .buyButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #db6900;
+  border-radius: 20px;
+  height: 60px;
+  cursor: pointer;
+}
+.modalProductOpen565_585 .actionButtons .buyButton p {
+  color: white;
+  font-size: 21px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.modalProductOpen565_585 .actionButtons .addButton {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.modalProductOpen565_585 .actionButtons .addButton p {
+  color: white;
+  font-size: 21px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.modalProductOpen525_565 {
+  position: absolute;
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  left: 0;
+  bottom: 0%;
+  width: 100%;
+  height: 98vh;
+  z-index: 99999;
+  background-color: #1c1c1c;
+  animation: slideUp 0.2s linear;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.modalProductOpen525_565 .sliderProduct {
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  position: relative;
+}
+.modalProductOpen525_565 .sliderProduct .slideProduct {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen525_565 .sliderProduct .slideProduct .imageProductModal {
+  height: 462px;
+  object-fit: contain;
+}
+.modalProductOpen525_565 .sliderProduct .addFavouriveButton {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 100;
+  background-color: white;
+  border-radius: 50px;
+  width: 47px;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen525_565 .sliderProduct .addFavouriveButton img {
+  width: 30px;
+}
+.modalProductOpen525_565 .sliderProduct .backButton {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 30px;
+  top: 20px;
+  z-index: 100;
+  cursor: pointer;
+  width: 20px;
+}
+.modalProductOpen525_565 .sliderProduct .backButton img {
+  height: 47px;
+  transform: rotateY(180deg);
+}
+.modalProductOpen525_565 .priceCountView {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 14px 26px 0 26px;
+}
+.modalProductOpen525_565 .priceCountView .priceView {
+  display: flex;
+  gap: 15px;
+  align-items: end;
+}
+.modalProductOpen525_565 .priceCountView .priceView .priceText {
+  color: #db6900;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+  font-size: 20px;
+}
+.modalProductOpen525_565 .priceCountView .priceView .oldPriceText {
+  font-family: TTForsTrialVariable;
+  font-size: 18px;
+  color: #9b9b9b;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+.modalProductOpen525_565 .priceCountView .countText {
+  color: white;
+  font-size: 17px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.modalProductOpen525_565 .modelNameText {
+  margin: 10px 26px 0 26px;
+  color: white;
+  font-size: 17px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.modalProductOpen525_565 .brandButton {
+  margin: 10px 26px 0 26px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen525_565 .brandButton p {
+  color: white;
+  font-weight: 700;
+  font-family: TTForsTrialVariable;
+  font-size: 20px;
+}
+.modalProductOpen525_565 .brandButton img {
+  height: 30px;
+}
+.modalProductOpen525_565 .sizesHeader {
+  display: flex;
+  margin: 20px 26px 0 26px;
+  justify-content: space-between;
+  align-items: end;
+}
+.modalProductOpen525_565 .sizesHeader .sizeHeaderText {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.modalProductOpen525_565 .sizesHeader .gridText {
+  color: #9b9b9b;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 17px;
+  cursor: pointer;
+}
+.modalProductOpen525_565 .sizesView {
+  display: flex;
+  margin: 15px 26px 0 26px;
+  overflow: scroll;
+  overflow-y: hidden;
+  gap: 25px;
+  padding: 10px 0 10px 0;
+}
+.modalProductOpen525_565 .sizesView .sizeButton {
+  min-width: 50px;
+  height: 60px;
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalProductOpen525_565 .sizesView .sizeButton p {
+  font-family: TTForsTrialVariable;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+.modalProductOpen525_565 .sizesView .activeSizeButton {
+  background-color: #db6900;
+  cursor: pointer;
+}
+.modalProductOpen525_565 .sizesView .inActiveSizeButton {
+  background-color: #242424;
+  cursor: pointer;
+  border: 2px solid #db6900;
+}
+.modalProductOpen525_565 .sizesView .lockSizeButton {
+  border: 2px solid #313131;
+  background-color: #242424;
+  position: relative;
+  cursor: no-drop;
+}
+.modalProductOpen525_565 .sizesView .lockSizeButton p {
+  color: #454545;
+}
+.modalProductOpen525_565 .sizesView .lockSizeButton .line {
+  height: 3px;
+  width: 142%;
+  position: absolute;
+  margin: auto 0 auto 0;
+  background-color: #313131;
+  transform: rotateZ(52deg);
+}
+.modalProductOpen525_565 footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 30px 15px 0 15px;
+}
+.modalProductOpen525_565 footer .hideView {
+  background-color: #080808;
+  padding: 20px 40px 20px 40px;
+  border-radius: 27px;
+}
+.modalProductOpen525_565 footer .hideView .hideButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen525_565 footer .hideView .hideButton p {
+  color: #f1f1f1;
+  font-size: 18px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.modalProductOpen525_565 footer .hideView .hideButton img {
+  height: 32px;
+}
+.modalProductOpen525_565 footer .hideView .hideButton .arrowClose {
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+.modalProductOpen525_565 footer .hideView .hideButton .arrowOpen {
+  transform: rotate(-90deg);
+  transition: 0.2s;
+}
+.modalProductOpen525_565 .actionButtons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 25px;
+  margin: 50px 44px 40px 44px;
+}
+.modalProductOpen525_565 .actionButtons .buyButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #db6900;
+  border-radius: 20px;
+  height: 60px;
+  cursor: pointer;
+}
+.modalProductOpen525_565 .actionButtons .buyButton p {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.modalProductOpen525_565 .actionButtons .addButton {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.modalProductOpen525_565 .actionButtons .addButton p {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.modalProductOpen485_525 {
+  position: absolute;
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  left: 0;
+  bottom: 0%;
+  width: 100%;
+  height: 98vh;
+  z-index: 99999;
+  background-color: #1c1c1c;
+  animation: slideUp 0.2s linear;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.modalProductOpen485_525 .sliderProduct {
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  position: relative;
+}
+.modalProductOpen485_525 .sliderProduct .slideProduct {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen485_525 .sliderProduct .slideProduct .imageProductModal {
+  height: 462px;
+  object-fit: contain;
+}
+.modalProductOpen485_525 .sliderProduct .addFavouriveButton {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 100;
+  background-color: white;
+  border-radius: 50px;
+  width: 47px;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen485_525 .sliderProduct .addFavouriveButton img {
+  width: 30px;
+}
+.modalProductOpen485_525 .sliderProduct .backButton {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 30px;
+  top: 20px;
+  z-index: 100;
+  cursor: pointer;
+  width: 20px;
+}
+.modalProductOpen485_525 .sliderProduct .backButton img {
+  height: 47px;
+  transform: rotateY(180deg);
+}
+.modalProductOpen485_525 .priceCountView {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 14px 26px 0 26px;
+}
+.modalProductOpen485_525 .priceCountView .priceView {
+  display: flex;
+  gap: 15px;
+  align-items: end;
+}
+.modalProductOpen485_525 .priceCountView .priceView .priceText {
+  color: #db6900;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+  font-size: 18px;
+}
+.modalProductOpen485_525 .priceCountView .priceView .oldPriceText {
+  font-family: TTForsTrialVariable;
+  font-size: 16px;
+  color: #9b9b9b;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+.modalProductOpen485_525 .priceCountView .countText {
+  color: white;
+  font-size: 15px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.modalProductOpen485_525 .modelNameText {
+  margin: 10px 26px 0 26px;
+  color: white;
+  font-size: 15px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.modalProductOpen485_525 .brandButton {
+  margin: 10px 26px 0 26px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen485_525 .brandButton p {
+  color: white;
+  font-weight: 700;
+  font-family: TTForsTrialVariable;
+  font-size: 18px;
+}
+.modalProductOpen485_525 .brandButton img {
+  height: 27px;
+}
+.modalProductOpen485_525 .sizesHeader {
+  display: flex;
+  margin: 20px 26px 0 26px;
+  justify-content: space-between;
+  align-items: end;
+}
+.modalProductOpen485_525 .sizesHeader .sizeHeaderText {
+  color: white;
+  font-size: 18px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.modalProductOpen485_525 .sizesHeader .gridText {
+  color: #9b9b9b;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+}
+.modalProductOpen485_525 .sizesView {
+  display: flex;
+  margin: 15px 26px 0 26px;
+  overflow: scroll;
+  overflow-y: hidden;
+  gap: 25px;
+  padding: 10px 0 10px 0;
+}
+.modalProductOpen485_525 .sizesView .sizeButton {
+  min-width: 50px;
+  height: 60px;
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalProductOpen485_525 .sizesView .sizeButton p {
+  font-family: TTForsTrialVariable;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+.modalProductOpen485_525 .sizesView .activeSizeButton {
+  background-color: #db6900;
+  cursor: pointer;
+}
+.modalProductOpen485_525 .sizesView .inActiveSizeButton {
+  background-color: #242424;
+  cursor: pointer;
+  border: 2px solid #db6900;
+}
+.modalProductOpen485_525 .sizesView .lockSizeButton {
+  border: 2px solid #313131;
+  background-color: #242424;
+  position: relative;
+  cursor: no-drop;
+}
+.modalProductOpen485_525 .sizesView .lockSizeButton p {
+  color: #454545;
+}
+.modalProductOpen485_525 .sizesView .lockSizeButton .line {
+  height: 3px;
+  width: 142%;
+  position: absolute;
+  margin: auto 0 auto 0;
+  background-color: #313131;
+  transform: rotateZ(52deg);
+}
+.modalProductOpen485_525 footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 30px 15px 0 15px;
+}
+.modalProductOpen485_525 footer .hideView {
+  background-color: #080808;
+  padding: 20px 40px 20px 40px;
+  border-radius: 27px;
+}
+.modalProductOpen485_525 footer .hideView .hideButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen485_525 footer .hideView .hideButton p {
+  color: #f1f1f1;
+  font-size: 16px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.modalProductOpen485_525 footer .hideView .hideButton img {
+  height: 32px;
+}
+.modalProductOpen485_525 footer .hideView .hideButton .arrowClose {
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+.modalProductOpen485_525 footer .hideView .hideButton .arrowOpen {
+  transform: rotate(-90deg);
+  transition: 0.2s;
+}
+.modalProductOpen485_525 .actionButtons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 25px;
+  margin: 50px 44px 40px 44px;
+}
+.modalProductOpen485_525 .actionButtons .buyButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #db6900;
+  border-radius: 20px;
+  height: 60px;
+  cursor: pointer;
+}
+.modalProductOpen485_525 .actionButtons .buyButton p {
+  color: white;
+  font-size: 18px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.modalProductOpen485_525 .actionButtons .addButton {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.modalProductOpen485_525 .actionButtons .addButton p {
+  color: white;
+  font-size: 18px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.modalProductOpen450_485 {
+  position: absolute;
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  left: 0;
+  bottom: 0%;
+  width: 100%;
+  height: 98vh;
+  z-index: 99999;
+  background-color: #1c1c1c;
+  animation: slideUp 0.2s linear;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.modalProductOpen450_485 .sliderProduct {
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  position: relative;
+}
+.modalProductOpen450_485 .sliderProduct .slideProduct {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen450_485 .sliderProduct .slideProduct .imageProductModal {
+  height: 462px;
+  object-fit: contain;
+}
+.modalProductOpen450_485 .sliderProduct .addFavouriveButton {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 100;
+  background-color: white;
+  border-radius: 50px;
+  width: 47px;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen450_485 .sliderProduct .addFavouriveButton img {
+  width: 30px;
+}
+.modalProductOpen450_485 .sliderProduct .backButton {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 30px;
+  top: 20px;
+  z-index: 100;
+  cursor: pointer;
+  width: 20px;
+}
+.modalProductOpen450_485 .sliderProduct .backButton img {
+  height: 47px;
+  transform: rotateY(180deg);
+}
+.modalProductOpen450_485 .priceCountView {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 14px 26px 0 26px;
+}
+.modalProductOpen450_485 .priceCountView .priceView {
+  display: flex;
+  gap: 15px;
+  align-items: end;
+}
+.modalProductOpen450_485 .priceCountView .priceView .priceText {
+  color: #db6900;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+  font-size: 17px;
+}
+.modalProductOpen450_485 .priceCountView .priceView .oldPriceText {
+  font-family: TTForsTrialVariable;
+  font-size: 15px;
+  color: #9b9b9b;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+.modalProductOpen450_485 .priceCountView .countText {
+  color: white;
+  font-size: 14px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.modalProductOpen450_485 .modelNameText {
+  margin: 10px 26px 0 26px;
+  color: white;
+  font-size: 14px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.modalProductOpen450_485 .brandButton {
+  margin: 10px 26px 0 26px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen450_485 .brandButton p {
+  color: white;
+  font-weight: 700;
+  font-family: TTForsTrialVariable;
+  font-size: 17px;
+}
+.modalProductOpen450_485 .brandButton img {
+  height: 26px;
+}
+.modalProductOpen450_485 .sizesHeader {
+  display: flex;
+  margin: 20px 26px 0 26px;
+  justify-content: space-between;
+  align-items: end;
+}
+.modalProductOpen450_485 .sizesHeader .sizeHeaderText {
+  color: white;
+  font-size: 17px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.modalProductOpen450_485 .sizesHeader .gridText {
+  color: #9b9b9b;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+.modalProductOpen450_485 .sizesView {
+  display: flex;
+  margin: 15px 26px 0 26px;
+  overflow: scroll;
+  overflow-y: hidden;
+  gap: 25px;
+  padding: 10px 0 10px 0;
+}
+.modalProductOpen450_485 .sizesView .sizeButton {
+  min-width: 50px;
+  height: 60px;
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalProductOpen450_485 .sizesView .sizeButton p {
+  font-family: TTForsTrialVariable;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+}
+.modalProductOpen450_485 .sizesView .activeSizeButton {
+  background-color: #db6900;
+  cursor: pointer;
+}
+.modalProductOpen450_485 .sizesView .inActiveSizeButton {
+  background-color: #242424;
+  cursor: pointer;
+  border: 2px solid #db6900;
+}
+.modalProductOpen450_485 .sizesView .lockSizeButton {
+  border: 2px solid #313131;
+  background-color: #242424;
+  position: relative;
+  cursor: no-drop;
+}
+.modalProductOpen450_485 .sizesView .lockSizeButton p {
+  color: #454545;
+}
+.modalProductOpen450_485 .sizesView .lockSizeButton .line {
+  height: 3px;
+  width: 142%;
+  position: absolute;
+  margin: auto 0 auto 0;
+  background-color: #313131;
+  transform: rotateZ(52deg);
+}
+.modalProductOpen450_485 footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 30px 15px 0 15px;
+}
+.modalProductOpen450_485 footer .hideView {
+  background-color: #080808;
+  padding: 20px 40px 20px 40px;
+  border-radius: 27px;
+}
+.modalProductOpen450_485 footer .hideView .hideButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen450_485 footer .hideView .hideButton p {
+  color: #f1f1f1;
+  font-size: 15px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.modalProductOpen450_485 footer .hideView .hideButton img {
+  height: 32px;
+}
+.modalProductOpen450_485 footer .hideView .hideButton .arrowClose {
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+.modalProductOpen450_485 footer .hideView .hideButton .arrowOpen {
+  transform: rotate(-90deg);
+  transition: 0.2s;
+}
+.modalProductOpen450_485 .actionButtons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 25px;
+  margin: 50px 44px 40px 44px;
+}
+.modalProductOpen450_485 .actionButtons .buyButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #db6900;
+  border-radius: 20px;
+  height: 60px;
+  cursor: pointer;
+}
+.modalProductOpen450_485 .actionButtons .buyButton p {
+  color: white;
+  font-size: 17px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.modalProductOpen450_485 .actionButtons .addButton {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.modalProductOpen450_485 .actionButtons .addButton p {
+  color: white;
+  font-size: 17px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.modalProductOpen410_450 {
+  position: absolute;
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  left: 0;
+  bottom: 0%;
+  width: 100%;
+  height: 98vh;
+  z-index: 99999;
+  background-color: #1c1c1c;
+  animation: slideUp 0.2s linear;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.modalProductOpen410_450 .sliderProduct {
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  position: relative;
+}
+.modalProductOpen410_450 .sliderProduct .slideProduct {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen410_450 .sliderProduct .slideProduct .imageProductModal {
+  height: 462px;
+  object-fit: contain;
+}
+.modalProductOpen410_450 .sliderProduct .addFavouriveButton {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 100;
+  background-color: white;
+  border-radius: 50px;
+  width: 47px;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen410_450 .sliderProduct .addFavouriveButton img {
+  width: 30px;
+}
+.modalProductOpen410_450 .sliderProduct .backButton {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 30px;
+  top: 20px;
+  z-index: 100;
+  cursor: pointer;
+  width: 20px;
+}
+.modalProductOpen410_450 .sliderProduct .backButton img {
+  height: 47px;
+  transform: rotateY(180deg);
+}
+.modalProductOpen410_450 .priceCountView {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 14px 26px 0 26px;
+}
+.modalProductOpen410_450 .priceCountView .priceView {
+  display: flex;
+  gap: 15px;
+  align-items: end;
+}
+.modalProductOpen410_450 .priceCountView .priceView .priceText {
+  color: #db6900;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+  font-size: 16px;
+}
+.modalProductOpen410_450 .priceCountView .priceView .oldPriceText {
+  font-family: TTForsTrialVariable;
+  font-size: 14px;
+  color: #9b9b9b;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+.modalProductOpen410_450 .priceCountView .countText {
+  color: white;
+  font-size: 13px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.modalProductOpen410_450 .modelNameText {
+  margin: 10px 26px 0 26px;
+  color: white;
+  font-size: 13px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.modalProductOpen410_450 .brandButton {
+  margin: 10px 26px 0 26px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen410_450 .brandButton p {
+  color: white;
+  font-weight: 700;
+  font-family: TTForsTrialVariable;
+  font-size: 16px;
+}
+.modalProductOpen410_450 .brandButton img {
+  height: 24px;
+}
+.modalProductOpen410_450 .sizesHeader {
+  display: flex;
+  margin: 20px 26px 0 26px;
+  justify-content: space-between;
+  align-items: end;
+}
+.modalProductOpen410_450 .sizesHeader .sizeHeaderText {
+  color: white;
+  font-size: 16px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.modalProductOpen410_450 .sizesHeader .gridText {
+  color: #9b9b9b;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+}
+.modalProductOpen410_450 .sizesView {
+  display: flex;
+  margin: 15px 26px 0 26px;
+  overflow: scroll;
+  overflow-y: hidden;
+  gap: 25px;
+  padding: 10px 0 10px 0;
+}
+.modalProductOpen410_450 .sizesView .sizeButton {
+  min-width: 50px;
+  height: 60px;
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalProductOpen410_450 .sizesView .sizeButton p {
+  font-family: TTForsTrialVariable;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+.modalProductOpen410_450 .sizesView .activeSizeButton {
+  background-color: #db6900;
+  cursor: pointer;
+}
+.modalProductOpen410_450 .sizesView .inActiveSizeButton {
+  background-color: #242424;
+  cursor: pointer;
+  border: 2px solid #db6900;
+}
+.modalProductOpen410_450 .sizesView .lockSizeButton {
+  border: 2px solid #313131;
+  background-color: #242424;
+  position: relative;
+  cursor: no-drop;
+}
+.modalProductOpen410_450 .sizesView .lockSizeButton p {
+  color: #454545;
+}
+.modalProductOpen410_450 .sizesView .lockSizeButton .line {
+  height: 3px;
+  width: 142%;
+  position: absolute;
+  margin: auto 0 auto 0;
+  background-color: #313131;
+  transform: rotateZ(52deg);
+}
+.modalProductOpen410_450 footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 30px 15px 0 15px;
+}
+.modalProductOpen410_450 footer .hideView {
+  background-color: #080808;
+  padding: 20px 40px 20px 40px;
+  border-radius: 27px;
+}
+.modalProductOpen410_450 footer .hideView .hideButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen410_450 footer .hideView .hideButton p {
+  color: #f1f1f1;
+  font-size: 14px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.modalProductOpen410_450 footer .hideView .hideButton img {
+  height: 32px;
+}
+.modalProductOpen410_450 footer .hideView .hideButton .arrowClose {
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+.modalProductOpen410_450 footer .hideView .hideButton .arrowOpen {
+  transform: rotate(-90deg);
+  transition: 0.2s;
+}
+.modalProductOpen410_450 .actionButtons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 25px;
+  margin: 50px 44px 40px 44px;
+}
+.modalProductOpen410_450 .actionButtons .buyButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #db6900;
+  border-radius: 20px;
+  height: 60px;
+  cursor: pointer;
+}
+.modalProductOpen410_450 .actionButtons .buyButton p {
+  color: white;
+  font-size: 16px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.modalProductOpen410_450 .actionButtons .addButton {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.modalProductOpen410_450 .actionButtons .addButton p {
+  color: white;
+  font-size: 16px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.modalProductOpen375_410 {
+  position: absolute;
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  left: 0;
+  bottom: 0%;
+  width: 100%;
+  height: 98vh;
+  z-index: 99999;
+  background-color: #1c1c1c;
+  animation: slideUp 0.2s linear;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.modalProductOpen375_410 .sliderProduct {
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  position: relative;
+}
+.modalProductOpen375_410 .sliderProduct .slideProduct {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen375_410 .sliderProduct .slideProduct .imageProductModal {
+  height: 462px;
+  object-fit: contain;
+}
+.modalProductOpen375_410 .sliderProduct .addFavouriveButton {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 100;
+  background-color: white;
+  border-radius: 50px;
+  width: 47px;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen375_410 .sliderProduct .addFavouriveButton img {
+  width: 30px;
+}
+.modalProductOpen375_410 .sliderProduct .backButton {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 30px;
+  top: 20px;
+  z-index: 100;
+  cursor: pointer;
+  width: 20px;
+}
+.modalProductOpen375_410 .sliderProduct .backButton img {
+  height: 47px;
+  transform: rotateY(180deg);
+}
+.modalProductOpen375_410 .priceCountView {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 14px 26px 0 26px;
+}
+.modalProductOpen375_410 .priceCountView .priceView {
+  display: flex;
+  gap: 15px;
+  align-items: end;
+}
+.modalProductOpen375_410 .priceCountView .priceView .priceText {
+  color: #db6900;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+  font-size: 16px;
+}
+.modalProductOpen375_410 .priceCountView .priceView .oldPriceText {
+  font-family: TTForsTrialVariable;
+  font-size: 14px;
+  color: #9b9b9b;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+.modalProductOpen375_410 .priceCountView .countText {
+  color: white;
+  font-size: 13px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.modalProductOpen375_410 .modelNameText {
+  margin: 10px 26px 0 26px;
+  color: white;
+  font-size: 13px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.modalProductOpen375_410 .brandButton {
+  margin: 10px 26px 0 26px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen375_410 .brandButton p {
+  color: white;
+  font-weight: 700;
+  font-family: TTForsTrialVariable;
+  font-size: 16px;
+}
+.modalProductOpen375_410 .brandButton img {
+  height: 24px;
+}
+.modalProductOpen375_410 .sizesHeader {
+  display: flex;
+  margin: 20px 26px 0 26px;
+  justify-content: space-between;
+  align-items: end;
+}
+.modalProductOpen375_410 .sizesHeader .sizeHeaderText {
+  color: white;
+  font-size: 16px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.modalProductOpen375_410 .sizesHeader .gridText {
+  color: #9b9b9b;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+}
+.modalProductOpen375_410 .sizesView {
+  display: flex;
+  margin: 15px 26px 0 26px;
+  overflow: scroll;
+  overflow-y: hidden;
+  gap: 25px;
+  padding: 10px 0 10px 0;
+}
+.modalProductOpen375_410 .sizesView .sizeButton {
+  min-width: 50px;
+  height: 60px;
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modalProductOpen375_410 .sizesView .sizeButton p {
+  font-family: TTForsTrialVariable;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+.modalProductOpen375_410 .sizesView .activeSizeButton {
+  background-color: #db6900;
+  cursor: pointer;
+}
+.modalProductOpen375_410 .sizesView .inActiveSizeButton {
+  background-color: #242424;
+  cursor: pointer;
+  border: 2px solid #db6900;
+}
+.modalProductOpen375_410 .sizesView .lockSizeButton {
+  border: 2px solid #313131;
+  background-color: #242424;
+  position: relative;
+  cursor: no-drop;
+}
+.modalProductOpen375_410 .sizesView .lockSizeButton p {
+  color: #454545;
+}
+.modalProductOpen375_410 .sizesView .lockSizeButton .line {
+  height: 3px;
+  width: 142%;
+  position: absolute;
+  margin: auto 0 auto 0;
+  background-color: #313131;
+  transform: rotateZ(52deg);
+}
+.modalProductOpen375_410 footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 30px 15px 0 15px;
+}
+.modalProductOpen375_410 footer .hideView {
+  background-color: #080808;
+  padding: 20px 40px 20px 40px;
+  border-radius: 27px;
+}
+.modalProductOpen375_410 footer .hideView .hideButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.modalProductOpen375_410 footer .hideView .hideButton p {
+  color: #f1f1f1;
+  font-size: 14px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.modalProductOpen375_410 footer .hideView .hideButton img {
+  height: 32px;
+}
+.modalProductOpen375_410 footer .hideView .hideButton .arrowClose {
+  transform: rotate(90deg);
+  transition: 0.2s;
+}
+.modalProductOpen375_410 footer .hideView .hideButton .arrowOpen {
+  transform: rotate(-90deg);
+  transition: 0.2s;
+}
+.modalProductOpen375_410 .actionButtons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 25px;
+  margin: 50px 44px 40px 44px;
+}
+.modalProductOpen375_410 .actionButtons .buyButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #db6900;
+  border-radius: 20px;
+  height: 60px;
+  cursor: pointer;
+}
+.modalProductOpen375_410 .actionButtons .buyButton p {
+  color: white;
+  font-size: 16px;
+  font-family: TTForsTrialVariable;
+  font-weight: 600;
+}
+.modalProductOpen375_410 .actionButtons .addButton {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.modalProductOpen375_410 .actionButtons .addButton p {
+  color: white;
+  font-size: 16px;
   font-family: TTForsTrialVariable;
   font-weight: 600;
 }

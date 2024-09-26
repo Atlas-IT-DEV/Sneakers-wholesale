@@ -266,7 +266,7 @@
   }
 }
 
-.modalProductOpen {
+.modalProductOpen585_600 {
   position: absolute;
   border-top-left-radius: 38px;
   border-top-right-radius: 38px;
@@ -340,7 +340,7 @@
         color: rgba(219, 105, 0, 1);
         font-family: @font;
         font-weight: 600;
-        font-size: 24px;
+        font-size: 23px;
       }
       .oldPriceText {
         font-family: @font;
@@ -374,10 +374,10 @@
       color: white;
       font-weight: 700;
       font-family: @font;
-      font-size: 24px;
+      font-size: 23px;
     }
     img {
-      height: 36px;
+      height: 35px;
     }
   }
   .sizesHeader {
@@ -409,7 +409,6 @@
     .sizeButton {
       min-width: 50px;
       height: 60px;
-      // background-color: red;
       border-radius: 13px;
       display: flex;
       justify-content: center;
@@ -498,7 +497,7 @@
       cursor: pointer;
       p {
         color: white;
-        font-size: 24px;
+        font-size: 23px;
         font-family: @font;
         font-weight: 600;
       }
@@ -512,7 +511,1525 @@
       cursor: pointer;
       p {
         color: white;
-        font-size: 24px;
+        font-size: 23px;
+        font-family: @font;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.modalProductOpen565_585 {
+  position: absolute;
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  left: 0;
+  bottom: 0%;
+  width: 100%;
+  height: 98vh;
+  z-index: 99999;
+  background-color: rgba(28, 28, 28, 1);
+  animation: slideUp 0.2s linear;
+  overflow: scroll;
+  overflow-x: hidden;
+  .sliderProduct {
+    border-top-left-radius: 38px;
+    border-top-right-radius: 38px;
+    position: relative;
+    .slideProduct {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      .imageProductModal {
+        height: 462px;
+        object-fit: contain;
+      }
+    }
+    .addFavouriveButton {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      z-index: 100;
+      background-color: white;
+      border-radius: 50px;
+      width: 47px;
+      height: 47px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      img {
+        width: 30px;
+      }
+    }
+    .backButton {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 30px;
+      top: 20px;
+      z-index: 100;
+      cursor: pointer;
+      width: 20px;
+      img {
+        height: 47px;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+  .priceCountView {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 14px 26px 0 26px;
+    .priceView {
+      display: flex;
+      gap: 15px;
+      align-items: end;
+      .priceText {
+        color: rgba(219, 105, 0, 1);
+        font-family: @font;
+        font-weight: 600;
+        font-size: 21px;
+      }
+      .oldPriceText {
+        font-family: @font;
+        font-size: 20px;
+        color: rgba(155, 155, 155, 1);
+        font-weight: 500;
+        text-decoration: line-through;
+      }
+    }
+    .countText {
+      color: white;
+      font-size: 19px;
+      font-family: @font;
+      font-weight: 500;
+    }
+  }
+  .modelNameText {
+    margin: 10px 26px 0 26px;
+    color: white;
+    font-size: 19px;
+    font-family: @font;
+    font-weight: 500;
+  }
+  .brandButton {
+    margin: 10px 26px 0 26px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+    p {
+      color: white;
+      font-weight: 700;
+      font-family: @font;
+      font-size: 21px;
+    }
+    img {
+      height: 32px;
+    }
+  }
+  .sizesHeader {
+    display: flex;
+    margin: 20px 26px 0 26px;
+    justify-content: space-between;
+    align-items: end;
+    .sizeHeaderText {
+      color: white;
+      font-size: 21px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .gridText {
+      color: rgba(155, 155, 155, 1);
+      font-family: @font;
+      font-weight: 500;
+      font-size: 19px;
+      cursor: pointer;
+    }
+  }
+  .sizesView {
+    display: flex;
+    margin: 15px 26px 0 26px;
+    overflow: scroll;
+    overflow-y: hidden;
+    gap: 25px;
+    padding: 10px 0 10px 0;
+    .sizeButton {
+      min-width: 50px;
+      height: 60px;
+      border-radius: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-family: @font;
+        font-size: 21px;
+        font-weight: 500;
+        color: white;
+      }
+    }
+    .activeSizeButton {
+      background-color: rgba(219, 105, 0, 1);
+      cursor: pointer;
+    }
+    .inActiveSizeButton {
+      background-color: rgba(36, 36, 36, 1);
+      cursor: pointer;
+      border: 2px solid rgba(219, 105, 0, 1);
+    }
+    .lockSizeButton {
+      border: 2px solid rgba(49, 49, 49, 1);
+      background-color: rgba(36, 36, 36, 1);
+      position: relative;
+      cursor: no-drop;
+      p {
+        color: rgba(69, 69, 69, 1);
+      }
+      .line {
+        height: 3px;
+        width: 142%;
+        position: absolute;
+        margin: auto 0 auto 0;
+        background-color: rgba(49, 49, 49, 1);
+        transform: rotateZ(52deg);
+      }
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 30px 15px 0 15px;
+    .hideView {
+      background-color: rgba(8, 8, 8, 1);
+
+      padding: 20px 40px 20px 40px;
+      border-radius: 27px;
+      .hideButton {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        p {
+          color: rgba(241, 241, 241, 1);
+          font-size: 20px;
+          font-family: @font;
+          font-weight: 600;
+        }
+        img {
+          height: 32px;
+        }
+        .arrowClose {
+          transform: rotate(90deg);
+          transition: 0.2s;
+        }
+        .arrowOpen {
+          transform: rotate(-90deg);
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+  .actionButtons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+    margin: 50px 44px 40px 44px;
+    .buyButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(219, 105, 0, 1);
+      border-radius: 20px;
+      height: 60px;
+      cursor: pointer;
+      p {
+        color: white;
+        font-size: 21px;
+        font-family: @font;
+        font-weight: 600;
+      }
+    }
+    .addButton {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      cursor: pointer;
+      p {
+        color: white;
+        font-size: 21px;
+        font-family: @font;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.modalProductOpen525_565 {
+  position: absolute;
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  left: 0;
+  bottom: 0%;
+  width: 100%;
+  height: 98vh;
+  z-index: 99999;
+  background-color: rgba(28, 28, 28, 1);
+  animation: slideUp 0.2s linear;
+  overflow: scroll;
+  overflow-x: hidden;
+  .sliderProduct {
+    border-top-left-radius: 38px;
+    border-top-right-radius: 38px;
+    position: relative;
+    .slideProduct {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      .imageProductModal {
+        height: 462px;
+        object-fit: contain;
+      }
+    }
+    .addFavouriveButton {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      z-index: 100;
+      background-color: white;
+      border-radius: 50px;
+      width: 47px;
+      height: 47px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      img {
+        width: 30px;
+      }
+    }
+    .backButton {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 30px;
+      top: 20px;
+      z-index: 100;
+      cursor: pointer;
+      width: 20px;
+      img {
+        height: 47px;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+  .priceCountView {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 14px 26px 0 26px;
+    .priceView {
+      display: flex;
+      gap: 15px;
+      align-items: end;
+      .priceText {
+        color: rgba(219, 105, 0, 1);
+        font-family: @font;
+        font-weight: 600;
+        font-size: 20px;
+      }
+      .oldPriceText {
+        font-family: @font;
+        font-size: 18px;
+        color: rgba(155, 155, 155, 1);
+        font-weight: 500;
+        text-decoration: line-through;
+      }
+    }
+    .countText {
+      color: white;
+      font-size: 17px;
+      font-family: @font;
+      font-weight: 500;
+    }
+  }
+  .modelNameText {
+    margin: 10px 26px 0 26px;
+    color: white;
+    font-size: 17px;
+    font-family: @font;
+    font-weight: 500;
+  }
+  .brandButton {
+    margin: 10px 26px 0 26px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+    p {
+      color: white;
+      font-weight: 700;
+      font-family: @font;
+      font-size: 20px;
+    }
+    img {
+      height: 30px;
+    }
+  }
+  .sizesHeader {
+    display: flex;
+    margin: 20px 26px 0 26px;
+    justify-content: space-between;
+    align-items: end;
+    .sizeHeaderText {
+      color: white;
+      font-size: 20px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .gridText {
+      color: rgba(155, 155, 155, 1);
+      font-family: @font;
+      font-weight: 500;
+      font-size: 17px;
+      cursor: pointer;
+    }
+  }
+  .sizesView {
+    display: flex;
+    margin: 15px 26px 0 26px;
+    overflow: scroll;
+    overflow-y: hidden;
+    gap: 25px;
+    padding: 10px 0 10px 0;
+    .sizeButton {
+      min-width: 50px;
+      height: 60px;
+      border-radius: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-family: @font;
+        font-size: 20px;
+        font-weight: 500;
+        color: white;
+      }
+    }
+    .activeSizeButton {
+      background-color: rgba(219, 105, 0, 1);
+      cursor: pointer;
+    }
+    .inActiveSizeButton {
+      background-color: rgba(36, 36, 36, 1);
+      cursor: pointer;
+      border: 2px solid rgba(219, 105, 0, 1);
+    }
+    .lockSizeButton {
+      border: 2px solid rgba(49, 49, 49, 1);
+      background-color: rgba(36, 36, 36, 1);
+      position: relative;
+      cursor: no-drop;
+      p {
+        color: rgba(69, 69, 69, 1);
+      }
+      .line {
+        height: 3px;
+        width: 142%;
+        position: absolute;
+        margin: auto 0 auto 0;
+        background-color: rgba(49, 49, 49, 1);
+        transform: rotateZ(52deg);
+      }
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 30px 15px 0 15px;
+    .hideView {
+      background-color: rgba(8, 8, 8, 1);
+
+      padding: 20px 40px 20px 40px;
+      border-radius: 27px;
+      .hideButton {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        p {
+          color: rgba(241, 241, 241, 1);
+          font-size: 18px;
+          font-family: @font;
+          font-weight: 600;
+        }
+        img {
+          height: 32px;
+        }
+        .arrowClose {
+          transform: rotate(90deg);
+          transition: 0.2s;
+        }
+        .arrowOpen {
+          transform: rotate(-90deg);
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+  .actionButtons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+    margin: 50px 44px 40px 44px;
+    .buyButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(219, 105, 0, 1);
+      border-radius: 20px;
+      height: 60px;
+      cursor: pointer;
+      p {
+        color: white;
+        font-size: 20px;
+        font-family: @font;
+        font-weight: 600;
+      }
+    }
+    .addButton {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      cursor: pointer;
+      p {
+        color: white;
+        font-size: 20px;
+        font-family: @font;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.modalProductOpen485_525 {
+  position: absolute;
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  left: 0;
+  bottom: 0%;
+  width: 100%;
+  height: 98vh;
+  z-index: 99999;
+  background-color: rgba(28, 28, 28, 1);
+  animation: slideUp 0.2s linear;
+  overflow: scroll;
+  overflow-x: hidden;
+  .sliderProduct {
+    border-top-left-radius: 38px;
+    border-top-right-radius: 38px;
+    position: relative;
+    .slideProduct {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      .imageProductModal {
+        height: 462px;
+        object-fit: contain;
+      }
+    }
+    .addFavouriveButton {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      z-index: 100;
+      background-color: white;
+      border-radius: 50px;
+      width: 47px;
+      height: 47px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      img {
+        width: 30px;
+      }
+    }
+    .backButton {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 30px;
+      top: 20px;
+      z-index: 100;
+      cursor: pointer;
+      width: 20px;
+      img {
+        height: 47px;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+  .priceCountView {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 14px 26px 0 26px;
+    .priceView {
+      display: flex;
+      gap: 15px;
+      align-items: end;
+      .priceText {
+        color: rgba(219, 105, 0, 1);
+        font-family: @font;
+        font-weight: 600;
+        font-size: 18px;
+      }
+      .oldPriceText {
+        font-family: @font;
+        font-size: 16px;
+        color: rgba(155, 155, 155, 1);
+        font-weight: 500;
+        text-decoration: line-through;
+      }
+    }
+    .countText {
+      color: white;
+      font-size: 15px;
+      font-family: @font;
+      font-weight: 500;
+    }
+  }
+  .modelNameText {
+    margin: 10px 26px 0 26px;
+    color: white;
+    font-size: 15px;
+    font-family: @font;
+    font-weight: 500;
+  }
+  .brandButton {
+    margin: 10px 26px 0 26px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+    p {
+      color: white;
+      font-weight: 700;
+      font-family: @font;
+      font-size: 18px;
+    }
+    img {
+      height: 27px;
+    }
+  }
+  .sizesHeader {
+    display: flex;
+    margin: 20px 26px 0 26px;
+    justify-content: space-between;
+    align-items: end;
+    .sizeHeaderText {
+      color: white;
+      font-size: 18px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .gridText {
+      color: rgba(155, 155, 155, 1);
+      font-family: @font;
+      font-weight: 500;
+      font-size: 15px;
+      cursor: pointer;
+    }
+  }
+  .sizesView {
+    display: flex;
+    margin: 15px 26px 0 26px;
+    overflow: scroll;
+    overflow-y: hidden;
+    gap: 25px;
+    padding: 10px 0 10px 0;
+    .sizeButton {
+      min-width: 50px;
+      height: 60px;
+      border-radius: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-family: @font;
+        font-size: 18px;
+        font-weight: 500;
+        color: white;
+      }
+    }
+    .activeSizeButton {
+      background-color: rgba(219, 105, 0, 1);
+      cursor: pointer;
+    }
+    .inActiveSizeButton {
+      background-color: rgba(36, 36, 36, 1);
+      cursor: pointer;
+      border: 2px solid rgba(219, 105, 0, 1);
+    }
+    .lockSizeButton {
+      border: 2px solid rgba(49, 49, 49, 1);
+      background-color: rgba(36, 36, 36, 1);
+      position: relative;
+      cursor: no-drop;
+      p {
+        color: rgba(69, 69, 69, 1);
+      }
+      .line {
+        height: 3px;
+        width: 142%;
+        position: absolute;
+        margin: auto 0 auto 0;
+        background-color: rgba(49, 49, 49, 1);
+        transform: rotateZ(52deg);
+      }
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 30px 15px 0 15px;
+    .hideView {
+      background-color: rgba(8, 8, 8, 1);
+
+      padding: 20px 40px 20px 40px;
+      border-radius: 27px;
+      .hideButton {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        p {
+          color: rgba(241, 241, 241, 1);
+          font-size: 16px;
+          font-family: @font;
+          font-weight: 600;
+        }
+        img {
+          height: 32px;
+        }
+        .arrowClose {
+          transform: rotate(90deg);
+          transition: 0.2s;
+        }
+        .arrowOpen {
+          transform: rotate(-90deg);
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+  .actionButtons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+    margin: 50px 44px 40px 44px;
+    .buyButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(219, 105, 0, 1);
+      border-radius: 20px;
+      height: 60px;
+      cursor: pointer;
+      p {
+        color: white;
+        font-size: 18px;
+        font-family: @font;
+        font-weight: 600;
+      }
+    }
+    .addButton {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      cursor: pointer;
+      p {
+        color: white;
+        font-size: 18px;
+        font-family: @font;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.modalProductOpen450_485 {
+  position: absolute;
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  left: 0;
+  bottom: 0%;
+  width: 100%;
+  height: 98vh;
+  z-index: 99999;
+  background-color: rgba(28, 28, 28, 1);
+  animation: slideUp 0.2s linear;
+  overflow: scroll;
+  overflow-x: hidden;
+  .sliderProduct {
+    border-top-left-radius: 38px;
+    border-top-right-radius: 38px;
+    position: relative;
+    .slideProduct {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      .imageProductModal {
+        height: 462px;
+        object-fit: contain;
+      }
+    }
+    .addFavouriveButton {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      z-index: 100;
+      background-color: white;
+      border-radius: 50px;
+      width: 47px;
+      height: 47px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      img {
+        width: 30px;
+      }
+    }
+    .backButton {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 30px;
+      top: 20px;
+      z-index: 100;
+      cursor: pointer;
+      width: 20px;
+      img {
+        height: 47px;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+  .priceCountView {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 14px 26px 0 26px;
+    .priceView {
+      display: flex;
+      gap: 15px;
+      align-items: end;
+      .priceText {
+        color: rgba(219, 105, 0, 1);
+        font-family: @font;
+        font-weight: 600;
+        font-size: 17px;
+      }
+      .oldPriceText {
+        font-family: @font;
+        font-size: 15px;
+        color: rgba(155, 155, 155, 1);
+        font-weight: 500;
+        text-decoration: line-through;
+      }
+    }
+    .countText {
+      color: white;
+      font-size: 14px;
+      font-family: @font;
+      font-weight: 500;
+    }
+  }
+  .modelNameText {
+    margin: 10px 26px 0 26px;
+    color: white;
+    font-size: 14px;
+    font-family: @font;
+    font-weight: 500;
+  }
+  .brandButton {
+    margin: 10px 26px 0 26px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+    p {
+      color: white;
+      font-weight: 700;
+      font-family: @font;
+      font-size: 17px;
+    }
+    img {
+      height: 26px;
+    }
+  }
+  .sizesHeader {
+    display: flex;
+    margin: 20px 26px 0 26px;
+    justify-content: space-between;
+    align-items: end;
+    .sizeHeaderText {
+      color: white;
+      font-size: 17px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .gridText {
+      color: rgba(155, 155, 155, 1);
+      font-family: @font;
+      font-weight: 500;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  }
+  .sizesView {
+    display: flex;
+    margin: 15px 26px 0 26px;
+    overflow: scroll;
+    overflow-y: hidden;
+    gap: 25px;
+    padding: 10px 0 10px 0;
+    .sizeButton {
+      min-width: 50px;
+      height: 60px;
+      border-radius: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-family: @font;
+        font-size: 17px;
+        font-weight: 500;
+        color: white;
+      }
+    }
+    .activeSizeButton {
+      background-color: rgba(219, 105, 0, 1);
+      cursor: pointer;
+    }
+    .inActiveSizeButton {
+      background-color: rgba(36, 36, 36, 1);
+      cursor: pointer;
+      border: 2px solid rgba(219, 105, 0, 1);
+    }
+    .lockSizeButton {
+      border: 2px solid rgba(49, 49, 49, 1);
+      background-color: rgba(36, 36, 36, 1);
+      position: relative;
+      cursor: no-drop;
+      p {
+        color: rgba(69, 69, 69, 1);
+      }
+      .line {
+        height: 3px;
+        width: 142%;
+        position: absolute;
+        margin: auto 0 auto 0;
+        background-color: rgba(49, 49, 49, 1);
+        transform: rotateZ(52deg);
+      }
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 30px 15px 0 15px;
+    .hideView {
+      background-color: rgba(8, 8, 8, 1);
+
+      padding: 20px 40px 20px 40px;
+      border-radius: 27px;
+      .hideButton {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        p {
+          color: rgba(241, 241, 241, 1);
+          font-size: 15px;
+          font-family: @font;
+          font-weight: 600;
+        }
+        img {
+          height: 32px;
+        }
+        .arrowClose {
+          transform: rotate(90deg);
+          transition: 0.2s;
+        }
+        .arrowOpen {
+          transform: rotate(-90deg);
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+  .actionButtons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+    margin: 50px 44px 40px 44px;
+    .buyButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(219, 105, 0, 1);
+      border-radius: 20px;
+      height: 60px;
+      cursor: pointer;
+      p {
+        color: white;
+        font-size: 17px;
+        font-family: @font;
+        font-weight: 600;
+      }
+    }
+    .addButton {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      cursor: pointer;
+      p {
+        color: white;
+        font-size: 17px;
+        font-family: @font;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.modalProductOpen410_450 {
+  position: absolute;
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  left: 0;
+  bottom: 0%;
+  width: 100%;
+  height: 98vh;
+  z-index: 99999;
+  background-color: rgba(28, 28, 28, 1);
+  animation: slideUp 0.2s linear;
+  overflow: scroll;
+  overflow-x: hidden;
+  .sliderProduct {
+    border-top-left-radius: 38px;
+    border-top-right-radius: 38px;
+    position: relative;
+    .slideProduct {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      .imageProductModal {
+        height: 462px;
+        object-fit: contain;
+      }
+    }
+    .addFavouriveButton {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      z-index: 100;
+      background-color: white;
+      border-radius: 50px;
+      width: 47px;
+      height: 47px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      img {
+        width: 30px;
+      }
+    }
+    .backButton {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 30px;
+      top: 20px;
+      z-index: 100;
+      cursor: pointer;
+      width: 20px;
+      img {
+        height: 47px;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+  .priceCountView {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 14px 26px 0 26px;
+    .priceView {
+      display: flex;
+      gap: 15px;
+      align-items: end;
+      .priceText {
+        color: rgba(219, 105, 0, 1);
+        font-family: @font;
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .oldPriceText {
+        font-family: @font;
+        font-size: 14px;
+        color: rgba(155, 155, 155, 1);
+        font-weight: 500;
+        text-decoration: line-through;
+      }
+    }
+    .countText {
+      color: white;
+      font-size: 13px;
+      font-family: @font;
+      font-weight: 500;
+    }
+  }
+  .modelNameText {
+    margin: 10px 26px 0 26px;
+    color: white;
+    font-size: 13px;
+    font-family: @font;
+    font-weight: 500;
+  }
+  .brandButton {
+    margin: 10px 26px 0 26px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+    p {
+      color: white;
+      font-weight: 700;
+      font-family: @font;
+      font-size: 16px;
+    }
+    img {
+      height: 24px;
+    }
+  }
+  .sizesHeader {
+    display: flex;
+    margin: 20px 26px 0 26px;
+    justify-content: space-between;
+    align-items: end;
+    .sizeHeaderText {
+      color: white;
+      font-size: 16px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .gridText {
+      color: rgba(155, 155, 155, 1);
+      font-family: @font;
+      font-weight: 500;
+      font-size: 13px;
+      cursor: pointer;
+    }
+  }
+  .sizesView {
+    display: flex;
+    margin: 15px 26px 0 26px;
+    overflow: scroll;
+    overflow-y: hidden;
+    gap: 25px;
+    padding: 10px 0 10px 0;
+    .sizeButton {
+      min-width: 50px;
+      height: 60px;
+      border-radius: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-family: @font;
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+      }
+    }
+    .activeSizeButton {
+      background-color: rgba(219, 105, 0, 1);
+      cursor: pointer;
+    }
+    .inActiveSizeButton {
+      background-color: rgba(36, 36, 36, 1);
+      cursor: pointer;
+      border: 2px solid rgba(219, 105, 0, 1);
+    }
+    .lockSizeButton {
+      border: 2px solid rgba(49, 49, 49, 1);
+      background-color: rgba(36, 36, 36, 1);
+      position: relative;
+      cursor: no-drop;
+      p {
+        color: rgba(69, 69, 69, 1);
+      }
+      .line {
+        height: 3px;
+        width: 142%;
+        position: absolute;
+        margin: auto 0 auto 0;
+        background-color: rgba(49, 49, 49, 1);
+        transform: rotateZ(52deg);
+      }
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 30px 15px 0 15px;
+    .hideView {
+      background-color: rgba(8, 8, 8, 1);
+
+      padding: 20px 40px 20px 40px;
+      border-radius: 27px;
+      .hideButton {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        p {
+          color: rgba(241, 241, 241, 1);
+          font-size: 14px;
+          font-family: @font;
+          font-weight: 600;
+        }
+        img {
+          height: 32px;
+        }
+        .arrowClose {
+          transform: rotate(90deg);
+          transition: 0.2s;
+        }
+        .arrowOpen {
+          transform: rotate(-90deg);
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+  .actionButtons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+    margin: 50px 44px 40px 44px;
+    .buyButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(219, 105, 0, 1);
+      border-radius: 20px;
+      height: 60px;
+      cursor: pointer;
+      p {
+        color: white;
+        font-size: 16px;
+        font-family: @font;
+        font-weight: 600;
+      }
+    }
+    .addButton {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      cursor: pointer;
+      p {
+        color: white;
+        font-size: 16px;
+        font-family: @font;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.modalProductOpen375_410 {
+  position: absolute;
+  border-top-left-radius: 38px;
+  border-top-right-radius: 38px;
+  left: 0;
+  bottom: 0%;
+  width: 100%;
+  height: 98vh;
+  z-index: 99999;
+  background-color: rgba(28, 28, 28, 1);
+  animation: slideUp 0.2s linear;
+  overflow: scroll;
+  overflow-x: hidden;
+  .sliderProduct {
+    border-top-left-radius: 38px;
+    border-top-right-radius: 38px;
+    position: relative;
+    .slideProduct {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      .imageProductModal {
+        height: 462px;
+        object-fit: contain;
+      }
+    }
+    .addFavouriveButton {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      z-index: 100;
+      background-color: white;
+      border-radius: 50px;
+      width: 47px;
+      height: 47px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      img {
+        width: 30px;
+      }
+    }
+    .backButton {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 30px;
+      top: 20px;
+      z-index: 100;
+      cursor: pointer;
+      width: 20px;
+      img {
+        height: 47px;
+        transform: rotateY(180deg);
+      }
+    }
+  }
+  .priceCountView {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 14px 26px 0 26px;
+    .priceView {
+      display: flex;
+      gap: 15px;
+      align-items: end;
+      .priceText {
+        color: rgba(219, 105, 0, 1);
+        font-family: @font;
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .oldPriceText {
+        font-family: @font;
+        font-size: 14px;
+        color: rgba(155, 155, 155, 1);
+        font-weight: 500;
+        text-decoration: line-through;
+      }
+    }
+    .countText {
+      color: white;
+      font-size: 13px;
+      font-family: @font;
+      font-weight: 500;
+    }
+  }
+  .modelNameText {
+    margin: 10px 26px 0 26px;
+    color: white;
+    font-size: 13px;
+    font-family: @font;
+    font-weight: 500;
+  }
+  .brandButton {
+    margin: 10px 26px 0 26px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+    p {
+      color: white;
+      font-weight: 700;
+      font-family: @font;
+      font-size: 16px;
+    }
+    img {
+      height: 24px;
+    }
+  }
+  .sizesHeader {
+    display: flex;
+    margin: 20px 26px 0 26px;
+    justify-content: space-between;
+    align-items: end;
+    .sizeHeaderText {
+      color: white;
+      font-size: 16px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .gridText {
+      color: rgba(155, 155, 155, 1);
+      font-family: @font;
+      font-weight: 500;
+      font-size: 13px;
+      cursor: pointer;
+    }
+  }
+  .sizesView {
+    display: flex;
+    margin: 15px 26px 0 26px;
+    overflow: scroll;
+    overflow-y: hidden;
+    gap: 25px;
+    padding: 10px 0 10px 0;
+    .sizeButton {
+      min-width: 50px;
+      height: 60px;
+      border-radius: 13px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-family: @font;
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+      }
+    }
+    .activeSizeButton {
+      background-color: rgba(219, 105, 0, 1);
+      cursor: pointer;
+    }
+    .inActiveSizeButton {
+      background-color: rgba(36, 36, 36, 1);
+      cursor: pointer;
+      border: 2px solid rgba(219, 105, 0, 1);
+    }
+    .lockSizeButton {
+      border: 2px solid rgba(49, 49, 49, 1);
+      background-color: rgba(36, 36, 36, 1);
+      position: relative;
+      cursor: no-drop;
+      p {
+        color: rgba(69, 69, 69, 1);
+      }
+      .line {
+        height: 3px;
+        width: 142%;
+        position: absolute;
+        margin: auto 0 auto 0;
+        background-color: rgba(49, 49, 49, 1);
+        transform: rotateZ(52deg);
+      }
+    }
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 30px 15px 0 15px;
+    .hideView {
+      background-color: rgba(8, 8, 8, 1);
+
+      padding: 20px 40px 20px 40px;
+      border-radius: 27px;
+      .hideButton {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        p {
+          color: rgba(241, 241, 241, 1);
+          font-size: 14px;
+          font-family: @font;
+          font-weight: 600;
+        }
+        img {
+          height: 32px;
+        }
+        .arrowClose {
+          transform: rotate(90deg);
+          transition: 0.2s;
+        }
+        .arrowOpen {
+          transform: rotate(-90deg);
+          transition: 0.2s;
+        }
+      }
+    }
+  }
+  .actionButtons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+    margin: 50px 44px 40px 44px;
+    .buyButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(219, 105, 0, 1);
+      border-radius: 20px;
+      height: 60px;
+      cursor: pointer;
+      p {
+        color: white;
+        font-size: 16px;
+        font-family: @font;
+        font-weight: 600;
+      }
+    }
+    .addButton {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      cursor: pointer;
+      p {
+        color: white;
+        font-size: 16px;
         font-family: @font;
         font-weight: 600;
       }
