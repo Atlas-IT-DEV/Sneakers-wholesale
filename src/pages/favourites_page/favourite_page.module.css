@@ -5,7 +5,8 @@
   overflow-x: hidden;
 }
 .container585_600 .header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   padding-top: 40px;
   padding-bottom: 14px;
   background-color: #db6900;
@@ -60,7 +61,7 @@
 .container585_600 .selector {
   display: inline-flexbox;
   margin-inline: 15px;
-  margin-top: 20px;
+  margin-top: 170px;
 }
 .container585_600 .products {
   display: flex;
@@ -75,7 +76,8 @@
   overflow-x: hidden;
 }
 .container565_585 .header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   padding-top: 40px;
   padding-bottom: 14px;
   background-color: #db6900;
@@ -130,7 +132,7 @@
 .container565_585 .selector {
   display: inline-flexbox;
   margin-inline: 15px;
-  margin-top: 20px;
+  margin-top: 170px;
 }
 .container565_585 .products {
   display: flex;
@@ -145,7 +147,8 @@
   overflow-x: hidden;
 }
 .container525_565 .header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   padding-top: 40px;
   padding-bottom: 14px;
   background-color: #db6900;
@@ -200,7 +203,7 @@
 .container525_565 .selector {
   display: inline-flexbox;
   margin-inline: 15px;
-  margin-top: 20px;
+  margin-top: 170px;
 }
 .container525_565 .products {
   display: flex;
@@ -215,7 +218,8 @@
   overflow-x: hidden;
 }
 .container485_525 .header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   padding-top: 40px;
   padding-bottom: 14px;
   background-color: #db6900;
@@ -270,7 +274,7 @@
 .container485_525 .selector {
   display: inline-flexbox;
   margin-inline: 15px;
-  margin-top: 20px;
+  margin-top: 170px;
 }
 .container485_525 .products {
   display: flex;
@@ -285,7 +289,8 @@
   overflow-x: hidden;
 }
 .container450_485 .header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   padding-top: 40px;
   padding-bottom: 14px;
   background-color: #db6900;
@@ -340,7 +345,7 @@
 .container450_485 .selector {
   display: inline-flexbox;
   margin-inline: 15px;
-  margin-top: 20px;
+  margin-top: 170px;
 }
 .container450_485 .products {
   display: flex;
@@ -355,7 +360,8 @@
   overflow-x: hidden;
 }
 .container410_450 .header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   padding-top: 40px;
   padding-bottom: 14px;
   background-color: #db6900;
@@ -410,7 +416,7 @@
 .container410_450 .selector {
   display: inline-flexbox;
   margin-inline: 15px;
-  margin-top: 20px;
+  margin-top: 170px;
 }
 .container410_450 .products {
   display: flex;
@@ -425,7 +431,8 @@
   overflow-x: hidden;
 }
 .container375_410 .header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   padding-top: 40px;
   padding-bottom: 14px;
   background-color: #db6900;
@@ -480,7 +487,7 @@
 .container375_410 .selector {
   display: inline-flexbox;
   margin-inline: 15px;
-  margin-top: 20px;
+  margin-top: 170px;
 }
 .container375_410 .products {
   display: flex;

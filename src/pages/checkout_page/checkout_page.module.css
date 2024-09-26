@@ -1,25 +1,25 @@
-.container {
+.container585_600 {
   width: 100%;
   height: 100vh;
   overflow: scroll;
   overflow-x: hidden;
 }
-.container .header {
+.container585_600 .header {
   width: 100%;
   position: fixed;
   padding-top: 40px;
   padding-bottom: 14px;
   background-color: #db6900;
 }
-.container .header .namePageText {
+.container585_600 .header .namePageText {
   display: flex;
   justify-content: center;
   color: #fcfcfc;
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
-.container .header .backButton {
+.container585_600 .header .backButton {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -30,22 +30,22 @@
   left: 0;
   bottom: 20px;
 }
-.container .header .backButton img {
+.container585_600 .header .backButton img {
   height: 26px;
 }
-.container .view {
+.container585_600 .view {
   padding: 15px 30px 15px 30px;
   background-color: #262626;
   margin: 110px 16px 0 16px;
   border-radius: 27px;
 }
-.container .view .headerView {
+.container585_600 .view .headerView {
   color: white;
   font-size: 21px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
-.container .view .selectButton {
+.container585_600 .view .selectButton {
   margin-top: 10px;
   background-color: #363636;
   padding: 25px 15px 25px 15px;
@@ -55,18 +55,18 @@
   justify-content: space-between;
   cursor: pointer;
 }
-.container .view .selectButton .contentView {
+.container585_600 .view .selectButton .contentView {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-.container .view .selectButton .contentView p {
+.container585_600 .view .selectButton .contentView p {
   color: white;
   font-family: TTForsTrialVariable;
   font-size: 21px;
   font-weight: 500;
 }
-.container .view .methodButton {
+.container585_600 .view .methodButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,13 +75,13 @@
   cursor: pointer;
   margin: 10px auto 0 auto;
 }
-.container .view .methodButton p {
+.container585_600 .view .methodButton p {
   color: #878787;
   font-size: 21px;
   font-family: TTForsTrialVariable;
   font-weight: 500;
 }
-.container .products {
+.container585_600 .products {
   border: #333333 solid 1px;
   padding: 22px 14px 22px 14px;
   margin: 20px 10px 0 10px;
@@ -91,81 +91,1114 @@
   align-items: center;
   gap: 14px;
 }
-.container .products img {
+.container585_600 .products img {
   min-width: 140px;
   min-height: 176px;
   max-width: 140px;
   max-height: 176px;
   object-fit: contain;
 }
-.container .payment {
+.container585_600 .payment {
   margin-top: 20px;
 }
-.container .divLine {
+.container585_600 .divLine {
   margin: 25px 27px 0 27px;
   height: 2px;
   background-color: #393939;
 }
-.container .totalView {
+.container585_600 .totalView {
   display: flex;
   margin: 12px 32px 0 32px;
 }
-.container .totalView .attributeTotal {
+.container585_600 .totalView .attributeTotal {
   width: 80%;
 }
-.container .totalView .totalText {
+.container585_600 .totalView .totalText {
   color: white;
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 600;
   font-family: TTForsTrialVariable;
 }
-.container .descriptionView {
+.container585_600 .descriptionView {
   display: flex;
   flex-direction: column;
   gap: 5px;
   margin: 12px 32px 0 32px;
 }
-.container .descriptionView .viewTotal {
+.container585_600 .descriptionView .viewTotal {
   display: flex;
 }
-.container .descriptionView .viewTotal .descAttrTotal {
+.container585_600 .descriptionView .viewTotal .descAttrTotal {
   width: 80%;
 }
-.container .descriptionView .viewTotal .descText {
+.container585_600 .descriptionView .viewTotal .descText {
   color: white;
   font-family: TTForsTrialVariable;
   font-size: 20px;
   font-weight: 500;
 }
-.container .orderButton {
+.container585_600 .orderButton {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
   height: 75px;
   background-color: #db6900;
   border-radius: 20px;
   margin: 20px 20px 50px 20px;
   padding: 0 34px 0 34px;
 }
-.container .orderButton .prices {
+.container585_600 .orderButton .prices {
   display: flex;
   gap: 15px;
 }
-.container .orderButton .orderButtonText {
+.container585_600 .orderButton .orderButtonText {
   color: white;
-  font-size: 24px;
+  font-size: 23px;
   font-family: TTForsTrialVariable;
   font-weight: 500;
 }
-.container .orderButton .priceText {
+.container585_600 .orderButton .priceText {
   font-family: TTForsTrialVariable;
   font-weight: 500;
   font-size: 23px;
 }
-.container .orderButton .newPriceText {
+.container585_600 .orderButton .newPriceText {
   color: white;
 }
-.container .orderButton .oldPriceText {
+.container585_600 .orderButton .oldPriceText {
+  color: rgba(255, 255, 255, 0.69);
+  text-decoration: line-through;
+}
+.container565_585 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container565_585 .header {
+  width: 100%;
+  position: fixed;
+  padding-top: 40px;
+  padding-bottom: 14px;
+  background-color: #db6900;
+}
+.container565_585 .header .namePageText {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+  font-size: 21px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .header .backButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 40px;
+  margin-left: 24px;
+  min-width: 14px;
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+}
+.container565_585 .header .backButton img {
+  height: 22px;
+}
+.container565_585 .view {
+  padding: 15px 30px 15px 30px;
+  background-color: #262626;
+  margin: 110px 16px 0 16px;
+  border-radius: 27px;
+}
+.container565_585 .view .headerView {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .view .selectButton {
+  margin-top: 10px;
+  background-color: #363636;
+  padding: 25px 15px 25px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.container565_585 .view .selectButton .contentView {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.container565_585 .view .selectButton .contentView p {
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-size: 20px;
+  font-weight: 500;
+}
+.container565_585 .view .methodButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  cursor: pointer;
+  margin: 10px auto 0 auto;
+}
+.container565_585 .view .methodButton p {
+  color: #878787;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container565_585 .products {
+  border: #333333 solid 1px;
+  padding: 22px 14px 22px 14px;
+  margin: 20px 10px 0 10px;
+  overflow: scroll;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.container565_585 .products img {
+  min-width: 140px;
+  min-height: 176px;
+  max-width: 140px;
+  max-height: 176px;
+  object-fit: contain;
+}
+.container565_585 .payment {
+  margin-top: 20px;
+}
+.container565_585 .divLine {
+  margin: 25px 27px 0 27px;
+  height: 2px;
+  background-color: #393939;
+}
+.container565_585 .totalView {
+  display: flex;
+  margin: 12px 32px 0 32px;
+}
+.container565_585 .totalView .attributeTotal {
+  width: 80%;
+}
+.container565_585 .totalView .totalText {
+  color: white;
+  font-size: 21px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container565_585 .descriptionView {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 12px 32px 0 32px;
+}
+.container565_585 .descriptionView .viewTotal {
+  display: flex;
+}
+.container565_585 .descriptionView .viewTotal .descAttrTotal {
+  width: 80%;
+}
+.container565_585 .descriptionView .viewTotal .descText {
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-size: 19px;
+  font-weight: 500;
+}
+.container565_585 .orderButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  height: 75px;
+  background-color: #db6900;
+  border-radius: 20px;
+  margin: 20px 20px 50px 20px;
+  padding: 0 34px 0 34px;
+}
+.container565_585 .orderButton .prices {
+  display: flex;
+  gap: 15px;
+}
+.container565_585 .orderButton .orderButtonText {
+  color: white;
+  font-size: 21px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container565_585 .orderButton .priceText {
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 21px;
+}
+.container565_585 .orderButton .newPriceText {
+  color: white;
+}
+.container565_585 .orderButton .oldPriceText {
+  color: rgba(255, 255, 255, 0.69);
+  text-decoration: line-through;
+}
+.container525_565 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container525_565 .header {
+  width: 100%;
+  position: fixed;
+  padding-top: 40px;
+  padding-bottom: 14px;
+  background-color: #db6900;
+}
+.container525_565 .header .namePageText {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .header .backButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 40px;
+  margin-left: 24px;
+  min-width: 14px;
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+}
+.container525_565 .header .backButton img {
+  height: 21px;
+}
+.container525_565 .view {
+  padding: 15px 30px 15px 30px;
+  background-color: #262626;
+  margin: 110px 16px 0 16px;
+  border-radius: 27px;
+}
+.container525_565 .view .headerView {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .view .selectButton {
+  margin-top: 10px;
+  background-color: #363636;
+  padding: 25px 15px 25px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.container525_565 .view .selectButton .contentView {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.container525_565 .view .selectButton .contentView p {
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-size: 18px;
+  font-weight: 500;
+}
+.container525_565 .view .methodButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  cursor: pointer;
+  margin: 10px auto 0 auto;
+}
+.container525_565 .view .methodButton p {
+  color: #878787;
+  font-size: 18px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container525_565 .products {
+  border: #333333 solid 1px;
+  padding: 22px 14px 22px 14px;
+  margin: 20px 10px 0 10px;
+  overflow: scroll;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.container525_565 .products img {
+  min-width: 140px;
+  min-height: 176px;
+  max-width: 140px;
+  max-height: 176px;
+  object-fit: contain;
+}
+.container525_565 .payment {
+  margin-top: 20px;
+}
+.container525_565 .divLine {
+  margin: 25px 27px 0 27px;
+  height: 2px;
+  background-color: #393939;
+}
+.container525_565 .totalView {
+  display: flex;
+  margin: 12px 32px 0 32px;
+}
+.container525_565 .totalView .attributeTotal {
+  width: 80%;
+}
+.container525_565 .totalView .totalText {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container525_565 .descriptionView {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 12px 32px 0 32px;
+}
+.container525_565 .descriptionView .viewTotal {
+  display: flex;
+}
+.container525_565 .descriptionView .viewTotal .descAttrTotal {
+  width: 80%;
+}
+.container525_565 .descriptionView .viewTotal .descText {
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-size: 17px;
+  font-weight: 500;
+}
+.container525_565 .orderButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  height: 75px;
+  background-color: #db6900;
+  border-radius: 20px;
+  margin: 20px 20px 50px 20px;
+  padding: 0 34px 0 34px;
+}
+.container525_565 .orderButton .prices {
+  display: flex;
+  gap: 15px;
+}
+.container525_565 .orderButton .orderButtonText {
+  color: white;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container525_565 .orderButton .priceText {
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 20px;
+}
+.container525_565 .orderButton .newPriceText {
+  color: white;
+}
+.container525_565 .orderButton .oldPriceText {
+  color: rgba(255, 255, 255, 0.69);
+  text-decoration: line-through;
+}
+.container485_525 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container485_525 .header {
+  width: 100%;
+  position: fixed;
+  padding-top: 40px;
+  padding-bottom: 14px;
+  background-color: #db6900;
+}
+.container485_525 .header .namePageText {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .header .backButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 40px;
+  margin-left: 24px;
+  min-width: 14px;
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+}
+.container485_525 .header .backButton img {
+  height: 18px;
+}
+.container485_525 .view {
+  padding: 15px 30px 15px 30px;
+  background-color: #262626;
+  margin: 110px 16px 0 16px;
+  border-radius: 27px;
+}
+.container485_525 .view .headerView {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .view .selectButton {
+  margin-top: 10px;
+  background-color: #363636;
+  padding: 25px 15px 25px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.container485_525 .view .selectButton .contentView {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.container485_525 .view .selectButton .contentView p {
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-size: 16px;
+  font-weight: 500;
+}
+.container485_525 .view .methodButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  cursor: pointer;
+  margin: 10px auto 0 auto;
+}
+.container485_525 .view .methodButton p {
+  color: #878787;
+  font-size: 16px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container485_525 .products {
+  border: #333333 solid 1px;
+  padding: 22px 14px 22px 14px;
+  margin: 20px 10px 0 10px;
+  overflow: scroll;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.container485_525 .products img {
+  min-width: 140px;
+  min-height: 176px;
+  max-width: 140px;
+  max-height: 176px;
+  object-fit: contain;
+}
+.container485_525 .payment {
+  margin-top: 20px;
+}
+.container485_525 .divLine {
+  margin: 25px 27px 0 27px;
+  height: 2px;
+  background-color: #393939;
+}
+.container485_525 .totalView {
+  display: flex;
+  margin: 12px 32px 0 32px;
+}
+.container485_525 .totalView .attributeTotal {
+  width: 80%;
+}
+.container485_525 .totalView .totalText {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container485_525 .descriptionView {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 12px 32px 0 32px;
+}
+.container485_525 .descriptionView .viewTotal {
+  display: flex;
+}
+.container485_525 .descriptionView .viewTotal .descAttrTotal {
+  width: 80%;
+}
+.container485_525 .descriptionView .viewTotal .descText {
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-size: 15px;
+  font-weight: 500;
+}
+.container485_525 .orderButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  height: 75px;
+  background-color: #db6900;
+  border-radius: 20px;
+  margin: 20px 20px 50px 20px;
+  padding: 0 34px 0 34px;
+}
+.container485_525 .orderButton .prices {
+  display: flex;
+  gap: 15px;
+}
+.container485_525 .orderButton .orderButtonText {
+  color: white;
+  font-size: 18px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container485_525 .orderButton .priceText {
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 18px;
+}
+.container485_525 .orderButton .newPriceText {
+  color: white;
+}
+.container485_525 .orderButton .oldPriceText {
+  color: rgba(255, 255, 255, 0.69);
+  text-decoration: line-through;
+}
+.container450_485 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container450_485 .header {
+  width: 100%;
+  position: fixed;
+  padding-top: 40px;
+  padding-bottom: 14px;
+  background-color: #db6900;
+}
+.container450_485 .header .namePageText {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .header .backButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 40px;
+  margin-left: 24px;
+  min-width: 14px;
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+}
+.container450_485 .header .backButton img {
+  height: 16px;
+}
+.container450_485 .view {
+  padding: 15px 30px 15px 30px;
+  background-color: #262626;
+  margin: 110px 16px 0 16px;
+  border-radius: 27px;
+}
+.container450_485 .view .headerView {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .view .selectButton {
+  margin-top: 10px;
+  background-color: #363636;
+  padding: 25px 15px 25px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.container450_485 .view .selectButton .contentView {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.container450_485 .view .selectButton .contentView p {
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-size: 15px;
+  font-weight: 500;
+}
+.container450_485 .view .methodButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  cursor: pointer;
+  margin: 10px auto 0 auto;
+}
+.container450_485 .view .methodButton p {
+  color: #878787;
+  font-size: 15px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container450_485 .products {
+  border: #333333 solid 1px;
+  padding: 22px 14px 22px 14px;
+  margin: 20px 10px 0 10px;
+  overflow: scroll;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.container450_485 .products img {
+  min-width: 140px;
+  min-height: 176px;
+  max-width: 140px;
+  max-height: 176px;
+  object-fit: contain;
+}
+.container450_485 .payment {
+  margin-top: 20px;
+}
+.container450_485 .divLine {
+  margin: 25px 27px 0 27px;
+  height: 2px;
+  background-color: #393939;
+}
+.container450_485 .totalView {
+  display: flex;
+  margin: 12px 32px 0 32px;
+}
+.container450_485 .totalView .attributeTotal {
+  width: 80%;
+}
+.container450_485 .totalView .totalText {
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container450_485 .descriptionView {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 12px 32px 0 32px;
+}
+.container450_485 .descriptionView .viewTotal {
+  display: flex;
+}
+.container450_485 .descriptionView .viewTotal .descAttrTotal {
+  width: 80%;
+}
+.container450_485 .descriptionView .viewTotal .descText {
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-size: 14px;
+  font-weight: 500;
+}
+.container450_485 .orderButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  height: 75px;
+  background-color: #db6900;
+  border-radius: 20px;
+  margin: 20px 20px 50px 20px;
+  padding: 0 34px 0 34px;
+}
+.container450_485 .orderButton .prices {
+  display: flex;
+  gap: 15px;
+}
+.container450_485 .orderButton .orderButtonText {
+  color: white;
+  font-size: 17px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container450_485 .orderButton .priceText {
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 17px;
+}
+.container450_485 .orderButton .newPriceText {
+  color: white;
+}
+.container450_485 .orderButton .oldPriceText {
+  color: rgba(255, 255, 255, 0.69);
+  text-decoration: line-through;
+}
+.container410_450 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container410_450 .header {
+  width: 100%;
+  position: fixed;
+  padding-top: 40px;
+  padding-bottom: 14px;
+  background-color: #db6900;
+}
+.container410_450 .header .namePageText {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .header .backButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 40px;
+  margin-left: 24px;
+  min-width: 14px;
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+}
+.container410_450 .header .backButton img {
+  height: 15px;
+}
+.container410_450 .view {
+  padding: 15px 30px 15px 30px;
+  background-color: #262626;
+  margin: 110px 16px 0 16px;
+  border-radius: 27px;
+}
+.container410_450 .view .headerView {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .view .selectButton {
+  margin-top: 10px;
+  background-color: #363636;
+  padding: 25px 15px 25px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.container410_450 .view .selectButton .contentView {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.container410_450 .view .selectButton .contentView p {
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-size: 14px;
+  font-weight: 500;
+}
+.container410_450 .view .methodButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  cursor: pointer;
+  margin: 10px auto 0 auto;
+}
+.container410_450 .view .methodButton p {
+  color: #878787;
+  font-size: 14px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container410_450 .products {
+  border: #333333 solid 1px;
+  padding: 22px 14px 22px 14px;
+  margin: 20px 10px 0 10px;
+  overflow: scroll;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.container410_450 .products img {
+  min-width: 140px;
+  min-height: 176px;
+  max-width: 140px;
+  max-height: 176px;
+  object-fit: contain;
+}
+.container410_450 .payment {
+  margin-top: 20px;
+}
+.container410_450 .divLine {
+  margin: 25px 27px 0 27px;
+  height: 2px;
+  background-color: #393939;
+}
+.container410_450 .totalView {
+  display: flex;
+  margin: 12px 32px 0 32px;
+}
+.container410_450 .totalView .attributeTotal {
+  width: 80%;
+}
+.container410_450 .totalView .totalText {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container410_450 .descriptionView {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 12px 32px 0 32px;
+}
+.container410_450 .descriptionView .viewTotal {
+  display: flex;
+}
+.container410_450 .descriptionView .viewTotal .descAttrTotal {
+  width: 80%;
+}
+.container410_450 .descriptionView .viewTotal .descText {
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-size: 13px;
+  font-weight: 500;
+}
+.container410_450 .orderButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  height: 75px;
+  background-color: #db6900;
+  border-radius: 20px;
+  margin: 20px 20px 50px 20px;
+  padding: 0 34px 0 34px;
+}
+.container410_450 .orderButton .prices {
+  display: flex;
+  gap: 15px;
+}
+.container410_450 .orderButton .orderButtonText {
+  color: white;
+  font-size: 16px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container410_450 .orderButton .priceText {
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 16px;
+}
+.container410_450 .orderButton .newPriceText {
+  color: white;
+}
+.container410_450 .orderButton .oldPriceText {
+  color: rgba(255, 255, 255, 0.69);
+  text-decoration: line-through;
+}
+.container375_410 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.container375_410 .header {
+  width: 100%;
+  position: fixed;
+  padding-top: 40px;
+  padding-bottom: 14px;
+  background-color: #db6900;
+}
+.container375_410 .header .namePageText {
+  display: flex;
+  justify-content: center;
+  color: #fcfcfc;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .header .backButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 40px;
+  margin-left: 24px;
+  min-width: 14px;
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+}
+.container375_410 .header .backButton img {
+  height: 15px;
+}
+.container375_410 .view {
+  padding: 15px 30px 15px 30px;
+  background-color: #262626;
+  margin: 110px 16px 0 16px;
+  border-radius: 27px;
+}
+.container375_410 .view .headerView {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .view .selectButton {
+  margin-top: 10px;
+  background-color: #363636;
+  padding: 25px 15px 25px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.container375_410 .view .selectButton .contentView {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.container375_410 .view .selectButton .contentView p {
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-size: 14px;
+  font-weight: 500;
+}
+.container375_410 .view .methodButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+  cursor: pointer;
+  margin: 10px auto 0 auto;
+}
+.container375_410 .view .methodButton p {
+  color: #878787;
+  font-size: 14px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container375_410 .products {
+  border: #333333 solid 1px;
+  padding: 22px 14px 22px 14px;
+  margin: 20px 10px 0 10px;
+  overflow: scroll;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.container375_410 .products img {
+  min-width: 140px;
+  min-height: 176px;
+  max-width: 140px;
+  max-height: 176px;
+  object-fit: contain;
+}
+.container375_410 .payment {
+  margin-top: 20px;
+}
+.container375_410 .divLine {
+  margin: 25px 27px 0 27px;
+  height: 2px;
+  background-color: #393939;
+}
+.container375_410 .totalView {
+  display: flex;
+  margin: 12px 32px 0 32px;
+}
+.container375_410 .totalView .attributeTotal {
+  width: 80%;
+}
+.container375_410 .totalView .totalText {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: TTForsTrialVariable;
+}
+.container375_410 .descriptionView {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 12px 32px 0 32px;
+}
+.container375_410 .descriptionView .viewTotal {
+  display: flex;
+}
+.container375_410 .descriptionView .viewTotal .descAttrTotal {
+  width: 80%;
+}
+.container375_410 .descriptionView .viewTotal .descText {
+  color: white;
+  font-family: TTForsTrialVariable;
+  font-size: 13px;
+  font-weight: 500;
+}
+.container375_410 .orderButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  height: 75px;
+  background-color: #db6900;
+  border-radius: 20px;
+  margin: 20px 20px 50px 20px;
+  padding: 0 34px 0 34px;
+}
+.container375_410 .orderButton .prices {
+  display: flex;
+  gap: 15px;
+}
+.container375_410 .orderButton .orderButtonText {
+  color: white;
+  font-size: 16px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container375_410 .orderButton .priceText {
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 16px;
+}
+.container375_410 .orderButton .newPriceText {
+  color: white;
+}
+.container375_410 .orderButton .oldPriceText {
   color: rgba(255, 255, 255, 0.69);
   text-decoration: line-through;
 }

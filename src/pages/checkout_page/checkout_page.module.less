@@ -1,6 +1,6 @@
 @font: TTForsTrialVariable;
 
-.container {
+.container585_600 {
   width: 100%;
   height: 100vh;
   overflow: scroll;
@@ -15,7 +15,7 @@
       display: flex;
       justify-content: center;
       color: rgba(252, 252, 252, 1);
-      font-size: 24px;
+      font-size: 23px;
       font-weight: 600;
       font-family: TTForsTrialVariable;
     }
@@ -115,7 +115,7 @@
     }
     .totalText {
       color: white;
-      font-size: 24px;
+      font-size: 23px;
       font-weight: 600;
       font-family: @font;
     }
@@ -143,6 +143,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
     height: 75px;
     background-color: rgba(219, 105, 0, 1);
     border-radius: 20px;
@@ -154,7 +155,7 @@
     }
     .orderButtonText {
       color: white;
-      font-size: 24px;
+      font-size: 23px;
       font-family: @font;
       font-weight: 500;
     }
@@ -162,6 +163,1050 @@
       font-family: @font;
       font-weight: 500;
       font-size: 23px;
+    }
+    .newPriceText {
+      color: white;
+    }
+    .oldPriceText {
+      color: rgba(255, 255, 255, 0.69);
+      text-decoration: line-through;
+    }
+  }
+}
+
+.container565_585 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  .header {
+    width: 100%;
+    position: fixed;
+    padding-top: 40px;
+    padding-bottom: 14px;
+    background-color: rgba(219, 105, 0, 1);
+    .namePageText {
+      display: flex;
+      justify-content: center;
+      color: rgba(252, 252, 252, 1);
+      font-size: 21px;
+      font-weight: 600;
+      font-family: TTForsTrialVariable;
+    }
+    .backButton {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-top: 40px;
+      margin-left: 24px;
+      min-width: 14px;
+      position: absolute;
+      left: 0;
+      bottom: 20px;
+      img {
+        height: 22px;
+      }
+    }
+  }
+  .view {
+    padding: 15px 30px 15px 30px;
+    background-color: rgba(38, 38, 38, 1);
+    margin: 110px 16px 0 16px;
+    border-radius: 27px;
+    .headerView {
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+      font-family: @font;
+    }
+    .selectButton {
+      margin-top: 10px;
+      background-color: rgba(54, 54, 54, 1);
+      padding: 25px 15px 25px 15px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      .contentView {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        p {
+          color: white;
+          font-family: @font;
+          font-size: 20px;
+          font-weight: 500;
+        }
+      }
+    }
+    .methodButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: max-content;
+      cursor: pointer;
+      margin: 10px auto 0 auto;
+      p {
+        color: rgba(135, 135, 135, 1);
+        font-size: 20px;
+        font-family: @font;
+        font-weight: 500;
+      }
+    }
+  }
+  .products {
+    border: rgba(51, 51, 51, 1) solid 1px;
+    padding: 22px 14px 22px 14px;
+    margin: 20px 10px 0 10px;
+    overflow: scroll;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    img {
+      min-width: 140px;
+      min-height: 176px;
+      max-width: 140px;
+      max-height: 176px;
+      object-fit: contain;
+    }
+  }
+  .payment {
+    margin-top: 20px;
+  }
+  .divLine {
+    margin: 25px 27px 0 27px;
+    height: 2px;
+    background-color: rgba(57, 57, 57, 1);
+  }
+  .totalView {
+    display: flex;
+    margin: 12px 32px 0 32px;
+    .attributeTotal {
+      width: 80%;
+    }
+    .totalText {
+      color: white;
+      font-size: 21px;
+      font-weight: 600;
+      font-family: @font;
+    }
+  }
+
+  .descriptionView {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 12px 32px 0 32px;
+    .viewTotal {
+      display: flex;
+      .descAttrTotal {
+        width: 80%;
+      }
+      .descText {
+        color: white;
+        font-family: @font;
+        font-size: 19px;
+        font-weight: 500;
+      }
+    }
+  }
+  .orderButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    height: 75px;
+    background-color: rgba(219, 105, 0, 1);
+    border-radius: 20px;
+    margin: 20px 20px 50px 20px;
+    padding: 0 34px 0 34px;
+    .prices {
+      display: flex;
+      gap: 15px;
+    }
+    .orderButtonText {
+      color: white;
+      font-size: 21px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .priceText {
+      font-family: @font;
+      font-weight: 500;
+      font-size: 21px;
+    }
+    .newPriceText {
+      color: white;
+    }
+    .oldPriceText {
+      color: rgba(255, 255, 255, 0.69);
+      text-decoration: line-through;
+    }
+  }
+}
+
+.container525_565 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  .header {
+    width: 100%;
+    position: fixed;
+    padding-top: 40px;
+    padding-bottom: 14px;
+    background-color: rgba(219, 105, 0, 1);
+    .namePageText {
+      display: flex;
+      justify-content: center;
+      color: rgba(252, 252, 252, 1);
+      font-size: 20px;
+      font-weight: 600;
+      font-family: TTForsTrialVariable;
+    }
+    .backButton {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-top: 40px;
+      margin-left: 24px;
+      min-width: 14px;
+      position: absolute;
+      left: 0;
+      bottom: 20px;
+      img {
+        height: 21px;
+      }
+    }
+  }
+  .view {
+    padding: 15px 30px 15px 30px;
+    background-color: rgba(38, 38, 38, 1);
+    margin: 110px 16px 0 16px;
+    border-radius: 27px;
+    .headerView {
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      font-family: @font;
+    }
+    .selectButton {
+      margin-top: 10px;
+      background-color: rgba(54, 54, 54, 1);
+      padding: 25px 15px 25px 15px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      .contentView {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        p {
+          color: white;
+          font-family: @font;
+          font-size: 18px;
+          font-weight: 500;
+        }
+      }
+    }
+    .methodButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: max-content;
+      cursor: pointer;
+      margin: 10px auto 0 auto;
+      p {
+        color: rgba(135, 135, 135, 1);
+        font-size: 18px;
+        font-family: @font;
+        font-weight: 500;
+      }
+    }
+  }
+  .products {
+    border: rgba(51, 51, 51, 1) solid 1px;
+    padding: 22px 14px 22px 14px;
+    margin: 20px 10px 0 10px;
+    overflow: scroll;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    img {
+      min-width: 140px;
+      min-height: 176px;
+      max-width: 140px;
+      max-height: 176px;
+      object-fit: contain;
+    }
+  }
+  .payment {
+    margin-top: 20px;
+  }
+  .divLine {
+    margin: 25px 27px 0 27px;
+    height: 2px;
+    background-color: rgba(57, 57, 57, 1);
+  }
+  .totalView {
+    display: flex;
+    margin: 12px 32px 0 32px;
+    .attributeTotal {
+      width: 80%;
+    }
+    .totalText {
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+      font-family: @font;
+    }
+  }
+
+  .descriptionView {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 12px 32px 0 32px;
+    .viewTotal {
+      display: flex;
+      .descAttrTotal {
+        width: 80%;
+      }
+      .descText {
+        color: white;
+        font-family: @font;
+        font-size: 17px;
+        font-weight: 500;
+      }
+    }
+  }
+  .orderButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    height: 75px;
+    background-color: rgba(219, 105, 0, 1);
+    border-radius: 20px;
+    margin: 20px 20px 50px 20px;
+    padding: 0 34px 0 34px;
+    .prices {
+      display: flex;
+      gap: 15px;
+    }
+    .orderButtonText {
+      color: white;
+      font-size: 20px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .priceText {
+      font-family: @font;
+      font-weight: 500;
+      font-size: 20px;
+    }
+    .newPriceText {
+      color: white;
+    }
+    .oldPriceText {
+      color: rgba(255, 255, 255, 0.69);
+      text-decoration: line-through;
+    }
+  }
+}
+
+.container485_525 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  .header {
+    width: 100%;
+    position: fixed;
+    padding-top: 40px;
+    padding-bottom: 14px;
+    background-color: rgba(219, 105, 0, 1);
+    .namePageText {
+      display: flex;
+      justify-content: center;
+      color: rgba(252, 252, 252, 1);
+      font-size: 18px;
+      font-weight: 600;
+      font-family: TTForsTrialVariable;
+    }
+    .backButton {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-top: 40px;
+      margin-left: 24px;
+      min-width: 14px;
+      position: absolute;
+      left: 0;
+      bottom: 20px;
+      img {
+        height: 18px;
+      }
+    }
+  }
+  .view {
+    padding: 15px 30px 15px 30px;
+    background-color: rgba(38, 38, 38, 1);
+    margin: 110px 16px 0 16px;
+    border-radius: 27px;
+    .headerView {
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: @font;
+    }
+    .selectButton {
+      margin-top: 10px;
+      background-color: rgba(54, 54, 54, 1);
+      padding: 25px 15px 25px 15px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      .contentView {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        p {
+          color: white;
+          font-family: @font;
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+    }
+    .methodButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: max-content;
+      cursor: pointer;
+      margin: 10px auto 0 auto;
+      p {
+        color: rgba(135, 135, 135, 1);
+        font-size: 16px;
+        font-family: @font;
+        font-weight: 500;
+      }
+    }
+  }
+  .products {
+    border: rgba(51, 51, 51, 1) solid 1px;
+    padding: 22px 14px 22px 14px;
+    margin: 20px 10px 0 10px;
+    overflow: scroll;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    img {
+      min-width: 140px;
+      min-height: 176px;
+      max-width: 140px;
+      max-height: 176px;
+      object-fit: contain;
+    }
+  }
+  .payment {
+    margin-top: 20px;
+  }
+  .divLine {
+    margin: 25px 27px 0 27px;
+    height: 2px;
+    background-color: rgba(57, 57, 57, 1);
+  }
+  .totalView {
+    display: flex;
+    margin: 12px 32px 0 32px;
+    .attributeTotal {
+      width: 80%;
+    }
+    .totalText {
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      font-family: @font;
+    }
+  }
+
+  .descriptionView {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 12px 32px 0 32px;
+    .viewTotal {
+      display: flex;
+      .descAttrTotal {
+        width: 80%;
+      }
+      .descText {
+        color: white;
+        font-family: @font;
+        font-size: 15px;
+        font-weight: 500;
+      }
+    }
+  }
+  .orderButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    height: 75px;
+    background-color: rgba(219, 105, 0, 1);
+    border-radius: 20px;
+    margin: 20px 20px 50px 20px;
+    padding: 0 34px 0 34px;
+    .prices {
+      display: flex;
+      gap: 15px;
+    }
+    .orderButtonText {
+      color: white;
+      font-size: 18px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .priceText {
+      font-family: @font;
+      font-weight: 500;
+      font-size: 18px;
+    }
+    .newPriceText {
+      color: white;
+    }
+    .oldPriceText {
+      color: rgba(255, 255, 255, 0.69);
+      text-decoration: line-through;
+    }
+  }
+}
+
+.container450_485 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  .header {
+    width: 100%;
+    position: fixed;
+    padding-top: 40px;
+    padding-bottom: 14px;
+    background-color: rgba(219, 105, 0, 1);
+    .namePageText {
+      display: flex;
+      justify-content: center;
+      color: rgba(252, 252, 252, 1);
+      font-size: 17px;
+      font-weight: 600;
+      font-family: TTForsTrialVariable;
+    }
+    .backButton {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-top: 40px;
+      margin-left: 24px;
+      min-width: 14px;
+      position: absolute;
+      left: 0;
+      bottom: 20px;
+      img {
+        height: 16px;
+      }
+    }
+  }
+  .view {
+    padding: 15px 30px 15px 30px;
+    background-color: rgba(38, 38, 38, 1);
+    margin: 110px 16px 0 16px;
+    border-radius: 27px;
+    .headerView {
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: @font;
+    }
+    .selectButton {
+      margin-top: 10px;
+      background-color: rgba(54, 54, 54, 1);
+      padding: 25px 15px 25px 15px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      .contentView {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        p {
+          color: white;
+          font-family: @font;
+          font-size: 15px;
+          font-weight: 500;
+        }
+      }
+    }
+    .methodButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: max-content;
+      cursor: pointer;
+      margin: 10px auto 0 auto;
+      p {
+        color: rgba(135, 135, 135, 1);
+        font-size: 15px;
+        font-family: @font;
+        font-weight: 500;
+      }
+    }
+  }
+  .products {
+    border: rgba(51, 51, 51, 1) solid 1px;
+    padding: 22px 14px 22px 14px;
+    margin: 20px 10px 0 10px;
+    overflow: scroll;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    img {
+      min-width: 140px;
+      min-height: 176px;
+      max-width: 140px;
+      max-height: 176px;
+      object-fit: contain;
+    }
+  }
+  .payment {
+    margin-top: 20px;
+  }
+  .divLine {
+    margin: 25px 27px 0 27px;
+    height: 2px;
+    background-color: rgba(57, 57, 57, 1);
+  }
+  .totalView {
+    display: flex;
+    margin: 12px 32px 0 32px;
+    .attributeTotal {
+      width: 80%;
+    }
+    .totalText {
+      color: white;
+      font-size: 17px;
+      font-weight: 600;
+      font-family: @font;
+    }
+  }
+
+  .descriptionView {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 12px 32px 0 32px;
+    .viewTotal {
+      display: flex;
+      .descAttrTotal {
+        width: 80%;
+      }
+      .descText {
+        color: white;
+        font-family: @font;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+  .orderButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    height: 75px;
+    background-color: rgba(219, 105, 0, 1);
+    border-radius: 20px;
+    margin: 20px 20px 50px 20px;
+    padding: 0 34px 0 34px;
+    .prices {
+      display: flex;
+      gap: 15px;
+    }
+    .orderButtonText {
+      color: white;
+      font-size: 17px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .priceText {
+      font-family: @font;
+      font-weight: 500;
+      font-size: 17px;
+    }
+    .newPriceText {
+      color: white;
+    }
+    .oldPriceText {
+      color: rgba(255, 255, 255, 0.69);
+      text-decoration: line-through;
+    }
+  }
+}
+
+.container410_450 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  .header {
+    width: 100%;
+    position: fixed;
+    padding-top: 40px;
+    padding-bottom: 14px;
+    background-color: rgba(219, 105, 0, 1);
+    .namePageText {
+      display: flex;
+      justify-content: center;
+      color: rgba(252, 252, 252, 1);
+      font-size: 16px;
+      font-weight: 600;
+      font-family: TTForsTrialVariable;
+    }
+    .backButton {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-top: 40px;
+      margin-left: 24px;
+      min-width: 14px;
+      position: absolute;
+      left: 0;
+      bottom: 20px;
+      img {
+        height: 15px;
+      }
+    }
+  }
+  .view {
+    padding: 15px 30px 15px 30px;
+    background-color: rgba(38, 38, 38, 1);
+    margin: 110px 16px 0 16px;
+    border-radius: 27px;
+    .headerView {
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: @font;
+    }
+    .selectButton {
+      margin-top: 10px;
+      background-color: rgba(54, 54, 54, 1);
+      padding: 25px 15px 25px 15px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      .contentView {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        p {
+          color: white;
+          font-family: @font;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+    .methodButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: max-content;
+      cursor: pointer;
+      margin: 10px auto 0 auto;
+      p {
+        color: rgba(135, 135, 135, 1);
+        font-size: 14px;
+        font-family: @font;
+        font-weight: 500;
+      }
+    }
+  }
+  .products {
+    border: rgba(51, 51, 51, 1) solid 1px;
+    padding: 22px 14px 22px 14px;
+    margin: 20px 10px 0 10px;
+    overflow: scroll;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    img {
+      min-width: 140px;
+      min-height: 176px;
+      max-width: 140px;
+      max-height: 176px;
+      object-fit: contain;
+    }
+  }
+  .payment {
+    margin-top: 20px;
+  }
+  .divLine {
+    margin: 25px 27px 0 27px;
+    height: 2px;
+    background-color: rgba(57, 57, 57, 1);
+  }
+  .totalView {
+    display: flex;
+    margin: 12px 32px 0 32px;
+    .attributeTotal {
+      width: 80%;
+    }
+    .totalText {
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: @font;
+    }
+  }
+
+  .descriptionView {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 12px 32px 0 32px;
+    .viewTotal {
+      display: flex;
+      .descAttrTotal {
+        width: 80%;
+      }
+      .descText {
+        color: white;
+        font-family: @font;
+        font-size: 13px;
+        font-weight: 500;
+      }
+    }
+  }
+  .orderButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    height: 75px;
+    background-color: rgba(219, 105, 0, 1);
+    border-radius: 20px;
+    margin: 20px 20px 50px 20px;
+    padding: 0 34px 0 34px;
+    .prices {
+      display: flex;
+      gap: 15px;
+    }
+    .orderButtonText {
+      color: white;
+      font-size: 16px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .priceText {
+      font-family: @font;
+      font-weight: 500;
+      font-size: 16px;
+    }
+    .newPriceText {
+      color: white;
+    }
+    .oldPriceText {
+      color: rgba(255, 255, 255, 0.69);
+      text-decoration: line-through;
+    }
+  }
+}
+
+.container375_410 {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  .header {
+    width: 100%;
+    position: fixed;
+    padding-top: 40px;
+    padding-bottom: 14px;
+    background-color: rgba(219, 105, 0, 1);
+    .namePageText {
+      display: flex;
+      justify-content: center;
+      color: rgba(252, 252, 252, 1);
+      font-size: 16px;
+      font-weight: 600;
+      font-family: TTForsTrialVariable;
+    }
+    .backButton {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-top: 40px;
+      margin-left: 24px;
+      min-width: 14px;
+      position: absolute;
+      left: 0;
+      bottom: 20px;
+      img {
+        height: 15px;
+      }
+    }
+  }
+  .view {
+    padding: 15px 30px 15px 30px;
+    background-color: rgba(38, 38, 38, 1);
+    margin: 110px 16px 0 16px;
+    border-radius: 27px;
+    .headerView {
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: @font;
+    }
+    .selectButton {
+      margin-top: 10px;
+      background-color: rgba(54, 54, 54, 1);
+      padding: 25px 15px 25px 15px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      .contentView {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        p {
+          color: white;
+          font-family: @font;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+    .methodButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: max-content;
+      cursor: pointer;
+      margin: 10px auto 0 auto;
+      p {
+        color: rgba(135, 135, 135, 1);
+        font-size: 14px;
+        font-family: @font;
+        font-weight: 500;
+      }
+    }
+  }
+  .products {
+    border: rgba(51, 51, 51, 1) solid 1px;
+    padding: 22px 14px 22px 14px;
+    margin: 20px 10px 0 10px;
+    overflow: scroll;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    img {
+      min-width: 140px;
+      min-height: 176px;
+      max-width: 140px;
+      max-height: 176px;
+      object-fit: contain;
+    }
+  }
+  .payment {
+    margin-top: 20px;
+  }
+  .divLine {
+    margin: 25px 27px 0 27px;
+    height: 2px;
+    background-color: rgba(57, 57, 57, 1);
+  }
+  .totalView {
+    display: flex;
+    margin: 12px 32px 0 32px;
+    .attributeTotal {
+      width: 80%;
+    }
+    .totalText {
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: @font;
+    }
+  }
+
+  .descriptionView {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 12px 32px 0 32px;
+    .viewTotal {
+      display: flex;
+      .descAttrTotal {
+        width: 80%;
+      }
+      .descText {
+        color: white;
+        font-family: @font;
+        font-size: 13px;
+        font-weight: 500;
+      }
+    }
+  }
+  .orderButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    height: 75px;
+    background-color: rgba(219, 105, 0, 1);
+    border-radius: 20px;
+    margin: 20px 20px 50px 20px;
+    padding: 0 34px 0 34px;
+    .prices {
+      display: flex;
+      gap: 15px;
+    }
+    .orderButtonText {
+      color: white;
+      font-size: 16px;
+      font-family: @font;
+      font-weight: 500;
+    }
+    .priceText {
+      font-family: @font;
+      font-weight: 500;
+      font-size: 16px;
     }
     .newPriceText {
       color: white;
