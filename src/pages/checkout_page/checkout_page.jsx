@@ -30,6 +30,15 @@ const CheckoutPage = () => {
           <img src={selectArrow} alt="" />
         </div>
       </div>
+      <div className={styles.products}>
+        <img src="" alt="" />
+        <img src="" alt="" />
+        <img src="" alt="" />
+        <img src="" alt="" />
+        <img src="" alt="" />
+        <img src="" alt="" />
+      </div>
+      <div></div>
     </div>
   );
 };
