@@ -11,6 +11,7 @@ import CatalogPage from "./pages/catalog_page/catalog_page";
 import FavouritesPage from "./pages/favourites_page/favourites_page";
 import FilterPage from "./pages/filter_page/filter_page";
 import ProfilePage from "./pages/profile_page/profile_page";
+import CheckoutPage from "./pages/checkout_page/checkout_page";
 
 const router = createMemoryRouter([
   {
@@ -58,6 +59,14 @@ const router = createMemoryRouter([
     element: (
       <PageContainer>
         <ProfilePage />
+      </PageContainer>
+    ),
+  },
+  {
+    path: "/checkout",
+    element: (
+      <PageContainer>
+        <CheckoutPage />
       </PageContainer>
     ),
   },

@@ -3,9 +3,12 @@ import BottomMenu from "../../components/bottom_menu/bottom_menu";
 import DiscountCard from "../../components/discount_card/discount_card";
 import CartProductCard from "../../components/cart_product_card/cart_product_card";
 import useWindowDimensions from "../../components/hooks/windowDimensions";
+import { Navigation } from "swiper/modules";
+import { useNavigate } from "react-router";
 
 const CartPage = () => {
   const { width } = useWindowDimensions();
+  const navigate = useNavigate();
   return (
     <div
       className={
@@ -38,7 +41,7 @@ const CartPage = () => {
         <CartProductCard />
         <CartProductCard />
       </div>
-      <div className={styles.orderButton}>
+      <div className={styles.orderButton} onClick={() => navigate("/checkout")}>
         <p className={styles.orderButtonText}>К оформлению</p>
         <p className={styles.detailsdOrderText}>2шт, 18400₽</p>
       </div>
