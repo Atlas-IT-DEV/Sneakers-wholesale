@@ -147,3 +147,25 @@
   margin: 20px 20px 50px 20px;
   padding: 0 34px 0 34px;
 }
+.container .orderButton .prices {
+  display: flex;
+  gap: 15px;
+}
+.container .orderButton .orderButtonText {
+  color: white;
+  font-size: 24px;
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+}
+.container .orderButton .priceText {
+  font-family: TTForsTrialVariable;
+  font-weight: 500;
+  font-size: 23px;
+}
+.container .orderButton .newPriceText {
+  color: white;
+}
+.container .orderButton .oldPriceText {
+  color: rgba(255, 255, 255, 0.69);
+  text-decoration: line-through;
+}

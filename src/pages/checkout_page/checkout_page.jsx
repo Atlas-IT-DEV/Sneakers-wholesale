@@ -83,10 +83,10 @@ const CheckoutPage = ({ count = 2 }) => {
         </div>
       </div>
       <div className={styles.orderButton}>
-        <p>Заказать</p>
-        <div>
-          <p>18500₽</p>
-          <p>18500₽</p>
+        <p className={styles.orderButtonText}>Заказать</p>
+        <div className={styles.prices}>
+          <p className={`${styles.oldPriceText} ${styles.priceText}`}>18500₽</p>
+          <p className={`${styles.newPriceText} ${styles.priceText}`}>18500₽</p>
         </div>
       </div>
     </div>

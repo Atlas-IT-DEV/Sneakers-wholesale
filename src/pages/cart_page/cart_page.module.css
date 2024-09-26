@@ -5,7 +5,9 @@
   overflow-x: hidden;
 }
 .container585_600 .header {
-  position: sticky;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
   padding-top: 40px;
   padding-bottom: 14px;
   background-color: #db6900;
@@ -31,7 +33,7 @@
   font-family: TTForsTrialVariable;
 }
 .container585_600 .discountContainer {
-  margin: 20px 16px 0 16px;
+  margin: 110px 16px 0 16px;
 }
 .container585_600 .productContainer {
   display: flex;
@@ -70,7 +72,9 @@
   overflow-x: hidden;
 }
 .container565_585 .header {
-  position: sticky;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
   padding-top: 40px;
   padding-bottom: 14px;
   background-color: #db6900;
@@ -96,7 +100,7 @@
   font-family: TTForsTrialVariable;
 }
 .container565_585 .discountContainer {
-  margin: 20px 16px 0 16px;
+  margin: 110px 16px 0 16px;
 }
 .container565_585 .productContainer {
   display: flex;
@@ -135,7 +139,9 @@
   overflow-x: hidden;
 }
 .container525_565 .header {
-  position: sticky;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
   padding-top: 40px;
   padding-bottom: 14px;
   background-color: #db6900;
@@ -161,7 +167,7 @@
   font-family: TTForsTrialVariable;
 }
 .container525_565 .discountContainer {
-  margin: 20px 16px 0 16px;
+  margin: 100px 16px 0 16px;
 }
 .container525_565 .productContainer {
   display: flex;
@@ -200,7 +206,9 @@
   overflow-x: hidden;
 }
 .container485_525 .header {
-  position: sticky;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
   padding-top: 40px;
   padding-bottom: 14px;
   background-color: #db6900;
@@ -226,7 +234,7 @@
   font-family: TTForsTrialVariable;
 }
 .container485_525 .discountContainer {
-  margin: 20px 16px 0 16px;
+  margin: 100px 16px 0 16px;
 }
 .container485_525 .productContainer {
   display: flex;
@@ -265,7 +273,9 @@
   overflow-x: hidden;
 }
 .container450_485 .header {
-  position: sticky;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
   padding-top: 40px;
   padding-bottom: 14px;
   background-color: #db6900;
@@ -291,7 +301,7 @@
   font-family: TTForsTrialVariable;
 }
 .container450_485 .discountContainer {
-  margin: 20px 16px 0 16px;
+  margin: 95px 16px 0 16px;
 }
 .container450_485 .productContainer {
   display: flex;
@@ -330,7 +340,9 @@
   overflow-x: hidden;
 }
 .container410_450 .header {
-  position: sticky;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
   padding-top: 40px;
   padding-bottom: 14px;
   background-color: #db6900;
@@ -356,7 +368,7 @@
   font-family: TTForsTrialVariable;
 }
 .container410_450 .discountContainer {
-  margin: 20px 16px 0 16px;
+  margin: 90px 16px 0 16px;
 }
 .container410_450 .productContainer {
   display: flex;
@@ -395,7 +407,9 @@
   overflow-x: hidden;
 }
 .container375_410 .header {
-  position: sticky;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
   padding-top: 40px;
   padding-bottom: 14px;
   background-color: #db6900;
@@ -421,7 +435,7 @@
   font-family: TTForsTrialVariable;
 }
 .container375_410 .discountContainer {
-  margin: 20px 16px 0 16px;
+  margin: 90px 16px 0 16px;
 }
 .container375_410 .productContainer {
   display: flex;
