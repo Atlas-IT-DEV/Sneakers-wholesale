@@ -272,6 +272,13 @@ const ProductModal = ({
                   }
                 />
               </div>
+              <div
+                className={
+                  isPressed[1] ? styles.subFiltersOpen : styles.subFiltersClose
+                }
+              >
+                <p className={styles.checkButtonText}>Hello</p>
+              </div>
             </div>
             <div className={styles.hideView}>
               <div
@@ -290,6 +297,13 @@ const ProductModal = ({
                   }
                 />
               </div>
+              <div
+                className={
+                  isPressed[2] ? styles.subFiltersOpen : styles.subFiltersClose
+                }
+              >
+                <p className={styles.checkButtonText}>Hello</p>
+              </div>
             </div>
             <div className={styles.hideView}>
               <div
@@ -307,6 +321,13 @@ const ProductModal = ({
                     isPressed[3] ? styles.arrowOpen : styles.arrowClose
                   }
                 />
+              </div>
+              <div
+                className={
+                  isPressed[3] ? styles.subFiltersOpen : styles.subFiltersClose
+                }
+              >
+                <p className={styles.checkButtonText}>Hello</p>
               </div>
             </div>
           </footer>
