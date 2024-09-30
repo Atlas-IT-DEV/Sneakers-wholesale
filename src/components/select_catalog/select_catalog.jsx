@@ -3,8 +3,12 @@ import useWindowDimensions from "../hooks/windowDimensions";
 
 import rightArrowWhiteIcon from "../../images/arrow_select_white.svg";
 import AttentionModal from "../modals/attention_modal/attenction_modal";
+import { useNavigate } from "react-router";
+import { useStores } from "../../store/store_context";
 
 const SelectCatalog = () => {
+  const navigate = useNavigate();
+  const { pageStore } = useStores();
   const { width } = useWindowDimensions();
   return (
     <div
@@ -26,11 +30,23 @@ const SelectCatalog = () => {
     >
       <p className={styles.nameText}>Каталог</p>
       <div className={styles.buttonsBlock}>
-        <div className={`${styles.button} ${styles.activeButton}`}>
+        <div
+          className={`${styles.button} ${styles.activeButton}`}
+          onClick={() => {
+            pageStore.updateShopFormat(0);
+            navigate("/catalog");
+          }}
+        >
           <p className={styles.buttonText}>Розничный магазин</p>
           <img src={rightArrowWhiteIcon} alt="" />
         </div>
-        <div className={`${styles.button} ${styles.activeButton}`}>
+        <div
+          className={`${styles.button} ${styles.activeButton}`}
+          onClick={() => {
+            pageStore.updateShopFormat(1);
+            navigate("/catalog");
+          }}
+        >
           <p className={styles.buttonText}>Оптовый магазин</p>
           <img src={rightArrowWhiteIcon} alt="" />
         </div>

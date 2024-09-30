@@ -8,10 +8,17 @@ import sortIcon from "../../images/sort_icon.svg";
 import filterIcon from "../../images/filter_icon.svg";
 import useWindowDimensions from "../../components/hooks/windowDimensions";
 import { useNavigate } from "react-router";
+import { useStores } from "../../store/store_context";
+import { observer } from "mobx-react-lite";
+import { useEffect } from "react";
 
-const CatalogPage = () => {
+const CatalogPage = observer(() => {
   const { width } = useWindowDimensions();
   const navigate = useNavigate();
+  const { pageStore } = useStores();
+  useEffect(() => {
+    pageStore.getProducts();
+  }, []);
   return (
     <div
       className={
@@ -55,16 +62,17 @@ const CatalogPage = () => {
       </div>
       <div className={styles.products}>
         <div className={styles.productsField}>
+          {pageStore.products.map((elem) => <ProductCard price={elem.price} model_name={elem.name} countProduct="" oldPrice={""} obj={elem}/>)}
+          {/* <ProductCard />
           <ProductCard />
           <ProductCard />
-          <ProductCard />
-          <ProductCard />
+          <ProductCard /> */}
         </div>
       </div>
 
       <BottomMenu />
     </div>
   );
-};
+});
 
 export default CatalogPage;

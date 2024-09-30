@@ -19,6 +19,7 @@ const ProductModal = ({
   count = "8 пар (опт)",
   model_name = "Gel Quantum Kinetic",
   brand_name = "Asics",
+  obj = {},
 }) => {
   const { width } = useWindowDimensions();
 
@@ -67,9 +68,29 @@ const ProductModal = ({
             setModalVisible(true);
           }}
         >
-          <SwiperSlide className={styles.slider}>
+          {" "}
+          {obj.urls.map((elem) => (
+            <SwiperSlide className={styles.slider}>
+              <img src={elem} alt="" className={styles.imageProduct} />
+              <div
+                className={styles.favouriteButton}
+                onClick={() => {
+                  favouriteClick();
+                  setModalVisible(false);
+                }}
+              >
+                <img
+                  src={
+                    isPressed[0] ? favouriteActiveIcon : favouriteInactiveIcon
+                  }
+                  alt=""
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+          {/* <SwiperSlide className={styles.slider}>
             <img
-              src="https://avatars.mds.yandex.net/i?id=9abb78b2620653cf366076b57cbdc214_l-5858783-images-thumbs&n=13"
+              src="https://legacy.reactjs.org/logo-og.png"
               alt=""
               className={styles.imageProduct}
             />
@@ -104,26 +125,7 @@ const ProductModal = ({
                 alt=""
               />
             </div>
-          </SwiperSlide>
-          <SwiperSlide className={styles.slider}>
-            <img
-              src="https://legacy.reactjs.org/logo-og.png"
-              alt=""
-              className={styles.imageProduct}
-            />
-            <div
-              className={styles.favouriteButton}
-              onClick={() => {
-                favouriteClick();
-                setModalVisible(false);
-              }}
-            >
-              <img
-                src={isPressed[0] ? favouriteActiveIcon : favouriteInactiveIcon}
-                alt=""
-              />
-            </div>
-          </SwiperSlide>
+          </SwiperSlide> */}
         </Swiper>
       </div>
 
@@ -185,37 +187,21 @@ const ProductModal = ({
                 alt=""
               />
             </div>
-            <SwiperSlide className={styles.slideProduct}>
-              <img
-                src="https://avatars.mds.yandex.net/i?id=9abb78b2620653cf366076b57cbdc214_l-5858783-images-thumbs&n=13"
-                alt=""
-                className={styles.imageProductModal}
-              />
-            </SwiperSlide>
-            <SwiperSlide className={styles.slideProduct}>
-              <img
-                src="https://legacy.reactjs.org/logo-og.png"
-                alt=""
-                className={styles.imageProductModal}
-              />
-            </SwiperSlide>
-            <SwiperSlide className={styles.slideProduct}>
-              <img
-                src="https://legacy.reactjs.org/logo-og.png"
-                alt=""
-                className={styles.imageProductModal}
-              />
-            </SwiperSlide>
+            {obj.urls.map((elem) => (
+              <SwiperSlide className={styles.slideProduct}>
+                <img src={elem} alt="" className={styles.imageProductModal} />
+              </SwiperSlide>
+            ))}
           </Swiper>
 
           <div className={styles.priceCountView}>
             <div className={styles.priceView}>
-              <p className={styles.priceText}>{price}₽</p>
-              <p className={styles.oldPriceText}>{old_price}₽</p>
+              <p className={styles.priceText}>{obj?.price}₽</p>
+              <p className={styles.oldPriceText}></p>
             </div>
-            <p className={styles.countText}>{count}</p>
+            <p className={styles.countText}>{obj?.count}</p>
           </div>
-          <p className={styles.modelNameText}>{model_name}</p>
+          <p className={styles.modelNameText}>{obj?.name}</p>
           <div className={styles.brandButton}>
             <p>{brand_name}</p>
             <img src={whiteArrow} alt="" />
