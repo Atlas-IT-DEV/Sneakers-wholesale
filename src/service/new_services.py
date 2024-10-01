@@ -2,18 +2,63 @@ from src.repository import new_repository
 from src.database.models import News
 from fastapi import HTTPException, status
 from src.utils.exam_services import check_for_duplicates, check_if_exists
+from src.utils.return_url_object import return_url_object
+from src.utils.list_to_str import encode_list_to_string, decode_string_to_list
+from src.service.image_services import get_image_by_id
 
 
-def get_all_news():
+def get_all_news(dirs: bool = False):
     news = new_repository.get_all_news()
-    return [News(**new) for new in news]
+    models = [News(**new) for new in news]
+    list_news = []
+    for new in news:
+        # Получаем список изображений по ID продукта и выбираем первое изображение
+        image_ids = decode_string_to_list(new.get("image_id"))
+        urls = []
+        for image_id in image_ids:
+            # Обрабатываем URL для первого изображения
+            if image_id is not None:
+                try:
+                    url = get_image_by_id(image_id)
+                    url = return_url_object(url)
+                    urls.append(url)
+                except HTTPException:
+                    urls.append(None)
+            else:
+                urls.append(None)
+        new["urls"] = urls
+        list_news.append(new)
+    if dirs:
+        return list_news
+    else:
+        return models
 
 
-def get_new_by_id(new_id: int):
+def get_new_by_id(new_id: int, dirs: bool = False):
     new = new_repository.get_new_by_id(new_id)
     if not new:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='New not found')
-    return News(**new) if new else None
+    model = News(**new) if new else None
+    # Получаем список изображений по ID продукта и выбираем первое изображение
+    image_ids = decode_string_to_list(new.get("image_id"))
+    urls = []
+    for image_id in image_ids:
+        # Обрабатываем URL для первого изображения
+        if image_id is not None:
+            try:
+                url = get_image_by_id(image_id)
+                url = return_url_object(url)
+                urls.append(url)
+            except HTTPException:
+                urls.append(None)
+        else:
+            urls.append(None)
+    new["urls"] = urls
+    # Возвращаем либо модель продукта, либо словарь, в зависимости от значения параметра dirs
+    if dirs:
+        return new  # Возвращаем словарь с преобразованным продуктом
+    else:
+        return model
 
 
 def create_new(new: News):

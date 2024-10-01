@@ -752,7 +752,21 @@ async def get_all_news():
     :return: response model List[News].
     """
     try:
-        return new_services.get_all_news()
+        return new_services.get_all_news(dirs=False)
+    except HTTPException as ex:
+        log.exception(f"Error", exc_info=ex)
+        raise ex
+
+
+@app.get("/news/full", response_model=list[Dict], tags=["New"])
+async def get_all_news_full():
+    """
+    Route for get all news from basedata.
+
+    :return: response model List[News].
+    """
+    try:
+        return new_services.get_all_news(dirs=True)
     except HTTPException as ex:
         log.exception(f"Error", exc_info=ex)
         raise ex
@@ -768,7 +782,23 @@ async def get_new_by_id(new_id: int):
     :return: response model News.
     """
     try:
-        return new_services.get_new_by_id(new_id)
+        return new_services.get_new_by_id(new_id, dirs=False)
+    except HTTPException as ex:
+        log.exception(f"Error", exc_info=ex)
+        raise ex
+
+
+@app.get("/news/new_id/full/{new_id}", response_model=Dict, tags=["New"])
+async def get_new_by_id_full(new_id: int):
+    """
+    Route for get new by NewID.
+
+    :param new_id: ID by new. [int]
+
+    :return: response model News.
+    """
+    try:
+        return new_services.get_new_by_id(new_id, dirs=True)
     except HTTPException as ex:
         log.exception(f"Error", exc_info=ex)
         raise ex
@@ -1508,6 +1538,20 @@ async def get_all_product_comments():
         raise ex
 
 
+@app.get("/product_comments/full", response_model=list[Dict], tags=["ProductComment"])
+async def get_all_product_comments_full():
+    """
+    Route for getting all product comments from basedata.
+
+    :return: response model List[ProductComments].
+    """
+    try:
+        return product_comment_services.get_all_product_comments(dirs=True)
+    except HTTPException as ex:
+        log.exception(f"Error", exc_info=ex)
+        raise ex
+
+
 @app.get("/product_comments/product_comment_id/{product_comment_id}", response_model=ProductComments,
          tags=["ProductComment"])
 async def get_product_comment_by_id(product_comment_id: int):
@@ -1520,6 +1564,23 @@ async def get_product_comment_by_id(product_comment_id: int):
     """
     try:
         return product_comment_services.get_product_comment_by_id(product_comment_id)
+    except HTTPException as ex:
+        log.exception(f"Error", exc_info=ex)
+        raise ex
+
+
+@app.get("/product_comments/product_comment_id/full/{product_comment_id}", response_model=Dict,
+         tags=["ProductComment"])
+async def get_product_comment_by_id_full(product_comment_id: int):
+    """
+    Route for getting product comment by ProductCommentID.
+
+    :param product_comment_id: ID of the product comment. [int]
+
+    :return: response model ProductComments.
+    """
+    try:
+        return product_comment_services.get_product_comment_by_id(product_comment_id, dirs=True)
     except HTTPException as ex:
         log.exception(f"Error", exc_info=ex)
         raise ex
@@ -1586,7 +1647,21 @@ async def get_all_company_comments():
     :return: response model List[CompanyComments].
     """
     try:
-        return company_comment_services.get_all_company_comments()
+        return company_comment_services.get_all_company_comments(dirs=False)
+    except HTTPException as ex:
+        log.exception(f"Error", exc_info=ex)
+        raise ex
+
+
+@app.get("/company_comments/full", response_model=list[Dict], tags=["CompanyComment"])
+async def get_all_company_comments_full():
+    """
+    Route for getting all company comments from basedata.
+
+    :return: response model List[CompanyComments].
+    """
+    try:
+        return company_comment_services.get_all_company_comments(dirs=True)
     except HTTPException as ex:
         log.exception(f"Error", exc_info=ex)
         raise ex
@@ -1604,6 +1679,23 @@ async def get_company_comment_by_id(company_comment_id: int):
     """
     try:
         return company_comment_services.get_company_comment_by_id(company_comment_id)
+    except HTTPException as ex:
+        log.exception(f"Error", exc_info=ex)
+        raise ex
+
+
+@app.get("/company_comments/company_comment_id/full/{company_comment_id}", response_model=Dict,
+         tags=["CompanyComment"])
+async def get_company_comment_by_id_full(company_comment_id: int):
+    """
+    Route for getting company comment by CompanyCommentID.
+
+    :param company_comment_id: ID of the company comment. [int]
+
+    :return: response model CompanyComments.
+    """
+    try:
+        return company_comment_services.get_company_comment_by_id(company_comment_id, dirs=True)
     except HTTPException as ex:
         log.exception(f"Error", exc_info=ex)
         raise ex
@@ -1922,10 +2014,25 @@ async def get_all_question_answers():
     :return: response model List[QuestionAnswers].
     """
     try:
-        return question_answer_services.get_all_question_answers()
+        return question_answer_services.get_all_question_answers(dirs=False)
     except HTTPException as ex:
         log.exception(f"Error", exc_info=ex)
         raise ex
+
+
+@app.get("/question_answers/full", response_model=list[Dict], tags=["QuestionAnswer"])
+async def get_all_question_answers_full():
+    """
+    Route for get all question_answers from basedata.
+
+    :return: response model List[QuestionAnswers].
+    """
+    try:
+        return question_answer_services.get_all_question_answers(dirs=True)
+    except HTTPException as ex:
+        log.exception(f"Error", exc_info=ex)
+        raise ex
+
 
 
 @app.get("/question_answers/question_answer_id/{question_answer_id}", response_model=QuestionAnswers,
@@ -1939,7 +2046,24 @@ async def get_question_answer_by_id(question_answer_id: int):
     :return: response model question answers. [QuestionAnswer]
     """
     try:
-        return question_answer_services.get_question_answer_by_id(question_answer_id)
+        return question_answer_services.get_question_answer_by_id(question_answer_id, dirs=False)
+    except HTTPException as ex:
+        log.exception(f"Error", exc_info=ex)
+        raise ex
+
+
+@app.get("/question_answers/question_answer_id/full/{question_answer_id}", response_model=Dict,
+         tags=["QuestionAnswer"])
+async def get_question_answer_by_id_full(question_answer_id: int):
+    """
+    Route for get question_answer by QuestionAnswerID.
+
+    :param question_answer_id: ID by question answer. [int]
+
+    :return: response model question answers. [QuestionAnswer]
+    """
+    try:
+        return question_answer_services.get_question_answer_by_id(question_answer_id, dirs=True)
     except HTTPException as ex:
         log.exception(f"Error", exc_info=ex)
         raise ex

@@ -40,21 +40,21 @@ def get_all_products(dirs: bool = False):
             promotion = get_promotion_by_id(promotion_id)
             product["promotion"] = promotion.model_dump(by_alias=True)
             del product["promotion_id"]
-            # Получаем список изображений по ID продукта и выбираем первое изображение
-            image_ids = decode_string_to_list(product.get("image_id"))
-            urls = []
-            for image_id in image_ids:
-                # Обрабатываем URL для первого изображения
-                if image_id is not None:
-                    try:
-                        url = get_image_by_id(image_id)
-                        url = return_url_object(url)
-                        urls.append(url)
-                    except HTTPException:
-                        urls.append(None)
-                else:
+        # Получаем список изображений по ID продукта и выбираем первое изображение
+        image_ids = decode_string_to_list(product.get("image_id"))
+        urls = []
+        for image_id in image_ids:
+            # Обрабатываем URL для первого изображения
+            if image_id is not None:
+                try:
+                    url = get_image_by_id(image_id)
+                    url = return_url_object(url)
+                    urls.append(url)
+                except HTTPException:
                     urls.append(None)
-            product["urls"] = urls
+            else:
+                urls.append(None)
+        product["urls"] = urls
         list_products.append(product)
     if dirs:
         return list_products
