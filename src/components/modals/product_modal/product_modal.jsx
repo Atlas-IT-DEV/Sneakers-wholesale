@@ -203,7 +203,7 @@ const ProductModal = ({
           </div>
           <p className={styles.modelNameText}>{obj?.name}</p>
           <div className={styles.brandButton}>
-            <p>{brand_name}</p>
+            <p>{obj.company.name}</p>
             <img src={whiteArrow} alt="" />
           </div>
           <div className={styles.sizesHeader}>
@@ -277,7 +277,10 @@ const ProductModal = ({
                   isPressed[1] ? styles.subFiltersOpen : styles.subFiltersClose
                 }
               >
-                <p className={styles.checkButtonText}>Hello</p>
+                <p className={styles.checkButtonText}>
+                  Доставка Доставка Доставка Доставка Доставка ДоставкаДоставка
+                  Доставка Доставка Доставка Доставка Доставка Доставка{" "}
+                </p>
               </div>
             </div>
             <div className={styles.hideView}>
@@ -302,7 +305,7 @@ const ProductModal = ({
                   isPressed[2] ? styles.subFiltersOpen : styles.subFiltersClose
                 }
               >
-                <p className={styles.checkButtonText}>Hello</p>
+                <p className={styles.checkButtonText}>{obj.description}</p>
               </div>
             </div>
             <div className={styles.hideView}>
@@ -327,7 +330,10 @@ const ProductModal = ({
                   isPressed[3] ? styles.subFiltersOpen : styles.subFiltersClose
                 }
               >
-                <p className={styles.checkButtonText}>Hello</p>
+                <p className={styles.checkButtonText}>
+                  Гарантия Гарантия Гарантия Гарантия Гарантия Гарантия Гарантия
+                  Гарантия ГарантияГарантияГарантия
+                </p>
               </div>
             </div>
           </footer>
