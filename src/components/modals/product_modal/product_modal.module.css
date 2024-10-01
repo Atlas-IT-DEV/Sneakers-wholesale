@@ -450,6 +450,11 @@
   padding: 20px 40px 20px 40px;
   border-radius: 27px;
 }
+.modalProductOpen585_600 footer .hideView .hideText {
+  color: #f1f1f1;
+  font-size: 21px;
+  font-family: TTForsTrialVariable;
+}
 .modalProductOpen585_600 footer .hideView .hideButton {
   display: flex;
   justify-content: space-between;
@@ -700,6 +705,11 @@
   background-color: #080808;
   padding: 20px 40px 20px 40px;
   border-radius: 27px;
+}
+.modalProductOpen565_585 footer .hideView .hideText {
+  color: #f1f1f1;
+  font-size: 20px;
+  font-family: TTForsTrialVariable;
 }
 .modalProductOpen565_585 footer .hideView .hideButton {
   display: flex;
@@ -952,6 +962,11 @@
   padding: 20px 40px 20px 40px;
   border-radius: 27px;
 }
+.modalProductOpen525_565 footer .hideView .hideText {
+  color: #f1f1f1;
+  font-size: 18px;
+  font-family: TTForsTrialVariable;
+}
 .modalProductOpen525_565 footer .hideView .hideButton {
   display: flex;
   justify-content: space-between;
@@ -1202,6 +1217,11 @@
   background-color: #080808;
   padding: 20px 40px 20px 40px;
   border-radius: 27px;
+}
+.modalProductOpen485_525 footer .hideView .hideText {
+  color: #f1f1f1;
+  font-size: 16px;
+  font-family: TTForsTrialVariable;
 }
 .modalProductOpen485_525 footer .hideView .hideButton {
   display: flex;
@@ -1454,6 +1474,11 @@
   padding: 20px 40px 20px 40px;
   border-radius: 27px;
 }
+.modalProductOpen450_485 footer .hideView .hideText {
+  color: #f1f1f1;
+  font-size: 15px;
+  font-family: TTForsTrialVariable;
+}
 .modalProductOpen450_485 footer .hideView .hideButton {
   display: flex;
   justify-content: space-between;
@@ -1705,6 +1730,11 @@
   padding: 20px 40px 20px 40px;
   border-radius: 27px;
 }
+.modalProductOpen410_450 footer .hideView .hideText {
+  color: #f1f1f1;
+  font-size: 14px;
+  font-family: TTForsTrialVariable;
+}
 .modalProductOpen410_450 footer .hideView .hideButton {
   display: flex;
   justify-content: space-between;
@@ -1955,6 +1985,11 @@
   background-color: #080808;
   padding: 20px 40px 20px 40px;
   border-radius: 27px;
+}
+.modalProductOpen375_410 footer .hideView .hideText {
+  color: #f1f1f1;
+  font-size: 14px;
+  font-family: TTForsTrialVariable;
 }
 .modalProductOpen375_410 footer .hideView .hideButton {
   display: flex;

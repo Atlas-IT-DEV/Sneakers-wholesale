@@ -15,7 +15,7 @@ const ProductCard = ({
   price = 18400,
   oldPrice = 20000,
   model_name = "",
-  obj = {}
+  obj = {},
 }) => {
   const { width } = useWindowDimensions();
 
@@ -41,7 +41,7 @@ const ProductCard = ({
           : styles.container375_410
       }
     >
-      <ProductModal obj={obj}/>
+      <ProductModal obj={obj} />
       <p className={styles.countProductText}>{countProduct}</p>
       <div className={styles.priceField}>
         <p className={styles.priceText}>{price}₽</p>
