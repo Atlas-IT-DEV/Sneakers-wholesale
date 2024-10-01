@@ -280,6 +280,10 @@ class Products(BaseModel):
                                          alias="image_id",
                                          examples=["1,2,4"],
                                          description="Image ID of product")
+    TypeProduct: Optional[StrictStr] = Field(None,
+                                             alias="type_product",
+                                             examples=["Опт"],
+                                             description="Product type")
 
 
 class ProductCharacteristics(BaseModel):

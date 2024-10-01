@@ -15,20 +15,20 @@ def get_product_by_id(product_id: int):
 
 def create_product(product: Products):
     query = ("INSERT INTO products (name, price, description, promotion_id,"
-             " company_id, category_id, image_id)"
-             " VALUES (%s, %s, %s, %s, %s, %s, %s)")
+             " company_id, category_id, image_id, type_product)"
+             " VALUES (%s, %s, %s, %s, %s, %s, %s, %s)")
     params = (product.Name, product.Price, product.Desc, product.PromotionID,
-              product.CompanyID, product.CategoryID, product.ImageID)
+              product.CompanyID, product.CategoryID, product.ImageID, product.TypeProduct)
     cursor = db.execute_query(query, params)
     return cursor.lastrowid
 
 
 def update_product(product_id: int, product: Products):
     query = ("UPDATE products SET name=%s, price=%s, description=%s, promotion_id=%s,"
-             " company_id=%s, category_id=%s, image_id=%s "
+             " company_id=%s, category_id=%s, image_id=%s, type_product=%s "
              " WHERE id=%s")
     params = (product.Name, product.Price, product.Desc, product.PromotionID,
-              product.CompanyID, product.CategoryID, product.ImageID, product_id)
+              product.CompanyID, product.CategoryID, product.ImageID, product.TypeProduct, product_id)
     db.execute_query(query, params)
 
 

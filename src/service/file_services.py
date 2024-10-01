@@ -1,4 +1,6 @@
 import os
+from logging import exception
+
 from fastapi import HTTPException, status, UploadFile
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder

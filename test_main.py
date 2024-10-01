@@ -98,7 +98,8 @@ def generate_test_data(entity_type):
             "category_id": None,
             "promotion_id": None,
             "company_id": None,
-            "image_id": "1,2,3,4"
+            "image_id": "1,2,3,4",
+            "type_product": "Опт"
         },
         "card": {
             "user_id": None,

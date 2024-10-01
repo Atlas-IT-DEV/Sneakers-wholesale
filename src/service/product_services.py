@@ -11,6 +11,9 @@ from src.service.characteristic_services import get_characteristic_by_id
 from src.repository.product_characteristic_repository import (get_product_characteristic_by_id,
                                                               get_product_characteristic_by_product_id)
 from src.utils.return_url_object import return_url_object
+from src.utils.custom_logging import setup_logging
+
+log = setup_logging()
 
 
 def get_all_products(dirs: bool = False):
