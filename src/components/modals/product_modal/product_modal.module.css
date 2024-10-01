@@ -513,6 +513,15 @@
   font-family: TTForsTrialVariable;
   font-weight: 600;
 }
+.modalProductOpen585_600 .subFiltersClose {
+  display: none;
+}
+.modalProductOpen585_600 .subFiltersOpen {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
 .modalProductOpen565_585 {
   position: absolute;
   border-top-left-radius: 38px;
@@ -768,6 +777,15 @@
   font-size: 21px;
   font-family: TTForsTrialVariable;
   font-weight: 600;
+}
+.modalProductOpen565_585 .subFiltersClose {
+  display: none;
+}
+.modalProductOpen565_585 .subFiltersOpen {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
 }
 .modalProductOpen525_565 {
   position: absolute;
@@ -1025,6 +1043,15 @@
   font-family: TTForsTrialVariable;
   font-weight: 600;
 }
+.modalProductOpen525_565 .subFiltersClose {
+  display: none;
+}
+.modalProductOpen525_565 .subFiltersOpen {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
 .modalProductOpen485_525 {
   position: absolute;
   border-top-left-radius: 38px;
@@ -1280,6 +1307,15 @@
   font-size: 18px;
   font-family: TTForsTrialVariable;
   font-weight: 600;
+}
+.modalProductOpen485_525 .subFiltersClose {
+  display: none;
+}
+.modalProductOpen485_525 .subFiltersOpen {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
 }
 .modalProductOpen450_485 {
   position: absolute;
@@ -1537,6 +1573,15 @@
   font-family: TTForsTrialVariable;
   font-weight: 600;
 }
+.modalProductOpen450_485 .subFiltersClose {
+  display: none;
+}
+.modalProductOpen450_485 .subFiltersOpen {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
 .modalProductOpen410_450 {
   position: absolute;
   border-top-left-radius: 38px;
@@ -1792,6 +1837,15 @@
   font-size: 16px;
   font-family: TTForsTrialVariable;
   font-weight: 600;
+}
+.modalProductOpen410_450 .subFiltersClose {
+  display: none;
+}
+.modalProductOpen410_450 .subFiltersOpen {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
 }
 .modalProductOpen375_410 {
   position: absolute;
