@@ -12,6 +12,8 @@ import "swiper/css/pagination";
 import { FreeMode, Navigation, Pagination } from "swiper/modules";
 import { useState } from "react";
 import useWindowDimensions from "../../hooks/windowDimensions";
+import { useStores } from "../../../store/store_context";
+import { useNavigate } from "react-router";
 
 const ProductModal = ({
   price = 18400,
@@ -22,7 +24,9 @@ const ProductModal = ({
   obj = {},
 }) => {
   const { width } = useWindowDimensions();
+  const navigate = useNavigate();
 
+  const { pageStore } = useStores();
   const [isPressed, setIsPressed] = useState([false, false, false, false]);
   const copyIsPressed = Array.from(isPressed);
   const [modalVisible, setModalVisible] = useState(false);
@@ -342,7 +346,15 @@ const ProductModal = ({
             <div className={styles.buyButton}>
               <p>Купить сейчас</p>
             </div>
-            <div className={styles.addButton}>
+            <div
+              className={styles.addButton}
+              onClick={() => {
+                let copy_cart = Array.from(pageStore.cart);
+                copy_cart.push(obj);
+                pageStore.updateCart(copy_cart);
+                navigate("/cart");
+              }}
+            >
               <p>В корзину</p>
             </div>
           </div>

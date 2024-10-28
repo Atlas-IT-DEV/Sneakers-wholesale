@@ -11,6 +11,7 @@ import { useNavigate } from "react-router";
 import { useStores } from "../../store/store_context";
 import { observer } from "mobx-react-lite";
 import { useEffect } from "react";
+import { useState } from "react";
 
 const CatalogPage = observer(() => {
   const { width } = useWindowDimensions();
@@ -18,7 +19,9 @@ const CatalogPage = observer(() => {
   const { pageStore } = useStores();
   useEffect(() => {
     pageStore.getProducts();
+    pageStore.getCompanys();
   }, []);
+  const formats = ["Розница", "Опт", "Сборный опт", "Дропшиппинг"];
   return (
     <div
       className={
@@ -38,7 +41,7 @@ const CatalogPage = observer(() => {
       }
     >
       <div className={styles.header}>
-        <div className={styles.backButton}>
+        <div className={styles.backButton} onClick={() => navigate("/")}>
           <img src={arrowBackIcon} alt="" />
         </div>
         <div className={styles.searchField}>
@@ -55,14 +58,31 @@ const CatalogPage = observer(() => {
         </div>
       </div>
       <div className={styles.cateroriesField}>
-        <Categories name_category="Категории" />
+        {pageStore.companys.map((elem) => {
+          return <Categories name_category={elem?.name} id={elem?.id} />;
+        })}
+        {/* <Categories name_category="Категории" />
         <Categories name_category="Кроссовки" />
         <Categories name_category="Nike" />
-        <Categories name_category="Adidas" />
+        <Categories name_category="Adidas" /> */}
       </div>
       <div className={styles.products}>
         <div className={styles.productsField}>
-          {pageStore.products.map((elem) => <ProductCard price={elem.price} model_name={elem.name} countProduct="" oldPrice={""} obj={elem}/>)}
+          {pageStore.products
+            .filter(
+              (elem) => elem.type_product == formats[pageStore.shop_format]
+            )
+            .map((elem) => {
+              return (
+                <ProductCard
+                  price={elem.price}
+                  model_name={elem.name}
+                  countProduct=""
+                  oldPrice={""}
+                  obj={elem}
+                />
+              );
+            })}
           {/* <ProductCard />
           <ProductCard />
           <ProductCard />
