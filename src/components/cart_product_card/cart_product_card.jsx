@@ -78,7 +78,12 @@ const CartProductCard = ({
         </div>
       </div>
       <div className={styles.settingsButton}>
-        <img src={settingProductIcon} alt="" />
+        <img
+          src={settingProductIcon}
+          alt=""
+          width={["20px", "20px", "22px", "24px", "26px", "28px", "30px"]}
+          height={["20px", "20px", "22px", "24px", "26px", "28px", "30px"]}
+        />
       </div>
     </div>
   );
