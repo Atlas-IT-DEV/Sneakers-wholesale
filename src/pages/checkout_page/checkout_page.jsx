@@ -11,26 +11,37 @@ import useWindowDimensions from "../../components/hooks/windowDimensions";
 const CheckoutPage = ({ count = 2 }) => {
   const navigate = useNavigate();
   const { width } = useWindowDimensions();
+
+  const tg = window?.Telegram?.WebApp;
+  const backButton = tg?.BackButton;
+  backButton?.show();
+  const back_page = () => {
+    navigate(-1);
+    backButton?.hide();
+  };
+  backButton?.onClick(back_page);
   return (
-    <div className={
-      width >= 585
-        ? styles.container585_600
-        : width >= 565
-        ? styles.container565_585
-        : width >= 525
-        ? styles.container525_565
-        : width >= 485
-        ? styles.container485_525
-        : width >= 450
-        ? styles.container450_485
-        : width >= 410
-        ? styles.container410_450
-        : styles.container375_410
-    }>
+    <div
+      className={
+        width >= 585
+          ? styles.container585_600
+          : width >= 565
+          ? styles.container565_585
+          : width >= 525
+          ? styles.container525_565
+          : width >= 485
+          ? styles.container485_525
+          : width >= 450
+          ? styles.container450_485
+          : width >= 410
+          ? styles.container410_450
+          : styles.container375_410
+      }
+    >
       <div className={styles.header}>
-        <div className={styles.backButton} onClick={() => navigate(-1)}>
+        {/* <div className={styles.backButton} onClick={() => navigate(-1)}>
           <img src={arrowBackIcon} alt="" />
-        </div>
+        </div> */}
         <p className={styles.namePageText}>Оформление заказа</p>
       </div>
       <div className={styles.view}>

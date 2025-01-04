@@ -12,6 +12,15 @@ import useWindowDimensions from "../../components/hooks/windowDimensions";
 const FavouritesPage = () => {
   const navigate = useNavigate();
   const { width } = useWindowDimensions();
+
+  const tg = window?.Telegram?.WebApp;
+  const backButton = tg?.BackButton;
+  backButton?.show();
+  const back_page = () => {
+    navigate(-1);
+    backButton?.hide();
+  };
+  backButton?.onClick(back_page);
   return (
     <div
       className={
@@ -34,9 +43,9 @@ const FavouritesPage = () => {
         <p className={styles.namePageText}>Избранное</p>
 
         <div className={styles.headerButtons}>
-          <div className={styles.backButton}>
+          {/* <div className={styles.backButton}>
             <img src={arrowBackIcon} alt="" />
-          </div>
+          </div> */}
           <div className={styles.searchField}>
             <input type="search" placeholder="Найти" />
           </div>

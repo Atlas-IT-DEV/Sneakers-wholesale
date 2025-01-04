@@ -18,6 +18,15 @@ const CatalogPage = observer(() => {
   const navigate = useNavigate();
   const { pageStore } = useStores();
   const formats = ["Розница", "Опт", "Сборный опт", "Дропшиппинг"];
+
+  const tg = window?.Telegram?.WebApp;
+  const backButton = tg?.BackButton;
+  backButton?.show();
+  const back_page = () => {
+    navigate(-1);
+    backButton?.hide();
+  };
+  backButton?.onClick(back_page);
   return (
     <div
       className={
@@ -37,9 +46,9 @@ const CatalogPage = observer(() => {
       }
     >
       <div className={styles.header}>
-        <div className={styles.backButton} onClick={() => navigate("/")}>
+        {/* <div className={styles.backButton} onClick={() => navigate("/")}>
           <img src={arrowBackIcon} alt="" />
-        </div>
+        </div> */}
         <div className={styles.searchField}>
           <input type="search" placeholder="Найти" />
         </div>
