@@ -9,6 +9,15 @@ import { useNavigate } from "react-router";
 const CartPage = () => {
   const { width } = useWindowDimensions();
   const navigate = useNavigate();
+
+  const tg = window?.Telegram?.WebApp;
+  const backButton = tg?.BackButton;
+  backButton?.show();
+  const back_page = () => {
+    navigate("/");
+    backButton?.hide();
+  };
+  backButton?.onClick(back_page);
   return (
     <div
       className={

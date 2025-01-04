@@ -23,7 +23,7 @@ const CatalogPage = observer(() => {
   const backButton = tg?.BackButton;
   backButton?.show();
   const back_page = () => {
-    navigate(-1);
+    navigate("/");
     backButton?.hide();
   };
   backButton?.onClick(back_page);
