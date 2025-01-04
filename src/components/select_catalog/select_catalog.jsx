@@ -5,8 +5,9 @@ import rightArrowWhiteIcon from "../../images/arrow_select_white.svg";
 import AttentionModal from "../modals/attention_modal/attenction_modal";
 import { useNavigate } from "react-router";
 import { useStores } from "../../store/store_context";
+import { observer } from "mobx-react-lite";
 
-const SelectCatalog = () => {
+const SelectCatalog = observer(() => {
   const navigate = useNavigate();
   const { pageStore } = useStores();
   const { width } = useWindowDimensions();
@@ -36,6 +37,10 @@ const SelectCatalog = () => {
             pageStore.updateShopFormat(0);
             navigate("/catalog");
           }}
+          style={{
+            backgroundColor:
+              pageStore.shop_format == 0 ? "rgb(227, 110, 0)" : null,
+          }}
         >
           <p className={styles.buttonText}>Розничный магазин</p>
           <img src={rightArrowWhiteIcon} alt="" />
@@ -46,6 +51,10 @@ const SelectCatalog = () => {
             pageStore.updateShopFormat(1);
             navigate("/catalog");
           }}
+          style={{
+            backgroundColor:
+              pageStore.shop_format == 1 ? "rgb(227, 110, 0)" : null,
+          }}
         >
           <p className={styles.buttonText}>Оптовый магазин</p>
           <img src={rightArrowWhiteIcon} alt="" />
@@ -55,6 +64,6 @@ const SelectCatalog = () => {
       </div>
     </div>
   );
-};
+});
 
 export default SelectCatalog;

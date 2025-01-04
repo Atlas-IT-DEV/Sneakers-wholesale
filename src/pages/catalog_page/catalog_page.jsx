@@ -17,10 +17,6 @@ const CatalogPage = observer(() => {
   const { width } = useWindowDimensions();
   const navigate = useNavigate();
   const { pageStore } = useStores();
-  useEffect(() => {
-    pageStore.getProducts();
-    pageStore.getCompanys();
-  }, []);
   const formats = ["Розница", "Опт", "Сборный опт", "Дропшиппинг"];
   return (
     <div

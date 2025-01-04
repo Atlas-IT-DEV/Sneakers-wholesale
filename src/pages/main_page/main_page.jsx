@@ -9,8 +9,15 @@ import ScoresCard from "../../components/scores_card/scores_card";
 import SelectCatalog from "../../components/select_catalog/select_catalog";
 import SliderCarousel from "../../components/slider_carousel/slider_carousel";
 import styles from "./main_page.module.css";
+import { useStores } from "../../store/store_context";
+import { useEffect } from "react";
 
 const MainPage = () => {
+  const { pageStore } = useStores();
+  useEffect(() => {
+    pageStore.getProducts();
+    pageStore.getCompanys();
+  }, []);
   return (
     <div className={styles.container}>
       <header>
@@ -21,11 +28,11 @@ const MainPage = () => {
         <SliderCarousel />
       </div>
       <main>
-        <Delivery />
+        {/*         <Delivery /> */}
         <SelectCatalog />
-        <div className={styles.doubleCard}>
+        <div>
           <ScoresCard />
-          <InviteFriends />
+          {/*           <InviteFriends /> */}
         </div>
 
         <CompanyInformation />

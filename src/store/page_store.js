@@ -1,7 +1,7 @@
 import { makeAutoObservable } from "mobx";
 
 class PageStore {
-  shop_format = null;
+  shop_format = 0;
   products = [];
   news = [];
   companys = [];
