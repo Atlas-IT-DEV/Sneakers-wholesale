@@ -34,7 +34,7 @@ const ProductCard = ({
     copy_cart.push(obj);
     pageStore.updateCart(copy_cart);
     toast({
-      duration: 2000,
+      duration: 1000,
       position: "bottom",
       render: () => {
         return (
@@ -47,7 +47,7 @@ const ProductCard = ({
             justify={"center"}
             marginTop={50}
           >
-            <Text color={"white"} textAlign={"center"} fontSize={'12px'}>
+            <Text color={"white"} textAlign={"center"} fontSize={"12px"}>
               {`${model_name} добавлено в корзину`}
             </Text>
           </VStack>
