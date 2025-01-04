@@ -4,6 +4,7 @@ import arrowWhite from "../../images/arrow_select_white.svg";
 
 import useWindowDimensions from "../../components/hooks/windowDimensions";
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 const ProfilePage = ({
   image = "https://legacy.reactjs.org/logo-og.png",
@@ -12,6 +13,17 @@ const ProfilePage = ({
 }) => {
   const { width } = useWindowDimensions();
   const [open, setOpen] = useState(false);
+
+  const tg = window?.Telegram?.WebApp;
+
+  const navigate = useNavigate();
+  const backButton = tg?.BackButton;
+  backButton?.show();
+  const back_page = () => {
+    navigate("/");
+    backButton?.hide();
+  };
+  backButton?.onClick(back_page);
   return (
     <div
       className={
