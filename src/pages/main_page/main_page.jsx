@@ -30,10 +30,9 @@ const MainPage = () => {
       <main>
         {/*         <Delivery /> */}
         <SelectCatalog />
-        <div>
-          <ScoresCard />
-          {/*           <InviteFriends /> */}
-        </div>
+        {/*           <div>
+            <ScoresCard />
+          </div> */}
 
         <CompanyInformation />
         <Adress />
