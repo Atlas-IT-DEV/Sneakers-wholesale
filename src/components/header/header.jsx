@@ -11,6 +11,8 @@ const Header = ({
   rank = "Бронза",
 }) => {
   const { width } = useWindowDimensions();
+
+  const tg = window.Telegram.WebApp;
   const navigate = useNavigate();
   return (
     <div
@@ -32,10 +34,20 @@ const Header = ({
       onClick={() => navigate("/profile")}
     >
       <div className={styles.aboutUser}>
-        <img src={image} alt="" className={styles.imageUser} />
+        <img
+          src={
+            tg.initDataUnsafe?.user?.photo_url ||
+            "https://legacy.reactjs.org/logo-og.png"
+          }
+          alt=""
+          className={styles.imageUser}
+        />
         <div className={styles.attributes}>
           <div className={styles.userButton}>
-            <p className={styles.userValues}>{user}</p>
+            <p className={styles.userValues}>
+              {tg.initDataUnsafe?.user?.first_name}
+              {tg.initDataUnsafe?.user?.last_name}
+            </p>
             <img src={rightArrowWhiteIcon} alt="" />
           </div>
 

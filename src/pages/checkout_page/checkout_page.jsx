@@ -16,7 +16,7 @@ const CheckoutPage = ({ count = 2 }) => {
   const backButton = tg?.BackButton;
   backButton?.show();
   const back_page = () => {
-    navigate("/cart_page");
+    navigate("/cart");
     backButton?.hide();
   };
   backButton?.onClick(back_page);

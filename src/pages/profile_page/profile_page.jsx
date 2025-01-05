@@ -44,10 +44,20 @@ const ProfilePage = ({
     >
       <div className={styles.header}>
         <div className={styles.aboutUser}>
-          <img src={image} alt="" className={styles.imageUser} />
+          <img
+            src={
+              tg.initDataUnsafe?.user?.photo_url ||
+              "https://legacy.reactjs.org/logo-og.png"
+            }
+            alt=""
+            className={styles.imageUser}
+          />
           <div className={styles.attributes}>
             <div className={styles.userButton}>
-              <p className={styles.userValues}>{user}</p>
+              <p className={styles.userValues}>
+                {tg.initDataUnsafe?.user?.first_name}
+                {tg.initDataUnsafe?.user?.last_name}
+              </p>
             </div>
           </div>
         </div>

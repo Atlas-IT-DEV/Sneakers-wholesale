@@ -11,13 +11,51 @@ import SliderCarousel from "../../components/slider_carousel/slider_carousel";
 import styles from "./main_page.module.css";
 import { useStores } from "../../store/store_context";
 import { useEffect } from "react";
+import { observer } from "mobx-react-lite";
 
-const MainPage = () => {
+const MainPage = observer(() => {
   const { pageStore } = useStores();
   useEffect(() => {
     pageStore.getProducts();
     pageStore.getCompanys();
   }, []);
+  const tg = window.Telegram.WebApp;
+
+  const signUp = async (first_name, last_name, tg_id) => {
+    await pageStore.signUp(first_name, last_name, tg_id);
+  };
+  const signIn = async (tg_id) => {
+    await pageStore.signIn(tg_id);
+  };
+
+  useEffect(() => {
+    console.log(
+      tg.initDataUnsafe?.user?.first_name,
+      tg.initDataUnsafe?.user?.last_name,
+      tg.initDataUnsafe?.user?.id
+    );
+  }, [tg.initDataUnsafe?.user?.id]);
+
+  const register = async () => {
+    await signIn(tg.initDataUnsafe?.user?.id);
+    if (!pageStore.token) {
+      await signUp(
+        tg.initDataUnsafe?.user?.first_name,
+        tg.initDataUnsafe?.user?.last_name,
+        tg.initDataUnsafe?.user?.id
+      );
+      pageStore.token && (await signIn(tg.initDataUnsafe?.user?.id));
+    }
+  };
+
+  useEffect(() => {
+    register();
+  }, []);
+
+  useEffect(() => {
+    console.log("token", pageStore.token);
+  }, [pageStore.token]);
+
   return (
     <div className={styles.container}>
       <header>
@@ -41,5 +79,5 @@ const MainPage = () => {
       <BottomMenu />
     </div>
   );
-};
+});
 export default MainPage;
