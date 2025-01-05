@@ -2,6 +2,8 @@ import BottomMenu from "../../components/bottom_menu/bottom_menu";
 import ProductCard from "../../components/product_card/product_card";
 import Categories from "../../components/categories/categories";
 import styles from "./catalog_page.module.css";
+import Fuse from "fuse.js";
+import { VStack, Text } from "@chakra-ui/react";
 
 import arrowBackIcon from "../../images/arrow_back_icon.svg";
 import sortIcon from "../../images/sort_icon.svg";
@@ -12,6 +14,8 @@ import { useStores } from "../../store/store_context";
 import { observer } from "mobx-react-lite";
 import { useEffect } from "react";
 import { useState } from "react";
+import Fuse from "fuse.js";
+import { VStack, Text } from "@chakra-ui/react";
 
 const CatalogPage = observer(() => {
   const { width } = useWindowDimensions();
@@ -26,11 +30,60 @@ const CatalogPage = observer(() => {
     navigate("/");
     backButton?.hide();
   };
+  const [products, setProducts] = useState([]);
+  const [similar, setSimilar] = useState([]);
   backButton?.onClick(back_page);
 
+  const sortCatalog = () => {
+    let copy_catalog = Array.from(
+      pageStore.products.filter(
+        (elem) => elem.type_product == formats[pageStore.shop_format]
+      )
+    );
+    if (pageStore.sort_type == 1) {
+      copy_catalog = copy_catalog.sort((a, b) => a.price - b.price);
+    } else if (pageStore.sort_type == 2) {
+      copy_catalog = copy_catalog.sort((a, b) => b.price - a.price);
+    }
+    if (pageStore.search_str != "") {
+      let fuce_copy_catalog = Array.from(copy_catalog);
+      copy_catalog = copy_catalog.filter(
+        (elem) =>
+          elem.name
+            .toLowerCase()
+            .includes(pageStore.search_str.toLowerCase()) ||
+          elem.description
+            .toLowerCase()
+            .includes(pageStore.search_str.toLowerCase()) ||
+          elem.company?.name
+            .toLowerCase()
+            .includes(pageStore.search_str.toLowerCase())
+      );
+      const options = {
+        keys: ["name", "description"], // Поля для поиска
+        threshold: 1, // 0 = точное совпадение, 1 = любые совпадения
+      };
+
+      const fuse = new Fuse(fuce_copy_catalog, options);
+      const result = fuse.search(pageStore.search_str);
+      const similarProducts = result.map((res) => res.item);
+      console.log(similarProducts);
+      setSimilar(similarProducts);
+    }
+
+    setProducts(copy_catalog);
+  };
+  const handleSortClick = () => {
+    if (pageStore.sort_type < 2) {
+      pageStore.updateSortType(pageStore.sort_type + 1);
+    } else {
+      pageStore.updateSortType(0);
+    }
+  };
   useEffect(() => {
-    console.log(pageStore.cart);
-  }, pageStore?.cart);
+    sortCatalog();
+  }, [pageStore.products, pageStore.sort_type, pageStore.search_str]);
+
   return (
     <div
       className={
@@ -54,10 +107,25 @@ const CatalogPage = observer(() => {
           <img src={arrowBackIcon} alt="" />
         </div> */}
         <div className={styles.searchField}>
-          <input type="search" placeholder="Найти" />
+          <input
+            type="search"
+            placeholder="Найти"
+            value={pageStore.search_str}
+            onChange={(e) => {
+              pageStore.updateSearchStr(e.target.value);
+            }}
+            onSubmit={(e) => {
+              e.target.preventDefault();
+            }}
+          />
         </div>
         <div className={styles.sortButton}>
-          <img src={sortIcon} alt="" />
+          <img
+            src={sortIcon}
+            alt=""
+            style={{ cursor: "pointer" }}
+            onClick={handleSortClick}
+          />
         </div>
         <div
           className={styles.filterButton}
@@ -79,24 +147,42 @@ const CatalogPage = observer(() => {
       </div>
       <div className={styles.products}>
         <div className={styles.productsField}>
-          {pageStore.products
-            .filter(
-              (elem) => elem.type_product == formats[pageStore.shop_format]
-            )
-            .map((elem, index) => {
-              return (
-                <ProductCard
-                  key={index}
-                  price={elem.price}
-                  model_name={elem.name}
-                  countProduct=""
-                  oldPrice={""}
-                  obj={elem}
-                />
-              );
-            })}
+          {products.map((elem, index) => {
+            return (
+              <ProductCard
+                key={index}
+                price={elem.price}
+                model_name={elem.name}
+                countProduct=""
+                oldPrice={""}
+                obj={elem}
+              />
+            );
+          })}
         </div>
       </div>
+      {similar.length != 0 && (
+        <VStack>
+          <Text>Возможно вы искали...</Text>{" "}
+          <div className={styles.products}>
+            <div className={styles.productsField}>
+              {products.map((elem, index) => {
+                return (
+                  <ProductCard
+                    key={index}
+                    price={elem.price}
+                    model_name={elem.name}
+                    countProduct=""
+                    oldPrice={""}
+                    obj={elem}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        </VStack>
+      )}
+
       <BottomMenu />
     </div>
   );
