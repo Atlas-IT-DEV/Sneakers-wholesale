@@ -63,7 +63,7 @@ class PageStore {
       body: JSON.stringify({
         id: 0,
         first_name: first_name,
-        last_name: last_name,
+        last_name: last_name || "empty",
         telegram_id: tg_id,
         type_id: 1,
         role: "user",

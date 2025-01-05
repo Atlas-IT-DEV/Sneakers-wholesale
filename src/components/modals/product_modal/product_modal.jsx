@@ -15,6 +15,8 @@ import useWindowDimensions from "../../hooks/windowDimensions";
 import { useStores } from "../../../store/store_context";
 import { useNavigate } from "react-router";
 
+import no_photo from "./../../../images/tiger_big_logo.jpg";
+
 const ProductModal = ({
   price = 18400,
   old_price = 18400,
@@ -72,64 +74,29 @@ const ProductModal = ({
             setModalVisible(true);
           }}
         >
-          {" "}
-          {obj.urls.map((elem) => (
-            <SwiperSlide className={styles.slider}>
-              <img src={elem} alt="" className={styles.imageProduct} />
-              <div
-                className={styles.favouriteButton}
-                onClick={() => {
-                  favouriteClick();
-                  setModalVisible(false);
-                }}
-              >
-                <img
-                  src={
-                    isPressed[0] ? favouriteActiveIcon : favouriteInactiveIcon
-                  }
-                  alt=""
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-          {/* <SwiperSlide className={styles.slider}>
-            <img
-              src="https://legacy.reactjs.org/logo-og.png"
-              alt=""
-              className={styles.imageProduct}
-            />
-            <div
-              className={styles.favouriteButton}
-              onClick={() => {
-                favouriteClick();
-                setModalVisible(false);
-              }}
-            >
-              <img
-                src={isPressed[0] ? favouriteActiveIcon : favouriteInactiveIcon}
-                alt=""
-              />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className={styles.slider}>
-            <img
-              src="https://legacy.reactjs.org/logo-og.png"
-              alt=""
-              className={styles.imageProduct}
-            />
-            <div
-              className={styles.favouriteButton}
-              onClick={() => {
-                favouriteClick();
-                setModalVisible(false);
-              }}
-            >
-              <img
-                src={isPressed[0] ? favouriteActiveIcon : favouriteInactiveIcon}
-                alt=""
-              />
-            </div>
-          </SwiperSlide> */}
+          {obj.urls.map((elem) =>
+            elem.length != 0 ? (
+              <SwiperSlide className={styles.slider}>
+                <img src={elem?.url} alt="" className={styles.imageProduct} />
+                <div
+                  className={styles.favouriteButton}
+                  onClick={() => {
+                    favouriteClick();
+                    setModalVisible(false);
+                  }}
+                >
+                  <img
+                    src={
+                      isPressed[0] ? favouriteActiveIcon : favouriteInactiveIcon
+                    }
+                    alt=""
+                  />
+                </div>
+              </SwiperSlide>
+            ) : (
+              <img src={no_photo} alt="" className={styles.imageProduct} />
+            )
+          )}
         </Swiper>
       </div>
 
@@ -193,7 +160,11 @@ const ProductModal = ({
             </div>
             {obj.urls.map((elem) => (
               <SwiperSlide className={styles.slideProduct}>
-                <img src={elem} alt="" className={styles.imageProductModal} />
+                <img
+                  src={elem?.url || no_photo}
+                  alt=""
+                  className={styles.imageProductModal}
+                />
               </SwiperSlide>
             ))}
           </Swiper>

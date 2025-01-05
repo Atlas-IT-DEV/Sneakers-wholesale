@@ -63,8 +63,10 @@ const CatalogPage = observer(() => {
         </div>
       </div>
       <div className={styles.cateroriesField}>
-        {pageStore.companys.map((elem) => {
-          return <Categories name_category={elem?.name} id={elem?.id} />;
+        {pageStore.companys.map((elem, index) => {
+          return (
+            <Categories key={index} name_category={elem?.name} id={elem?.id} />
+          );
         })}
         {/* <Categories name_category="Категории" />
         <Categories name_category="Кроссовки" />
@@ -77,9 +79,10 @@ const CatalogPage = observer(() => {
             .filter(
               (elem) => elem.type_product == formats[pageStore.shop_format]
             )
-            .map((elem) => {
+            .map((elem, index) => {
               return (
                 <ProductCard
+                  key={index}
                   price={elem.price}
                   model_name={elem.name}
                   countProduct=""
@@ -88,13 +91,8 @@ const CatalogPage = observer(() => {
                 />
               );
             })}
-          {/* <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard /> */}
         </div>
       </div>
-
       <BottomMenu />
     </div>
   );

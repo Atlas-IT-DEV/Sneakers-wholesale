@@ -38,6 +38,7 @@ const MainPage = observer(() => {
 
   const register = async () => {
     await signIn(tg.initDataUnsafe?.user?.id);
+    pageStore.token && (await pageStore.getCurrentAuthUser());
     if (!pageStore.token) {
       await signUp(
         tg.initDataUnsafe?.user?.first_name,
@@ -45,6 +46,7 @@ const MainPage = observer(() => {
         tg.initDataUnsafe?.user?.id
       );
       pageStore.token && (await signIn(tg.initDataUnsafe?.user?.id));
+      pageStore.token && (await pageStore.getCurrentAuthUser());
     }
   };
 
