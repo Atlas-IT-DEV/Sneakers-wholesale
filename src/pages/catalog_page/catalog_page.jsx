@@ -14,8 +14,6 @@ import { useStores } from "../../store/store_context";
 import { observer } from "mobx-react-lite";
 import { useEffect } from "react";
 import { useState } from "react";
-import Fuse from "fuse.js";
-import { VStack, Text } from "@chakra-ui/react";
 
 const CatalogPage = observer(() => {
   const { width } = useWindowDimensions();
