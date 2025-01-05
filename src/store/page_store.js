@@ -9,6 +9,8 @@ class PageStore {
   companys = [];
   company_filter = null;
   cart = [];
+  sort_type = 0;
+  search_str = "";
 
   constructor() {
     makeAutoObservable(this);
@@ -24,6 +26,12 @@ class PageStore {
 
   updateCart = (new_cart) => {
     this.cart = new_cart;
+  };
+  updateSortType = (new_sort_type) => {
+    this.sort_type = new_sort_type;
+  };
+  updateSearchStr = (new_search_str) => {
+    this.search_str = new_search_str;
   };
 
   getProducts = async () => {
