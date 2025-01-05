@@ -74,8 +74,8 @@ const ProductModal = ({
             setModalVisible(true);
           }}
         >
-          {obj.urls.map((elem) =>
-            elem.length != 0 ? (
+          {obj.urls.length != 0 ? (
+            obj.urls.map((elem) => (
               <SwiperSlide className={styles.slider}>
                 <img src={elem?.url} alt="" className={styles.imageProduct} />
                 <div
@@ -93,9 +93,11 @@ const ProductModal = ({
                   />
                 </div>
               </SwiperSlide>
-            ) : (
+            ))
+          ) : (
+            <SwiperSlide className={styles.slider}>
               <img src={no_photo} alt="" className={styles.imageProduct} />
-            )
+            </SwiperSlide>
           )}
         </Swiper>
       </div>
@@ -158,15 +160,21 @@ const ProductModal = ({
                 alt=""
               />
             </div>
-            {obj.urls.map((elem) => (
+            {obj.urls.length != 0 ? (
+              obj.urls.map((elem) => (
+                <SwiperSlide className={styles.slideProduct}>
+                  <img
+                    src={elem?.url || no_photo}
+                    alt=""
+                    className={styles.imageProductModal}
+                  />
+                </SwiperSlide>
+              ))
+            ) : (
               <SwiperSlide className={styles.slideProduct}>
-                <img
-                  src={elem?.url || no_photo}
-                  alt=""
-                  className={styles.imageProductModal}
-                />
+                <img src={no_photo} alt="" className={styles.imageProduct} />
               </SwiperSlide>
-            ))}
+            )}
           </Swiper>
 
           <div className={styles.priceCountView}>
