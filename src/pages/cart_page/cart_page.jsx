@@ -163,7 +163,7 @@ const CartPage = observer(() => {
       >
         <p className={styles.orderButtonText}>К оформлению</p>
         <p className={styles.detailsdOrderText}>
-          {pageStore?.cart.length} шт, {priceCart}
+          {pageStore?.cart.length} шт, {priceCart} ₽
         </p>
       </div>
       <BottomMenu />
