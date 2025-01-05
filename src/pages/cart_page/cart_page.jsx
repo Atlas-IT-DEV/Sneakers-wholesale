@@ -83,6 +83,14 @@ const CartPage = observer(() => {
     pageStore.updateCart(products);
   }, [products]);
 
+  const sumCart = pageStore.cart.map((item) => {
+    let price = 0;
+    price += parseInt(item?.price * parseInt(item?.quantity));
+    return parseInt(price);
+  });
+
+  let priceCart = 0;
+  sumCart.forEach((x) => (priceCart += x));
   return (
     <div
       className={
@@ -155,7 +163,7 @@ const CartPage = observer(() => {
       >
         <p className={styles.orderButtonText}>К оформлению</p>
         <p className={styles.detailsdOrderText}>
-          {pageStore?.cart.length} шт, 18400₽
+          {pageStore?.cart.length} шт, {priceCart}
         </p>
       </div>
       <BottomMenu />
