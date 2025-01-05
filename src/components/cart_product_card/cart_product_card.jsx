@@ -10,7 +10,6 @@ import {
   Input,
   Popover,
   PopoverBody,
-  PopoverCloseButton,
   PopoverContent,
   PopoverTrigger,
   VStack,
@@ -28,9 +27,12 @@ const CartProductCard = ({
   count_product,
   increase,
   decrease,
+  remove,
+  onChangeQuantity,
+  obj,
 }) => {
-  const [countGoods, setCountGoods] = useState(1);
   const { width } = useWindowDimensions();
+
   return (
     <div
       className={
@@ -65,22 +67,23 @@ const CartProductCard = ({
         <div className={styles.countProduct}>
           <div
             className={
-              countGoods == 1
+              obj?.quantity == 1
                 ? styles.countUnactiveButton
                 : styles.countActiveButton
             }
-            onClick={decrease()}
+            onClick={obj.quantity != 1 ? decrease : null}
           >
             <img src={minusIcon} alt="" />
           </div>
           <p className={styles.countProductText}>{count_product}</p>
-          <div className={`${styles.countActiveButton}`} onClick={increase()}>
+          <div className={`${styles.countActiveButton}`} onClick={increase}>
             <img src={plusIcon} alt="" />
           </div>
         </div>
         <div className={styles.priceProduct}>
-          <p className={styles.newPriceText}>{parseInt(new_price)} ₽</p>
-          {/* <p className={styles.priceText}>{price}₽</p> */}
+          <p className={styles.newPriceText}>
+            {parseInt(new_price) * parseInt(count_product)} ₽
+          </p>
         </div>
       </div>
 
@@ -98,7 +101,7 @@ const CartProductCard = ({
         <PopoverContent
           bgColor={"rgba(30,30,30,1)"}
           border={"1px solid #db6900"}
-          width={"300px"}
+          width={"220px"}
           padding={"5px"}
         >
           <PopoverBody>
@@ -109,17 +112,9 @@ const CartProductCard = ({
                   border={"1px solid #db6900"}
                   color={"white"}
                   inputMode="numeric"
+                  // value={count_product}
+                  onChange={(e) => onChangeQuantity(e.target.value)}
                 />
-                <Button
-                  backgroundColor={"rgba(200,0,0,1)"}
-                  color={"white"}
-                  _hover={{
-                    color: "black",
-                    backgroundColor: "rgba(205,205,205,1)",
-                  }}
-                >
-                  Принять
-                </Button>
               </HStack>
 
               <Button
@@ -129,6 +124,7 @@ const CartProductCard = ({
                   color: "black",
                   backgroundColor: "rgba(205,205,205,1)",
                 }}
+                onClick={remove}
               >
                 Удалить
               </Button>
