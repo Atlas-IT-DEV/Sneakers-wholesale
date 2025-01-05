@@ -4,6 +4,17 @@ import plusIcon from "../../images/plus_icon.svg";
 import settingProductIcon from "../../images/setting_product_icon.svg";
 import { useState } from "react";
 import useWindowDimensions from "../hooks/windowDimensions";
+import {
+  Button,
+  HStack,
+  Input,
+  Popover,
+  PopoverBody,
+  PopoverCloseButton,
+  PopoverContent,
+  PopoverTrigger,
+  VStack,
+} from "@chakra-ui/react";
 
 const CartProductCard = ({
   brand = "Asics",
@@ -14,6 +25,9 @@ const CartProductCard = ({
   price = 18400,
   new_price = 12000,
   image = "https://legacy.reactjs.org/logo-og.png",
+  count_product,
+  increase,
+  decrease,
 }) => {
   const [countGoods, setCountGoods] = useState(1);
   const { width } = useWindowDimensions();
@@ -55,36 +69,73 @@ const CartProductCard = ({
                 ? styles.countUnactiveButton
                 : styles.countActiveButton
             }
-            onClick={() =>
-              countGoods != 1 ? setCountGoods(countGoods - 1) : setCountGoods(1)
-            }
+            onClick={decrease()}
           >
             <img src={minusIcon} alt="" />
           </div>
-          <p className={styles.countProductText}>{countGoods}</p>
-          <div
-            className={`${styles.countActiveButton}`}
-            onClick={() => setCountGoods(countGoods + 1)}
-          >
+          <p className={styles.countProductText}>{count_product}</p>
+          <div className={`${styles.countActiveButton}`} onClick={increase()}>
             <img src={plusIcon} alt="" />
           </div>
         </div>
         <div className={styles.priceProduct}>
-          <p className={styles.newPriceText}>{new_price}₽</p>
-          <p className={styles.priceText}>{price}₽</p>
-        </div>
-        <div className={styles.buyButton}>
-          <p className={styles.buyText}>Купить</p>
+          <p className={styles.newPriceText}>{parseInt(new_price)} ₽</p>
+          {/* <p className={styles.priceText}>{price}₽</p> */}
         </div>
       </div>
-      <div className={styles.settingsButton}>
-        <img
-          src={settingProductIcon}
-          alt=""
-          width={["20px", "20px", "22px", "24px", "26px", "28px", "30px"]}
-          height={["20px", "20px", "22px", "24px", "26px", "28px", "30px"]}
-        />
-      </div>
+
+      <Popover>
+        <PopoverTrigger>
+          <div className={styles.settingsButton}>
+            <img
+              src={settingProductIcon}
+              alt=""
+              width={["20px", "20px", "22px", "24px", "26px", "28px", "30px"]}
+              height={["20px", "20px", "22px", "24px", "26px", "28px", "30px"]}
+            />
+          </div>
+        </PopoverTrigger>
+        <PopoverContent
+          bgColor={"rgba(30,30,30,1)"}
+          border={"1px solid #db6900"}
+          width={"300px"}
+          padding={"5px"}
+        >
+          <PopoverBody>
+            <VStack>
+              <HStack>
+                <Input
+                  placeholder="Введите количество"
+                  border={"1px solid #db6900"}
+                  color={"white"}
+                  inputMode="numeric"
+                />
+                <Button
+                  backgroundColor={"rgba(200,0,0,1)"}
+                  color={"white"}
+                  _hover={{
+                    color: "black",
+                    backgroundColor: "rgba(205,205,205,1)",
+                  }}
+                >
+                  Принять
+                </Button>
+              </HStack>
+
+              <Button
+                backgroundColor={"rgba(200,0,0,1)"}
+                color={"white"}
+                _hover={{
+                  color: "black",
+                  backgroundColor: "rgba(205,205,205,1)",
+                }}
+              >
+                Удалить
+              </Button>
+            </VStack>
+          </PopoverBody>
+        </PopoverContent>
+      </Popover>
     </div>
   );
 };

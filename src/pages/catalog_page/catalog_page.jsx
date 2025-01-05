@@ -27,6 +27,10 @@ const CatalogPage = observer(() => {
     backButton?.hide();
   };
   backButton?.onClick(back_page);
+
+  useEffect(() => {
+    console.log(pageStore.cart);
+  }, pageStore?.cart);
   return (
     <div
       className={
