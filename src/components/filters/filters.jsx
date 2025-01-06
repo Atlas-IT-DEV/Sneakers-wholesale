@@ -6,9 +6,14 @@ import divLine from "../../images/div_line.svg";
 import selectArrow from "../../images/arrow_select_white.svg";
 import activeCheck from "../../images/active_check.svg";
 import inActiveCheck from "../../images/inactive_check.svg";
+import { useStores } from "../../store/store_context";
+import { observer } from "mobx-react-lite";
+import DropdownChar from "./dropdown_char";
+import DropdownCompany from "./dropdown_company";
 
-const Filters = () => {
+const Filters = observer(() => {
   const { width } = useWindowDimensions();
+  const { pageStore } = useStores();
   const [isVisible, setIsVisible] = useState([
     [false, false, false, false, false, false],
     [false, false],
@@ -19,6 +24,25 @@ const Filters = () => {
     [false, false],
   ]);
   let copyIsVisible = Array.from(isVisible);
+
+  const groupedData = (data) => {
+    return Object.values(
+      data.reduce((acc, item) => {
+        // Если группа с таким id еще не создана, создаем
+        if (!acc[item.id]) {
+          acc[item.id] = [];
+        }
+        // Проверяем уникальность value
+        const isValueUnique = !acc[item.id].some(
+          (el) => el.value === item.value
+        );
+        if (isValueUnique) {
+          acc[item.id].push(item);
+        }
+        return acc;
+      }, {})
+    );
+  };
 
   return (
     <div
@@ -44,277 +68,44 @@ const Filters = () => {
           type="number"
           placeholder="min"
           className={styles.inputPriceFilter}
+          value={pageStore.min_max[0]}
+          onChange={(e) => {
+            let copy_min_max = Array.from(pageStore.min_max);
+            copy_min_max[0] = e.target.value;
+            pageStore.updateMinMax(copy_min_max);
+          }}
+          onSubmit={(e) => e.target.preventDefault()}
         />
         <img src={divLine} alt="" />
         <input
           type="number"
           placeholder="max"
           className={styles.inputPriceFilter}
+          value={pageStore.min_max[1]}
+          onChange={(e) => {
+            let copy_min_max = Array.from(pageStore.min_max);
+            copy_min_max[1] = e.target.value;
+            pageStore.updateMinMax(copy_min_max);
+          }}
+          onSubmit={(e) => e.target.preventDefault()}
         />
       </div>
       <div className={styles.mainFilters}>
         <div className={styles.divideLine} />
-        <div className={styles.filterRow}>
-          <div
-            className={styles.filterButton}
-            onClick={() => {
-              copyIsVisible[0][0] = !copyIsVisible[0][0];
-              setIsVisible(copyIsVisible);
-            }}
-          >
-            <p className={styles.filterNameText}>Бренд</p>
-            <img
-              src={selectArrow}
-              alt=""
-              className={isVisible[0][0] ? styles.arrowClose : styles.arrowOpen}
-            />
-          </div>
 
-          <div
-            className={
-              isVisible[0][0] ? styles.subFiltersOpen : styles.subFiltersClose
-            }
-          >
-            <div
-              className={styles.subFilterRow}
-              onClick={() => {
-                copyIsVisible[1][0] = !copyIsVisible[1][0];
-                setIsVisible(copyIsVisible);
-              }}
-            >
-              <img src={isVisible[1][0] ? activeCheck : inActiveCheck} alt="" />
-              <p className={styles.checkButtonText}>Adidas</p>
-            </div>
-            <div
-              className={styles.subFilterRow}
-              onClick={() => {
-                copyIsVisible[1][1] = !copyIsVisible[1][1];
-                setIsVisible(copyIsVisible);
-              }}
-            >
-              <img src={isVisible[1][1] ? activeCheck : inActiveCheck} alt="" />
-              <p className={styles.checkButtonText}>Nike</p>
-            </div>
-          </div>
-        </div>
+        <DropdownCompany chars={pageStore.companys.map((elem) => elem.name)} />
         <div className={styles.divideLine} />
-        <div className={styles.filterRow}>
-          <div
-            className={styles.filterButton}
-            onClick={() => {
-              copyIsVisible[0][1] = !copyIsVisible[0][1];
-              setIsVisible(copyIsVisible);
-            }}
-          >
-            <p className={styles.filterNameText}>Цвет</p>
-            <img
-              src={selectArrow}
-              alt=""
-              className={isVisible[0][1] ? styles.arrowClose : styles.arrowOpen}
-            />
-          </div>
-          <div
-            className={
-              isVisible[0][1] ? styles.subFiltersOpen : styles.subFiltersClose
-            }
-          >
-            <div
-              className={styles.subFilterRow}
-              onClick={() => {
-                copyIsVisible[2][0] = !copyIsVisible[2][0];
-                setIsVisible(copyIsVisible);
-              }}
-            >
-              <img src={isVisible[2][0] ? activeCheck : inActiveCheck} alt="" />
-              <p className={styles.checkButtonText}>Белый</p>
-            </div>
-            <div
-              className={styles.subFilterRow}
-              onClick={() => {
-                copyIsVisible[2][1] = !copyIsVisible[2][1];
-                setIsVisible(copyIsVisible);
-              }}
-            >
-              <img src={isVisible[2][1] ? activeCheck : inActiveCheck} alt="" />
-              <p className={styles.checkButtonText}>Черный</p>
-            </div>
-          </div>
-        </div>
-        <div className={styles.divideLine} />
-        <div className={styles.filterRow}>
-          <div
-            className={styles.filterButton}
-            onClick={() => {
-              copyIsVisible[0][2] = !copyIsVisible[0][2];
-              setIsVisible(copyIsVisible);
-            }}
-          >
-            <p className={styles.filterNameText}>Размер</p>
-            <img
-              src={selectArrow}
-              alt=""
-              className={isVisible[0][2] ? styles.arrowClose : styles.arrowOpen}
-            />
-          </div>
-          <div
-            className={
-              isVisible[0][2] ? styles.subFiltersOpen : styles.subFiltersClose
-            }
-          >
-            <div
-              className={styles.subFilterRow}
-              onClick={() => {
-                copyIsVisible[3][0] = !copyIsVisible[3][0];
-                setIsVisible(copyIsVisible);
-              }}
-            >
-              <img src={isVisible[3][0] ? activeCheck : inActiveCheck} alt="" />
-              <p className={styles.checkButtonText}>42</p>
-            </div>
-            <div
-              className={styles.subFilterRow}
-              onClick={() => {
-                copyIsVisible[3][1] = !copyIsVisible[3][1];
-                setIsVisible(copyIsVisible);
-              }}
-            >
-              <img src={isVisible[3][1] ? activeCheck : inActiveCheck} alt="" />
-              <p className={styles.checkButtonText}>43</p>
-            </div>
-          </div>
-        </div>
-        <div className={styles.divideLine} />
-        <div className={styles.filterRow}>
-          <div
-            className={styles.filterButton}
-            onClick={() => {
-              copyIsVisible[0][3] = !copyIsVisible[0][3];
-              setIsVisible(copyIsVisible);
-            }}
-          >
-            <p className={styles.filterNameText}>Сезон</p>
-            <img
-              src={selectArrow}
-              alt=""
-              className={isVisible[0][3] ? styles.arrowClose : styles.arrowOpen}
-            />
-          </div>
-          <div
-            className={
-              isVisible[0][3] ? styles.subFiltersOpen : styles.subFiltersClose
-            }
-          >
-            <div
-              className={styles.subFilterRow}
-              onClick={() => {
-                copyIsVisible[4][0] = !copyIsVisible[4][0];
-                setIsVisible(copyIsVisible);
-              }}
-            >
-              <img src={isVisible[4][0] ? activeCheck : inActiveCheck} alt="" />
-              <p className={styles.checkButtonText}>Лето</p>
-            </div>
-            <div
-              className={styles.subFilterRow}
-              onClick={() => {
-                copyIsVisible[4][1] = !copyIsVisible[4][1];
-                setIsVisible(copyIsVisible);
-              }}
-            >
-              <img src={isVisible[4][1] ? activeCheck : inActiveCheck} alt="" />
-              <p className={styles.checkButtonText}>Зима</p>
-            </div>
-          </div>
-        </div>
-        <div className={styles.divideLine} />
-        <div className={styles.filterRow}>
-          <div
-            className={styles.filterButton}
-            onClick={() => {
-              copyIsVisible[0][4] = !copyIsVisible[0][4];
-              setIsVisible(copyIsVisible);
-            }}
-          >
-            <p className={styles.filterNameText}>Пол</p>
-            <img
-              src={selectArrow}
-              alt=""
-              className={isVisible[0][4] ? styles.arrowClose : styles.arrowOpen}
-            />
-          </div>
-          <div
-            className={
-              isVisible[0][4] ? styles.subFiltersOpen : styles.subFiltersClose
-            }
-          >
-            <div
-              className={styles.subFilterRow}
-              onClick={() => {
-                copyIsVisible[5][0] = !copyIsVisible[5][0];
-                setIsVisible(copyIsVisible);
-              }}
-            >
-              <img src={isVisible[5][0] ? activeCheck : inActiveCheck} alt="" />
-              <p className={styles.checkButtonText}>Мужское</p>
-            </div>
-            <div
-              className={styles.subFilterRow}
-              onClick={() => {
-                copyIsVisible[5][1] = !copyIsVisible[5][1];
-                setIsVisible(copyIsVisible);
-              }}
-            >
-              <img src={isVisible[5][1] ? activeCheck : inActiveCheck} alt="" />
-              <p className={styles.checkButtonText}>Женское</p>
-            </div>
-          </div>
-        </div>
-        <div className={styles.divideLine} />
-        <div className={styles.filterRow}>
-          <div
-            className={styles.filterButton}
-            onClick={() => {
-              copyIsVisible[0][5] = !copyIsVisible[0][5];
-              setIsVisible(copyIsVisible);
-            }}
-          >
-            <p className={styles.filterNameText}>Материал</p>
-            <img
-              src={selectArrow}
-              alt=""
-              className={isVisible[0][5] ? styles.arrowClose : styles.arrowOpen}
-            />
-          </div>
-          <div
-            className={
-              isVisible[0][5] ? styles.subFiltersOpen : styles.subFiltersClose
-            }
-          >
-            <div
-              className={styles.subFilterRow}
-              onClick={() => {
-                copyIsVisible[6][0] = !copyIsVisible[6][0];
-                setIsVisible(copyIsVisible);
-              }}
-            >
-              <img src={isVisible[6][0] ? activeCheck : inActiveCheck} alt="" />
-              <p className={styles.checkButtonText}>Полиэстер</p>
-            </div>
-            <div
-              className={styles.subFilterRow}
-              onClick={() => {
-                copyIsVisible[6][1] = !copyIsVisible[6][1];
-                setIsVisible(copyIsVisible);
-              }}
-            >
-              <img src={isVisible[6][1] ? activeCheck : inActiveCheck} alt="" />
-              <p className={styles.checkButtonText}>Хлопок</p>
-            </div>
-          </div>
-        </div>
+        {groupedData(
+          pageStore.products.flatMap((elem) => elem.characteristics)
+        ).map((el) => (
+          <>
+            <DropdownChar chars={el} name={el[0].name} />
+            <div className={styles.divideLine} />
+          </>
+        ))}
       </div>
     </div>
   );
-};
+});
 
 export default Filters;

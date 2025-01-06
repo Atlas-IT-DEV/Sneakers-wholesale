@@ -2,10 +2,12 @@ import { useNavigate } from "react-router";
 import useWindowDimensions from "../../components/hooks/windowDimensions";
 import styles from "./filter_page.module.css";
 import Filters from "../../components/filters/filters";
-
-const FilterPage = () => {
+import { observer } from "mobx-react-lite";
+import { useStores } from "../../store/store_context";
+const FilterPage = observer(() => {
   const { width } = useWindowDimensions();
   const navigate = useNavigate();
+  const { pageStore } = useStores();
   return (
     <div
       className={
@@ -32,7 +34,15 @@ const FilterPage = () => {
           <p>Закрыть</p>
         </div>
         <p className={styles.namePageText}>Фильтры</p>
-        <div className={styles.selectButton}>
+        <div
+          className={styles.selectButton}
+          onClick={() => {
+            pageStore.updateSelectedChars([]);
+            pageStore.updateSelectedCompanys([]);
+            pageStore.updateMinMax(["", ""]);
+            pageStore.updateSearchStr("");
+          }}
+        >
           <p className={styles.selectButtonText}>Сбросить всё</p>
         </div>
       </div>
@@ -41,6 +51,6 @@ const FilterPage = () => {
       </div>
     </div>
   );
-};
+});
 
 export default FilterPage;

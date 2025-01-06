@@ -7,10 +7,13 @@ class PageStore {
   products = [];
   news = [];
   companys = [];
-  company_filter = null;
   cart = [];
   sort_type = 0;
   search_str = "";
+  chars = [];
+  selected_chars = [];
+  selected_companys = [];
+  min_max = ["", ""];
 
   constructor() {
     makeAutoObservable(this);
@@ -18,10 +21,6 @@ class PageStore {
 
   updateShopFormat = (new_format) => {
     this.shop_format = new_format;
-  };
-
-  updateCompanyFilter = (new_filter) => {
-    this.company_filter = new_filter;
   };
 
   updateCart = (new_cart) => {
@@ -32,6 +31,18 @@ class PageStore {
   };
   updateSearchStr = (new_search_str) => {
     this.search_str = new_search_str;
+  };
+  updateChars = (new_chars) => {
+    this.chars = new_chars;
+  };
+  updateSelectedChars = (new_selected_chars) => {
+    this.selected_chars = new_selected_chars;
+  };
+  updateMinMax = (new_min_max) => {
+    this.min_max = new_min_max;
+  };
+  updateSelectedCompanys = (new_selected_companys) => {
+    this.selected_companys = new_selected_companys;
   };
 
   getProducts = async () => {
@@ -59,6 +70,14 @@ class PageStore {
     });
     const result = await response.json();
     this.companys = result;
+  };
+  getChars = async () => {
+    const response = await fetch(
+      "https://reed-shop.ru:8088/product_characteristics/",
+      { method: "GET", headers: { accept: "application/json" } }
+    );
+    const result = await response.json();
+    this.chars = result;
   };
 
   signUp = async (first_name, last_name, tg_id) => {

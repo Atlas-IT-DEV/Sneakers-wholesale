@@ -31,6 +31,18 @@ const CatalogPage = observer(() => {
   const [products, setProducts] = useState([]);
   const [similar, setSimilar] = useState([]);
   backButton?.onClick(back_page);
+  const findMatchingProducts = (products, selectedCharacteristics) => {
+    return products.filter((product) => {
+      // Для каждой характеристики проверяем, есть ли совпадение в product.characteristics
+      return selectedCharacteristics.every((selectedChar) =>
+        product.characteristics.some(
+          (char) =>
+            char.id === selectedChar.id && // Совпадает id характеристики
+            char.value === selectedChar.value // Совпадает значение
+        )
+      );
+    });
+  };
 
   const sortCatalog = () => {
     let copy_catalog = Array.from(
@@ -59,7 +71,7 @@ const CatalogPage = observer(() => {
       );
       const options = {
         keys: ["name", "description"], // Поля для поиска
-        threshold: 1, // 0 = точное совпадение, 1 = любые совпадения
+        threshold: 0.5, // 0 = точное совпадение, 1 = любые совпадения
       };
 
       const fuse = new Fuse(fuce_copy_catalog, options);
@@ -75,6 +87,32 @@ const CatalogPage = observer(() => {
       console.log(similarProducts);
       setSimilar(similarProducts);
     }
+    if (pageStore.selected_chars.length != 0) {
+      copy_catalog = findMatchingProducts(
+        copy_catalog,
+        pageStore.selected_chars
+      );
+    }
+    if (pageStore.min_max[0] != "" && pageStore.min_max[1] != "") {
+      copy_catalog = copy_catalog.filter(
+        (elem) =>
+          Number(elem.price) >= Number(pageStore.min_max[0]) &&
+          Number(elem.price) <= Number(pageStore.min_max[1])
+      );
+    } else if (pageStore.min_max[0] != "" && pageStore.min_max[1] == "") {
+      copy_catalog = copy_catalog.filter(
+        (elem) => Number(elem.price) >= Number(pageStore.min_max[0])
+      );
+    } else if (pageStore.min_max[0] == "" && pageStore.min_max[1] != "") {
+      copy_catalog = copy_catalog.filter(
+        (elem) => Number(elem.price) <= Number(pageStore.min_max[1])
+      );
+    }
+    if (pageStore.selected_companys.length != 0) {
+      copy_catalog = copy_catalog.filter((elem) =>
+        pageStore.selected_companys.includes(elem.company.name)
+      );
+    }
 
     setProducts(copy_catalog);
   };
@@ -87,7 +125,14 @@ const CatalogPage = observer(() => {
   };
   useEffect(() => {
     sortCatalog();
-  }, [pageStore.products, pageStore.sort_type, pageStore.search_str]);
+  }, [
+    pageStore.products,
+    pageStore.sort_type,
+    pageStore.search_str,
+    pageStore.selected_chars,
+    pageStore.min_max,
+    pageStore.selected_companys,
+  ]);
 
   return (
     <div

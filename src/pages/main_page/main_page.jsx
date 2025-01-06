@@ -18,6 +18,7 @@ const MainPage = observer(() => {
   useEffect(() => {
     pageStore.getProducts();
     pageStore.getCompanys();
+    pageStore.getChars();
   }, []);
   const tg = window.Telegram.WebApp;
 
