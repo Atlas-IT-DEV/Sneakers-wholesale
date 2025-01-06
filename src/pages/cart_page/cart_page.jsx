@@ -41,57 +41,34 @@ const CartPage = observer(() => {
     }, []);
   };
 
-  const [products, setProducts] = useState(combineProducts(pageStore?.cart));
-
-  const incrementQuantity = (id) => {
-    setProducts((prevProducts) =>
-      prevProducts.map((product) =>
-        product.id === id
-          ? { ...product, quantity: product.quantity + 1 }
-          : product
-      )
-    );
-  };
-
-  const decrementQuantity = (id) => {
-    setProducts((prevProducts) =>
-      prevProducts.map((product) =>
-        product.id === id && product.quantity > 1
-          ? { ...product, quantity: product.quantity - 1 }
-          : product
-      )
-    );
-  };
-
   const removeProduct = (id) => {
-    setProducts((prevProducts) =>
+    pageStore.updateCart((prevProducts) =>
       prevProducts.filter((product) => product.id !== id)
     );
   };
 
-  const changeQuantity = (id, value) => {
-    const newValue = parseInt(value, 10);
-    if (isNaN(newValue) || newValue <= 0) return; // Игнорируем некорректное значение
-    setProducts((prevProducts) =>
-      prevProducts.map((product) =>
-        product.id === id ? { ...product, quantity: newValue } : product
-      )
-    );
-  };
-  console.log("products", products);
+  const changeQuantity = (value, obj, id) => {
+    if (value <= 0) return;
+    let copy_cart = Array.from(pageStore.cart);
 
-  useEffect(() => {
-    pageStore.updateCart(products);
-  }, [products]);
+    copy_cart.filter((item) => {
+      return item?.id != id;
+    });
+    for (let i = 0; i < value; i++) {
+      copy_cart.push(obj);
+    }
+    pageStore.updateCart(copy_cart);
+  };
 
   const sumCart = pageStore.cart.map((item) => {
-    let price = 0;
-    price += parseInt(item?.price * parseInt(item?.quantity));
-    return parseInt(price);
+    let sum = 0;
+    sum += parseInt(item?.price);
+    return sum;
   });
 
   let priceCart = 0;
   sumCart.forEach((x) => (priceCart += x));
+
   return (
     <div
       className={
@@ -117,11 +94,12 @@ const CartPage = observer(() => {
         </div>
       </div>
       <div className={styles.discountContainer}>
-        {pageStore.cart.length != 0 ? <DiscountCard /> : null}
+        {/* Блок с информацией о скидке */}
+        {/* {pageStore.cart.length != 0 ? <DiscountCard /> : null} */}
       </div>
       <div className={styles.productContainer}>
         {pageStore.cart.length != 0 ? (
-          pageStore?.cart.map((item, index) => {
+          combineProducts(pageStore.cart).map((item, index) => {
             return (
               <CartProductCard
                 key={index}
@@ -131,11 +109,11 @@ const CartPage = observer(() => {
                 new_price={item?.price}
                 image={item?.urls?.[0]?.url || no_photo}
                 count_product={item?.quantity}
-                increase={() => incrementQuantity(item.id)}
-                decrease={() => decrementQuantity(item.id)}
                 obj={item}
                 remove={() => removeProduct(item?.id)}
-                onChangeQuantity={(value) => changeQuantity(item.id, value)}
+                onChangeQuantity={(value) =>
+                  changeQuantity(value, item, item?.id)
+                }
               />
             );
           })

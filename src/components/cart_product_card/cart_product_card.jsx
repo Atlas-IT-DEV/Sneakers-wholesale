@@ -15,6 +15,7 @@ import {
   position,
   VStack,
 } from "@chakra-ui/react";
+import { useStores } from "../../store/store_context";
 
 const CartProductCard = ({
   brand = "Asics",
@@ -26,13 +27,13 @@ const CartProductCard = ({
   new_price = 12000,
   image = "https://legacy.reactjs.org/logo-og.png",
   count_product,
-  increase,
-  decrease,
   remove,
   onChangeQuantity,
   obj,
 }) => {
   const { width } = useWindowDimensions();
+
+  const { pageStore } = useStores();
 
   return (
     <div
@@ -72,12 +73,25 @@ const CartProductCard = ({
                 ? styles.countUnactiveButton
                 : styles.countActiveButton
             }
-            onClick={obj.quantity != 1 ? decrease : null}
+            onClick={() => {
+              if (obj?.quantity != 1) {
+                let copy_cart = Array.from(pageStore.cart);
+                copy_cart.splice(obj, 1);
+                pageStore.updateCart(copy_cart);
+              }
+            }}
           >
             <img src={minusIcon} alt="" />
           </div>
           <p className={styles.countProductText}>{count_product}</p>
-          <div className={`${styles.countActiveButton}`} onClick={increase}>
+          <div
+            className={`${styles.countActiveButton}`}
+            onClick={() => {
+              let copy_cart = Array.from(pageStore.cart);
+              copy_cart.push(obj);
+              pageStore.updateCart(copy_cart);
+            }}
+          >
             <img src={plusIcon} alt="" />
           </div>
         </div>
