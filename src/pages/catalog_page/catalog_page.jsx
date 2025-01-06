@@ -64,7 +64,14 @@ const CatalogPage = observer(() => {
 
       const fuse = new Fuse(fuce_copy_catalog, options);
       const result = fuse.search(pageStore.search_str);
-      const similarProducts = result.map((res) => res.item);
+      const similarProducts = result
+        .map((res) => res.item)
+        .filter(
+          (el) =>
+            !copy_catalog.some(
+              (item) => JSON.stringify(el) == JSON.stringify(item)
+            )
+        );
       console.log(similarProducts);
       setSimilar(similarProducts);
     }
@@ -160,11 +167,13 @@ const CatalogPage = observer(() => {
         </div>
       </div>
       {similar.length != 0 && (
-        <VStack>
-          <Text color={"white"}>Возможно вы искали...</Text>
+        <VStack padding={"0px 30px"}>
+          <Text color={"white"} alignSelf={"flex-start"}>
+            Возможно вы искали...
+          </Text>
           <div className={styles.products}>
             <div className={styles.productsField}>
-              {products.map((elem, index) => {
+              {similar.map((elem, index) => {
                 return (
                   <ProductCard
                     key={index}
