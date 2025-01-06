@@ -78,6 +78,7 @@ const CartPage = observer(() => {
       )
     );
   };
+  console.log("products", products);
 
   useEffect(() => {
     pageStore.updateCart(products);

@@ -4,9 +4,11 @@ import sdekIcon from "../../images/sdek_icon.svg";
 import plusIcon from "../../images/plus_orange_icon.svg";
 import selectArrow from "../../images/arrow_light_gray.svg";
 import mirIcon from "../../images/mir_icon.svg";
+import no_photo from "./../../images/tiger_big_logo.jpg";
 
 import { useNavigate } from "react-router";
 import useWindowDimensions from "../../components/hooks/windowDimensions";
+import { useStores } from "../../store/store_context";
 
 const CheckoutPage = ({ count = 2 }) => {
   const navigate = useNavigate();
@@ -20,6 +22,9 @@ const CheckoutPage = ({ count = 2 }) => {
     backButton?.hide();
   };
   backButton?.onClick(back_page);
+
+  const { pageStore } = useStores();
+
   return (
     <div
       className={
@@ -39,9 +44,6 @@ const CheckoutPage = ({ count = 2 }) => {
       }
     >
       <div className={styles.header}>
-        {/* <div className={styles.backButton} onClick={() => navigate(-1)}>
-          <img src={arrowBackIcon} alt="" />
-        </div> */}
         <p className={styles.namePageText}>Оформление заказа</p>
       </div>
       <div className={styles.view}>
@@ -59,12 +61,15 @@ const CheckoutPage = ({ count = 2 }) => {
         </div>
       </div>
       <div className={styles.products}>
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
+        {pageStore.cart.map((item, index) => {
+          return item?.urls.length != 0 ? (
+            item?.urls.map((images) => {
+              return <img src={images?.url} alt="" />;
+            })
+          ) : (
+            <img src={no_photo} alt="" />
+          );
+        })}
       </div>
       <div className={`${styles.view} ${styles.payment}`}>
         <p className={styles.headerView}>Способ оплаты</p>
