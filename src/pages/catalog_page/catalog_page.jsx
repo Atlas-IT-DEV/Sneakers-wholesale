@@ -161,7 +161,7 @@ const CatalogPage = observer(() => {
       </div>
       {similar.length != 0 && (
         <VStack>
-          <Text>Возможно вы искали...</Text>{" "}
+          <Text color={"white"}>Возможно вы искали...</Text>
           <div className={styles.products}>
             <div className={styles.productsField}>
               {products.map((elem, index) => {

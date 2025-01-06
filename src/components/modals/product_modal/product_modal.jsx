@@ -97,6 +97,20 @@ const ProductModal = ({
           ) : (
             <SwiperSlide className={styles.slider}>
               <img src={no_photo} alt="" className={styles.imageProduct} />
+              <div
+                className={styles.favouriteButton}
+                onClick={() => {
+                  favouriteClick();
+                  setModalVisible(false);
+                }}
+              >
+                <img
+                  src={
+                    isPressed[0] ? favouriteActiveIcon : favouriteInactiveIcon
+                  }
+                  alt=""
+                />
+              </div>
             </SwiperSlide>
           )}
         </Swiper>

@@ -12,6 +12,7 @@ import {
   PopoverBody,
   PopoverContent,
   PopoverTrigger,
+  position,
   VStack,
 } from "@chakra-ui/react";
 
@@ -87,7 +88,7 @@ const CartProductCard = ({
         </div>
       </div>
 
-      <Popover>
+      <Popover strategy="absolute" placement="auto">
         <PopoverTrigger>
           <div className={styles.settingsButton}>
             <img
@@ -126,7 +127,7 @@ const CartProductCard = ({
                 }}
                 onClick={remove}
               >
-                Удалить
+                Убрать из корзины
               </Button>
             </VStack>
           </PopoverBody>
