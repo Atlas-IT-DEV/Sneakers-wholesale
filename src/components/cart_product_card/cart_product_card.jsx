@@ -76,7 +76,13 @@ const CartProductCard = ({
             onClick={() => {
               if (obj?.quantity != 1) {
                 let copy_cart = Array.from(pageStore.cart);
-                copy_cart.splice(obj, 1);
+
+                const index = copy_cart.findLastIndex(
+                  (object) => object?.id == obj?.id
+                );
+                if (index != -1) {
+                  copy_cart.splice(index, 1);
+                }
                 pageStore.updateCart(copy_cart);
               }
             }}
@@ -127,7 +133,6 @@ const CartProductCard = ({
                   border={"1px solid #db6900"}
                   color={"white"}
                   inputMode="numeric"
-                  // value={count_product}
                   onChange={(e) => onChangeQuantity(e.target.value)}
                 />
               </HStack>

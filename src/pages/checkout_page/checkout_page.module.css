@@ -109,6 +109,7 @@
 .container585_600 .totalView {
   display: flex;
   margin: 12px 32px 0 32px;
+  justify-content: space-between;
 }
 .container585_600 .totalView .attributeTotal {
   width: 80%;
@@ -127,6 +128,7 @@
 }
 .container585_600 .descriptionView .viewTotal {
   display: flex;
+  justify-content: space-between;
 }
 .container585_600 .descriptionView .viewTotal .descAttrTotal {
   width: 80%;
@@ -281,6 +283,7 @@
 .container565_585 .totalView {
   display: flex;
   margin: 12px 32px 0 32px;
+  justify-content: space-between;
 }
 .container565_585 .totalView .attributeTotal {
   width: 80%;
@@ -299,6 +302,7 @@
 }
 .container565_585 .descriptionView .viewTotal {
   display: flex;
+  justify-content: space-between;
 }
 .container565_585 .descriptionView .viewTotal .descAttrTotal {
   width: 80%;
@@ -453,6 +457,7 @@
 .container525_565 .totalView {
   display: flex;
   margin: 12px 32px 0 32px;
+  justify-content: space-between;
 }
 .container525_565 .totalView .attributeTotal {
   width: 80%;
@@ -471,6 +476,7 @@
 }
 .container525_565 .descriptionView .viewTotal {
   display: flex;
+  justify-content: space-between;
 }
 .container525_565 .descriptionView .viewTotal .descAttrTotal {
   width: 80%;
@@ -625,6 +631,7 @@
 .container485_525 .totalView {
   display: flex;
   margin: 12px 32px 0 32px;
+  justify-content: space-between;
 }
 .container485_525 .totalView .attributeTotal {
   width: 80%;
@@ -643,6 +650,7 @@
 }
 .container485_525 .descriptionView .viewTotal {
   display: flex;
+  justify-content: space-between;
 }
 .container485_525 .descriptionView .viewTotal .descAttrTotal {
   width: 80%;
@@ -797,6 +805,7 @@
 .container450_485 .totalView {
   display: flex;
   margin: 12px 32px 0 32px;
+  justify-content: space-between;
 }
 .container450_485 .totalView .attributeTotal {
   width: 80%;
@@ -815,6 +824,7 @@
 }
 .container450_485 .descriptionView .viewTotal {
   display: flex;
+  justify-content: space-between;
 }
 .container450_485 .descriptionView .viewTotal .descAttrTotal {
   width: 80%;
@@ -969,6 +979,7 @@
 .container410_450 .totalView {
   display: flex;
   margin: 12px 32px 0 32px;
+  justify-content: space-between;
 }
 .container410_450 .totalView .attributeTotal {
   width: 80%;
@@ -987,6 +998,7 @@
 }
 .container410_450 .descriptionView .viewTotal {
   display: flex;
+  justify-content: space-between;
 }
 .container410_450 .descriptionView .viewTotal .descAttrTotal {
   width: 80%;
@@ -1141,6 +1153,7 @@
 .container375_410 .totalView {
   display: flex;
   margin: 12px 32px 0 32px;
+  justify-content: space-between;
 }
 .container375_410 .totalView .attributeTotal {
   width: 80%;
@@ -1159,6 +1172,7 @@
 }
 .container375_410 .descriptionView .viewTotal {
   display: flex;
+  justify-content: space-between;
 }
 .container375_410 .descriptionView .viewTotal .descAttrTotal {
   width: 80%;

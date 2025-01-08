@@ -15,6 +15,8 @@ class PageStore {
   selected_companys = [];
   min_max = ["", ""];
 
+  delivery_type = "";
+
   constructor() {
     makeAutoObservable(this);
   }
@@ -43,6 +45,9 @@ class PageStore {
   };
   updateSelectedCompanys = (new_selected_companys) => {
     this.selected_companys = new_selected_companys;
+  };
+  updateTypeDelivery = (new_delivery) => {
+    this.delivery_type = new_delivery;
   };
 
   getProducts = async () => {

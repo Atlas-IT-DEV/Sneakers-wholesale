@@ -50,24 +50,30 @@ const CartPage = observer(() => {
   const changeQuantity = (value, obj, id) => {
     if (value <= 0) return;
     let copy_cart = Array.from(pageStore.cart);
-
-    copy_cart.filter((item) => {
+    const filtered = copy_cart.filter((item) => {
       return item?.id != id;
     });
+    pageStore.updateCart(filtered);
+    copy_cart = Array.from(filtered);
+
     for (let i = 0; i < value; i++) {
-      copy_cart.push(obj);
+      copy_cart.unshift(obj);
     }
     pageStore.updateCart(copy_cart);
   };
 
-  const sumCart = pageStore.cart.map((item) => {
-    let sum = 0;
-    sum += parseInt(item?.price);
-    return sum;
-  });
+  const countSumCart = () => {
+    const sumCart = pageStore.cart.map((item) => {
+      let sum = 0;
+      sum += parseInt(item?.price);
+      return sum;
+    });
 
-  let priceCart = 0;
-  sumCart.forEach((x) => (priceCart += x));
+    let priceCart = 0;
+    sumCart.forEach((x) => (priceCart += x));
+
+    return priceCart;
+  };
 
   return (
     <div
@@ -110,6 +116,7 @@ const CartPage = observer(() => {
                 image={item?.urls?.[0]?.url || no_photo}
                 count_product={item?.quantity}
                 obj={item}
+                idx={index}
                 remove={() => removeProduct(item?.id)}
                 onChangeQuantity={(value) =>
                   changeQuantity(value, item, item?.id)
@@ -142,7 +149,8 @@ const CartPage = observer(() => {
       >
         <p className={styles.orderButtonText}>К оформлению</p>
         <p className={styles.detailsdOrderText}>
-          {pageStore?.cart.length} шт, {priceCart} ₽
+          {pageStore?.cart.length} шт,{" "}
+          {pageStore.cart.length != 0 ? countSumCart() : 0} ₽
         </p>
       </div>
       <BottomMenu />
