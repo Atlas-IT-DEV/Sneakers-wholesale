@@ -16,6 +16,7 @@ class PageStore {
   min_max = ["", ""];
 
   delivery_type = "";
+  adress_delivery = "";
 
   constructor() {
     makeAutoObservable(this);
@@ -48,6 +49,9 @@ class PageStore {
   };
   updateTypeDelivery = (new_delivery) => {
     this.delivery_type = new_delivery;
+  };
+  updateAdressDelivery = (new_adress) => {
+    this.adress_delivery = new_adress;
   };
 
   getProducts = async () => {

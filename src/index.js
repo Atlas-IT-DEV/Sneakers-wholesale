@@ -12,6 +12,7 @@ import FavouritesPage from "./pages/favourites_page/favourites_page";
 import FilterPage from "./pages/filter_page/filter_page";
 import ProfilePage from "./pages/profile_page/profile_page";
 import CheckoutPage from "./pages/checkout_page/checkout_page";
+import CopyPage from "./pages/copy_page/copy_page";
 
 const router = createMemoryRouter([
   {
@@ -67,6 +68,14 @@ const router = createMemoryRouter([
     element: (
       <PageContainer>
         <CheckoutPage />
+      </PageContainer>
+    ),
+  },
+  {
+    path: "/copy",
+    element: (
+      <PageContainer>
+        <CopyPage />
       </PageContainer>
     ),
   },

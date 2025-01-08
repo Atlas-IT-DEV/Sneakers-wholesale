@@ -14,6 +14,7 @@ import { useStores } from "../../store/store_context";
 import {
   HStack,
   Image,
+  Input,
   Popover,
   PopoverBody,
   PopoverContent,
@@ -55,7 +56,10 @@ const CheckoutPage = ({ count = 2 }) => {
 
   const [deliveryType, setDeliveryType] = useState([1, 0, 0]);
 
-  console.log(deliveryType);
+  const [adressDelivery, setAdressDelivery] = useState("");
+  useEffect(() => {
+    pageStore.updateAdressDelivery(adressDelivery);
+  }, [adressDelivery]);
 
   useEffect(() => {
     deliveryType[0] == 1
@@ -117,6 +121,7 @@ const CheckoutPage = ({ count = 2 }) => {
             width={"80%"}
             padding={"10px"}
             position={"absolute"}
+            zIndex={1000}
             left={0}
             right={0}
             margin={"0 auto"}
@@ -174,6 +179,19 @@ const CheckoutPage = ({ count = 2 }) => {
           </VStack>
         )}
       </div>
+      {(deliveryType[0] == 1 || deliveryType[1] == 1) && (
+        <HStack w={"100%"} padding={"0 16px"} marginTop={"20px"}>
+          <Input
+            placeholder="Введите адрес доставки (город, улица, дом)"
+            backgroundColor={"rgba(57,57,57,1)"}
+            border={"none"}
+            color={"white"}
+            borderRadius={"16px"}
+            onChange={(e) => setAdressDelivery(e.target.value)}
+          />
+        </HStack>
+      )}
+
       <div className={styles.products}>
         {pageStore.cart.map((item, index) => {
           return item?.urls.length != 0 ? (
@@ -236,8 +254,20 @@ const CheckoutPage = ({ count = 2 }) => {
             </p>
           </div> */}
       </div>
-      <div className={styles.orderButton}>
-        <p className={styles.orderButtonText}>Заказать</p>
+      <div
+        className={styles.orderButton}
+        onClick={() =>
+          adressDelivery == "" && (deliveryType[0] == 1 || deliveryType[1] == 1)
+            ? null
+            : navigate("/copy")
+        }
+        style={
+          adressDelivery == "" && (deliveryType[0] == 1 || deliveryType[1] == 1)
+            ? { backgroundColor: "rgba(200,0,0,1)", cursor: "no-drop" }
+            : null
+        }
+      >
+        <p className={styles.orderButtonText}>Продолжить</p>
         <div className={styles.prices}>
           {/* <p className={`${styles.oldPriceText} ${styles.priceText}`}>18500₽</p> */}
           <p className={`${styles.newPriceText} ${styles.priceText}`}>
