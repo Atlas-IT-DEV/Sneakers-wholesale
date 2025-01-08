@@ -6,6 +6,7 @@ import selectArrow from "../../images/arrow_light_gray.svg";
 // import mirIcon from "../../images/mir_icon.svg";
 import no_photo from "./../../images/tiger_big_logo.jpg";
 import pochtaIcon from "./../../images/pochta.svg";
+import geo from "./../../images/geo.svg";
 
 import { useNavigate } from "react-router";
 import useWindowDimensions from "../../components/hooks/windowDimensions";
@@ -36,6 +37,8 @@ const CheckoutPage = ({ count = 2 }) => {
   backButton?.onClick(back_page);
 
   const { pageStore } = useStores();
+
+  const [openPopup, setOpenPopup] = useState(false);
 
   const countSumCart = () => {
     const sumCart = pageStore.cart.map((item) => {
@@ -93,61 +96,83 @@ const CheckoutPage = ({ count = 2 }) => {
               <img src={sdekIcon} style={{ height: "80px" }} />
             ) : deliveryType[1] == 1 ? (
               <img src={pochtaIcon} style={{ height: "80px" }} />
-            ) : null}
+            ) : (
+              <img src={geo} style={{ height: "80px" }} />
+            )}
           </div>
           {/* <img src={plusIcon} /> */}
         </div>
-
-        <Popover strategy="absolute">
-          <PopoverTrigger>
-            <div className={styles.methodButton}>
-              <p>Все способы доставки</p>
-              <img src={selectArrow} alt="" />
-            </div>
-          </PopoverTrigger>
-          <PopoverContent
-            bgColor={"rgba(30,30,30,1)"}
-            border={"1px solid #db6900"}
-            // width={"220px"}
-            padding={"5px"}
-          >
-            <PopoverBody>
-              <VStack align={"flex-start"} w={"100%"} gap={"10px"}>
-                <HStack
-                  justify={"space-between"}
-                  w={"100%"}
-                  cursor={"pointer"}
-                  onClick={() => setDeliveryType([1, 0, 0])}
-                >
-                  <Image src={sdekIcon} height={"50px"} />
-                  <Text color={"white"}>СДЭК</Text>
-                </HStack>
-                <HStack
-                  justify={"space-between"}
-                  w={"100%"}
-                  cursor={"pointer"}
-                  onClick={() => setDeliveryType([0, 1, 0])}
-                >
-                  <Image src={pochtaIcon} height={"50px"} />
-                  <Text color={"white"}>Почта России</Text>
-                </HStack>
-                <HStack
-                  justify={"space-between"}
-                  w={"100%"}
-                  cursor={"pointer"}
-                  onClick={() => setDeliveryType([0, 0, 1])}
-                >
-                  <Image src={""} />
-                  <Text color={"white"}>Самовывоз</Text>
-                </HStack>
-              </VStack>
-            </PopoverBody>
-          </PopoverContent>
-        </Popover>
-        {/* <div className={styles.methodButton}>
+        <div
+          className={styles.methodButton}
+          onClick={() => setOpenPopup(!openPopup)}
+        >
           <p>Все способы доставки</p>
           <img src={selectArrow} alt="" />
-        </div> */}
+        </div>
+        {openPopup && (
+          <VStack
+            bgColor={"rgba(30,30,30,1)"}
+            border={"1px solid #db6900"}
+            borderRadius={"20px"}
+            width={"80%"}
+            padding={"10px"}
+            position={"absolute"}
+            left={0}
+            right={0}
+            margin={"0 auto"}
+          >
+            <VStack align={"flex-start"} w={"100%"} gap={"10px"}>
+              <HStack
+                justify={"space-between"}
+                w={"100%"}
+                cursor={"pointer"}
+                onClick={() => {
+                  setDeliveryType([1, 0, 0]);
+                  setOpenPopup(false);
+                }}
+              >
+                <Image src={sdekIcon} height={"50px"} />
+                <Text color={"white"}>СДЭК</Text>
+              </HStack>
+              <HStack
+                w={"100%"}
+                height={"2px"}
+                backgroundColor={"rgba(57, 57, 57, 1)"}
+                borderRadius={"20px"}
+              />
+              <HStack
+                justify={"space-between"}
+                w={"100%"}
+                cursor={"pointer"}
+                onClick={() => {
+                  setDeliveryType([0, 1, 0]);
+                  setOpenPopup(false);
+                }}
+              >
+                <Image src={pochtaIcon} height={"50px"} />
+                <Text color={"white"}>Почта России</Text>
+              </HStack>
+              <HStack
+                w={"100%"}
+                height={"2px"}
+                backgroundColor={"rgba(57, 57, 57, 1)"}
+                borderRadius={"20px"}
+              />
+              <HStack
+                justify={"space-between"}
+                w={"100%"}
+                cursor={"pointer"}
+                onClick={() => {
+                  setDeliveryType([0, 0, 1]);
+                  setOpenPopup(false);
+                }}
+              >
+                <Image src={geo} height={"50px"} />
+                <Text color={"white"}>Самовывоз</Text>
+              </HStack>
+            </VStack>
+          </VStack>
+        )}
       </div>
       <div className={styles.products}>
         {pageStore.cart.map((item, index) => {
