@@ -56,10 +56,15 @@ const CheckoutPage = ({ count = 2 }) => {
 
   const [deliveryType, setDeliveryType] = useState([1, 0, 0]);
 
+  const [username, setUsername] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [adressDelivery, setAdressDelivery] = useState("");
+
   useEffect(() => {
     pageStore.updateAdressDelivery(adressDelivery);
-  }, [adressDelivery]);
+    pageStore.updatePhoneNumber(phoneNumber);
+    pageStore.updateUsername(username);
+  }, [username, phoneNumber, adressDelivery]);
 
   useEffect(() => {
     deliveryType[0] == 1
@@ -179,6 +184,35 @@ const CheckoutPage = ({ count = 2 }) => {
           </VStack>
         )}
       </div>
+
+      <HStack w={"100%"} padding={"0 16px"} marginTop={"20px"}>
+        <Input
+          type="text"
+          placeholder="Введите ФИО"
+          // pattern="/(?:\+|\d)[\d\-\(\) ]{9,}\d/g"
+          backgroundColor={"rgba(57,57,57,1)"}
+          border={"none"}
+          color={"white"}
+          borderRadius={"16px"}
+          onChange={(e) => {
+            setUsername(e.target.value);
+          }}
+        />
+      </HStack>
+      <HStack w={"100%"} padding={"0 16px"} marginTop={"20px"}>
+        <Input
+          type="text"
+          placeholder="Введите номер телефона"
+          pattern="/(?:\+|\d)[\d\-\(\) ]{9,}\d/g"
+          backgroundColor={"rgba(57,57,57,1)"}
+          border={"none"}
+          color={"white"}
+          borderRadius={"16px"}
+          onChange={(e) => {
+            setPhoneNumber(e.target.value);
+          }}
+        />
+      </HStack>
       {(deliveryType[0] == 1 || deliveryType[1] == 1) && (
         <HStack w={"100%"} padding={"0 16px"} marginTop={"20px"}>
           <Input

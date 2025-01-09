@@ -16,6 +16,8 @@ class PageStore {
   min_max = ["", ""];
 
   delivery_type = "";
+  user_name = "";
+  phone_number = "";
   adress_delivery = "";
 
   constructor() {
@@ -52,6 +54,12 @@ class PageStore {
   };
   updateAdressDelivery = (new_adress) => {
     this.adress_delivery = new_adress;
+  };
+  updatePhoneNumber = (new_number) => {
+    this.phone_number = new_number;
+  };
+  updateUsername = (new_user_name) => {
+    this.user_name = new_user_name;
   };
 
   getProducts = async () => {

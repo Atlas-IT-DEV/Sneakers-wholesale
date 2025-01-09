@@ -84,12 +84,9 @@ const CopyPage = () => {
         <textarea
           id="details"
           defaultValue={`Здравствуйте. Хочу сделать заказ. \n\n Данные для заказа: \n ФИО: ${
-            pageStore.user_info?.first_name
-          } ${
-            pageStore.user_info?.last_name != "empty"
-              ? pageStore.user_info?.last_name
-              : ""
-          } \n Тип доставки: ${pageStore.delivery_type} \n ${
+            pageStore.user_name
+          } \n Номер телефона: ${pageStore.phone_number}
+           \n Тип доставки: ${pageStore.delivery_type} \n ${
             pageStore.delivery_type == "Почта России" ||
             pageStore.delivery_type == "СДЭК"
               ? `Адрес доставки: ${pageStore.adress_delivery}\n `
@@ -113,7 +110,7 @@ const CopyPage = () => {
             padding: "10px",
             color: "white",
             height: "auto",
-            minHeight: "550px",
+            minHeight: "500px",
             outline: "none",
           }}
         ></textarea>
