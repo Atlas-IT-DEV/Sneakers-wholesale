@@ -20,6 +20,8 @@ class PageStore {
   phone_number = "";
   adress_delivery = "";
 
+  favourites = [];
+
   constructor() {
     makeAutoObservable(this);
   }
@@ -148,6 +150,36 @@ class PageStore {
     const result = await response.json();
     this.user_info = result;
     console.log("auth user", result);
+  };
+
+  createFavourite = async (product_id) => {
+    const response = await fetch("https://reed-shop.ru:8088/favorites/", {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${this.token}`,
+      },
+      body: JSON.stringify({
+        id: 0,
+        user_id: this.user_info?.id,
+        product_id: product_id,
+      }),
+    });
+  };
+
+  getFavouriteByUserIdFull = async () => {
+    const response = await fetch(
+      `https://reed-shop.ru:8088/favorites/user_id/full/${this.user_info?.id}`,
+      {
+        method: "GET",
+        headers: {
+          accept: "application/json",
+        },
+      }
+    );
+
+    const result = await response.json();
   };
 }
 

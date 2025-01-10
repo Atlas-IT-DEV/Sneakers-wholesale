@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 
 // import "swiper/css/navigation";
 import { FreeMode, Navigation, Pagination } from "swiper/modules";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useWindowDimensions from "../../hooks/windowDimensions";
 import { useStores } from "../../../store/store_context";
 import { useNavigate } from "react-router";
@@ -36,6 +36,29 @@ const ProductModal = ({
     copyIsPressed[0] = !copyIsPressed[0];
     setIsPressed(copyIsPressed);
   };
+
+  const createFavourite = async (product_id) => {
+    await pageStore.createFavourite(product_id);
+  };
+
+  const deleteFavourive = async (fav_id) => {
+    const response = await fetch(
+      `https://reed-shop.ru:8088/favorites/${fav_id}`,
+      {
+        method: "DELETE",
+        headers: {
+          accept: "application/json",
+          Authorization: `Bearer ${this.token}`,
+        },
+      }
+    );
+    console.log("Удаление", response);
+  };
+
+  useEffect(() => {
+    pageStore.getFavouriteByUserIdFull();
+  }, []);
+
   return (
     <div>
       <div
