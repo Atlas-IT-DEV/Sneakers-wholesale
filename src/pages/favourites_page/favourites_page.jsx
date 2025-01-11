@@ -8,8 +8,12 @@ import { useNavigate } from "react-router";
 import SelectCatalog from "../../components/select_catalog/select_catalog";
 import FavouriteProductCard from "../../components/favourite_product_card/favourite_product_card";
 import useWindowDimensions from "../../components/hooks/windowDimensions";
+import { useEffect } from "react";
+import { useStores } from "../../store/store_context";
+import { Text } from "@chakra-ui/react";
+import { observer } from "mobx-react-lite";
 
-const FavouritesPage = () => {
+const FavouritesPage = observer(() => {
   const navigate = useNavigate();
   const { width } = useWindowDimensions();
 
@@ -21,6 +25,14 @@ const FavouritesPage = () => {
     backButton?.hide();
   };
   backButton?.onClick(back_page);
+
+  const { pageStore } = useStores();
+
+  useEffect(() => {
+    pageStore.getFavouriteByUserIdFull();
+    console.log("fav", pageStore.favourites);
+  }, []);
+
   return (
     <div
       className={
@@ -64,11 +76,16 @@ const FavouritesPage = () => {
         <SelectCatalog />
       </div>
       <div className={styles.products}>
-        <FavouriteProductCard />
-        <FavouriteProductCard />
+        {pageStore.favourites.length != 0 ? (
+          pageStore.favourites.map((item, index) => {
+            return <FavouriteProductCard key={index} />;
+          })
+        ) : (
+          <Text>Вы ничего не добавляли в избранное</Text>
+        )}
       </div>
       <BottomMenu />
     </div>
   );
-};
+});
 export default FavouritesPage;

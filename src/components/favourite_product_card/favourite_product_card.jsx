@@ -62,7 +62,7 @@ const FavouriteProductCard = ({
         <p className={styles.sizeText}>
           Размер: <span>{size}</span>
         </p>
-        <div className={styles.counterProduct}>
+        {/* <div className={styles.counterProduct}>
           <div
             className={`${styles.button} ${
               count == 1 ? styles.buttonLock : styles.buttonUnlock
@@ -78,7 +78,7 @@ const FavouriteProductCard = ({
           >
             <img src={plusIcon} alt="" />
           </div>
-        </div>
+        </div> */}
         <div className={styles.costsView}>
           <p className={styles.priceText}>{price}₽</p>
           <p className={styles.oldPriceText}>{oldPrice}₽</p>

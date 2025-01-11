@@ -198,6 +198,7 @@ const CatalogPage = observer(() => {
       <div className={styles.products}>
         <div className={styles.productsField}>
           {products.map((elem, index) => {
+            console.log("elem", elem);
             return (
               <ProductCard
                 key={index}

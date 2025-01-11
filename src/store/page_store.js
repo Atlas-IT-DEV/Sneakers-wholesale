@@ -1,4 +1,5 @@
 import { makeAutoObservable } from "mobx";
+import { Await } from "react-router";
 
 class PageStore {
   token = "";
@@ -158,19 +159,20 @@ class PageStore {
       headers: {
         accept: "application/json",
         "Content-Type": "application/json",
-        Authorization: `Bearer ${this.token}`,
+        Authorization: `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJUT0tFTl9UWVBFX0ZJRUxEIjoiYWNjZXNzX3Rva2VuX3R5cGUiLCJzdWIiOiJhZG1pbiIsInVzZXJfaWQiOjYxOCwiZmlyc3RfbmFtZSI6IkRJTUFTUyIsImxhc3RfbmFtZSI6IlZFTElDSEtPIiwiZXhwIjoxNzM2NzAyNjA2LCJpYXQiOjE3MzY2MTYyMDZ9.PWl6R3VtK678hm81xbOZ-UruVUe9G792Lq5kghudbQFXmhoaU04rHK-esfqY32NXO-BfqWNrjgY22e8Nz8ZyfNKGjFyknDhDxT-e_mWcpIBKbJR0kJyxkvOO0DrnEtBJYrCp6Gect4rw8biXQHIRI4DpCDBtFRTof8ASBVx8DEy0wH_9vqDKRyufTK47kYmcRCn6B4x3qgYNumhg0eK_5Xbhhc3fDPJ5xxPTE_BGzYGPc1y0Zwt-EV_Em-NjE-irWxpLPr2_cGs4gQPL26bwFhOdxQNs_8mO6lMJW9SKxFQHEQ1bnCtC26J0rPFLmBZlAivWDyIyiZ3HyG84aLmUJA`,
       },
       body: JSON.stringify({
         id: 0,
-        user_id: this.user_info?.id,
+        user_id: 618,
         product_id: product_id,
       }),
     });
+    console.log(response);
   };
 
   getFavouriteByUserIdFull = async () => {
     const response = await fetch(
-      `https://reed-shop.ru:8088/favorites/user_id/full/${this.user_info?.id}`,
+      `https://reed-shop.ru:8088/favorites/user_id/full/${618}`,
       {
         method: "GET",
         headers: {
@@ -180,6 +182,11 @@ class PageStore {
     );
 
     const result = await response.json();
+    this.favourites = result;
+  };
+
+  updateFav = (new_fav) => {
+    this.favourites = new_fav;
   };
 }
 

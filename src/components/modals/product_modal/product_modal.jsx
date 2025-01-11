@@ -16,147 +16,91 @@ import { useStores } from "../../../store/store_context";
 import { useNavigate } from "react-router";
 
 import no_photo from "./../../../images/tiger_big_logo.jpg";
+import { observer } from "mobx-react-lite";
 
-const ProductModal = ({
-  price = 18400,
-  old_price = 18400,
-  count = "8 пар (опт)",
-  model_name = "Gel Quantum Kinetic",
-  brand_name = "Asics",
-  obj = {},
-}) => {
-  const { width } = useWindowDimensions();
-  const navigate = useNavigate();
+const ProductModal = observer(
+  ({
+    price = 18400,
+    old_price = 18400,
+    count = "8 пар (опт)",
+    model_name = "Gel Quantum Kinetic",
+    brand_name = "Asics",
+    obj = {},
+  }) => {
+    const { width } = useWindowDimensions();
+    const navigate = useNavigate();
 
-  const { pageStore } = useStores();
-  const [isPressed, setIsPressed] = useState([false, false, false, false]);
-  const copyIsPressed = Array.from(isPressed);
-  const [modalVisible, setModalVisible] = useState(false);
-  const favouriteClick = () => {
-    copyIsPressed[0] = !copyIsPressed[0];
-    setIsPressed(copyIsPressed);
-  };
+    const { pageStore } = useStores();
+    const [isPressed, setIsPressed] = useState([false, false, false, false]);
+    const copyIsPressed = Array.from(isPressed);
+    const [modalVisible, setModalVisible] = useState(false);
+    const favouriteClick = () => {
+      copyIsPressed[0] = !copyIsPressed[0];
+      setIsPressed(copyIsPressed);
+    };
 
-  const createFavourite = async (product_id) => {
-    await pageStore.createFavourite(product_id);
-  };
-
-  const deleteFavourive = async (fav_id) => {
-    const response = await fetch(
-      `https://reed-shop.ru:8088/favorites/${fav_id}`,
-      {
-        method: "DELETE",
-        headers: {
-          accept: "application/json",
-          Authorization: `Bearer ${this.token}`,
-        },
+    useEffect(() => {
+      pageStore.getFavouriteByUserIdFull();
+      if (pageStore.favourites.length != 0) {
+        const added = pageStore.favourites.map((item) => {
+          return { ...item, is_fav: true };
+        });
+        pageStore.updateFav(added);
       }
-    );
-    console.log("Удаление", response);
-  };
+    }, []);
 
-  useEffect(() => {
-    pageStore.getFavouriteByUserIdFull();
-  }, []);
+    const createFavourite = async (product_id) => {
+      await pageStore.createFavourite(product_id);
+    };
 
-  return (
-    <div>
-      <div
-        className={
-          width >= 585
-            ? styles.imageContainer585_600
-            : width >= 565
-            ? styles.imageContainer565_585
-            : width >= 525
-            ? styles.imageContainer525_565
-            : width >= 485
-            ? styles.imageContainer485_525
-            : width >= 450
-            ? styles.imageContainer450_485
-            : width >= 410
-            ? styles.imageContainer410_450
-            : styles.imageContainer375_410
+    const deleteFavourite = async (fav_id) => {
+      const response = await fetch(
+        `https://reed-shop.ru:8088/favorites/${fav_id}`,
+        {
+          method: "DELETE",
+          headers: {
+            accept: "application/json",
+            Authorization: `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJUT0tFTl9UWVBFX0ZJRUxEIjoiYWNjZXNzX3Rva2VuX3R5cGUiLCJzdWIiOiJhZG1pbiIsInVzZXJfaWQiOjYxOCwiZmlyc3RfbmFtZSI6IkRJTUFTUyIsImxhc3RfbmFtZSI6IlZFTElDSEtPIiwiZXhwIjoxNzM2NzAyNjA2LCJpYXQiOjE3MzY2MTYyMDZ9.PWl6R3VtK678hm81xbOZ-UruVUe9G792Lq5kghudbQFXmhoaU04rHK-esfqY32NXO-BfqWNrjgY22e8Nz8ZyfNKGjFyknDhDxT-e_mWcpIBKbJR0kJyxkvOO0DrnEtBJYrCp6Gect4rw8biXQHIRI4DpCDBtFRTof8ASBVx8DEy0wH_9vqDKRyufTK47kYmcRCn6B4x3qgYNumhg0eK_5Xbhhc3fDPJ5xxPTE_BGzYGPc1y0Zwt-EV_Em-NjE-irWxpLPr2_cGs4gQPL26bwFhOdxQNs_8mO6lMJW9SKxFQHEQ1bnCtC26J0rPFLmBZlAivWDyIyiZ3HyG84aLmUJA`,
+          },
         }
-      >
-        <Swiper
-          style={{
-            "--swiper-pagination-color": "rgba(219, 105, 0, 1)",
-            "--swiper-pagination-bullet-inactive-color":
-              "rgba(224, 224, 224, 1)",
-            "--swiper-pagination-bullet-inactive-opacity": "1",
-            "--swiper-pagination-bullet-size": "9px",
-            "--swiper-pagination-bullet-horizontal-gap": "4px",
-          }}
-          className={styles.slideTrack}
-          modules={[FreeMode, Navigation, Pagination]}
-          spaceBetween={50}
-          freeMode={false}
-          navigation={true}
-          pagination={true}
-          onClick={() => {
-            setModalVisible(true);
-          }}
-        >
-          {obj.urls.length != 0 ? (
-            obj.urls.map((elem) => (
-              <SwiperSlide className={styles.slider}>
-                <img src={elem?.url} alt="" className={styles.imageProduct} />
-                <div
-                  className={styles.favouriteButton}
-                  onClick={() => {
-                    favouriteClick();
-                    setModalVisible(false);
-                  }}
-                >
-                  <img
-                    src={
-                      isPressed[0] ? favouriteActiveIcon : favouriteInactiveIcon
-                    }
-                    alt=""
-                  />
-                </div>
-              </SwiperSlide>
-            ))
-          ) : (
-            <SwiperSlide className={styles.slider}>
-              <img src={no_photo} alt="" className={styles.imageProduct} />
-              <div
-                className={styles.favouriteButton}
-                onClick={() => {
-                  favouriteClick();
-                  setModalVisible(false);
-                }}
-              >
-                <img
-                  src={
-                    isPressed[0] ? favouriteActiveIcon : favouriteInactiveIcon
-                  }
-                  alt=""
-                />
-              </div>
-            </SwiperSlide>
-          )}
-        </Swiper>
-      </div>
+      );
+    };
 
-      {modalVisible && (
+    useEffect(() => {
+      console.log("fav", pageStore.favourites);
+    }, [modalVisible]);
+
+    const toggleFavourite = async () => {
+      favouriteClick();
+      setModalVisible(false);
+
+      const isFavourite =
+        pageStore.favourites.length != 0
+          ? pageStore.favourites.find((item) => item.product_id == obj.id)
+          : null;
+      if (!isFavourite) {
+        await createFavourite(obj?.id);
+        pageStore.getFavouriteByUserIdFull();
+      }
+    };
+
+    return (
+      <div>
         <div
           className={
-            modalVisible && width >= 585
-              ? styles.modalProductOpen585_600
-              : modalVisible && width >= 565
-              ? styles.modalProductOpen565_585
-              : modalVisible && width >= 525
-              ? styles.modalProductOpen525_565
-              : modalVisible && width >= 485
-              ? styles.modalProductOpen485_525
-              : modalVisible && width >= 450
-              ? styles.modalProductOpen450_485
-              : modalVisible && width >= 410
-              ? styles.modalProductOpen410_450
-              : modalVisible && width >= 375
-              ? styles.modalProductOpen375_410
-              : styles.modalProductClose
+            width >= 585
+              ? styles.imageContainer585_600
+              : width >= 565
+              ? styles.imageContainer565_585
+              : width >= 525
+              ? styles.imageContainer525_565
+              : width >= 485
+              ? styles.imageContainer485_525
+              : width >= 450
+              ? styles.imageContainer450_485
+              : width >= 410
+              ? styles.imageContainer410_450
+              : styles.imageContainer375_410
           }
         >
           <Swiper
@@ -168,9 +112,9 @@ const ProductModal = ({
               "--swiper-pagination-bullet-size": "9px",
               "--swiper-pagination-bullet-horizontal-gap": "4px",
             }}
-            className={styles.sliderProduct}
+            className={styles.slideTrack}
             modules={[FreeMode, Navigation, Pagination]}
-            spaceBetween={10}
+            spaceBetween={50}
             freeMode={false}
             navigation={true}
             pagination={true}
@@ -178,206 +122,297 @@ const ProductModal = ({
               setModalVisible(true);
             }}
           >
-            <div
-              className={styles.backButton}
-              onClick={() => {
-                setModalVisible(false);
-              }}
-            >
-              <img src={whiteArrow} alt="" />
-            </div>
-            <div
-              className={styles.addFavouriveButton}
-              onClick={() => {
-                favouriteClick();
-              }}
-            >
-              <img
-                src={isPressed[0] ? favouriteActiveIcon : favouriteInactiveIcon}
-                alt=""
-              />
-            </div>
             {obj.urls.length != 0 ? (
               obj.urls.map((elem) => (
-                <SwiperSlide className={styles.slideProduct}>
-                  <img
-                    src={elem?.url || no_photo}
-                    alt=""
-                    className={styles.imageProductModal}
-                  />
+                <SwiperSlide className={styles.slider}>
+                  <img src={elem?.url} alt="" className={styles.imageProduct} />
+                  <div
+                    className={styles.favouriteButton}
+                    onClick={async () => {
+                      await toggleFavourite();
+                    }}
+                  >
+                    <img
+                      // src={
+                      //   isFavourite ? favouriteActiveIcon : favouriteInactiveIcon
+                      // }
+                      alt=""
+                    />
+                  </div>
                 </SwiperSlide>
               ))
             ) : (
-              <SwiperSlide className={styles.slideProduct}>
+              <SwiperSlide className={styles.slider}>
                 <img src={no_photo} alt="" className={styles.imageProduct} />
+                <div
+                  className={styles.favouriteButton}
+                  onClick={() => {
+                    setModalVisible(false);
+                  }}
+                >
+                  <img
+                    // src={
+                    //   isFavourite ? favouriteActiveIcon : favouriteInactiveIcon
+                    // }
+                    alt=""
+                  />
+                </div>
               </SwiperSlide>
             )}
           </Swiper>
+        </div>
 
-          <div className={styles.priceCountView}>
-            <div className={styles.priceView}>
-              <p className={styles.priceText}>{obj?.price}₽</p>
-              <p className={styles.oldPriceText}></p>
-            </div>
-            <p className={styles.countText}>{obj?.count}</p>
-          </div>
-          <p className={styles.modelNameText}>{obj?.name}</p>
-          <div className={styles.brandButton}>
-            <p>{obj.company.name}</p>
-            <img src={whiteArrow} alt="" />
-          </div>
-          <div className={styles.sizesHeader}>
-            <p className={styles.sizeHeaderText}>Размеры (EU)</p>
-            <p className={styles.gridText}>Размерная сетка</p>
-          </div>
-          <div className={styles.sizesView}>
-            <div className={`${styles.sizeButton} ${styles.lockSizeButton}`}>
-              <div className={styles.line} />
-              <p>36</p>
-            </div>
-            <div className={`${styles.sizeButton} ${styles.activeSizeButton}`}>
-              <p>37</p>
-            </div>
-            <div
-              className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
-            >
-              <p>38</p>
-            </div>
-            <div
-              className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
-            >
-              <p>38</p>
-            </div>
-            <div
-              className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
-            >
-              <p>38</p>
-            </div>
-            <div
-              className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
-            >
-              <p>38</p>
-            </div>
-            <div
-              className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
-            >
-              <p>38</p>
-            </div>
-            <div
-              className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
-            >
-              <p>38</p>
-            </div>
-            <div
-              className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
-            >
-              <p>38</p>
-            </div>
-          </div>
-          <footer>
-            <div className={styles.hideView}>
-              <div
-                className={styles.hideButton}
-                onClick={() => {
-                  copyIsPressed[1] = !copyIsPressed[1];
-                  setIsPressed(copyIsPressed);
-                }}
-              >
-                <p>Доставка</p>
-                <img
-                  src={whiteArrow}
-                  alt=""
-                  className={
-                    isPressed[1] ? styles.arrowOpen : styles.arrowClose
-                  }
-                />
-              </div>
-              <div
-                className={
-                  isPressed[1] ? styles.subFiltersOpen : styles.subFiltersClose
-                }
-              >
-                <p className={styles.hideText}>
-                  Доставка Доставка Доставка Доставка Доставка ДоставкаДоставка
-                  Доставка Доставка Доставка Доставка Доставка Доставка{" "}
-                </p>
-              </div>
-            </div>
-            <div className={styles.hideView}>
-              <div
-                className={styles.hideButton}
-                onClick={() => {
-                  copyIsPressed[2] = !copyIsPressed[2];
-                  setIsPressed(copyIsPressed);
-                }}
-              >
-                <p>Детали</p>
-                <img
-                  src={whiteArrow}
-                  alt=""
-                  className={
-                    isPressed[2] ? styles.arrowOpen : styles.arrowClose
-                  }
-                />
-              </div>
-              <div
-                className={
-                  isPressed[2] ? styles.subFiltersOpen : styles.subFiltersClose
-                }
-              >
-                <p className={styles.hideText}>{obj.description}</p>
-              </div>
-            </div>
-            <div className={styles.hideView}>
-              <div
-                className={styles.hideButton}
-                onClick={() => {
-                  copyIsPressed[3] = !copyIsPressed[3];
-                  setIsPressed(copyIsPressed);
-                }}
-              >
-                <p>Гарантия</p>
-                <img
-                  src={whiteArrow}
-                  alt=""
-                  className={
-                    isPressed[3] ? styles.arrowOpen : styles.arrowClose
-                  }
-                />
-              </div>
-              <div
-                className={
-                  isPressed[3] ? styles.subFiltersOpen : styles.subFiltersClose
-                }
-              >
-                <p className={styles.hideText}>
-                  Гарантия Гарантия Гарантия Гарантия Гарантия Гарантия Гарантия
-                  Гарантия ГарантияГарантияГарантия
-                </p>
-              </div>
-            </div>
-          </footer>
-
-          <div className={styles.actionButtons}>
-            <div className={styles.buyButton}>
-              <p>Купить сейчас</p>
-            </div>
-            <div
-              className={styles.addButton}
+        {modalVisible && (
+          <div
+            className={
+              modalVisible && width >= 585
+                ? styles.modalProductOpen585_600
+                : modalVisible && width >= 565
+                ? styles.modalProductOpen565_585
+                : modalVisible && width >= 525
+                ? styles.modalProductOpen525_565
+                : modalVisible && width >= 485
+                ? styles.modalProductOpen485_525
+                : modalVisible && width >= 450
+                ? styles.modalProductOpen450_485
+                : modalVisible && width >= 410
+                ? styles.modalProductOpen410_450
+                : modalVisible && width >= 375
+                ? styles.modalProductOpen375_410
+                : styles.modalProductClose
+            }
+          >
+            <Swiper
+              style={{
+                "--swiper-pagination-color": "rgba(219, 105, 0, 1)",
+                "--swiper-pagination-bullet-inactive-color":
+                  "rgba(224, 224, 224, 1)",
+                "--swiper-pagination-bullet-inactive-opacity": "1",
+                "--swiper-pagination-bullet-size": "9px",
+                "--swiper-pagination-bullet-horizontal-gap": "4px",
+              }}
+              className={styles.sliderProduct}
+              modules={[FreeMode, Navigation, Pagination]}
+              spaceBetween={10}
+              freeMode={false}
+              navigation={true}
+              pagination={true}
               onClick={() => {
-                let copy_cart = Array.from(pageStore.cart);
-                copy_cart.push(obj);
-                pageStore.updateCart(copy_cart);
-                navigate("/cart");
+                setModalVisible(true);
               }}
             >
-              <p>В корзину</p>
+              <div
+                className={styles.backButton}
+                onClick={() => {
+                  setModalVisible(false);
+                }}
+              >
+                <img src={whiteArrow} alt="" />
+              </div>
+              <div
+                className={styles.addFavouriveButton}
+                onClick={() => {
+                  favouriteClick();
+                }}
+              >
+                <img
+                  src={
+                    isPressed[0] ? favouriteActiveIcon : favouriteInactiveIcon
+                  }
+                  alt=""
+                />
+              </div>
+              {obj.urls.length != 0 ? (
+                obj.urls.map((elem) => (
+                  <SwiperSlide className={styles.slideProduct}>
+                    <img
+                      src={elem?.url || no_photo}
+                      alt=""
+                      className={styles.imageProductModal}
+                    />
+                  </SwiperSlide>
+                ))
+              ) : (
+                <SwiperSlide className={styles.slideProduct}>
+                  <img src={no_photo} alt="" className={styles.imageProduct} />
+                </SwiperSlide>
+              )}
+            </Swiper>
+
+            <div className={styles.priceCountView}>
+              <div className={styles.priceView}>
+                <p className={styles.priceText}>{obj?.price}₽</p>
+                <p className={styles.oldPriceText}></p>
+              </div>
+              <p className={styles.countText}>{obj?.count}</p>
+            </div>
+            <p className={styles.modelNameText}>{obj?.name}</p>
+            <div className={styles.brandButton}>
+              <p>{obj.company.name}</p>
+              <img src={whiteArrow} alt="" />
+            </div>
+            <div className={styles.sizesHeader}>
+              <p className={styles.sizeHeaderText}>Размеры (EU)</p>
+              <p className={styles.gridText}>Размерная сетка</p>
+            </div>
+            <div className={styles.sizesView}>
+              <div className={`${styles.sizeButton} ${styles.lockSizeButton}`}>
+                <div className={styles.line} />
+                <p>36</p>
+              </div>
+              <div
+                className={`${styles.sizeButton} ${styles.activeSizeButton}`}
+              >
+                <p>37</p>
+              </div>
+              <div
+                className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
+              >
+                <p>38</p>
+              </div>
+              <div
+                className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
+              >
+                <p>38</p>
+              </div>
+              <div
+                className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
+              >
+                <p>38</p>
+              </div>
+              <div
+                className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
+              >
+                <p>38</p>
+              </div>
+              <div
+                className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
+              >
+                <p>38</p>
+              </div>
+              <div
+                className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
+              >
+                <p>38</p>
+              </div>
+              <div
+                className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
+              >
+                <p>38</p>
+              </div>
+            </div>
+            <footer>
+              <div className={styles.hideView}>
+                <div
+                  className={styles.hideButton}
+                  onClick={() => {
+                    copyIsPressed[1] = !copyIsPressed[1];
+                    setIsPressed(copyIsPressed);
+                  }}
+                >
+                  <p>Доставка</p>
+                  <img
+                    src={whiteArrow}
+                    alt=""
+                    className={
+                      isPressed[1] ? styles.arrowOpen : styles.arrowClose
+                    }
+                  />
+                </div>
+                <div
+                  className={
+                    isPressed[1]
+                      ? styles.subFiltersOpen
+                      : styles.subFiltersClose
+                  }
+                >
+                  <p className={styles.hideText}>
+                    Доставка Доставка Доставка Доставка Доставка
+                    ДоставкаДоставка Доставка Доставка Доставка Доставка
+                    Доставка Доставка{" "}
+                  </p>
+                </div>
+              </div>
+              <div className={styles.hideView}>
+                <div
+                  className={styles.hideButton}
+                  onClick={() => {
+                    copyIsPressed[2] = !copyIsPressed[2];
+                    setIsPressed(copyIsPressed);
+                  }}
+                >
+                  <p>Детали</p>
+                  <img
+                    src={whiteArrow}
+                    alt=""
+                    className={
+                      isPressed[2] ? styles.arrowOpen : styles.arrowClose
+                    }
+                  />
+                </div>
+                <div
+                  className={
+                    isPressed[2]
+                      ? styles.subFiltersOpen
+                      : styles.subFiltersClose
+                  }
+                >
+                  <p className={styles.hideText}>{obj.description}</p>
+                </div>
+              </div>
+              <div className={styles.hideView}>
+                <div
+                  className={styles.hideButton}
+                  onClick={() => {
+                    copyIsPressed[3] = !copyIsPressed[3];
+                    setIsPressed(copyIsPressed);
+                  }}
+                >
+                  <p>Гарантия</p>
+                  <img
+                    src={whiteArrow}
+                    alt=""
+                    className={
+                      isPressed[3] ? styles.arrowOpen : styles.arrowClose
+                    }
+                  />
+                </div>
+                <div
+                  className={
+                    isPressed[3]
+                      ? styles.subFiltersOpen
+                      : styles.subFiltersClose
+                  }
+                >
+                  <p className={styles.hideText}>
+                    Гарантия Гарантия Гарантия Гарантия Гарантия Гарантия
+                    Гарантия Гарантия ГарантияГарантияГарантия
+                  </p>
+                </div>
+              </div>
+            </footer>
+
+            <div className={styles.actionButtons}>
+              <div className={styles.buyButton}>
+                <p>Купить сейчас</p>
+              </div>
+              <div
+                className={styles.addButton}
+                onClick={() => {
+                  let copy_cart = Array.from(pageStore.cart);
+                  copy_cart.push(obj);
+                  pageStore.updateCart(copy_cart);
+                  navigate("/cart");
+                }}
+              >
+                <p>В корзину</p>
+              </div>
             </div>
           </div>
-        </div>
-      )}
-    </div>
-  );
-};
+        )}
+      </div>
+    );
+  }
+);
 
 export default ProductModal;
