@@ -61,17 +61,17 @@ const ProductModal = observer(
       console.log("delete", response);
     };
 
-    let findProduct;
-
-    const findFavourite = async () => {
-      findProduct =
+    const findFavourite = () => {
+      let findProduct =
         pageStore.favourites.length != 0
-          ? pageStore.favourites.find((item) => item.product.id == obj.id)
+          ? pageStore.favourites.find((item) => item?.product?.id == obj?.id)
           : null;
+      return findProduct;
     };
 
+    let findProduct = findFavourite();
+
     useEffect(() => {
-      findFavourite();
       console.log("find", findProduct);
     }, [pageStore.favourites]);
 
@@ -79,7 +79,7 @@ const ProductModal = observer(
       if (!findProduct) {
         await createFavourite(obj?.id);
       } else {
-        await deleteFavourite(findProduct.id);
+        await deleteFavourite(findProduct?.id);
       }
       await pageStore.getFavouriteByUserIdFull();
     };
