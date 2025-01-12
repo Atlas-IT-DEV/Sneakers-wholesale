@@ -62,31 +62,28 @@ const ProductModal = observer(
     };
 
     const findFavourite = () => {
-      let findProduct =
-        pageStore.favourites.length != 0
-          ? pageStore.favourites.find((item) => item?.product?.id == obj?.id)
-          : null;
-      return findProduct;
+      return pageStore.favourites.length != 0
+        ? pageStore.favourites.find((item) => item?.product?.id == obj?.id)
+        : null;
     };
 
-    let findProduct = findFavourite();
-
     useEffect(() => {
-      console.log("find", findProduct);
-    }, [pageStore.favourites]);
+      modalVisible && console.log("find", findFavourite());
+    }, [pageStore.favourites, modalVisible]);
 
     const toggleFavourite = async () => {
-      if (!findProduct) {
+      if (!findFavourite()) {
+        console.log("ХУЙЙЙЙЛООО");
         await createFavourite(obj?.id);
       } else {
-        await deleteFavourite(findProduct?.id);
+        await deleteFavourite(findFavourite()?.id);
       }
       await pageStore.getFavouriteByUserIdFull();
     };
 
     useEffect(() => {
-      console.log("fav", pageStore.favourites);
-    }, [pageStore.favourites]);
+      modalVisible && console.log("fav", pageStore.favourites);
+    }, [pageStore.favourites, modalVisible]);
 
     return (
       <div>
