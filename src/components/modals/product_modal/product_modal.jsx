@@ -41,12 +41,6 @@ const ProductModal = observer(
 
     useEffect(() => {
       pageStore.getFavouriteByUserIdFull();
-      if (pageStore.favourites.length != 0) {
-        const added = pageStore.favourites.map((item) => {
-          return { ...item, is_fav: true };
-        });
-        pageStore.updateFav(added);
-      }
     }, []);
 
     const createFavourite = async (product_id) => {
@@ -60,29 +54,39 @@ const ProductModal = observer(
           method: "DELETE",
           headers: {
             accept: "application/json",
-            Authorization: `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJUT0tFTl9UWVBFX0ZJRUxEIjoiYWNjZXNzX3Rva2VuX3R5cGUiLCJzdWIiOiJhZG1pbiIsInVzZXJfaWQiOjYxOCwiZmlyc3RfbmFtZSI6IkRJTUFTUyIsImxhc3RfbmFtZSI6IlZFTElDSEtPIiwiZXhwIjoxNzM2NzAyNjA2LCJpYXQiOjE3MzY2MTYyMDZ9.PWl6R3VtK678hm81xbOZ-UruVUe9G792Lq5kghudbQFXmhoaU04rHK-esfqY32NXO-BfqWNrjgY22e8Nz8ZyfNKGjFyknDhDxT-e_mWcpIBKbJR0kJyxkvOO0DrnEtBJYrCp6Gect4rw8biXQHIRI4DpCDBtFRTof8ASBVx8DEy0wH_9vqDKRyufTK47kYmcRCn6B4x3qgYNumhg0eK_5Xbhhc3fDPJ5xxPTE_BGzYGPc1y0Zwt-EV_Em-NjE-irWxpLPr2_cGs4gQPL26bwFhOdxQNs_8mO6lMJW9SKxFQHEQ1bnCtC26J0rPFLmBZlAivWDyIyiZ3HyG84aLmUJA`,
+            Authorization: `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJUT0tFTl9UWVBFX0ZJRUxEIjoiYWNjZXNzX3Rva2VuX3R5cGUiLCJzdWIiOiJhZG1pbiIsInVzZXJfaWQiOjYxOCwiZmlyc3RfbmFtZSI6IkRJTUFTUyIsImxhc3RfbmFtZSI6IlZFTElDSEtPIiwiZXhwIjoxNzM2NzcwNTU1LCJpYXQiOjE3MzY2ODQxNTV9.m-_FGU1n-ueCXV0WTJVoN8GG2nuiJn3RG9RRcr2QxbVRJo2hiVNtW0nf2l1S-84h1-QDce1LaPdus9jtk24EAit5YB3sYrkF6N4sFktpScOdICckuRp4Xd8i8Osoq5imXa1vwdepiEcApNBi9d_iiaYrQS15uq8WmBqs3YTuxiYr7QCbYIXoyrqqPxsRv4B1fX72FMyHJ6g5tOv8wr63PJuSv8VKwVhtZ7KHX6Eg2awN8ZG2HXe2taX4iedDcNNILM3t710XBSI9XgaoIGwkh5ZM9ZJkkBNsv132096Sg2HNbS_QibxsfRLomkbsyqC9uUwb0A08X8BHEjP07kuxtQ`,
           },
         }
       );
+      console.log("delete", response);
+    };
+
+    let findProduct;
+
+    const findFavourite = async () => {
+      findProduct =
+        pageStore.favourites.length != 0
+          ? pageStore.favourites.find((item) => item.product.id == obj.id)
+          : null;
+    };
+
+    useEffect(() => {
+      findFavourite();
+      console.log("find", findProduct);
+    }, [pageStore.favourites]);
+
+    const toggleFavourite = async () => {
+      if (!findProduct) {
+        await createFavourite(obj?.id);
+      } else {
+        await deleteFavourite(findProduct.id);
+      }
+      await pageStore.getFavouriteByUserIdFull();
     };
 
     useEffect(() => {
       console.log("fav", pageStore.favourites);
-    }, [modalVisible]);
-
-    const toggleFavourite = async () => {
-      favouriteClick();
-      setModalVisible(false);
-
-      const isFavourite =
-        pageStore.favourites.length != 0
-          ? pageStore.favourites.find((item) => item.product_id == obj.id)
-          : null;
-      if (!isFavourite) {
-        await createFavourite(obj?.id);
-        pageStore.getFavouriteByUserIdFull();
-      }
-    };
+    }, [pageStore.favourites]);
 
     return (
       <div>
@@ -123,24 +127,32 @@ const ProductModal = observer(
             }}
           >
             {obj.urls.length != 0 ? (
-              obj.urls.map((elem) => (
-                <SwiperSlide className={styles.slider}>
-                  <img src={elem?.url} alt="" className={styles.imageProduct} />
-                  <div
-                    className={styles.favouriteButton}
-                    onClick={async () => {
-                      await toggleFavourite();
-                    }}
-                  >
+              obj.urls.map((elem) => {
+                return (
+                  <SwiperSlide className={styles.slider}>
                     <img
-                      // src={
-                      //   isFavourite ? favouriteActiveIcon : favouriteInactiveIcon
-                      // }
+                      src={elem?.url}
                       alt=""
+                      className={styles.imageProduct}
                     />
-                  </div>
-                </SwiperSlide>
-              ))
+                    <div
+                      className={styles.favouriteButton}
+                      onClick={async () => {
+                        await toggleFavourite();
+                      }}
+                    >
+                      <img
+                        // src={
+                        //   favourites
+                        //     ? favouriteActiveIcon
+                        //     : favouriteInactiveIcon
+                        // }
+                        alt=""
+                      />
+                    </div>
+                  </SwiperSlide>
+                );
+              })
             ) : (
               <SwiperSlide className={styles.slider}>
                 <img src={no_photo} alt="" className={styles.imageProduct} />

@@ -159,7 +159,7 @@ class PageStore {
       headers: {
         accept: "application/json",
         "Content-Type": "application/json",
-        Authorization: `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJUT0tFTl9UWVBFX0ZJRUxEIjoiYWNjZXNzX3Rva2VuX3R5cGUiLCJzdWIiOiJhZG1pbiIsInVzZXJfaWQiOjYxOCwiZmlyc3RfbmFtZSI6IkRJTUFTUyIsImxhc3RfbmFtZSI6IlZFTElDSEtPIiwiZXhwIjoxNzM2NzAyNjA2LCJpYXQiOjE3MzY2MTYyMDZ9.PWl6R3VtK678hm81xbOZ-UruVUe9G792Lq5kghudbQFXmhoaU04rHK-esfqY32NXO-BfqWNrjgY22e8Nz8ZyfNKGjFyknDhDxT-e_mWcpIBKbJR0kJyxkvOO0DrnEtBJYrCp6Gect4rw8biXQHIRI4DpCDBtFRTof8ASBVx8DEy0wH_9vqDKRyufTK47kYmcRCn6B4x3qgYNumhg0eK_5Xbhhc3fDPJ5xxPTE_BGzYGPc1y0Zwt-EV_Em-NjE-irWxpLPr2_cGs4gQPL26bwFhOdxQNs_8mO6lMJW9SKxFQHEQ1bnCtC26J0rPFLmBZlAivWDyIyiZ3HyG84aLmUJA`,
+        Authorization: `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJUT0tFTl9UWVBFX0ZJRUxEIjoiYWNjZXNzX3Rva2VuX3R5cGUiLCJzdWIiOiJhZG1pbiIsInVzZXJfaWQiOjYxOCwiZmlyc3RfbmFtZSI6IkRJTUFTUyIsImxhc3RfbmFtZSI6IlZFTElDSEtPIiwiZXhwIjoxNzM2NzY4MzAxLCJpYXQiOjE3MzY2ODE5MDF9.izcznKeHGmgXhW2BBM0hvqPEgPxR75JbSTaG2FvwJIwbV6UUDDR7nPUY8Qp6QSLFzXARIKxVJ1Xh5FQGQobMAXM2UFmsNIcI5gWuqd0Rcf8CMpIddtr79zdb4g-kRaCPArwUsToTyQup2HtXGhZRie56kbNS99YCCQ6tdvqP5QB1rI97GYMt8z6vzavWey1on0etgKbeUvaRQZHxRzwb6ieSmYwEf_YOztxl9IvvNTrCTVKBgVhtYTha8SXg48EYkRlaBTPmBzmakt5BdoXDoH9-_D7_QSUiXQaKpW-DS4-pkvJm9l8XwqVGp20K5ZD55ydKzt7bZ8IwVI3A5JO6yQ`,
       },
       body: JSON.stringify({
         id: 0,
@@ -180,9 +180,8 @@ class PageStore {
         },
       }
     );
-
     const result = await response.json();
-    this.favourites = result;
+    this.favourites = response.status == 404 ? [] : result;
   };
 
   updateFav = (new_fav) => {
