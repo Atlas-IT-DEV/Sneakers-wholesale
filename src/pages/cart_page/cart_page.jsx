@@ -98,7 +98,7 @@ const CartPage = observer(() => {
       <div className={styles.productContainer}>
         {pageStore.cart.length != 0 ? (
           combineProducts(pageStore.cart).map((item, index) => {
-            // console.log("size", item?.size);
+            console.log("size", item?.size);
             return (
               <CartProductCard
                 key={index}

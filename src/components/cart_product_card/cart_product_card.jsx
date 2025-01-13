@@ -35,13 +35,15 @@ const CartProductCard = ({
   const { pageStore } = useStores();
 
   const removeProduct = (id, size) => {
-    console.log("size", size);
+    console.log("size", size, id);
+    console.log(pageStore.cart);
+    let copy_cart = Array.from(pageStore.cart);
+    pageStore.updateCart(
+      copy_cart.filter((elem) => !(elem.id === id && elem.size === size))
+    );
     // pageStore.updateCart((prevProducts) =>
-    //   prevProducts.filter((product) => {
-    //     // return product.id != id && product.size != size;
-    //     console.log("size", size);
-    //   })
-    // );
+    //   prevProducts.filter((elem) => !(elem.id === id && elem.size === size))
+    // ); prevProducts это текущее состояние которое записано в мобиксе, НО сам превпродуктс передается в функцию в качестве аргумента, что автоматом означает что у нас внутри стрелочной функции меняется область видимости и очевидно не в нашу пользу поэтому лучше такой конструкцией не пользуйся ибо можешь запутаться как сейчас и проебать много времени либо явно передавай в стрелочную функцию нужные аргументы
   };
 
   return (
@@ -153,7 +155,10 @@ const CartProductCard = ({
                   color: "black",
                   backgroundColor: "rgba(205,205,205,1)",
                 }}
-                onClick={() => removeProduct(obj.id, obj.size)}
+                onClick={() => {
+                  console.log(obj);
+                  removeProduct(obj.id, obj.size);
+                }}
               >
                 Убрать из корзины
               </Button>
