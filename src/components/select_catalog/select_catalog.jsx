@@ -60,7 +60,21 @@ const SelectCatalog = observer(() => {
           <img src={rightArrowWhiteIcon} alt="" />
         </div>
         <AttentionModal name_button="Дропшиппинг" />
-        <AttentionModal name_button="Сборный опт" />
+        {/* <AttentionModal name_button="Сборный опт" /> */}
+        <div
+          className={`${styles.button} ${styles.activeButton}`}
+          onClick={() => {
+            pageStore.updateShopFormat(3);
+            navigate("/catalog");
+          }}
+          style={{
+            backgroundColor:
+              pageStore.shop_format == 3 ? "rgb(227, 110, 0)" : null,
+          }}
+        >
+          <p className={styles.buttonText}>Сборный опт</p>
+          <img src={rightArrowWhiteIcon} alt="" />
+        </div>
       </div>
     </div>
   );

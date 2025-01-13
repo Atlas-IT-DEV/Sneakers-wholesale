@@ -14,12 +14,13 @@ import { useStores } from "../../store/store_context";
 import { observer } from "mobx-react-lite";
 import { useEffect } from "react";
 import { useState } from "react";
+import SborOptCard from "../../components/sbor_opt_card";
 
 const CatalogPage = observer(() => {
   const { width } = useWindowDimensions();
   const navigate = useNavigate();
   const { pageStore } = useStores();
-  const formats = ["Розница", "Опт", "Сборный опт", "Дропшиппинг"];
+  const formats = ["Розница", "Опт", "Дропшиппинг", "Сборный опт"];
 
   const tg = window?.Telegram?.WebApp;
   const backButton = tg?.BackButton;

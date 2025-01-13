@@ -4,6 +4,8 @@ import orangeArrow from "../../images/orange_arrow.svg";
 import minusIcon from "../../images/minus_icon.svg";
 import plusIcon from "../../images/plus_icon.svg";
 
+import no_photo from "./../../images/tiger_big_logo.jpg";
+
 import { useEffect, useState } from "react";
 import useWindowDimensions from "../hooks/windowDimensions";
 
@@ -15,6 +17,8 @@ const FavouriteProductCard = ({
   price = 18400,
   oldPrice = 18400,
   num = 1,
+  image_product = no_photo,
+  shop_type,
 }) => {
   const [count, setCount] = useState(1);
   useEffect(() => {
@@ -41,16 +45,15 @@ const FavouriteProductCard = ({
       }
     >
       <div className={styles.imageContainer}>
-        <img
-          src="https://cache3.youla.io/files/images/780_780/5d/57/5d577bb2074b3e6c3359dfd6.jpg"
-          alt=""
-        />
+        <img src={image_product} alt="" />
       </div>
       <div className={styles.infoCard}>
         <div className={styles.headerCard}>
           <div className={styles.catalogButton}>
-            <p>Розничный магазин</p>
-            <img src={orangeArrow} alt="" />
+            <p>
+              {shop_type == "Розница" ? "Розничный магазин" : "Оптовый магазин"}
+            </p>
+            {/* <img src={orangeArrow} alt="" /> */}
           </div>
           <div className={styles.settingsProductButton}>
             <img src={settingsProduct} alt="" />
@@ -80,8 +83,8 @@ const FavouriteProductCard = ({
           </div>
         </div> */}
         <div className={styles.costsView}>
-          <p className={styles.priceText}>{price}₽</p>
-          <p className={styles.oldPriceText}>{oldPrice}₽</p>
+          <p className={styles.priceText}>{parseInt(price)} ₽</p>
+          {/* <p className={styles.oldPriceText}>{oldPrice}₽</p> */}
         </div>
         <div className={styles.buyButton}>
           <p>Купить</p>

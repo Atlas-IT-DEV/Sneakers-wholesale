@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import { useStores } from "../../store/store_context";
 import { Text } from "@chakra-ui/react";
 import { observer } from "mobx-react-lite";
+import SborOptCard from "../../components/sbor_opt_card";
 
 const FavouritesPage = observer(() => {
   const navigate = useNavigate();
@@ -77,12 +78,29 @@ const FavouritesPage = observer(() => {
       </div>
       <div className={styles.products}>
         {pageStore.favourites.length != 0 ? (
-          pageStore.favourites.map((item, index) => {
-            return <FavouriteProductCard key={index} />;
+          pageStore.products.map((item, index) => {
+            if (
+              pageStore.favourites.some((elem) => elem.product.id == item.id)
+            ) {
+              console.log("item", item);
+              return (
+                <FavouriteProductCard
+                  key={index}
+                  name={item?.company?.name}
+                  model_name={item?.name}
+                  image_product={item?.urls[0]?.url}
+                  price={item?.price}
+                  shop_type={item?.type_product}
+                />
+              );
+            }
           })
         ) : (
-          <Text>Вы ничего не добавляли в избранное</Text>
+          <Text color={"white"} textAlign={"center"}>
+            Вы ничего не добавляли в избранное
+          </Text>
         )}
+        <SborOptCard />
       </div>
       <BottomMenu />
     </div>

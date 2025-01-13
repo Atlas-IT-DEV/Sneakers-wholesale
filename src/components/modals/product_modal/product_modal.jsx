@@ -17,6 +17,7 @@ import { useNavigate } from "react-router";
 
 import no_photo from "./../../../images/tiger_big_logo.jpg";
 import { observer } from "mobx-react-lite";
+import { Text } from "@chakra-ui/react";
 
 const ProductModal = observer(
   ({
@@ -72,8 +73,8 @@ const ProductModal = observer(
     }, [pageStore.favourites, modalVisible]);
 
     const toggleFavourite = async () => {
+      setModalVisible(false);
       if (!findFavourite()) {
-        console.log("ХУЙЙЙЙЛООО");
         await createFavourite(obj?.id);
       } else {
         await deleteFavourite(findFavourite()?.id);
@@ -84,6 +85,8 @@ const ProductModal = observer(
     useEffect(() => {
       modalVisible && console.log("fav", pageStore.favourites);
     }, [pageStore.favourites, modalVisible]);
+
+    const [selectedSize, setSelectedSize] = useState("");
 
     return (
       <div>
@@ -139,11 +142,11 @@ const ProductModal = observer(
                       }}
                     >
                       <img
-                        // src={
-                        //   favourites
-                        //     ? favouriteActiveIcon
-                        //     : favouriteInactiveIcon
-                        // }
+                        src={
+                          findFavourite()
+                            ? favouriteActiveIcon
+                            : favouriteInactiveIcon
+                        }
                         alt=""
                       />
                     </div>
@@ -155,14 +158,16 @@ const ProductModal = observer(
                 <img src={no_photo} alt="" className={styles.imageProduct} />
                 <div
                   className={styles.favouriteButton}
-                  onClick={() => {
-                    setModalVisible(false);
+                  onClick={async () => {
+                    await toggleFavourite();
                   }}
                 >
                   <img
-                    // src={
-                    //   isFavourite ? favouriteActiveIcon : favouriteInactiveIcon
-                    // }
+                    src={
+                      findFavourite()
+                        ? favouriteActiveIcon
+                        : favouriteInactiveIcon
+                    }
                     alt=""
                   />
                 </div>
@@ -214,6 +219,7 @@ const ProductModal = observer(
                 className={styles.backButton}
                 onClick={() => {
                   setModalVisible(false);
+                  setSelectedSize("");
                 }}
               >
                 <img src={whiteArrow} alt="" />
@@ -265,51 +271,26 @@ const ProductModal = observer(
               <p className={styles.gridText}>Размерная сетка</p>
             </div>
             <div className={styles.sizesView}>
-              <div className={`${styles.sizeButton} ${styles.lockSizeButton}`}>
-                <div className={styles.line} />
-                <p>36</p>
-              </div>
-              <div
-                className={`${styles.sizeButton} ${styles.activeSizeButton}`}
-              >
-                <p>37</p>
-              </div>
-              <div
-                className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
-              >
-                <p>38</p>
-              </div>
-              <div
-                className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
-              >
-                <p>38</p>
-              </div>
-              <div
-                className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
-              >
-                <p>38</p>
-              </div>
-              <div
-                className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
-              >
-                <p>38</p>
-              </div>
-              <div
-                className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
-              >
-                <p>38</p>
-              </div>
-              <div
-                className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
-              >
-                <p>38</p>
-              </div>
-              <div
-                className={`${styles.sizeButton} ${styles.inActiveSizeButton}`}
-              >
-                <p>38</p>
-              </div>
+              {obj?.characteristics.map((item, index) =>
+                item?.id == 1 ? (
+                  <div
+                    className={`${styles.sizeButton} ${
+                      selectedSize == item?.value
+                        ? styles.activeSizeButton
+                        : styles.inActiveSizeButton
+                    }`}
+                    onClick={() => setSelectedSize(item?.value)}
+                  >
+                    <p>{item?.value}</p>
+                  </div>
+                ) : null
+              )}
             </div>
+            {selectedSize == "" && (
+              <Text color={"red"} fontSize={"14px"} marginLeft={"26px"}>
+                Выберите размер
+              </Text>
+            )}
             <footer>
               <div className={styles.hideView}>
                 <div
@@ -402,16 +383,23 @@ const ProductModal = observer(
             </footer>
 
             <div className={styles.actionButtons}>
-              <div className={styles.buyButton}>
+              <div
+                className={styles.buyButton}
+                style={selectedSize == "" ? { cursor: "no-drop" } : null}
+              >
                 <p>Купить сейчас</p>
               </div>
               <div
                 className={styles.addButton}
+                style={selectedSize == "" ? { cursor: "no-drop" } : null}
                 onClick={() => {
-                  let copy_cart = Array.from(pageStore.cart);
-                  copy_cart.push(obj);
-                  pageStore.updateCart(copy_cart);
-                  navigate("/cart");
+                  if (selectedSize != "") {
+                    let copy_cart = Array.from(pageStore.cart);
+                    copy_cart.push({ ...obj, size: selectedSize });
+                    pageStore.updateCart(copy_cart);
+                    setSelectedSize("");
+                    navigate("/cart");
+                  }
                 }}
               >
                 <p>В корзину</p>

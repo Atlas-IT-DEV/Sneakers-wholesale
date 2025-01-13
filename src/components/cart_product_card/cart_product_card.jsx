@@ -27,13 +27,20 @@ const CartProductCard = ({
   new_price = 12000,
   image = "https://legacy.reactjs.org/logo-og.png",
   count_product,
-  remove,
   onChangeQuantity,
   obj,
 }) => {
   const { width } = useWindowDimensions();
 
   const { pageStore } = useStores();
+
+  const removeProduct = (id, size) => {
+    pageStore.updateCart((prevProducts) =>
+      prevProducts.filter((product) => {
+        return product.id != id && product.size != size;
+      })
+    );
+  };
 
   return (
     <div
@@ -144,7 +151,7 @@ const CartProductCard = ({
                   color: "black",
                   backgroundColor: "rgba(205,205,205,1)",
                 }}
-                onClick={remove}
+                onClick={() => removeProduct(obj.id, obj.size)}
               >
                 Убрать из корзины
               </Button>

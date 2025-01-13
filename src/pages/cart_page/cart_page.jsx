@@ -25,13 +25,11 @@ const CartPage = observer(() => {
   };
   backButton?.onClick(back_page);
 
-  useEffect(() => {
-    console.log("cart", pageStore.cart);
-  }, [pageStore.cart]);
-
   const combineProducts = (products) => {
     return products.reduce((acc, product) => {
-      const existingProduct = acc.find((item) => item.id === product.id);
+      const existingProduct = acc.find(
+        (item) => item.id === product.id && item.size === product.size
+      );
       if (existingProduct) {
         existingProduct.quantity += 1;
       } else {
@@ -41,13 +39,7 @@ const CartPage = observer(() => {
     }, []);
   };
 
-  const removeProduct = (id) => {
-    pageStore.updateCart((prevProducts) =>
-      prevProducts.filter((product) => product.id !== id)
-    );
-  };
-
-  const changeQuantity = (value, obj, id) => {
+  const changeQuantity = (value, obj, id, size) => {
     if (value <= 0) return;
     let copy_cart = Array.from(pageStore.cart);
     const filtered = copy_cart.filter((item) => {
@@ -74,6 +66,13 @@ const CartPage = observer(() => {
 
     return priceCart;
   };
+
+  useEffect(() => {
+    console.log(
+      "cart sizes",
+      pageStore.cart.map((item) => item?.size)
+    );
+  }, [pageStore.cart]);
 
   return (
     <div
@@ -106,6 +105,7 @@ const CartPage = observer(() => {
       <div className={styles.productContainer}>
         {pageStore.cart.length != 0 ? (
           combineProducts(pageStore.cart).map((item, index) => {
+            // console.log("size", item?.size);
             return (
               <CartProductCard
                 key={index}
@@ -117,9 +117,10 @@ const CartPage = observer(() => {
                 count_product={item?.quantity}
                 obj={item}
                 idx={index}
-                remove={() => removeProduct(item?.id)}
+                size={item?.size}
+                // remove={() => removeProduct(item?.id, item?.size)}
                 onChangeQuantity={(value) =>
-                  changeQuantity(value, item, item?.id)
+                  changeQuantity(value, item, item?.id, item?.size)
                 }
               />
             );
