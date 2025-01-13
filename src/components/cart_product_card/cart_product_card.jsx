@@ -35,11 +35,13 @@ const CartProductCard = ({
   const { pageStore } = useStores();
 
   const removeProduct = (id, size) => {
-    pageStore.updateCart((prevProducts) =>
-      prevProducts.filter((product) => {
-        return product.id != id && product.size != size;
-      })
-    );
+    console.log("size", size);
+    // pageStore.updateCart((prevProducts) =>
+    //   prevProducts.filter((product) => {
+    //     // return product.id != id && product.size != size;
+    //     console.log("size", size);
+    //   })
+    // );
   };
 
   return (

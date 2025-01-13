@@ -67,13 +67,6 @@ const CartPage = observer(() => {
     return priceCart;
   };
 
-  useEffect(() => {
-    console.log(
-      "cart sizes",
-      pageStore.cart.map((item) => item?.size)
-    );
-  }, [pageStore.cart]);
-
   return (
     <div
       className={
