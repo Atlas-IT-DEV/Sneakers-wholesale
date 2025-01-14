@@ -215,7 +215,7 @@ const CatalogPage = observer(() => {
       </div>
       {similar.length != 0 && (
         <VStack padding={"0px 30px"}>
-          <Text color={"white"} alignSelf={"flex-start"}>
+          <Text color={"white"} alignSelf={"flex-start"} fontSize={20}>
             Возможно вы искали...
           </Text>
           <div className={styles.products}>

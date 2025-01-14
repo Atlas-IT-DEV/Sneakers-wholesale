@@ -17,7 +17,8 @@ import { useNavigate } from "react-router";
 
 import no_photo from "./../../../images/tiger_big_logo.jpg";
 import { observer } from "mobx-react-lite";
-import { Text } from "@chakra-ui/react";
+import { Text, VStack } from "@chakra-ui/react";
+import { useToast } from "@chakra-ui/react";
 
 const ProductModal = observer(
   ({
@@ -39,10 +40,7 @@ const ProductModal = observer(
       copyIsPressed[0] = !copyIsPressed[0];
       setIsPressed(copyIsPressed);
     };
-
-    useEffect(() => {
-      pageStore.getFavouriteByUserIdFull();
-    }, []);
+    const toast = useToast();
 
     const createFavourite = async (product_id) => {
       await pageStore.createFavourite(product_id);
@@ -271,20 +269,22 @@ const ProductModal = observer(
               <p className={styles.gridText}>Размерная сетка</p>
             </div>
             <div className={styles.sizesView}>
-              {obj?.characteristics.map((item, index) =>
-                item?.id == 1 ? (
+              {Array.from(obj?.characteristics)
+                .filter((elem) => elem.id == 1)
+                .map((elem) => elem.value)
+                .sort()
+                .map((item) => (
                   <div
                     className={`${styles.sizeButton} ${
-                      selectedSize == item?.value
+                      selectedSize == item
                         ? styles.activeSizeButton
                         : styles.inActiveSizeButton
                     }`}
-                    onClick={() => setSelectedSize(item?.value)}
+                    onClick={() => setSelectedSize(item)}
                   >
-                    <p>{item?.value}</p>
+                    <p>{item}</p>
                   </div>
-                ) : null
-              )}
+                ))}
             </div>
             {selectedSize == "" && (
               <Text color={"red"} fontSize={"14px"} marginLeft={"26px"}>
@@ -386,6 +386,15 @@ const ProductModal = observer(
               <div
                 className={styles.buyButton}
                 style={selectedSize == "" ? { cursor: "no-drop" } : null}
+                onClick={() => {
+                  if (selectedSize != "") {
+                    let copy_cart = Array.from(pageStore.cart);
+                    copy_cart.push({ ...obj, size: selectedSize });
+                    pageStore.updateCart(copy_cart);
+                    setSelectedSize("");
+                    navigate("/cart");
+                  }
+                }}
               >
                 <p>Купить сейчас</p>
               </div>
@@ -398,7 +407,6 @@ const ProductModal = observer(
                     copy_cart.push({ ...obj, size: selectedSize });
                     pageStore.updateCart(copy_cart);
                     setSelectedSize("");
-                    navigate("/cart");
                   }
                 }}
               >

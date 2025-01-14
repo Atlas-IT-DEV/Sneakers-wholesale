@@ -6,10 +6,13 @@ import shoppingCartIcon from "../../images/shopping_cart_inactive.svg";
 
 import useWindowDimensions from "../hooks/windowDimensions";
 import { useNavigate } from "react-router";
-
-const BottomMenu = () => {
+import { useStores } from "../../store/store_context";
+import { Text, VStack } from "@chakra-ui/react";
+import { observer } from "mobx-react-lite";
+const BottomMenu = observer(() => {
   const { width } = useWindowDimensions();
   const navigate = useNavigate();
+  const { pageStore } = useStores();
   return (
     <div
       className={
@@ -29,11 +32,41 @@ const BottomMenu = () => {
       }
     >
       <img src={homeIcon} alt="" onClick={() => navigate("/")} />
-      <img src={catalogIcon} alt="" onClick={() => navigate("/catalog")}/>
-      <img src={favouriteIcon} alt="" onClick={() => navigate("/favourites")}/>
-      <img src={shoppingCartIcon} alt="" onClick={() => navigate("/cart")} />
+      <img src={catalogIcon} alt="" onClick={() => navigate("/catalog")} />
+      <VStack position={"relative"}>
+        <img
+          src={favouriteIcon}
+          alt=""
+          onClick={() => navigate("/favourites")}
+        />
+        {pageStore.favourites.length != 0 && (
+          <Text
+            position={"absolute"}
+            color={"rgb(219, 105, 0)"}
+            top={0}
+            right={1}
+            fontWeight={600}
+          >
+            {pageStore.favourites.length}
+          </Text>
+        )}
+      </VStack>
+      <VStack position={"relative"}>
+        <img src={shoppingCartIcon} alt="" onClick={() => navigate("/cart")} />
+        {pageStore.cart.length != 0 && (
+          <Text
+            position={"absolute"}
+            color={"rgb(219, 105, 0)"}
+            top={0}
+            right={1}
+            fontWeight={600}
+          >
+            {pageStore.cart.length}
+          </Text>
+        )}
+      </VStack>
     </div>
   );
-};
+});
 
 export default BottomMenu;

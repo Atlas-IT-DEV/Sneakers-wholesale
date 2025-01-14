@@ -19,6 +19,7 @@ const MainPage = observer(() => {
     pageStore.getProducts();
     pageStore.getCompanys();
     pageStore.getChars();
+    pageStore.getFavouriteByUserIdFull();
   }, []);
   const tg = window.Telegram.WebApp;
 
