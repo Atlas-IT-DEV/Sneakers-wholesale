@@ -17,7 +17,7 @@
   color: #fcfcfc;
   font-size: 23px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container585_600 .header .backButton {
   display: flex;
@@ -43,7 +43,7 @@
   color: white;
   font-size: 21px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container585_600 .view .selectButton {
   margin-top: 10px;
@@ -62,7 +62,7 @@
 }
 .container585_600 .view .selectButton .contentView p {
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 21px;
   font-weight: 500;
 }
@@ -78,7 +78,7 @@
 .container585_600 .view .methodButton p {
   color: #878787;
   font-size: 21px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .container585_600 .products {
@@ -118,7 +118,7 @@
   color: white;
   font-size: 23px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container585_600 .descriptionView {
   display: flex;
@@ -135,7 +135,7 @@
 }
 .container585_600 .descriptionView .viewTotal .descText {
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 20px;
   font-weight: 500;
 }
@@ -157,11 +157,11 @@
 .container585_600 .orderButton .orderButtonText {
   color: white;
   font-size: 23px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .container585_600 .orderButton .priceText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
   font-size: 23px;
 }
@@ -191,7 +191,7 @@
   color: #fcfcfc;
   font-size: 21px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container565_585 .header .backButton {
   display: flex;
@@ -217,7 +217,7 @@
   color: white;
   font-size: 20px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container565_585 .view .selectButton {
   margin-top: 10px;
@@ -236,7 +236,7 @@
 }
 .container565_585 .view .selectButton .contentView p {
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 20px;
   font-weight: 500;
 }
@@ -252,7 +252,7 @@
 .container565_585 .view .methodButton p {
   color: #878787;
   font-size: 20px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .container565_585 .products {
@@ -292,7 +292,7 @@
   color: white;
   font-size: 21px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container565_585 .descriptionView {
   display: flex;
@@ -309,7 +309,7 @@
 }
 .container565_585 .descriptionView .viewTotal .descText {
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 19px;
   font-weight: 500;
 }
@@ -331,11 +331,11 @@
 .container565_585 .orderButton .orderButtonText {
   color: white;
   font-size: 21px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .container565_585 .orderButton .priceText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
   font-size: 21px;
 }
@@ -365,7 +365,7 @@
   color: #fcfcfc;
   font-size: 20px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container525_565 .header .backButton {
   display: flex;
@@ -391,7 +391,7 @@
   color: white;
   font-size: 18px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container525_565 .view .selectButton {
   margin-top: 10px;
@@ -410,7 +410,7 @@
 }
 .container525_565 .view .selectButton .contentView p {
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 18px;
   font-weight: 500;
 }
@@ -426,7 +426,7 @@
 .container525_565 .view .methodButton p {
   color: #878787;
   font-size: 18px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .container525_565 .products {
@@ -466,7 +466,7 @@
   color: white;
   font-size: 20px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container525_565 .descriptionView {
   display: flex;
@@ -483,7 +483,7 @@
 }
 .container525_565 .descriptionView .viewTotal .descText {
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 17px;
   font-weight: 500;
 }
@@ -505,11 +505,11 @@
 .container525_565 .orderButton .orderButtonText {
   color: white;
   font-size: 20px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .container525_565 .orderButton .priceText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
   font-size: 20px;
 }
@@ -539,7 +539,7 @@
   color: #fcfcfc;
   font-size: 18px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container485_525 .header .backButton {
   display: flex;
@@ -565,7 +565,7 @@
   color: white;
   font-size: 16px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container485_525 .view .selectButton {
   margin-top: 10px;
@@ -584,7 +584,7 @@
 }
 .container485_525 .view .selectButton .contentView p {
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 16px;
   font-weight: 500;
 }
@@ -600,7 +600,7 @@
 .container485_525 .view .methodButton p {
   color: #878787;
   font-size: 16px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .container485_525 .products {
@@ -640,7 +640,7 @@
   color: white;
   font-size: 18px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container485_525 .descriptionView {
   display: flex;
@@ -657,7 +657,7 @@
 }
 .container485_525 .descriptionView .viewTotal .descText {
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 15px;
   font-weight: 500;
 }
@@ -679,11 +679,11 @@
 .container485_525 .orderButton .orderButtonText {
   color: white;
   font-size: 18px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .container485_525 .orderButton .priceText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
   font-size: 18px;
 }
@@ -713,7 +713,7 @@
   color: #fcfcfc;
   font-size: 17px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container450_485 .header .backButton {
   display: flex;
@@ -739,7 +739,7 @@
   color: white;
   font-size: 15px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container450_485 .view .selectButton {
   margin-top: 10px;
@@ -758,7 +758,7 @@
 }
 .container450_485 .view .selectButton .contentView p {
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 15px;
   font-weight: 500;
 }
@@ -774,7 +774,7 @@
 .container450_485 .view .methodButton p {
   color: #878787;
   font-size: 15px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .container450_485 .products {
@@ -814,7 +814,7 @@
   color: white;
   font-size: 17px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container450_485 .descriptionView {
   display: flex;
@@ -831,7 +831,7 @@
 }
 .container450_485 .descriptionView .viewTotal .descText {
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 14px;
   font-weight: 500;
 }
@@ -853,11 +853,11 @@
 .container450_485 .orderButton .orderButtonText {
   color: white;
   font-size: 17px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .container450_485 .orderButton .priceText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
   font-size: 17px;
 }
@@ -887,7 +887,7 @@
   color: #fcfcfc;
   font-size: 16px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container410_450 .header .backButton {
   display: flex;
@@ -913,7 +913,7 @@
   color: white;
   font-size: 14px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container410_450 .view .selectButton {
   margin-top: 10px;
@@ -932,7 +932,7 @@
 }
 .container410_450 .view .selectButton .contentView p {
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 14px;
   font-weight: 500;
 }
@@ -948,7 +948,7 @@
 .container410_450 .view .methodButton p {
   color: #878787;
   font-size: 14px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .container410_450 .products {
@@ -988,7 +988,7 @@
   color: white;
   font-size: 16px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container410_450 .descriptionView {
   display: flex;
@@ -1005,7 +1005,7 @@
 }
 .container410_450 .descriptionView .viewTotal .descText {
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 13px;
   font-weight: 500;
 }
@@ -1027,11 +1027,11 @@
 .container410_450 .orderButton .orderButtonText {
   color: white;
   font-size: 16px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .container410_450 .orderButton .priceText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
   font-size: 16px;
 }
@@ -1061,7 +1061,7 @@
   color: #fcfcfc;
   font-size: 16px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container375_410 .header .backButton {
   display: flex;
@@ -1087,7 +1087,7 @@
   color: white;
   font-size: 14px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container375_410 .view .selectButton {
   margin-top: 10px;
@@ -1106,7 +1106,7 @@
 }
 .container375_410 .view .selectButton .contentView p {
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 14px;
   font-weight: 500;
 }
@@ -1122,7 +1122,7 @@
 .container375_410 .view .methodButton p {
   color: #878787;
   font-size: 14px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .container375_410 .products {
@@ -1162,7 +1162,7 @@
   color: white;
   font-size: 16px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container375_410 .descriptionView {
   display: flex;
@@ -1179,7 +1179,7 @@
 }
 .container375_410 .descriptionView .viewTotal .descText {
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 13px;
   font-weight: 500;
 }
@@ -1201,11 +1201,11 @@
 .container375_410 .orderButton .orderButtonText {
   color: white;
   font-size: 16px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .container375_410 .orderButton .priceText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
   font-size: 16px;
 }

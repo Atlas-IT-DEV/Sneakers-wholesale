@@ -16,7 +16,7 @@ const ScoresCard = () => {
       >
         <HStack width={"100%"} justify={"space-between"}>
           <Text
-            fontFamily={"TTForsTrialVariable"}
+            fontFamily={"montserrat"}
             color={" rgba(227, 110, 0, 1)"}
             fontSize={"17px"}
             fontWeight={600}
@@ -28,7 +28,7 @@ const ScoresCard = () => {
         <HStack width={"100%"} justify={"space-between"} align={"flex-end"}>
           <img src={moneyIcon} alt="" />
           <Text
-            fontFamily={"TTForsTrialVariable"}
+            fontFamily={"montserrat"}
             color={" rgba(227, 110, 0, 1)"}
             fontSize={"17px"}
             fontWeight={600}

@@ -31,7 +31,7 @@
   color: white;
   font-size: 18px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container585_600 .header .telegramButton {
   display: flex;
@@ -48,7 +48,7 @@
   width: 31px;
 }
 .container585_600 .header .telegramText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: black;
   font-weight: 500;
   font-size: 18px;
@@ -64,7 +64,7 @@
   text-align: center;
   border-radius: 90px;
   width: max-content;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   margin: 30px 30px 0 30px;
 }
 .container585_600 .bronzeRank {
@@ -79,7 +79,7 @@
 .container585_600 .discountText {
   margin: 30px 30px 0 30px;
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 21px;
   font-weight: 600;
 }
@@ -96,7 +96,7 @@
   color: white;
   font-size: 21px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container585_600 .countPurchase p span {
   color: #f07a0a;
@@ -118,7 +118,7 @@
 .container585_600 .loyalityProgram .headerLoyality p {
   color: #f1f1f1;
   font-size: 21px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .container585_600 .loyalityProgram .headerLoyality img {
@@ -153,7 +153,7 @@
 }
 .container585_600 .subFiltersOpen .statusLoyality .statusText {
   color: #686868;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 23px;
   padding-right: 30px;
 }
@@ -164,7 +164,7 @@
   text-decoration: underline;
   margin-top: 15px;
   font-size: 20px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: #686868;
   cursor: pointer;
 }
@@ -206,7 +206,7 @@
   color: white;
   font-size: 18px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container565_585 .header .telegramButton {
   display: flex;
@@ -223,7 +223,7 @@
   width: 30px;
 }
 .container565_585 .header .telegramText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: black;
   font-weight: 500;
   font-size: 18px;
@@ -239,7 +239,7 @@
   text-align: center;
   border-radius: 90px;
   width: max-content;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   margin: 30px 30px 0 30px;
 }
 .container565_585 .bronzeRank {
@@ -254,7 +254,7 @@
 .container565_585 .discountText {
   margin: 30px 30px 0 30px;
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 20px;
   font-weight: 600;
 }
@@ -271,7 +271,7 @@
   color: white;
   font-size: 20px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container565_585 .countPurchase p span {
   color: #f07a0a;
@@ -293,7 +293,7 @@
 .container565_585 .loyalityProgram .headerLoyality p {
   color: #f1f1f1;
   font-size: 20px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .container565_585 .loyalityProgram .headerLoyality img {
@@ -328,7 +328,7 @@
 }
 .container565_585 .subFiltersOpen .statusLoyality .statusText {
   color: #686868;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 21px;
   padding-right: 30px;
 }
@@ -339,7 +339,7 @@
   text-decoration: underline;
   margin-top: 15px;
   font-size: 19px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: #686868;
   cursor: pointer;
 }
@@ -381,7 +381,7 @@
   color: white;
   font-size: 18px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container525_565 .header .telegramButton {
   display: flex;
@@ -398,7 +398,7 @@
   width: 29px;
 }
 .container525_565 .header .telegramText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: black;
   font-weight: 500;
   font-size: 18px;
@@ -414,7 +414,7 @@
   text-align: center;
   border-radius: 90px;
   width: max-content;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   margin: 30px 30px 0 30px;
 }
 .container525_565 .bronzeRank {
@@ -429,7 +429,7 @@
 .container525_565 .discountText {
   margin: 30px 30px 0 30px;
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 18px;
   font-weight: 600;
 }
@@ -446,7 +446,7 @@
   color: white;
   font-size: 18px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container525_565 .countPurchase p span {
   color: #f07a0a;
@@ -468,7 +468,7 @@
 .container525_565 .loyalityProgram .headerLoyality p {
   color: #f1f1f1;
   font-size: 18px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .container525_565 .loyalityProgram .headerLoyality img {
@@ -503,7 +503,7 @@
 }
 .container525_565 .subFiltersOpen .statusLoyality .statusText {
   color: #686868;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 20px;
   padding-right: 30px;
 }
@@ -514,7 +514,7 @@
   text-decoration: underline;
   margin-top: 15px;
   font-size: 17px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: #686868;
   cursor: pointer;
 }
@@ -556,7 +556,7 @@
   color: white;
   font-size: 16px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container485_525 .header .telegramButton {
   display: flex;
@@ -573,7 +573,7 @@
   width: 28px;
 }
 .container485_525 .header .telegramText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: black;
   font-weight: 500;
   font-size: 16px;
@@ -589,7 +589,7 @@
   text-align: center;
   border-radius: 90px;
   width: max-content;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   margin: 30px 30px 0 30px;
 }
 .container485_525 .bronzeRank {
@@ -604,7 +604,7 @@
 .container485_525 .discountText {
   margin: 30px 30px 0 30px;
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 16px;
   font-weight: 600;
 }
@@ -621,7 +621,7 @@
   color: white;
   font-size: 16px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container485_525 .countPurchase p span {
   color: #f07a0a;
@@ -643,7 +643,7 @@
 .container485_525 .loyalityProgram .headerLoyality p {
   color: #f1f1f1;
   font-size: 16px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .container485_525 .loyalityProgram .headerLoyality img {
@@ -678,7 +678,7 @@
 }
 .container485_525 .subFiltersOpen .statusLoyality .statusText {
   color: #686868;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 18px;
   padding-right: 30px;
 }
@@ -689,7 +689,7 @@
   text-decoration: underline;
   margin-top: 15px;
   font-size: 15px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: #686868;
   cursor: pointer;
 }
@@ -731,7 +731,7 @@
   color: white;
   font-size: 16px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container450_485 .header .telegramButton {
   display: flex;
@@ -748,7 +748,7 @@
   width: 27px;
 }
 .container450_485 .header .telegramText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: black;
   font-weight: 500;
   font-size: 16px;
@@ -764,7 +764,7 @@
   text-align: center;
   border-radius: 90px;
   width: max-content;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   margin: 30px 30px 0 30px;
 }
 .container450_485 .bronzeRank {
@@ -779,7 +779,7 @@
 .container450_485 .discountText {
   margin: 30px 30px 0 30px;
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 15px;
   font-weight: 600;
 }
@@ -796,7 +796,7 @@
   color: white;
   font-size: 15px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container450_485 .countPurchase p span {
   color: #f07a0a;
@@ -818,7 +818,7 @@
 .container450_485 .loyalityProgram .headerLoyality p {
   color: #f1f1f1;
   font-size: 15px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .container450_485 .loyalityProgram .headerLoyality img {
@@ -853,7 +853,7 @@
 }
 .container450_485 .subFiltersOpen .statusLoyality .statusText {
   color: #686868;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 17px;
   padding-right: 30px;
 }
@@ -864,7 +864,7 @@
   text-decoration: underline;
   margin-top: 15px;
   font-size: 14px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: #686868;
   cursor: pointer;
 }
@@ -906,7 +906,7 @@
   color: white;
   font-size: 14px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container410_450 .header .telegramButton {
   display: flex;
@@ -923,7 +923,7 @@
   width: 26px;
 }
 .container410_450 .header .telegramText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: black;
   font-weight: 500;
   font-size: 14px;
@@ -939,7 +939,7 @@
   text-align: center;
   border-radius: 90px;
   width: max-content;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   margin: 30px 30px 0 30px;
 }
 .container410_450 .bronzeRank {
@@ -954,7 +954,7 @@
 .container410_450 .discountText {
   margin: 30px 30px 0 30px;
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 14px;
   font-weight: 600;
 }
@@ -971,7 +971,7 @@
   color: white;
   font-size: 14px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container410_450 .countPurchase p span {
   color: #f07a0a;
@@ -993,7 +993,7 @@
 .container410_450 .loyalityProgram .headerLoyality p {
   color: #f1f1f1;
   font-size: 14px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .container410_450 .loyalityProgram .headerLoyality img {
@@ -1028,7 +1028,7 @@
 }
 .container410_450 .subFiltersOpen .statusLoyality .statusText {
   color: #686868;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 16px;
   padding-right: 30px;
 }
@@ -1039,7 +1039,7 @@
   text-decoration: underline;
   margin-top: 15px;
   font-size: 13px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: #686868;
   cursor: pointer;
 }
@@ -1081,7 +1081,7 @@
   color: white;
   font-size: 14px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container375_410 .header .telegramButton {
   display: flex;
@@ -1098,7 +1098,7 @@
   width: 25px;
 }
 .container375_410 .header .telegramText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: black;
   font-weight: 500;
   font-size: 14px;
@@ -1114,7 +1114,7 @@
   text-align: center;
   border-radius: 90px;
   width: max-content;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   margin: 30px 30px 0 30px;
 }
 .container375_410 .bronzeRank {
@@ -1129,7 +1129,7 @@
 .container375_410 .discountText {
   margin: 30px 30px 0 30px;
   color: white;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 14px;
   font-weight: 600;
 }
@@ -1146,7 +1146,7 @@
   color: white;
   font-size: 14px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container375_410 .countPurchase p span {
   color: #f07a0a;
@@ -1168,7 +1168,7 @@
 .container375_410 .loyalityProgram .headerLoyality p {
   color: #f1f1f1;
   font-size: 14px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .container375_410 .loyalityProgram .headerLoyality img {
@@ -1203,7 +1203,7 @@
 }
 .container375_410 .subFiltersOpen .statusLoyality .statusText {
   color: #686868;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 16px;
   padding-right: 30px;
 }
@@ -1214,7 +1214,7 @@
   text-decoration: underline;
   margin-top: 15px;
   font-size: 13px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: #686868;
   cursor: pointer;
 }

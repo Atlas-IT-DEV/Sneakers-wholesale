@@ -22,7 +22,7 @@
 .button585_600 .buttonText {
   font-size: 21px;
   font-weight: 500;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   text-align: center;
 }
 .button565_585 {
@@ -39,7 +39,7 @@
 .button565_585 .buttonText {
   font-size: 20px;
   font-weight: 500;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   text-align: center;
 }
 .button525_565 {
@@ -56,7 +56,7 @@
 .button525_565 .buttonText {
   font-size: 18px;
   font-weight: 500;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   text-align: center;
 }
 .button485_525 {
@@ -73,7 +73,7 @@
 .button485_525 .buttonText {
   font-size: 16px;
   font-weight: 500;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   text-align: center;
 }
 .button450_485 {
@@ -90,7 +90,7 @@
 .button450_485 .buttonText {
   font-size: 15px;
   font-weight: 500;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   text-align: center;
 }
 .button410_450 {
@@ -108,7 +108,7 @@
 .button410_450 .buttonText {
   font-size: 14px;
   font-weight: 500;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   text-align: center;
 }
 .button375_410 {
@@ -126,7 +126,7 @@
 .button375_410 .buttonText {
   font-size: 14px;
   font-weight: 500;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   text-align: center;
 }
 .modal585_600 .closeButton {
@@ -139,7 +139,7 @@
   text-align: center;
   padding: 0 38px 0 38px;
   font-size: 21px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
   line-height: 28px;
 }
@@ -156,7 +156,7 @@
 }
 .modal585_600 .aboutButton p {
   color: #7a7a7a;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 18px;
   font-weight: 500;
 }
@@ -174,7 +174,7 @@
   text-align: center;
   padding: 0 38px 0 38px;
   font-size: 20px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
   line-height: 28px;
 }
@@ -191,7 +191,7 @@
 }
 .modal565_585 .aboutButton p {
   color: #7a7a7a;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 18px;
   font-weight: 500;
 }
@@ -209,7 +209,7 @@
   text-align: center;
   padding: 0 38px 0 38px;
   font-size: 18px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
   line-height: 28px;
 }
@@ -226,7 +226,7 @@
 }
 .modal525_565 .aboutButton p {
   color: #7a7a7a;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 17px;
   font-weight: 500;
 }
@@ -244,7 +244,7 @@
   text-align: center;
   padding: 0 33px 0 33px;
   font-size: 16px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
   line-height: 28px;
 }
@@ -261,7 +261,7 @@
 }
 .modal485_525 .aboutButton p {
   color: #7a7a7a;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 16px;
   font-weight: 500;
 }
@@ -279,7 +279,7 @@
   text-align: center;
   padding: 0 33px 0 33px;
   font-size: 15px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
   line-height: 28px;
 }
@@ -296,7 +296,7 @@
 }
 .modal450_485 .aboutButton p {
   color: #7a7a7a;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 16px;
   font-weight: 500;
 }
@@ -314,7 +314,7 @@
   text-align: center;
   padding: 0 38px 0 38px;
   font-size: 14px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
   line-height: 28px;
 }
@@ -331,7 +331,7 @@
 }
 .modal410_450 .aboutButton p {
   color: #7a7a7a;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 14px;
   font-weight: 500;
 }
@@ -349,7 +349,7 @@
   text-align: center;
   padding: 0 38px 0 38px;
   font-size: 14px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
   line-height: 28px;
 }
@@ -366,7 +366,7 @@
 }
 .modal375_410 .aboutButton p {
   color: #7a7a7a;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 14px;
   font-weight: 500;
 }

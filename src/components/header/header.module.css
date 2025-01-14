@@ -31,7 +31,7 @@
   color: white;
   font-size: 18px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container585_600 .aboutUser .attributes .rankUser {
   display: flex;
@@ -44,7 +44,7 @@
   text-align: center;
   border-radius: 90px;
   width: max-content;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container585_600 .aboutUser .attributes .bronzeRank {
   background: linear-gradient(90deg, #df7b42, #7a3e1c);
@@ -70,7 +70,7 @@
   width: 31px;
 }
 .container585_600 .telegramText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: black;
   font-weight: 500;
   font-size: 18px;
@@ -108,7 +108,7 @@
   color: white;
   font-size: 18px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container565_585 .aboutUser .attributes .rankUser {
   display: flex;
@@ -122,7 +122,7 @@
   text-align: center;
   border-radius: 90px;
   width: max-content;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container565_585 .aboutUser .attributes .bronzeRank {
   background: linear-gradient(90deg, #df7b42, #7a3e1c);
@@ -148,7 +148,7 @@
   width: 30px;
 }
 .container565_585 .telegramText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: black;
   font-weight: 500;
   font-size: 18px;
@@ -186,7 +186,7 @@
   color: white;
   font-size: 18px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container525_565 .aboutUser .attributes .rankUser {
   display: flex;
@@ -200,7 +200,7 @@
   text-align: center;
   border-radius: 90px;
   width: max-content;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container525_565 .aboutUser .attributes .bronzeRank {
   background: linear-gradient(90deg, #df7b42, #7a3e1c);
@@ -226,7 +226,7 @@
   width: 29px;
 }
 .container525_565 .telegramText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: black;
   font-weight: 500;
   font-size: 18px;
@@ -264,7 +264,7 @@
   color: white;
   font-size: 16px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container485_525 .aboutUser .attributes .rankUser {
   display: flex;
@@ -278,7 +278,7 @@
   text-align: center;
   border-radius: 90px;
   width: max-content;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container485_525 .aboutUser .attributes .bronzeRank {
   background: linear-gradient(90deg, #df7b42, #7a3e1c);
@@ -304,7 +304,7 @@
   width: 28px;
 }
 .container485_525 .telegramText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: black;
   font-weight: 500;
   font-size: 16px;
@@ -342,7 +342,7 @@
   color: white;
   font-size: 16px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container450_485 .aboutUser .attributes .rankUser {
   display: flex;
@@ -356,7 +356,7 @@
   text-align: center;
   border-radius: 90px;
   width: max-content;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container450_485 .aboutUser .attributes .bronzeRank {
   background: linear-gradient(90deg, #df7b42, #7a3e1c);
@@ -382,7 +382,7 @@
   width: 27px;
 }
 .container450_485 .telegramText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: black;
   font-weight: 500;
   font-size: 16px;
@@ -420,7 +420,7 @@
   color: white;
   font-size: 14px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container410_450 .aboutUser .attributes .rankUser {
   display: flex;
@@ -434,7 +434,7 @@
   text-align: center;
   border-radius: 90px;
   width: max-content;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container410_450 .aboutUser .attributes .bronzeRank {
   background: linear-gradient(90deg, #df7b42, #7a3e1c);
@@ -460,7 +460,7 @@
   width: 26px;
 }
 .container410_450 .telegramText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: black;
   font-weight: 500;
   font-size: 14px;
@@ -498,7 +498,7 @@
   color: white;
   font-size: 14px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container375_410 .aboutUser .attributes .rankUser {
   display: flex;
@@ -512,7 +512,7 @@
   text-align: center;
   border-radius: 90px;
   width: max-content;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container375_410 .aboutUser .attributes .bronzeRank {
   background: linear-gradient(90deg, #df7b42, #7a3e1c);
@@ -538,7 +538,7 @@
   width: 25px;
 }
 .container375_410 .telegramText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   color: black;
   font-weight: 500;
   font-size: 14px;

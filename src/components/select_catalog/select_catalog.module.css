@@ -8,7 +8,7 @@
   color: #f1f1f1;
   font-size: 21px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container585_600 .buttonsBlock {
   display: grid;
@@ -30,7 +30,7 @@
 .container585_600 .buttonsBlock .button .buttonText {
   font-size: 21px;
   font-weight: 500;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container585_600 .buttonsBlock .activeButton {
   background-color: #1c1c1c;
@@ -52,7 +52,7 @@
   color: #f1f1f1;
   font-size: 20px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container565_585 .buttonsBlock {
   display: grid;
@@ -74,7 +74,7 @@
 .container565_585 .buttonsBlock .button .buttonText {
   font-size: 20px;
   font-weight: 500;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container565_585 .buttonsBlock .activeButton {
   background-color: #1c1c1c;
@@ -96,7 +96,7 @@
   color: #f1f1f1;
   font-size: 18px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container525_565 .buttonsBlock {
   display: grid;
@@ -118,7 +118,7 @@
 .container525_565 .buttonsBlock .button .buttonText {
   font-size: 18px;
   font-weight: 500;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container525_565 .buttonsBlock .activeButton {
   background-color: #1c1c1c;
@@ -140,7 +140,7 @@
   color: #f1f1f1;
   font-size: 16px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container485_525 .buttonsBlock {
   display: grid;
@@ -162,7 +162,7 @@
 .container485_525 .buttonsBlock .buttonText {
   font-size: 16px;
   font-weight: 500;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   text-align: center;
 }
 .container485_525 .buttonsBlock .activeButton {
@@ -185,7 +185,7 @@
   color: #f1f1f1;
   font-size: 15px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container450_485 .buttonsBlock {
   display: grid;
@@ -207,7 +207,7 @@
 .container450_485 .buttonsBlock .buttonText {
   font-size: 15px;
   font-weight: 500;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   text-align: center;
 }
 .container450_485 .buttonsBlock .activeButton {
@@ -230,7 +230,7 @@
   color: #f1f1f1;
   font-size: 14px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container410_450 .buttonsBlock {
   display: grid;
@@ -252,7 +252,7 @@
 .container410_450 .buttonsBlock .buttonText {
   font-size: 14px;
   font-weight: 500;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   text-align: center;
 }
 .container410_450 .buttonsBlock .activeButton {
@@ -275,7 +275,7 @@
   color: #f1f1f1;
   font-size: 14px;
   font-weight: 600;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container375_410 .buttonsBlock {
   display: grid;
@@ -298,7 +298,7 @@
 .container375_410 .buttonsBlock .buttonText {
   font-size: 14px;
   font-weight: 500;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   text-align: center;
 }
 .container375_410 .buttonsBlock .activeButton {

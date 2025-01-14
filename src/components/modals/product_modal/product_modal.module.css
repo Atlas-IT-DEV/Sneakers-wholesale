@@ -332,12 +332,12 @@
 }
 .modalProductOpen585_600 .priceCountView .priceView .priceText {
   color: #db6900;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
   font-size: 23px;
 }
 .modalProductOpen585_600 .priceCountView .priceView .oldPriceText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 21px;
   color: #9b9b9b;
   font-weight: 500;
@@ -346,14 +346,14 @@
 .modalProductOpen585_600 .priceCountView .countText {
   color: white;
   font-size: 20px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen585_600 .modelNameText {
   margin: 10px 26px 0 26px;
   color: white;
   font-size: 20px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen585_600 .brandButton {
@@ -366,7 +366,7 @@
 .modalProductOpen585_600 .brandButton p {
   color: white;
   font-weight: 700;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 23px;
 }
 .modalProductOpen585_600 .brandButton img {
@@ -381,12 +381,12 @@
 .modalProductOpen585_600 .sizesHeader .sizeHeaderText {
   color: white;
   font-size: 23px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen585_600 .sizesHeader .gridText {
   color: #9b9b9b;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
   font-size: 20px;
   cursor: pointer;
@@ -408,7 +408,7 @@
   align-items: center;
 }
 .modalProductOpen585_600 .sizesView .sizeButton p {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 23px;
   font-weight: 500;
   color: white;
@@ -453,7 +453,7 @@
 .modalProductOpen585_600 footer .hideView .hideText {
   color: #f1f1f1;
   font-size: 21px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .modalProductOpen585_600 footer .hideView .hideButton {
   display: flex;
@@ -464,7 +464,7 @@
 .modalProductOpen585_600 footer .hideView .hideButton p {
   color: #f1f1f1;
   font-size: 21px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen585_600 footer .hideView .hideButton img {
@@ -496,7 +496,7 @@
 .modalProductOpen585_600 .actionButtons .buyButton p {
   color: white;
   font-size: 23px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen585_600 .actionButtons .addButton {
@@ -510,7 +510,7 @@
 .modalProductOpen585_600 .actionButtons .addButton p {
   color: white;
   font-size: 23px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen585_600 .subFiltersClose {
@@ -597,12 +597,12 @@
 }
 .modalProductOpen565_585 .priceCountView .priceView .priceText {
   color: #db6900;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
   font-size: 21px;
 }
 .modalProductOpen565_585 .priceCountView .priceView .oldPriceText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 20px;
   color: #9b9b9b;
   font-weight: 500;
@@ -611,14 +611,14 @@
 .modalProductOpen565_585 .priceCountView .countText {
   color: white;
   font-size: 19px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen565_585 .modelNameText {
   margin: 10px 26px 0 26px;
   color: white;
   font-size: 19px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen565_585 .brandButton {
@@ -631,7 +631,7 @@
 .modalProductOpen565_585 .brandButton p {
   color: white;
   font-weight: 700;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 21px;
 }
 .modalProductOpen565_585 .brandButton img {
@@ -646,12 +646,12 @@
 .modalProductOpen565_585 .sizesHeader .sizeHeaderText {
   color: white;
   font-size: 21px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen565_585 .sizesHeader .gridText {
   color: #9b9b9b;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
   font-size: 19px;
   cursor: pointer;
@@ -673,7 +673,7 @@
   align-items: center;
 }
 .modalProductOpen565_585 .sizesView .sizeButton p {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 21px;
   font-weight: 500;
   color: white;
@@ -718,7 +718,7 @@
 .modalProductOpen565_585 footer .hideView .hideText {
   color: #f1f1f1;
   font-size: 20px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .modalProductOpen565_585 footer .hideView .hideButton {
   display: flex;
@@ -729,7 +729,7 @@
 .modalProductOpen565_585 footer .hideView .hideButton p {
   color: #f1f1f1;
   font-size: 20px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen565_585 footer .hideView .hideButton img {
@@ -761,7 +761,7 @@
 .modalProductOpen565_585 .actionButtons .buyButton p {
   color: white;
   font-size: 21px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen565_585 .actionButtons .addButton {
@@ -775,7 +775,7 @@
 .modalProductOpen565_585 .actionButtons .addButton p {
   color: white;
   font-size: 21px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen565_585 .subFiltersClose {
@@ -862,12 +862,12 @@
 }
 .modalProductOpen525_565 .priceCountView .priceView .priceText {
   color: #db6900;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
   font-size: 20px;
 }
 .modalProductOpen525_565 .priceCountView .priceView .oldPriceText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 18px;
   color: #9b9b9b;
   font-weight: 500;
@@ -876,14 +876,14 @@
 .modalProductOpen525_565 .priceCountView .countText {
   color: white;
   font-size: 17px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen525_565 .modelNameText {
   margin: 10px 26px 0 26px;
   color: white;
   font-size: 17px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen525_565 .brandButton {
@@ -896,7 +896,7 @@
 .modalProductOpen525_565 .brandButton p {
   color: white;
   font-weight: 700;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 20px;
 }
 .modalProductOpen525_565 .brandButton img {
@@ -911,12 +911,12 @@
 .modalProductOpen525_565 .sizesHeader .sizeHeaderText {
   color: white;
   font-size: 20px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen525_565 .sizesHeader .gridText {
   color: #9b9b9b;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
   font-size: 17px;
   cursor: pointer;
@@ -938,7 +938,7 @@
   align-items: center;
 }
 .modalProductOpen525_565 .sizesView .sizeButton p {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 20px;
   font-weight: 500;
   color: white;
@@ -983,7 +983,7 @@
 .modalProductOpen525_565 footer .hideView .hideText {
   color: #f1f1f1;
   font-size: 18px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .modalProductOpen525_565 footer .hideView .hideButton {
   display: flex;
@@ -994,7 +994,7 @@
 .modalProductOpen525_565 footer .hideView .hideButton p {
   color: #f1f1f1;
   font-size: 18px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen525_565 footer .hideView .hideButton img {
@@ -1026,7 +1026,7 @@
 .modalProductOpen525_565 .actionButtons .buyButton p {
   color: white;
   font-size: 20px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen525_565 .actionButtons .addButton {
@@ -1040,7 +1040,7 @@
 .modalProductOpen525_565 .actionButtons .addButton p {
   color: white;
   font-size: 20px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen525_565 .subFiltersClose {
@@ -1127,12 +1127,12 @@
 }
 .modalProductOpen485_525 .priceCountView .priceView .priceText {
   color: #db6900;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
   font-size: 18px;
 }
 .modalProductOpen485_525 .priceCountView .priceView .oldPriceText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 16px;
   color: #9b9b9b;
   font-weight: 500;
@@ -1141,14 +1141,14 @@
 .modalProductOpen485_525 .priceCountView .countText {
   color: white;
   font-size: 15px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen485_525 .modelNameText {
   margin: 10px 26px 0 26px;
   color: white;
   font-size: 15px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen485_525 .brandButton {
@@ -1161,7 +1161,7 @@
 .modalProductOpen485_525 .brandButton p {
   color: white;
   font-weight: 700;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 18px;
 }
 .modalProductOpen485_525 .brandButton img {
@@ -1176,12 +1176,12 @@
 .modalProductOpen485_525 .sizesHeader .sizeHeaderText {
   color: white;
   font-size: 18px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen485_525 .sizesHeader .gridText {
   color: #9b9b9b;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
   font-size: 15px;
   cursor: pointer;
@@ -1203,7 +1203,7 @@
   align-items: center;
 }
 .modalProductOpen485_525 .sizesView .sizeButton p {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 18px;
   font-weight: 500;
   color: white;
@@ -1248,7 +1248,7 @@
 .modalProductOpen485_525 footer .hideView .hideText {
   color: #f1f1f1;
   font-size: 16px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .modalProductOpen485_525 footer .hideView .hideButton {
   display: flex;
@@ -1259,7 +1259,7 @@
 .modalProductOpen485_525 footer .hideView .hideButton p {
   color: #f1f1f1;
   font-size: 16px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen485_525 footer .hideView .hideButton img {
@@ -1291,7 +1291,7 @@
 .modalProductOpen485_525 .actionButtons .buyButton p {
   color: white;
   font-size: 18px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen485_525 .actionButtons .addButton {
@@ -1305,7 +1305,7 @@
 .modalProductOpen485_525 .actionButtons .addButton p {
   color: white;
   font-size: 18px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen485_525 .subFiltersClose {
@@ -1392,12 +1392,12 @@
 }
 .modalProductOpen450_485 .priceCountView .priceView .priceText {
   color: #db6900;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
   font-size: 17px;
 }
 .modalProductOpen450_485 .priceCountView .priceView .oldPriceText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 15px;
   color: #9b9b9b;
   font-weight: 500;
@@ -1406,14 +1406,14 @@
 .modalProductOpen450_485 .priceCountView .countText {
   color: white;
   font-size: 14px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen450_485 .modelNameText {
   margin: 10px 26px 0 26px;
   color: white;
   font-size: 14px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen450_485 .brandButton {
@@ -1426,7 +1426,7 @@
 .modalProductOpen450_485 .brandButton p {
   color: white;
   font-weight: 700;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 17px;
 }
 .modalProductOpen450_485 .brandButton img {
@@ -1441,12 +1441,12 @@
 .modalProductOpen450_485 .sizesHeader .sizeHeaderText {
   color: white;
   font-size: 17px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen450_485 .sizesHeader .gridText {
   color: #9b9b9b;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
   font-size: 14px;
   cursor: pointer;
@@ -1468,7 +1468,7 @@
   align-items: center;
 }
 .modalProductOpen450_485 .sizesView .sizeButton p {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 17px;
   font-weight: 500;
   color: white;
@@ -1513,7 +1513,7 @@
 .modalProductOpen450_485 footer .hideView .hideText {
   color: #f1f1f1;
   font-size: 15px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .modalProductOpen450_485 footer .hideView .hideButton {
   display: flex;
@@ -1524,7 +1524,7 @@
 .modalProductOpen450_485 footer .hideView .hideButton p {
   color: #f1f1f1;
   font-size: 15px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen450_485 footer .hideView .hideButton img {
@@ -1556,7 +1556,7 @@
 .modalProductOpen450_485 .actionButtons .buyButton p {
   color: white;
   font-size: 17px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen450_485 .actionButtons .addButton {
@@ -1570,7 +1570,7 @@
 .modalProductOpen450_485 .actionButtons .addButton p {
   color: white;
   font-size: 17px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen450_485 .subFiltersClose {
@@ -1657,12 +1657,12 @@
 }
 .modalProductOpen410_450 .priceCountView .priceView .priceText {
   color: #db6900;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
   font-size: 16px;
 }
 .modalProductOpen410_450 .priceCountView .priceView .oldPriceText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 14px;
   color: #9b9b9b;
   font-weight: 500;
@@ -1671,14 +1671,14 @@
 .modalProductOpen410_450 .priceCountView .countText {
   color: white;
   font-size: 13px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen410_450 .modelNameText {
   margin: 10px 26px 0 26px;
   color: white;
   font-size: 13px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen410_450 .brandButton {
@@ -1691,7 +1691,7 @@
 .modalProductOpen410_450 .brandButton p {
   color: white;
   font-weight: 700;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 16px;
 }
 .modalProductOpen410_450 .brandButton img {
@@ -1706,12 +1706,12 @@
 .modalProductOpen410_450 .sizesHeader .sizeHeaderText {
   color: white;
   font-size: 16px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen410_450 .sizesHeader .gridText {
   color: #9b9b9b;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
   font-size: 13px;
   cursor: pointer;
@@ -1733,7 +1733,7 @@
   align-items: center;
 }
 .modalProductOpen410_450 .sizesView .sizeButton p {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 16px;
   font-weight: 500;
   color: white;
@@ -1778,7 +1778,7 @@
 .modalProductOpen410_450 footer .hideView .hideText {
   color: #f1f1f1;
   font-size: 14px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .modalProductOpen410_450 footer .hideView .hideButton {
   display: flex;
@@ -1789,7 +1789,7 @@
 .modalProductOpen410_450 footer .hideView .hideButton p {
   color: #f1f1f1;
   font-size: 14px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen410_450 footer .hideView .hideButton img {
@@ -1821,7 +1821,7 @@
 .modalProductOpen410_450 .actionButtons .buyButton p {
   color: white;
   font-size: 16px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen410_450 .actionButtons .addButton {
@@ -1835,7 +1835,7 @@
 .modalProductOpen410_450 .actionButtons .addButton p {
   color: white;
   font-size: 16px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen410_450 .subFiltersClose {
@@ -1922,12 +1922,12 @@
 }
 .modalProductOpen375_410 .priceCountView .priceView .priceText {
   color: #db6900;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
   font-size: 16px;
 }
 .modalProductOpen375_410 .priceCountView .priceView .oldPriceText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 14px;
   color: #9b9b9b;
   font-weight: 500;
@@ -1936,14 +1936,14 @@
 .modalProductOpen375_410 .priceCountView .countText {
   color: white;
   font-size: 13px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen375_410 .modelNameText {
   margin: 10px 26px 0 26px;
   color: white;
   font-size: 13px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen375_410 .brandButton {
@@ -1956,7 +1956,7 @@
 .modalProductOpen375_410 .brandButton p {
   color: white;
   font-weight: 700;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 16px;
 }
 .modalProductOpen375_410 .brandButton img {
@@ -1971,12 +1971,12 @@
 .modalProductOpen375_410 .sizesHeader .sizeHeaderText {
   color: white;
   font-size: 16px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
 }
 .modalProductOpen375_410 .sizesHeader .gridText {
   color: #9b9b9b;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 500;
   font-size: 13px;
   cursor: pointer;
@@ -1998,7 +1998,7 @@
   align-items: center;
 }
 .modalProductOpen375_410 .sizesView .sizeButton p {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 16px;
   font-weight: 500;
   color: white;
@@ -2043,7 +2043,7 @@
 .modalProductOpen375_410 footer .hideView .hideText {
   color: #f1f1f1;
   font-size: 14px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .modalProductOpen375_410 footer .hideView .hideButton {
   display: flex;
@@ -2054,7 +2054,7 @@
 .modalProductOpen375_410 footer .hideView .hideButton p {
   color: #f1f1f1;
   font-size: 14px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen375_410 footer .hideView .hideButton img {
@@ -2086,7 +2086,7 @@
 .modalProductOpen375_410 .actionButtons .buyButton p {
   color: white;
   font-size: 16px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen375_410 .actionButtons .addButton {
@@ -2100,7 +2100,7 @@
 .modalProductOpen375_410 .actionButtons .addButton p {
   color: white;
   font-size: 16px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .modalProductOpen375_410 .subFiltersClose {

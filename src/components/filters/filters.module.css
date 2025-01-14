@@ -5,7 +5,7 @@
 }
 .container585_600 .priceText {
   color: #f1f1f1;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 21px;
   font-weight: 600;
 }
@@ -24,7 +24,7 @@
   border-radius: 8px;
   color: #f1f1f1;
   font-size: 20px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container585_600 .mainFilters {
   display: flex;
@@ -60,7 +60,7 @@
 .container585_600 .mainFilters .filterRow .filterButton .filterNameText {
   color: #f1f1f1;
   font-size: 21px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .container585_600 .mainFilters .filterRow .subFiltersClose {
@@ -92,7 +92,7 @@
   border-radius: 3px;
 }
 .container585_600 .mainFilters .filterRow .subFilterRow .checkButtonText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 20px;
   color: #f1f1f1;
 }
@@ -103,7 +103,7 @@
 }
 .container565_585 .priceText {
   color: #f1f1f1;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 20px;
   font-weight: 600;
 }
@@ -122,7 +122,7 @@
   border-radius: 8px;
   color: #f1f1f1;
   font-size: 19px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container565_585 .mainFilters {
   display: flex;
@@ -158,7 +158,7 @@
 .container565_585 .mainFilters .filterRow .filterButton .filterNameText {
   color: #f1f1f1;
   font-size: 20px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .container565_585 .mainFilters .filterRow .subFiltersClose {
@@ -190,7 +190,7 @@
   border-radius: 3px;
 }
 .container565_585 .mainFilters .filterRow .subFilterRow .checkButtonText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 19px;
   color: #f1f1f1;
 }
@@ -201,7 +201,7 @@
 }
 .container525_565 .priceText {
   color: #f1f1f1;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 18px;
   font-weight: 600;
 }
@@ -220,7 +220,7 @@
   border-radius: 8px;
   color: #f1f1f1;
   font-size: 17px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container525_565 .mainFilters {
   display: flex;
@@ -256,7 +256,7 @@
 .container525_565 .mainFilters .filterRow .filterButton .filterNameText {
   color: #f1f1f1;
   font-size: 18px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .container525_565 .mainFilters .filterRow .subFiltersClose {
@@ -288,7 +288,7 @@
   border-radius: 3px;
 }
 .container525_565 .mainFilters .filterRow .subFilterRow .checkButtonText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 17px;
   color: #f1f1f1;
 }
@@ -299,7 +299,7 @@
 }
 .container485_525 .priceText {
   color: #f1f1f1;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 16px;
   font-weight: 600;
 }
@@ -318,7 +318,7 @@
   border-radius: 8px;
   color: #f1f1f1;
   font-size: 15px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container485_525 .mainFilters {
   display: flex;
@@ -354,7 +354,7 @@
 .container485_525 .mainFilters .filterRow .filterButton .filterNameText {
   color: #f1f1f1;
   font-size: 16px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .container485_525 .mainFilters .filterRow .subFiltersClose {
@@ -386,7 +386,7 @@
   border-radius: 3px;
 }
 .container485_525 .mainFilters .filterRow .subFilterRow .checkButtonText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 15px;
   color: #f1f1f1;
 }
@@ -397,7 +397,7 @@
 }
 .container450_485 .priceText {
   color: #f1f1f1;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 15px;
   font-weight: 600;
 }
@@ -416,7 +416,7 @@
   border-radius: 8px;
   color: #f1f1f1;
   font-size: 14px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container450_485 .mainFilters {
   display: flex;
@@ -452,7 +452,7 @@
 .container450_485 .mainFilters .filterRow .filterButton .filterNameText {
   color: #f1f1f1;
   font-size: 15px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .container450_485 .mainFilters .filterRow .subFiltersClose {
@@ -484,7 +484,7 @@
   border-radius: 3px;
 }
 .container450_485 .mainFilters .filterRow .subFilterRow .checkButtonText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 14px;
   color: #f1f1f1;
 }
@@ -495,7 +495,7 @@
 }
 .container410_450 .priceText {
   color: #f1f1f1;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 14px;
   font-weight: 600;
 }
@@ -514,7 +514,7 @@
   border-radius: 8px;
   color: #f1f1f1;
   font-size: 13px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container410_450 .mainFilters {
   display: flex;
@@ -550,7 +550,7 @@
 .container410_450 .mainFilters .filterRow .filterButton .filterNameText {
   color: #f1f1f1;
   font-size: 14px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .container410_450 .mainFilters .filterRow .subFiltersClose {
@@ -582,7 +582,7 @@
   border-radius: 3px;
 }
 .container410_450 .mainFilters .filterRow .subFilterRow .checkButtonText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 13px;
   color: #f1f1f1;
 }
@@ -593,7 +593,7 @@
 }
 .container375_410 .priceText {
   color: #f1f1f1;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 14px;
   font-weight: 600;
 }
@@ -612,7 +612,7 @@
   border-radius: 8px;
   color: #f1f1f1;
   font-size: 13px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
 }
 .container375_410 .mainFilters {
   display: flex;
@@ -648,7 +648,7 @@
 .container375_410 .mainFilters .filterRow .filterButton .filterNameText {
   color: #f1f1f1;
   font-size: 14px;
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-weight: 600;
 }
 .container375_410 .mainFilters .filterRow .subFiltersClose {
@@ -680,7 +680,7 @@
   border-radius: 3px;
 }
 .container375_410 .mainFilters .filterRow .subFilterRow .checkButtonText {
-  font-family: TTForsTrialVariable;
+  font-family: montserrat;
   font-size: 13px;
   color: #f1f1f1;
 }
