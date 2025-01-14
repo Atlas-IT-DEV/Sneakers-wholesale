@@ -17,7 +17,7 @@ import { useNavigate } from "react-router";
 
 import no_photo from "./../../../images/tiger_big_logo.jpg";
 import { observer } from "mobx-react-lite";
-import { Text, VStack } from "@chakra-ui/react";
+import { Image, Text, VStack } from "@chakra-ui/react";
 import { useToast } from "@chakra-ui/react";
 
 const ProductModal = observer(
@@ -238,16 +238,23 @@ const ProductModal = observer(
               {obj.urls.length != 0 ? (
                 obj.urls.map((elem) => (
                   <SwiperSlide className={styles.slideProduct}>
-                    <img
+                    <Image
+                      src={elem?.url || no_photo}
+                      // maxHeight={"300px"}
+                      width={width}
+                      obj
+                    />
+                    {/* <img
                       src={elem?.url || no_photo}
                       alt=""
                       className={styles.imageProductModal}
-                    />
+                    /> */}
                   </SwiperSlide>
                 ))
               ) : (
                 <SwiperSlide className={styles.slideProduct}>
-                  <img src={no_photo} alt="" className={styles.imageProduct} />
+                  {/* <img src={no_photo} alt="" className={styles.imageProduct} /> */}
+                  <Image src={no_photo} width={width} objectFit={"fill"} />
                 </SwiperSlide>
               )}
             </Swiper>
