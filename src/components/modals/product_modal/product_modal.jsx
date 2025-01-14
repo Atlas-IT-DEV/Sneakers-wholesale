@@ -53,7 +53,7 @@ const ProductModal = observer(
           method: "DELETE",
           headers: {
             accept: "application/json",
-            Authorization: `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJUT0tFTl9UWVBFX0ZJRUxEIjoiYWNjZXNzX3Rva2VuX3R5cGUiLCJzdWIiOiJhZG1pbiIsInVzZXJfaWQiOjYxOCwiZmlyc3RfbmFtZSI6IkRJTUFTUyIsImxhc3RfbmFtZSI6IlZFTElDSEtPIiwiZXhwIjoxNzM2NzcwNTU1LCJpYXQiOjE3MzY2ODQxNTV9.m-_FGU1n-ueCXV0WTJVoN8GG2nuiJn3RG9RRcr2QxbVRJo2hiVNtW0nf2l1S-84h1-QDce1LaPdus9jtk24EAit5YB3sYrkF6N4sFktpScOdICckuRp4Xd8i8Osoq5imXa1vwdepiEcApNBi9d_iiaYrQS15uq8WmBqs3YTuxiYr7QCbYIXoyrqqPxsRv4B1fX72FMyHJ6g5tOv8wr63PJuSv8VKwVhtZ7KHX6Eg2awN8ZG2HXe2taX4iedDcNNILM3t710XBSI9XgaoIGwkh5ZM9ZJkkBNsv132096Sg2HNbS_QibxsfRLomkbsyqC9uUwb0A08X8BHEjP07kuxtQ`,
+            Authorization: `Bearer ${pageStore.token}`,
           },
         }
       );
@@ -72,6 +72,15 @@ const ProductModal = observer(
 
     const toggleFavourite = async () => {
       setModalVisible(false);
+      if (!findFavourite()) {
+        await createFavourite(obj?.id);
+      } else {
+        await deleteFavourite(findFavourite()?.id);
+      }
+      await pageStore.getFavouriteByUserIdFull();
+    };
+
+    const toggleModalFavourite = async () => {
       if (!findFavourite()) {
         await createFavourite(obj?.id);
       } else {
@@ -224,13 +233,15 @@ const ProductModal = observer(
               </div>
               <div
                 className={styles.addFavouriveButton}
-                onClick={() => {
-                  favouriteClick();
+                onClick={async () => {
+                  await toggleModalFavourite();
                 }}
               >
                 <img
                   src={
-                    isPressed[0] ? favouriteActiveIcon : favouriteInactiveIcon
+                    findFavourite()
+                      ? favouriteActiveIcon
+                      : favouriteInactiveIcon
                   }
                   alt=""
                 />

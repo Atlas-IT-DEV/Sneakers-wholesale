@@ -5,7 +5,7 @@ import styles from "./catalog_page.module.css";
 import Fuse from "fuse.js";
 import { VStack, Text } from "@chakra-ui/react";
 
-import arrowBackIcon from "../../images/arrow_back_icon.svg";
+// import arrowBackIcon from "../../images/arrow_back_icon.svg";
 import sortIcon from "../../images/sort_icon.svg";
 import filterIcon from "../../images/filter_icon.svg";
 import useWindowDimensions from "../../components/hooks/windowDimensions";
@@ -14,7 +14,7 @@ import { useStores } from "../../store/store_context";
 import { observer } from "mobx-react-lite";
 import { useEffect } from "react";
 import { useState } from "react";
-import SborOptCard from "../../components/sbor_opt_card";
+// import SborOptCard from "../../components/sbor_opt_card";
 
 const CatalogPage = observer(() => {
   const { width } = useWindowDimensions();
@@ -29,6 +29,7 @@ const CatalogPage = observer(() => {
     navigate("/");
     backButton?.hide();
   };
+
   const [products, setProducts] = useState([]);
   const [similar, setSimilar] = useState([]);
   backButton?.onClick(back_page);
