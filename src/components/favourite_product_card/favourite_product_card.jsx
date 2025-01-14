@@ -98,9 +98,9 @@ const FavouriteProductCard = observer(
           <p className={styles.nameProductText}>{name}</p>
           <p className={styles.modelNameText}>{model_name}</p>
           <p className={styles.countProductText}>{count_product}</p>
-          <p className={styles.sizeText}>
+          {/* <p className={styles.sizeText}>
             Размер: <span>{size}</span>
-          </p>
+          </p> */}
           {/* <div className={styles.counterProduct}>
           <div
             className={`${styles.button} ${
@@ -122,9 +122,9 @@ const FavouriteProductCard = observer(
             <p className={styles.priceText}>{parseInt(price)} ₽</p>
             {/* <p className={styles.oldPriceText}>{oldPrice}₽</p> */}
           </div>
-          <div className={styles.buyButton}>
+          {/* <div className={styles.buyButton}>
             <p>Купить</p>
-          </div>
+          </div> */}
         </div>
       </div>
     );
