@@ -9,11 +9,17 @@ class PageStore {
   companys = [];
   cart = [];
   sort_type = 0;
+  sort_type_fav = 0;
   search_str = "";
+  search_str_fav = "";
   chars = [];
+  chars_fav = [];
   selected_chars = [];
+  selected_chars_fav = [];
   selected_companys = [];
+  selected_companys_fav = [];
   min_max = ["", ""];
+  min_max_fav = ["", ""];
 
   delivery_type = "";
   user_name = "";
@@ -36,20 +42,38 @@ class PageStore {
   updateSortType = (new_sort_type) => {
     this.sort_type = new_sort_type;
   };
+  updateSortTypeFav = (new_sort_type) => {
+    this.sort_type_fav = new_sort_type;
+  };
   updateSearchStr = (new_search_str) => {
     this.search_str = new_search_str;
+  };
+  updateSearchStrFav = (new_search_str) => {
+    this.search_str_fav = new_search_str;
   };
   updateChars = (new_chars) => {
     this.chars = new_chars;
   };
+  updateCharsFav = (new_chars) => {
+    this.chars_fav = new_chars;
+  };
   updateSelectedChars = (new_selected_chars) => {
     this.selected_chars = new_selected_chars;
+  };
+  updateSelectedCharsFav = (new_selected_chars) => {
+    this.selected_chars_fav = new_selected_chars;
   };
   updateMinMax = (new_min_max) => {
     this.min_max = new_min_max;
   };
+  updateMinMaxFav = (new_min_max) => {
+    this.min_max_fav = new_min_max;
+  };
   updateSelectedCompanys = (new_selected_companys) => {
     this.selected_companys = new_selected_companys;
+  };
+  updateSelectedCompanysFav = (new_selected_companys) => {
+    this.selected_companys_fav = new_selected_companys;
   };
   updateTypeDelivery = (new_delivery) => {
     this.delivery_type = new_delivery;
