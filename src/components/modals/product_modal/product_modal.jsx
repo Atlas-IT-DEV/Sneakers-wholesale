@@ -127,9 +127,9 @@ const ProductModal = observer(
             }}
           >
             {obj.urls.length != 0 ? (
-              obj.urls.map((elem) => {
+              obj.urls.map((elem, index) => {
                 return (
-                  <SwiperSlide className={styles.slider}>
+                  <SwiperSlide className={styles.slider} key={index}>
                     <img
                       src={elem?.url}
                       alt=""

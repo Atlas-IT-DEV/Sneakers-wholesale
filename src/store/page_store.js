@@ -1,5 +1,4 @@
 import { makeAutoObservable } from "mobx";
-import { Await } from "react-router";
 
 class PageStore {
   token = "";
@@ -159,7 +158,7 @@ class PageStore {
       headers: {
         accept: "application/json",
         "Content-Type": "application/json",
-        Authorization: `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJUT0tFTl9UWVBFX0ZJRUxEIjoiYWNjZXNzX3Rva2VuX3R5cGUiLCJzdWIiOiJhZG1pbiIsInVzZXJfaWQiOjYxOCwiZmlyc3RfbmFtZSI6IkRJTUFTUyIsImxhc3RfbmFtZSI6IlZFTElDSEtPIiwiZXhwIjoxNzM2NzY4MzAxLCJpYXQiOjE3MzY2ODE5MDF9.izcznKeHGmgXhW2BBM0hvqPEgPxR75JbSTaG2FvwJIwbV6UUDDR7nPUY8Qp6QSLFzXARIKxVJ1Xh5FQGQobMAXM2UFmsNIcI5gWuqd0Rcf8CMpIddtr79zdb4g-kRaCPArwUsToTyQup2HtXGhZRie56kbNS99YCCQ6tdvqP5QB1rI97GYMt8z6vzavWey1on0etgKbeUvaRQZHxRzwb6ieSmYwEf_YOztxl9IvvNTrCTVKBgVhtYTha8SXg48EYkRlaBTPmBzmakt5BdoXDoH9-_D7_QSUiXQaKpW-DS4-pkvJm9l8XwqVGp20K5ZD55ydKzt7bZ8IwVI3A5JO6yQ`,
+        Authorization: `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJUT0tFTl9UWVBFX0ZJRUxEIjoiYWNjZXNzX3Rva2VuX3R5cGUiLCJzdWIiOiJhZG1pbiIsInVzZXJfaWQiOjYxOCwiZmlyc3RfbmFtZSI6IkRJTUFTUyIsImxhc3RfbmFtZSI6IlZFTElDSEtPIiwiZXhwIjoxNzM2ODgwMTYzLCJpYXQiOjE3MzY3OTM3NjN9.ofvpMalNsIliUMNNlG1w2uT1J9zNlJuhyRAsxPWKTH84iivKVpCqQD0h8RzgBCzW8a1LEKGT1Wlq6tFlD5OIT7wLPa-imJK4lghtoA_9lcnZ4W334WqxU3KsNIKdAkObnZs0mpJLXgMOEBJUZmDKHmnbObCixpLat-c2XGjXq5SMOLpRoKF9KEJ6UFFDB7lnfSd8Egkih8f-TjPlTieY2kIc6kEHxDzbZzFyK2ytxp_v16B6KAtD4jNGPQxeGnkEy2dLwA5d6AcJH6GGbw2S7Sflw5p-CV8EuOtHztzBCqEjJYHSz40u04BZkILQq76yGi2UuJL9dusEvqJkXqUA_g`,
       },
       body: JSON.stringify({
         id: 0,

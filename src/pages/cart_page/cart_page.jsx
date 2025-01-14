@@ -1,12 +1,10 @@
 import styles from "./cart_page.module.css";
 import BottomMenu from "../../components/bottom_menu/bottom_menu";
-import DiscountCard from "../../components/discount_card/discount_card";
+// import DiscountCard from "../../components/discount_card/discount_card";
 import CartProductCard from "../../components/cart_product_card/cart_product_card";
 import useWindowDimensions from "../../components/hooks/windowDimensions";
-import { Navigation } from "swiper/modules";
 import { useNavigate } from "react-router";
-import { Text, useEditable } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { Text } from "@chakra-ui/react";
 import { useStores } from "../../store/store_context";
 import { observer } from "mobx-react-lite";
 
@@ -42,11 +40,10 @@ const CartPage = observer(() => {
   const changeQuantity = (value, obj, id, size) => {
     if (value <= 0) return;
     let copy_cart = Array.from(pageStore.cart);
-    const filtered = copy_cart.filter((item) => {
-      return item?.id != id;
-    });
-    pageStore.updateCart(filtered);
-    copy_cart = Array.from(filtered);
+    pageStore.updateCart(
+      copy_cart.filter((item) => !(item.id == id && item.size == size))
+    );
+    copy_cart = Array.from(pageStore.cart);
 
     for (let i = 0; i < value; i++) {
       copy_cart.unshift(obj);

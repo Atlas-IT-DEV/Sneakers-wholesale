@@ -1,7 +1,7 @@
 import BottomMenu from "../../components/bottom_menu/bottom_menu";
 import styles from "./favourite_page.module.css";
 
-import arrowBackIcon from "../../images/arrow_back_icon.svg";
+// import arrowBackIcon from "../../images/arrow_back_icon.svg";
 import sortIcon from "../../images/sort_icon.svg";
 import filterIcon from "../../images/filter_icon.svg";
 import { useNavigate } from "react-router";
@@ -91,6 +91,7 @@ const FavouritesPage = observer(() => {
                   image_product={item?.urls[0]?.url}
                   price={item?.price}
                   shop_type={item?.type_product}
+                  obj={item}
                 />
               );
             }

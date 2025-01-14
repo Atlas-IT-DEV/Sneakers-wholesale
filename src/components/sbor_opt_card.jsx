@@ -18,12 +18,10 @@ const SborOptCard = ({
     <VStack
       w={"100%"}
       bgColor={"black"}
-      //   height={"100px"}
       borderRadius={"26px"}
       padding={"20px"}
       align={"flex-start"}
       justify={"flex-start"}
-      overflow={"hidden"}
     >
       <Swiper
         style={{
@@ -78,10 +76,86 @@ const SborOptCard = ({
       </Text>
       <Text color={"white"}>{model}</Text>
       <Text color={"rgba(100,100,100,1)"}>Размеры</Text>
-      <HStack align={"flex-start"}>
-        <Text color={"white"}>42</Text>
-        <Text color={"white"}>42</Text>
-        <Text color={"white"}>42</Text>
+      <HStack
+        w={"100%"}
+        align={"flex-start"}
+        gap={"15px"}
+        overflow={"auto"}
+        overflowY={"hidden"}
+        paddingBottom={"10px"}
+      >
+        <Stack
+          height={"50px"}
+          width={"40px"}
+          minWidth={"40px"}
+          color={"white"}
+          border={"1px solid red"}
+          borderRadius={"10px"}
+          justifyContent={"center"}
+          align={"center"}
+        >
+          <Text>42</Text>
+        </Stack>
+        <Stack
+          height={"50px"}
+          width={"40px"}
+          minWidth={"40px"}
+          color={"white"}
+          border={"1px solid red"}
+          borderRadius={"10px"}
+          justifyContent={"center"}
+          align={"center"}
+        >
+          <Text>42</Text>
+        </Stack>
+        <Stack
+          height={"50px"}
+          width={"40px"}
+          minWidth={"40px"}
+          color={"white"}
+          border={"1px solid red"}
+          borderRadius={"10px"}
+          justifyContent={"center"}
+          align={"center"}
+        >
+          <Text>42</Text>
+        </Stack>
+        <Stack
+          height={"50px"}
+          width={"40px"}
+          minWidth={"40px"}
+          color={"white"}
+          border={"1px solid red"}
+          borderRadius={"10px"}
+          justifyContent={"center"}
+          align={"center"}
+        >
+          <Text>42</Text>
+        </Stack>
+        <Stack
+          height={"50px"}
+          width={"40px"}
+          minWidth={"40px"}
+          color={"white"}
+          border={"1px solid red"}
+          borderRadius={"10px"}
+          justifyContent={"center"}
+          align={"center"}
+        >
+          <Text>42</Text>
+        </Stack>
+        <Stack
+          height={"50px"}
+          width={"40px"}
+          minWidth={"40px"}
+          color={"white"}
+          border={"1px solid red"}
+          borderRadius={"10px"}
+          justifyContent={"center"}
+          align={"center"}
+        >
+          <Text>42</Text>
+        </Stack>
       </HStack>
 
       <Text color={"rgba(219, 105, 0, 1)"} fontWeight={"600"} fontSize={"18px"}>
