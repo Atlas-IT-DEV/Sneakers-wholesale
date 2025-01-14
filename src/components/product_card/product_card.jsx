@@ -82,7 +82,7 @@ const ProductCard = ({
         </p>
       </div>
       <p className={styles.modelNameText}>{model_name}</p>
-      <div
+      {/* <div
         className={styles.addButton}
         onClick={() => {
           handleClick();
@@ -90,7 +90,7 @@ const ProductCard = ({
       >
         <p className={styles.addButtonText}>Добавить</p>
         <img src={shoppingIcon} alt="" className={styles.shopIcon} />
-      </div>
+      </div> */}
     </div>
   );
 };
