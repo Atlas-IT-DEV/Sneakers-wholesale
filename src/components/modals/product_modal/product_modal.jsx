@@ -80,6 +80,15 @@ const ProductModal = observer(
       await pageStore.getFavouriteByUserIdFull();
     };
 
+    const toggleModalFavourite = async () => {
+      if (!findFavourite()) {
+        await createFavourite(obj?.id);
+      } else {
+        await deleteFavourite(findFavourite()?.id);
+      }
+      await pageStore.getFavouriteByUserIdFull();
+    };
+
     useEffect(() => {
       modalVisible && console.log("fav", pageStore.favourites);
     }, [pageStore.favourites, modalVisible]);
@@ -224,13 +233,15 @@ const ProductModal = observer(
               </div>
               <div
                 className={styles.addFavouriveButton}
-                onClick={() => {
-                  favouriteClick();
+                onClick={async () => {
+                  await toggleModalFavourite();
                 }}
               >
                 <img
                   src={
-                    isPressed[0] ? favouriteActiveIcon : favouriteInactiveIcon
+                    findFavourite()
+                      ? favouriteActiveIcon
+                      : favouriteInactiveIcon
                   }
                   alt=""
                 />
