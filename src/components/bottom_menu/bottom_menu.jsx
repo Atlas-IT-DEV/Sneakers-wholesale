@@ -44,7 +44,7 @@ const BottomMenu = observer(() => {
             position={"absolute"}
             color={"rgb(219, 105, 0)"}
             top={0}
-            right={1}
+            right={0}
             fontWeight={600}
           >
             {pageStore.favourites.length}
@@ -58,7 +58,7 @@ const BottomMenu = observer(() => {
             position={"absolute"}
             color={"rgb(219, 105, 0)"}
             top={0}
-            right={1}
+            right={-2}
             fontWeight={600}
           >
             {pageStore.cart.length}

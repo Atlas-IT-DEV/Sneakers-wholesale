@@ -293,11 +293,19 @@ const ProductModal = observer(
                   </div>
                 ))}
             </div>
-            {selectedSize == "" && (
+            {selectedSize == "" ? (
               <Text color={"red"} fontSize={"14px"} marginLeft={"26px"}>
                 Выберите размер
               </Text>
-            )}
+            ) : selectedSize == "new" ? (
+              <Text
+                color={"rgb(219, 105, 0)"}
+                fontSize={"14px"}
+                marginLeft={"26px"}
+              >
+                Товар добавлен!
+              </Text>
+            ) : null}
             <footer>
               <div className={styles.hideView}>
                 <div
@@ -413,7 +421,8 @@ const ProductModal = observer(
                     let copy_cart = Array.from(pageStore.cart);
                     copy_cart.push({ ...obj, size: selectedSize });
                     pageStore.updateCart(copy_cart);
-                    setSelectedSize("");
+                    setSelectedSize("new");
+                    setTimeout(() => setSelectedSize(""), 1000);
                   }
                 }}
               >

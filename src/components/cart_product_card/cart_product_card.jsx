@@ -14,6 +14,7 @@ import {
   PopoverTrigger,
   position,
   VStack,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { useStores } from "../../store/store_context";
 
@@ -33,6 +34,7 @@ const CartProductCard = ({
   const { width } = useWindowDimensions();
 
   const { pageStore } = useStores();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const removeProduct = (id, size) => {
     console.log("size", size, id);
@@ -74,9 +76,7 @@ const CartProductCard = ({
       <div className={styles.aboutProduct}>
         <p className={styles.brandText}>{brand}</p>
         <p className={styles.modelText}>{model}</p>
-        <p className={styles.countText}>
-          {count} ({type})
-        </p>
+        <p className={styles.countText}>({obj?.type_product})</p>
         <div className={styles.sizeField}>
           <p className={styles.sizeAttributeText}>Размер:</p>
           <p className={styles.sizeText}>{size}</p>
@@ -123,7 +123,13 @@ const CartProductCard = ({
         </div>
       </div>
 
-      <Popover strategy="absolute" placement="auto">
+      <Popover
+        strategy="absolute"
+        placement="auto"
+        isOpen={isOpen}
+        onClose={onClose}
+        onOpen={onOpen}
+      >
         <PopoverTrigger>
           <div className={styles.settingsButton}>
             <img
@@ -162,6 +168,7 @@ const CartProductCard = ({
                 onClick={() => {
                   console.log(obj);
                   removeProduct(obj.id, obj.size);
+                  onClose();
                 }}
               >
                 Убрать из корзины

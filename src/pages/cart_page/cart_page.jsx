@@ -94,27 +94,37 @@ const CartPage = observer(() => {
       </div>
       <div className={styles.productContainer}>
         {pageStore.cart.length != 0 ? (
-          combineProducts(pageStore.cart).map((item, index) => {
-            console.log("size", item?.size);
-            return (
-              <CartProductCard
-                key={index}
-                brand={item?.company?.name}
-                model={item?.name}
-                type={item?.type_product}
-                new_price={item?.price}
-                image={item?.urls?.[0]?.url || no_photo}
-                count_product={item?.quantity}
-                obj={item}
-                idx={index}
-                size={item?.size}
-                // remove={() => removeProduct(item?.id, item?.size)}
-                onChangeQuantity={(value) =>
-                  changeQuantity(value, item, item?.id, item?.size)
-                }
-              />
-            );
-          })
+          combineProducts(pageStore.cart)
+            .sort((a, b) => {
+              // Сравнение по name (лексикографическое сравнение)
+              const nameComparison = a.name.localeCompare(b.name);
+              if (nameComparison !== 0) {
+                return nameComparison;
+              }
+              // Если name одинаковый, сравниваем по size (числовое сравнение)
+              return parseInt(a.size, 10) - parseInt(b.size, 10);
+            })
+            .map((item, index) => {
+              console.log("size", item?.size);
+              return (
+                <CartProductCard
+                  key={index}
+                  brand={item?.company?.name}
+                  model={item?.name}
+                  type={item?.type_product}
+                  new_price={item?.price}
+                  image={item?.urls?.[0]?.url || no_photo}
+                  count_product={item?.quantity}
+                  obj={item}
+                  idx={index}
+                  size={item?.size}
+                  // remove={() => removeProduct(item?.id, item?.size)}
+                  onChangeQuantity={(value) =>
+                    changeQuantity(value, item, item?.id, item?.size)
+                  }
+                />
+              );
+            })
         ) : (
           <Text
             color={"white"}
