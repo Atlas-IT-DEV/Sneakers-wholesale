@@ -2,7 +2,6 @@ import styles from "./cart_product_card.module.css";
 import minusIcon from "../../images/minus_icon.svg";
 import plusIcon from "../../images/plus_icon.svg";
 import settingProductIcon from "../../images/setting_product_icon.svg";
-import { useState } from "react";
 import useWindowDimensions from "../hooks/windowDimensions";
 import {
   Button,
@@ -12,7 +11,6 @@ import {
   PopoverBody,
   PopoverContent,
   PopoverTrigger,
-  position,
   VStack,
 } from "@chakra-ui/react";
 import { useStores } from "../../store/store_context";

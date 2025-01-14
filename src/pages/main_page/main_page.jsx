@@ -2,10 +2,10 @@ import AboutDelivery from "../../components/about_delivery/about_delivery";
 import Adress from "../../components/adress/adress";
 import BottomMenu from "../../components/bottom_menu/bottom_menu";
 import CompanyInformation from "../../components/company_information/company_information";
-import Delivery from "../../components/delivery/delivery";
+// import Delivery from "../../components/delivery/delivery";
 import Header from "../../components/header/header";
-import InviteFriends from "../../components/invite_friends/invite_friends";
-import ScoresCard from "../../components/scores_card/scores_card";
+// import InviteFriends from "../../components/invite_friends/invite_friends";
+// import ScoresCard from "../../components/scores_card/scores_card";
 import SelectCatalog from "../../components/select_catalog/select_catalog";
 import SliderCarousel from "../../components/slider_carousel/slider_carousel";
 import styles from "./main_page.module.css";
@@ -29,6 +29,10 @@ const MainPage = observer(() => {
   const signIn = async (tg_id) => {
     await pageStore.signIn(tg_id);
   };
+
+  useEffect(() => {
+    console.log("fav", pageStore.favourites);
+  }, []);
 
   useEffect(() => {
     console.log(

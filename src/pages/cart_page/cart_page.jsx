@@ -84,9 +84,9 @@ const CartPage = observer(() => {
     >
       <div className={styles.header}>
         <p className={styles.namePageText}>Корзина</p>
-        <div className={styles.selectButton}>
+        {/* <div className={styles.selectButton}>
           <p className={styles.selectButtonText}>Выбрать</p>
-        </div>
+        </div> */}
       </div>
       <div className={styles.discountContainer}>
         {/* Блок с информацией о скидке */}
