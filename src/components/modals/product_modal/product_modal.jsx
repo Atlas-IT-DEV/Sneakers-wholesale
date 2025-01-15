@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 
 // import "swiper/css/navigation";
 import { FreeMode, Navigation, Pagination } from "swiper/modules";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import useWindowDimensions from "../../hooks/windowDimensions";
 import { useStores } from "../../../store/store_context";
 import { useNavigate } from "react-router";
@@ -18,6 +18,8 @@ import { useNavigate } from "react-router";
 import no_photo from "./../../../images/tiger_big_logo.jpg";
 import { observer } from "mobx-react-lite";
 import {
+  Button,
+  Collapse,
   HStack,
   Image,
   Modal,
@@ -40,17 +42,14 @@ const ProductModal = observer(
     brand_name = "Asics",
     obj = {},
   }) => {
-    const { width } = useWindowDimensions();
+    const { width, height } = useWindowDimensions();
     const navigate = useNavigate();
 
     const { pageStore } = useStores();
-    const [isPressed, setIsPressed] = useState([false, false, false, false]);
-    const copyIsPressed = Array.from(isPressed);
+    //доставка, детали, гарантия
+    const [isPressed, setIsPressed] = useState([false, false, false]);
+
     const [modalVisible, setModalVisible] = useState(false);
-    const favouriteClick = () => {
-      copyIsPressed[0] = !copyIsPressed[0];
-      setIsPressed(copyIsPressed);
-    };
     const toast = useToast();
 
     const createFavourite = async (product_id) => {
@@ -80,12 +79,8 @@ const ProductModal = observer(
         : null;
     };
 
-    useEffect(() => {
-      modalVisible && console.log("find", findFavourite());
-    }, [pageStore.favourites, modalVisible]);
-
     const toggleFavourite = async () => {
-      setModalVisible(false);
+      onClose();
       if (!findFavourite()) {
         await createFavourite(obj?.id);
       } else {
@@ -110,6 +105,11 @@ const ProductModal = observer(
     const [selectedSize, setSelectedSize] = useState("");
 
     const { isOpen, onOpen, onClose } = useDisclosure();
+    const modalRef = useRef(null);
+
+    useEffect(() => {
+      modalVisible && console.log("find", findFavourite());
+    }, [pageStore.favourites, isOpen]);
 
     return (
       <div>
@@ -205,22 +205,32 @@ const ProductModal = observer(
           onClose={onClose}
           size={"fullscreen"}
           motionPreset="slideInBottom"
+          blockScrollOnMount
+          isCentered={false}
+          initialFocusRef={modalRef}
+          // scrollBehavior="inside"
         >
-          <ModalOverlay />
+          <ModalOverlay position={"relative"} width={"100%"} height={"100vh"} />
           <ModalContent
+            ref={modalRef}
+            margin={0}
+            padding={0}
+            position={"fixed"}
+            bottom={0}
+            left={0}
+            w={"100%"}
+            height={"96vh"}
             backgroundColor={"rgba(28,28,28,1)"}
-            width={"100%"}
             borderTopLeftRadius={"26px"}
             borderTopRightRadius={"26px"}
-            zIndex={999}
-            letterSpacing={0}
-            gap={0}
-            padding={0}
+            overflow={"scroll"}
+            overflowX={"hidden"}
           >
             <ModalBody padding={0}>
               {/* <VStack align={"flex-start"} position={"relative"}> */}
               <Swiper
                 style={{
+                  "--swiper-pagination-position": "top",
                   "--swiper-pagination-color": "rgba(219, 105, 0, 1)",
                   "--swiper-pagination-bullet-inactive-color":
                     "rgba(224, 224, 224, 1)",
@@ -236,8 +246,11 @@ const ProductModal = observer(
                 modules={[FreeMode, Navigation, Pagination]}
                 spaceBetween={10}
                 freeMode={false}
-                navigation={true}
-                pagination={true}
+                // navigation={true}
+                pagination={{
+                  clickable: true,
+                  type: "bullets",
+                }}
                 onClick={() => {
                   setModalVisible(true);
                 }}
@@ -248,6 +261,10 @@ const ProductModal = observer(
                   left={"20px"}
                   top={"10px"}
                   cursor={"pointer"}
+                  onClick={() => {
+                    setSelectedSize("");
+                    onClose();
+                  }}
                 >
                   <Image
                     src={whiteArrow}
@@ -267,6 +284,7 @@ const ProductModal = observer(
                   justify={"center"}
                   align={"center"}
                   borderRadius={"50%"}
+                  onClick={() => toggleModalFavourite()}
                 >
                   <Image
                     src={
@@ -303,171 +321,188 @@ const ProductModal = observer(
                 >
                   <Text color={"white"}>{obj?.price}</Text>
                 </HStack>
-              </VStack>
-
-              <div className={styles.priceCountView}>
-                <div className={styles.priceView}>
-                  <p className={styles.priceText}>{obj?.price}₽</p>
-                  <p className={styles.oldPriceText}></p>
-                </div>
-                <p className={styles.countText}>{obj?.count}</p>
-              </div>
-            </ModalBody>
-          </ModalContent>
-        </Modal>
-
-        {modalVisible && (
-          <div
-            className={
-              modalVisible && width >= 585
-                ? styles.modalProductOpen585_600
-                : modalVisible && width >= 565
-                ? styles.modalProductOpen565_585
-                : modalVisible && width >= 525
-                ? styles.modalProductOpen525_565
-                : modalVisible && width >= 485
-                ? styles.modalProductOpen485_525
-                : modalVisible && width >= 450
-                ? styles.modalProductOpen450_485
-                : modalVisible && width >= 410
-                ? styles.modalProductOpen410_450
-                : modalVisible && width >= 375
-                ? styles.modalProductOpen375_410
-                : styles.modalProductClose
-            }
-          >
-            <p className={styles.modelNameText}>{obj?.name}</p>
-            <div className={styles.brandButton}>
-              <p>{obj.company.name}</p>
-              <img src={whiteArrow} alt="" />
-            </div>
-            <div className={styles.sizesHeader}>
+                <Text color={"white"} marginTop={"10px"}>
+                  {obj?.name}
+                </Text>
+                {/* <p className={styles.modelNameText}>{obj?.name}</p> */}
+                {/* <p>{obj.company.name}</p> */}
+                <Text
+                  color={"white"}
+                  fontWeight={500}
+                  _hover={{ textDecoration: "underline", cursor: "pointer" }}
+                >
+                  {obj?.company?.name}
+                </Text>
+                {/* <div className={styles.sizesHeader}>
               <p className={styles.sizeHeaderText}>Размеры (EU)</p>
               <p className={styles.gridText}>Размерная сетка</p>
-            </div>
-            <div className={styles.sizesView}>
-              {Array.from(obj?.characteristics)
-                .filter((elem) => elem.id == 1)
-                .map((elem) => elem.value)
-                .sort()
-                .map((item) => (
-                  <div
-                    className={`${styles.sizeButton} ${
-                      selectedSize == item
-                        ? styles.activeSizeButton
-                        : styles.inActiveSizeButton
-                    }`}
-                    onClick={() => setSelectedSize(item)}
+            </div> */}
+                <HStack
+                  justify={"space-between"}
+                  width={"100%"}
+                  align={"flex-end"}
+                >
+                  <Text color={"white"} fontSize={"14px"} marginTop={"20px"}>
+                    Размеры (EU)
+                  </Text>
+                  <Text
+                    color={"rgba(155,155,155,1)"}
+                    cursor={"pointer"}
+                    textDecoration={"underline"}
+                    fontSize={"14px"}
                   >
-                    <p>{item}</p>
-                  </div>
-                ))}
-            </div>
-            {selectedSize == "" ? (
-              <Text color={"red"} fontSize={"14px"} marginLeft={"26px"}>
-                Выберите размер
-              </Text>
-            ) : selectedSize == "new" ? (
-              <Text
-                color={"rgb(219, 105, 0)"}
-                fontSize={"14px"}
-                marginLeft={"26px"}
-              >
-                Товар добавлен!
-              </Text>
-            ) : null}
-            <footer>
-              <div className={styles.hideView}>
-                <div
-                  className={styles.hideButton}
-                  onClick={() => {
-                    copyIsPressed[1] = !copyIsPressed[1];
-                    setIsPressed(copyIsPressed);
-                  }}
+                    Размерная сетка
+                  </Text>
+                </HStack>
+                <HStack
+                  overflow={"scroll"}
+                  overflowY={"hidden"}
+                  gap={"20px"}
+                  marginTop={"15px"}
                 >
-                  <p>Доставка</p>
-                  <img
-                    src={whiteArrow}
-                    alt=""
-                    className={
-                      isPressed[1] ? styles.arrowOpen : styles.arrowClose
-                    }
-                  />
-                </div>
-                <div
-                  className={
-                    isPressed[1]
-                      ? styles.subFiltersOpen
-                      : styles.subFiltersClose
-                  }
-                >
-                  <p className={styles.hideText}>
-                    Доставка Доставка Доставка Доставка Доставка
-                    ДоставкаДоставка Доставка Доставка Доставка Доставка
-                    Доставка Доставка{" "}
-                  </p>
-                </div>
-              </div>
-              <div className={styles.hideView}>
-                <div
-                  className={styles.hideButton}
-                  onClick={() => {
-                    copyIsPressed[2] = !copyIsPressed[2];
-                    setIsPressed(copyIsPressed);
-                  }}
-                >
-                  <p>Детали</p>
-                  <img
-                    src={whiteArrow}
-                    alt=""
-                    className={
-                      isPressed[2] ? styles.arrowOpen : styles.arrowClose
-                    }
-                  />
-                </div>
-                <div
-                  className={
-                    isPressed[2]
-                      ? styles.subFiltersOpen
-                      : styles.subFiltersClose
-                  }
-                >
-                  <p className={styles.hideText}>{obj.description}</p>
-                </div>
-              </div>
-              <div className={styles.hideView}>
-                <div
-                  className={styles.hideButton}
-                  onClick={() => {
-                    copyIsPressed[3] = !copyIsPressed[3];
-                    setIsPressed(copyIsPressed);
-                  }}
-                >
-                  <p>Гарантия</p>
-                  <img
-                    src={whiteArrow}
-                    alt=""
-                    className={
-                      isPressed[3] ? styles.arrowOpen : styles.arrowClose
-                    }
-                  />
-                </div>
-                <div
-                  className={
-                    isPressed[3]
-                      ? styles.subFiltersOpen
-                      : styles.subFiltersClose
-                  }
-                >
-                  <p className={styles.hideText}>
-                    Гарантия Гарантия Гарантия Гарантия Гарантия Гарантия
-                    Гарантия Гарантия ГарантияГарантияГарантия
-                  </p>
-                </div>
-              </div>
-            </footer>
+                  {Array.from(obj?.characteristics)
+                    .filter((elem) => elem.id == 1)
+                    .map((elem) => elem.value)
+                    .sort()
+                    .map((item) => (
+                      <Stack
+                        width={"50px"}
+                        height={"60px"}
+                        onClick={() => setSelectedSize(item)}
+                        justify={"center"}
+                        align={"center"}
+                        borderRadius={"13px"}
+                        backgroundColor={
+                          selectedSize == item
+                            ? "rgba(219, 105, 0, 1)"
+                            : "rgba(36,36,36,1)"
+                        }
+                        border={"1px solid rgba(219, 105, 0, 1)"}
+                        cursor={"pointer"}
+                      >
+                        <Text color={"white"}>{item}</Text>
+                      </Stack>
+                    ))}
+                </HStack>
+                {selectedSize == "" ? (
+                  <Text color={"red"} fontSize={"14px"}>
+                    Выберите размер
+                  </Text>
+                ) : selectedSize == "new" ? (
+                  <Text color={"rgb(219, 105, 0)"} fontSize={"14px"}>
+                    Товар добавлен!
+                  </Text>
+                ) : null}
 
-            <div className={styles.actionButtons}>
+                <VStack
+                  align={"flex-start"}
+                  padding={"0 20px"}
+                  width={"100%"}
+                  backgroundColor={"rgba(8,8,8,1)"}
+                  borderRadius={"26px"}
+                  marginTop={"20px"}
+                >
+                  <HStack
+                    height={"50px"}
+                    width={"100%"}
+                    justify={"space-between"}
+                    cursor={"pointer"}
+                    onClick={() => {
+                      let copyIsPressed = Array.from(isPressed);
+                      copyIsPressed[0] = !copyIsPressed[0];
+                      setIsPressed(copyIsPressed);
+                    }}
+                  >
+                    <Text color={"white"}>Доставка</Text>
+                    <Image
+                      src={whiteArrow}
+                      height={"32px"}
+                      transform={isPressed[0] ? "rotate(90deg)" : null}
+                      transition={"0.2s"}
+                    />
+                  </HStack>
+                  <Collapse in={isPressed[0]}>
+                    <VStack padding={"10px 0"}>
+                      <Text color={"white"}>
+                        Доставка Доставка Доставка Доставка Доставка Доставка
+                        Доставка Доставка Доставка Доставка Доставка Доставка
+                      </Text>
+                    </VStack>
+                  </Collapse>
+                </VStack>
+
+                <VStack
+                  align={"flex-start"}
+                  padding={"0 20px"}
+                  width={"100%"}
+                  backgroundColor={"rgba(8,8,8,1)"}
+                  borderRadius={"26px"}
+                  marginTop={"10px"}
+                >
+                  <HStack
+                    height={"50px"}
+                    width={"100%"}
+                    justify={"space-between"}
+                    cursor={"pointer"}
+                    onClick={() => {
+                      let copyIsPressed = Array.from(isPressed);
+                      copyIsPressed[1] = !copyIsPressed[1];
+                      setIsPressed(copyIsPressed);
+                    }}
+                  >
+                    <Text color={"white"}>Детали</Text>
+                    <Image
+                      src={whiteArrow}
+                      height={"32px"}
+                      transform={isPressed[1] ? "rotate(90deg)" : null}
+                      transition={"0.2s"}
+                    />
+                  </HStack>
+                  <Collapse in={isPressed[1]}>
+                    <VStack padding={"10px 0"}>
+                      <Text color={"white"}>{obj?.description}</Text>
+                    </VStack>
+                  </Collapse>
+                </VStack>
+
+                <VStack
+                  align={"flex-start"}
+                  padding={"0 20px"}
+                  width={"100%"}
+                  backgroundColor={"rgba(8,8,8,1)"}
+                  borderRadius={"26px"}
+                  marginTop={"10px"}
+                >
+                  <HStack
+                    height={"50px"}
+                    width={"100%"}
+                    justify={"space-between"}
+                    cursor={"pointer"}
+                    onClick={() => {
+                      let copyIsPressed = Array.from(isPressed);
+                      copyIsPressed[2] = !copyIsPressed[2];
+                      setIsPressed(copyIsPressed);
+                    }}
+                  >
+                    <Text color={"white"}>Гарантия</Text>
+                    <Image
+                      src={whiteArrow}
+                      height={"32px"}
+                      transform={isPressed[2] ? "rotate(90deg)" : null}
+                      transition={"0.2s"}
+                    />
+                  </HStack>
+                  <Collapse in={isPressed[2]}>
+                    <VStack padding={"10px 0"}>
+                      <Text color={"white"}>
+                        Гарантия Гарантия Гарантия Гарантия Гарантия Гарантия
+                        Гарантия Гарантия Гарантия Гарантия Гарантия Гарантия
+                      </Text>
+                    </VStack>
+                  </Collapse>
+                </VStack>
+                {/* 
+                <div className={styles.actionButtons}>
               <div
                 className={styles.buyButton}
                 style={selectedSize == "" ? { cursor: "no-drop" } : null}
@@ -498,9 +533,57 @@ const ProductModal = observer(
               >
                 <p>В корзину</p>
               </div>
-            </div>
-          </div>
-        )}
+            </div> */}
+                <HStack
+                  margin={"40px 0"}
+                  width={"100%"}
+                  justify={"space-around"}
+                  gap={"20px"}
+                >
+                  <Button
+                    borderRadius={"26px"}
+                    height={"50px"}
+                    w={"100%"}
+                    backgroundColor={"rgba(219, 105, 0, 1)"}
+                    color={"white"}
+                    _hover={{
+                      bgColor:
+                        selectedSize == "" ? "rgba(219, 105, 0, 1)" : "white",
+                      color:
+                        selectedSize == "" ? "white" : "rgba(219, 105, 0, 1)",
+                      cursor: selectedSize == "" ? "no-drop" : "pointer",
+                    }}
+                  >
+                    Купить сейчас
+                  </Button>
+                  <Button
+                    borderRadius={"26px"}
+                    height={"50px"}
+                    w={"100%"}
+                    bgColor={"black"}
+                    color={"white"}
+                    _hover={{
+                      bgColor: selectedSize == "" ? "black" : "white",
+                      color: selectedSize == "" ? "white" : "black",
+                      cursor: selectedSize == "" ? "no-drop" : "pointer",
+                    }}
+                    onClick={() => {
+                      if (selectedSize != "") {
+                        let copy_cart = Array.from(pageStore.cart);
+                        copy_cart.push({ ...obj, size: selectedSize });
+                        pageStore.updateCart(copy_cart);
+                        setSelectedSize("new");
+                        setTimeout(() => setSelectedSize(""), 1000);
+                      }
+                    }}
+                  >
+                    В корзину
+                  </Button>
+                </HStack>
+              </VStack>
+            </ModalBody>
+          </ModalContent>
+        </Modal>
       </div>
     );
   }

@@ -8,7 +8,7 @@
   display: flex;
   position: fixed;
   width: 100%;
-  z-index: 99999;
+  z-index: 998;
   padding-bottom: 14px;
   background-color: #db6900;
 }
@@ -78,7 +78,7 @@
   display: flex;
   position: fixed;
   width: 100%;
-  z-index: 99999;
+  z-index: 998;
   padding-bottom: 14px;
   background-color: #db6900;
 }
@@ -148,7 +148,7 @@
   display: flex;
   position: fixed;
   width: 100%;
-  z-index: 99999;
+  z-index: 998;
   padding-bottom: 14px;
   background-color: #db6900;
 }
@@ -218,7 +218,7 @@
   display: flex;
   position: fixed;
   width: 100%;
-  z-index: 99999;
+  z-index: 998;
   padding-bottom: 14px;
   background-color: #db6900;
 }
@@ -288,7 +288,7 @@
   display: flex;
   position: fixed;
   width: 100%;
-  z-index: 99999;
+  z-index: 998;
   padding-bottom: 14px;
   background-color: #db6900;
 }
@@ -358,7 +358,7 @@
   display: flex;
   position: fixed;
   width: 100%;
-  z-index: 99999;
+  z-index: 998;
   padding-bottom: 14px;
   background-color: #db6900;
 }

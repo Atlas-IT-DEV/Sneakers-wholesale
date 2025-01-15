@@ -237,7 +237,6 @@ const CatalogPage = observer(() => {
           </div>
         </VStack>
       )}
-
       <BottomMenu />
     </div>
   );
