@@ -218,7 +218,6 @@ const FavouritesPage = observer(() => {
             Вы ничего не добавляли в избранное
           </Text>
         )}
-        <SborOptCard />
       </div>
       <BottomMenu />
     </div>
