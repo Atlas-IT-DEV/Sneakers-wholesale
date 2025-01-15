@@ -14,7 +14,14 @@ import { useStores } from "../../store/store_context";
 import { observer } from "mobx-react-lite";
 import { useEffect } from "react";
 import { useState } from "react";
+import SborOptCard from "../../components/sbor_opt_card";
+import { createClient } from "graphql-ws";
 // import SborOptCard from "../../components/sbor_opt_card";
+
+// Создаем клиент для подключения к серверу GraphQL через WebSocket
+const client = createClient({
+  url: "ws://localhost:8000/graphql", // Замените на адрес вашего сервера
+});
 
 const CatalogPage = observer(() => {
   const { width } = useWindowDimensions();
@@ -135,6 +142,45 @@ const CatalogPage = observer(() => {
     pageStore.min_max,
     pageStore.selected_companys,
   ]);
+  const [sub_products, setSubProducts] = useState([]);
+  const subs = () => {
+    client.subscribe(
+      {
+        query: `
+    subscription getPrSub {
+      onProductsUpdated {
+        id
+        sizes {
+          id
+          size {
+            name
+          }
+          ordered
+          telegramId
+          nickName
+        }
+      }
+    }
+  `,
+      },
+      {
+        next: (data) => {
+          console.log("Получены данные:", data.data);
+          setSubProducts(data.data.onProductsUpdated);
+        },
+        error: (err) => {
+          console.error("Ошибка:", err);
+          setSubProducts([]);
+        },
+        complete: () => console.log("Подписка завершена"),
+      }
+    );
+  };
+  useEffect(() => {
+    if (pageStore.shop_format == 3) {
+      subs();
+    }
+  }, []);
 
   return (
     <div
@@ -197,6 +243,14 @@ const CatalogPage = observer(() => {
         <Categories name_category="Nike" />
         <Categories name_category="Adidas" /> */}
       </div>
+
+      {pageStore.shop_format == 3 ? (
+        <VStack>
+          {sub_products.map((elem) => (
+            <SborOptCard />
+          ))}
+        </VStack>
+      ) : null}
       <div className={styles.products}>
         <div className={styles.productsField}>
           {products.map((elem, index) => {
