@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import { FreeMode, Navigation, Pagination } from "swiper/modules";
 
 import no_photo from "./../images/tiger_big_logo.jpg";
+import useWindowDimensions from "./hooks/windowDimensions";
 
 const SborOptCard = ({
   brand = "Nike",
@@ -14,6 +15,7 @@ const SborOptCard = ({
   sizes,
   price = "3000",
 }) => {
+  const { width } = useWindowDimensions();
   return (
     <VStack
       w={"100%"}
@@ -71,11 +73,22 @@ const SborOptCard = ({
         </SwiperSlide>
       </Swiper>
 
-      <Text color={"white"} fontWeight={"700"}>
+      <Text
+        color={"white"}
+        fontWeight={"600"}
+        fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
+      >
         {brand}
       </Text>
-      <Text color={"white"}>{model}</Text>
-      <Text color={"rgba(100,100,100,1)"}>Размеры</Text>
+      <Text color={"white"} fontSize={width <= 600 ? ["16px", "18px"] : "18px"}>
+        {model}
+      </Text>
+      <Text
+        color={"rgba(100,100,100,1)"}
+        fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
+      >
+        Размеры
+      </Text>
       <HStack
         w={"100%"}
         align={"flex-start"}
@@ -93,72 +106,17 @@ const SborOptCard = ({
           borderRadius={"10px"}
           justifyContent={"center"}
           align={"center"}
-        >
-          <Text>42</Text>
-        </Stack>
-        <Stack
-          height={"50px"}
-          width={"40px"}
-          minWidth={"40px"}
-          color={"white"}
-          border={"1px solid red"}
-          borderRadius={"10px"}
-          justifyContent={"center"}
-          align={"center"}
-        >
-          <Text>42</Text>
-        </Stack>
-        <Stack
-          height={"50px"}
-          width={"40px"}
-          minWidth={"40px"}
-          color={"white"}
-          border={"1px solid red"}
-          borderRadius={"10px"}
-          justifyContent={"center"}
-          align={"center"}
-        >
-          <Text>42</Text>
-        </Stack>
-        <Stack
-          height={"50px"}
-          width={"40px"}
-          minWidth={"40px"}
-          color={"white"}
-          border={"1px solid red"}
-          borderRadius={"10px"}
-          justifyContent={"center"}
-          align={"center"}
-        >
-          <Text>42</Text>
-        </Stack>
-        <Stack
-          height={"50px"}
-          width={"40px"}
-          minWidth={"40px"}
-          color={"white"}
-          border={"1px solid red"}
-          borderRadius={"10px"}
-          justifyContent={"center"}
-          align={"center"}
-        >
-          <Text>42</Text>
-        </Stack>
-        <Stack
-          height={"50px"}
-          width={"40px"}
-          minWidth={"40px"}
-          color={"white"}
-          border={"1px solid red"}
-          borderRadius={"10px"}
-          justifyContent={"center"}
-          align={"center"}
+          fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
         >
           <Text>42</Text>
         </Stack>
       </HStack>
 
-      <Text color={"rgba(219, 105, 0, 1)"} fontWeight={"600"} fontSize={"18px"}>
+      <Text
+        color={"rgba(219, 105, 0, 1)"}
+        fontWeight={"600"}
+        fontSize={width <= 600 ? ["18px", "20px"] : "20px"}
+      >
         {price} ₽ / пару
       </Text>
     </VStack>

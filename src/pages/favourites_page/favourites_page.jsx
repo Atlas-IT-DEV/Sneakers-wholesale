@@ -58,24 +58,24 @@ const FavouritesPage = observer(() => {
         (elem) => elem.type_product == formats[pageStore.shop_format]
       )
     );
-    if (pageStore.sort_type == 1) {
+    if (pageStore.sort_type_fav == 1) {
       copy_catalog = copy_catalog.sort((a, b) => a.price - b.price);
-    } else if (pageStore.sort_type == 2) {
+    } else if (pageStore.sort_type_fav == 2) {
       copy_catalog = copy_catalog.sort((a, b) => b.price - a.price);
     }
-    if (pageStore.search_str != "") {
+    if (pageStore.search_str_fav != "") {
       let fuce_copy_catalog = Array.from(copy_catalog);
       copy_catalog = copy_catalog.filter(
         (elem) =>
           elem.name
             .toLowerCase()
-            .includes(pageStore.search_str.toLowerCase()) ||
+            .includes(pageStore.search_str_fav.toLowerCase()) ||
           elem.description
             .toLowerCase()
-            .includes(pageStore.search_str.toLowerCase()) ||
+            .includes(pageStore.search_str_fav.toLowerCase()) ||
           elem.company?.name
             .toLowerCase()
-            .includes(pageStore.search_str.toLowerCase())
+            .includes(pageStore.search_str_fav.toLowerCase())
       );
       const options = {
         keys: ["name", "description"], // Поля для поиска
@@ -83,7 +83,7 @@ const FavouritesPage = observer(() => {
       };
 
       const fuse = new Fuse(fuce_copy_catalog, options);
-      const result = fuse.search(pageStore.search_str);
+      const result = fuse.search(pageStore.search_str_fav);
       const similarProducts = result
         .map((res) => res.item)
         .filter(
@@ -95,30 +95,36 @@ const FavouritesPage = observer(() => {
       console.log(similarProducts);
       setSimilar(similarProducts);
     }
-    if (pageStore.selected_chars.length != 0) {
+    if (pageStore.selected_chars_fav.length != 0) {
       copy_catalog = findMatchingProducts(
         copy_catalog,
-        pageStore.selected_chars
+        pageStore.selected_chars_fav
       );
     }
-    if (pageStore.min_max[0] != "" && pageStore.min_max[1] != "") {
+    if (pageStore.min_max_fav[0] != "" && pageStore.min_max_fav[1] != "") {
       copy_catalog = copy_catalog.filter(
         (elem) =>
-          Number(elem.price) >= Number(pageStore.min_max[0]) &&
-          Number(elem.price) <= Number(pageStore.min_max[1])
+          Number(elem.price) >= Number(pageStore.min_max_fav[0]) &&
+          Number(elem.price) <= Number(pageStore.min_max_fav[1])
       );
-    } else if (pageStore.min_max[0] != "" && pageStore.min_max[1] == "") {
+    } else if (
+      pageStore.min_max_fav[0] != "" &&
+      pageStore.min_max_fav[1] == ""
+    ) {
       copy_catalog = copy_catalog.filter(
-        (elem) => Number(elem.price) >= Number(pageStore.min_max[0])
+        (elem) => Number(elem.price) >= Number(pageStore.min_max_fav[0])
       );
-    } else if (pageStore.min_max[0] == "" && pageStore.min_max[1] != "") {
+    } else if (
+      pageStore.min_max_fav[0] == "" &&
+      pageStore.min_max_fav[1] != ""
+    ) {
       copy_catalog = copy_catalog.filter(
-        (elem) => Number(elem.price) <= Number(pageStore.min_max[1])
+        (elem) => Number(elem.price) <= Number(pageStore.min_max_fav[1])
       );
     }
-    if (pageStore.selected_companys.length != 0) {
+    if (pageStore.selected_companys_fav.length != 0) {
       copy_catalog = copy_catalog.filter((elem) =>
-        pageStore.selected_companys.includes(elem.company.name)
+        pageStore.selected_companys_fav.includes(elem.company.name)
       );
     }
 
@@ -126,20 +132,20 @@ const FavouritesPage = observer(() => {
   };
   const handleSortClick = () => {
     if (pageStore.sort_type < 2) {
-      pageStore.updateSortType(pageStore.sort_type + 1);
+      pageStore.updateSortTypeFav(pageStore.sort_type_fav + 1);
     } else {
-      pageStore.updateSortType(0);
+      pageStore.updateSortTypeFav(0);
     }
   };
   useEffect(() => {
     sortCatalog();
   }, [
     pageStore.products,
-    pageStore.sort_type,
-    pageStore.search_str,
-    pageStore.selected_chars,
-    pageStore.min_max,
-    pageStore.selected_companys,
+    pageStore.sort_type_fav,
+    pageStore.search_str_fav,
+    pageStore.selected_chars_fav,
+    pageStore.min_max_fav,
+    pageStore.selected_companys_fav,
   ]);
 
   return (
@@ -171,8 +177,8 @@ const FavouritesPage = observer(() => {
             <input
               type="search"
               placeholder="Найти"
-              value={pageStore.search_str}
-              onChange={(e) => pageStore.updateSearchStr(e.target.value)}
+              value={pageStore.search_str_fav}
+              onChange={(e) => pageStore.updateSearchStrFav(e.target.value)}
               onSubmit={(e) => {
                 e.target.preventDefault();
               }}

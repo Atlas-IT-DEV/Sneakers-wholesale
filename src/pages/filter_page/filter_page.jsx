@@ -27,10 +27,7 @@ const FilterPage = observer(() => {
       }
     >
       <div className={styles.header}>
-        <div
-          className={styles.closeButton}
-          onClick={() => navigate("/catalog")}
-        >
+        <div className={styles.closeButton} onClick={() => navigate(-1)}>
           <p>Закрыть</p>
         </div>
         <p className={styles.namePageText}>Фильтры</p>
