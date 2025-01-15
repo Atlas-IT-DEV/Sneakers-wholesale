@@ -3,9 +3,7 @@ import styles from "./favourite_product_card.module.css";
 // import orangeArrow from "../../images/orange_arrow.svg";
 // import minusIcon from "../../images/minus_icon.svg";
 // import plusIcon from "../../images/plus_icon.svg";
-
 import no_photo from "./../../images/tiger_big_logo.jpg";
-
 import trash from "./../../images/trash.svg";
 
 // import { useEffect, useState } from "react";
@@ -31,7 +29,8 @@ const FavouriteProductCard = observer(
     const { pageStore } = useStores();
 
     const findFavourite = () => {
-      return pageStore.favourites.length != 0
+      return pageStore.favourites.length != 0 &&
+        Array.isArray(pageStore.favourites)
         ? pageStore.favourites.find((item) => item?.product?.id == obj?.id)
         : null;
     };
@@ -43,7 +42,7 @@ const FavouriteProductCard = observer(
           method: "DELETE",
           headers: {
             accept: "application/json",
-            Authorization: `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJUT0tFTl9UWVBFX0ZJRUxEIjoiYWNjZXNzX3Rva2VuX3R5cGUiLCJzdWIiOiJhZG1pbiIsInVzZXJfaWQiOjYxOCwiZmlyc3RfbmFtZSI6IkRJTUFTUyIsImxhc3RfbmFtZSI6IlZFTElDSEtPIiwiZXhwIjoxNzM2ODgwMTYzLCJpYXQiOjE3MzY3OTM3NjN9.ofvpMalNsIliUMNNlG1w2uT1J9zNlJuhyRAsxPWKTH84iivKVpCqQD0h8RzgBCzW8a1LEKGT1Wlq6tFlD5OIT7wLPa-imJK4lghtoA_9lcnZ4W334WqxU3KsNIKdAkObnZs0mpJLXgMOEBJUZmDKHmnbObCixpLat-c2XGjXq5SMOLpRoKF9KEJ6UFFDB7lnfSd8Egkih8f-TjPlTieY2kIc6kEHxDzbZzFyK2ytxp_v16B6KAtD4jNGPQxeGnkEy2dLwA5d6AcJH6GGbw2S7Sflw5p-CV8EuOtHztzBCqEjJYHSz40u04BZkILQq76yGi2UuJL9dusEvqJkXqUA_g`,
+            Authorization: `Bearer ${pageStore.token}`,
           },
         }
       );

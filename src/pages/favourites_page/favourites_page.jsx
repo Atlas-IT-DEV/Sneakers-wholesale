@@ -193,7 +193,8 @@ const FavouritesPage = observer(() => {
         <SelectCatalog />
       </div>
       <div className={styles.products}>
-        {pageStore.favourites.length != 0 ? (
+        {pageStore.favourites.length != 0 &&
+        Array.isArray(pageStore.favourites) ? (
           products.map((item, index) => {
             if (
               pageStore.favourites.some((elem) => elem.product.id == item.id)

@@ -17,7 +17,18 @@ import { useNavigate } from "react-router";
 
 import no_photo from "./../../../images/tiger_big_logo.jpg";
 import { observer } from "mobx-react-lite";
-import { Image, Text, VStack } from "@chakra-ui/react";
+import {
+  HStack,
+  Image,
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalOverlay,
+  Stack,
+  Text,
+  useDisclosure,
+  VStack,
+} from "@chakra-ui/react";
 import { useToast } from "@chakra-ui/react";
 
 const ProductModal = observer(
@@ -60,8 +71,11 @@ const ProductModal = observer(
       console.log("delete", response);
     };
 
+    console.log("favs", pageStore.favourites);
+
     const findFavourite = () => {
-      return pageStore.favourites.length != 0
+      return pageStore.favourites?.length != 0 &&
+        Array.isArray(pageStore.favourites)
         ? pageStore.favourites.find((item) => item?.product?.id == obj?.id)
         : null;
     };
@@ -94,6 +108,8 @@ const ProductModal = observer(
     }, [pageStore.favourites, modalVisible]);
 
     const [selectedSize, setSelectedSize] = useState("");
+
+    const { isOpen, onOpen, onClose } = useDisclosure();
 
     return (
       <div>
@@ -130,7 +146,8 @@ const ProductModal = observer(
             navigation={true}
             pagination={true}
             onClick={() => {
-              setModalVisible(true);
+              // setModalVisible(true);
+              onOpen();
             }}
           >
             {obj.urls.length != 0 ? (
@@ -183,6 +200,122 @@ const ProductModal = observer(
           </Swiper>
         </div>
 
+        <Modal
+          isOpen={isOpen}
+          onClose={onClose}
+          size={"fullscreen"}
+          motionPreset="slideInBottom"
+        >
+          <ModalOverlay />
+          <ModalContent
+            backgroundColor={"rgba(28,28,28,1)"}
+            width={"100%"}
+            borderTopLeftRadius={"26px"}
+            borderTopRightRadius={"26px"}
+            zIndex={999}
+            letterSpacing={0}
+            gap={0}
+            padding={0}
+          >
+            <ModalBody padding={0}>
+              {/* <VStack align={"flex-start"} position={"relative"}> */}
+              <Swiper
+                style={{
+                  "--swiper-pagination-color": "rgba(219, 105, 0, 1)",
+                  "--swiper-pagination-bullet-inactive-color":
+                    "rgba(224, 224, 224, 1)",
+                  "--swiper-pagination-bullet-inactive-opacity": "1",
+                  "--swiper-pagination-bullet-size": "9px",
+                  "--swiper-pagination-bullet-horizontal-gap": "4px",
+                  display: "flex",
+                  borderTopLeftRadius: "26px",
+                  borderTopRightRadius: "26px",
+                  position: "relative",
+                }}
+                // className={styles.sliderProduct}
+                modules={[FreeMode, Navigation, Pagination]}
+                spaceBetween={10}
+                freeMode={false}
+                navigation={true}
+                pagination={true}
+                onClick={() => {
+                  setModalVisible(true);
+                }}
+              >
+                <Stack
+                  position={"absolute"}
+                  zIndex={100}
+                  left={"20px"}
+                  top={"10px"}
+                  cursor={"pointer"}
+                >
+                  <Image
+                    src={whiteArrow}
+                    height={"47px"}
+                    transform={"rotateY(180deg)"}
+                  />
+                </Stack>
+                <Stack
+                  position={"absolute"}
+                  top={"20px"}
+                  right={"20px"}
+                  cursor={"pointer"}
+                  zIndex={100}
+                  backgroundColor={"white"}
+                  width={"35px"}
+                  h={"35px"}
+                  justify={"center"}
+                  align={"center"}
+                  borderRadius={"50%"}
+                >
+                  <Image
+                    src={
+                      findFavourite()
+                        ? favouriteActiveIcon
+                        : favouriteInactiveIcon
+                    }
+                    width={"20px"}
+                  />
+                </Stack>
+                {obj.urls.length != 0 ? (
+                  obj.urls.map((elem) => (
+                    <SwiperSlide className={styles.slideProduct}>
+                      <Image
+                        src={elem?.url || no_photo}
+                        // maxHeight={"300px"}
+                        width={width}
+                      />
+                    </SwiperSlide>
+                  ))
+                ) : (
+                  <SwiperSlide className={styles.slideProduct}>
+                    {/* <img src={no_photo} alt="" className={styles.imageProduct} /> */}
+                    <Image src={no_photo} width={width} objectFit={"fill"} />
+                  </SwiperSlide>
+                )}
+              </Swiper>
+              <VStack width={"100%"} padding={"0 20px"} align={"flex-start"}>
+                <HStack
+                  width={"100%"}
+                  justifyContent={"space-between"}
+                  align={"end"}
+                  marginTop={"14px"}
+                >
+                  <Text color={"white"}>{obj?.price}</Text>
+                </HStack>
+              </VStack>
+
+              <div className={styles.priceCountView}>
+                <div className={styles.priceView}>
+                  <p className={styles.priceText}>{obj?.price}₽</p>
+                  <p className={styles.oldPriceText}></p>
+                </div>
+                <p className={styles.countText}>{obj?.count}</p>
+              </div>
+            </ModalBody>
+          </ModalContent>
+        </Modal>
+
         {modalVisible && (
           <div
             className={
@@ -203,80 +336,6 @@ const ProductModal = observer(
                 : styles.modalProductClose
             }
           >
-            <Swiper
-              style={{
-                "--swiper-pagination-color": "rgba(219, 105, 0, 1)",
-                "--swiper-pagination-bullet-inactive-color":
-                  "rgba(224, 224, 224, 1)",
-                "--swiper-pagination-bullet-inactive-opacity": "1",
-                "--swiper-pagination-bullet-size": "9px",
-                "--swiper-pagination-bullet-horizontal-gap": "4px",
-              }}
-              className={styles.sliderProduct}
-              modules={[FreeMode, Navigation, Pagination]}
-              spaceBetween={10}
-              freeMode={false}
-              navigation={true}
-              pagination={true}
-              onClick={() => {
-                setModalVisible(true);
-              }}
-            >
-              <div
-                className={styles.backButton}
-                onClick={() => {
-                  setModalVisible(false);
-                  setSelectedSize("");
-                }}
-              >
-                <img src={whiteArrow} alt="" />
-              </div>
-              <div
-                className={styles.addFavouriveButton}
-                onClick={async () => {
-                  await toggleModalFavourite();
-                }}
-              >
-                <img
-                  src={
-                    findFavourite()
-                      ? favouriteActiveIcon
-                      : favouriteInactiveIcon
-                  }
-                  alt=""
-                />
-              </div>
-              {obj.urls.length != 0 ? (
-                obj.urls.map((elem) => (
-                  <SwiperSlide className={styles.slideProduct}>
-                    <Image
-                      src={elem?.url || no_photo}
-                      // maxHeight={"300px"}
-                      width={width}
-                      obj
-                    />
-                    {/* <img
-                      src={elem?.url || no_photo}
-                      alt=""
-                      className={styles.imageProductModal}
-                    /> */}
-                  </SwiperSlide>
-                ))
-              ) : (
-                <SwiperSlide className={styles.slideProduct}>
-                  {/* <img src={no_photo} alt="" className={styles.imageProduct} /> */}
-                  <Image src={no_photo} width={width} objectFit={"fill"} />
-                </SwiperSlide>
-              )}
-            </Swiper>
-
-            <div className={styles.priceCountView}>
-              <div className={styles.priceView}>
-                <p className={styles.priceText}>{obj?.price}₽</p>
-                <p className={styles.oldPriceText}></p>
-              </div>
-              <p className={styles.countText}>{obj?.count}</p>
-            </div>
             <p className={styles.modelNameText}>{obj?.name}</p>
             <div className={styles.brandButton}>
               <p>{obj.company.name}</p>
