@@ -319,7 +319,7 @@ const ProductModal = observer(
                   align={"end"}
                   marginTop={"14px"}
                 >
-                  <Text color={"white"}>{obj?.price}</Text>
+                  <Text color={"white"}>{parseInt(obj?.price)} ₽</Text>
                 </HStack>
                 <Text color={"white"} marginTop={"10px"}>
                   {obj?.name}
