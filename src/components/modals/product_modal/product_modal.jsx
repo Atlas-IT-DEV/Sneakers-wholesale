@@ -2,7 +2,8 @@ import styles from "./product_modal.module.css";
 
 import favouriteInactiveIcon from "../../../images/favourite_inactive_icon.svg";
 import favouriteActiveIcon from "../../../images/favourite_active_icon.svg";
-import whiteArrow from "../../../images/arrow_select_white.svg";
+import backArrow from "../../../images/arrow_right_icon.svg";
+import whiteArrow from "./../../../images/arrow_select_white.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
@@ -259,17 +260,24 @@ const ProductModal = observer(
                   position={"absolute"}
                   zIndex={100}
                   left={"20px"}
-                  top={"10px"}
+                  top={"20px"}
                   cursor={"pointer"}
                   onClick={() => {
                     setSelectedSize("");
                     onClose();
                   }}
+                  backgroundColor={"white"}
+                  width={width <= 600 ? ["35px", "40px"] : "40px"}
+                  height={width <= 600 ? ["35px", "40px"] : "40px"}
+                  justify={"center"}
+                  align={"center"}
+                  borderRadius={"50%"}
                 >
                   <Image
-                    src={whiteArrow}
-                    height={"47px"}
-                    transform={"rotateY(180deg)"}
+                    src={backArrow}
+                    transform={"rotate(180deg)"}
+                    marginRight={"4px"}
+                    w={width <= 600 ? ["15px", "18px"] : "18px"}
                   />
                 </Stack>
                 <Stack
@@ -279,8 +287,8 @@ const ProductModal = observer(
                   cursor={"pointer"}
                   zIndex={100}
                   backgroundColor={"white"}
-                  width={"35px"}
-                  h={"35px"}
+                  width={width <= 600 ? ["35px", "40px"] : "40px"}
+                  height={width <= 600 ? ["35px", "40px"] : "40px"}
                   justify={"center"}
                   align={"center"}
                   borderRadius={"50%"}
@@ -292,7 +300,7 @@ const ProductModal = observer(
                         ? favouriteActiveIcon
                         : favouriteInactiveIcon
                     }
-                    width={"20px"}
+                    width={width <= 600 ? ["20px", "25px"] : "25px"}
                   />
                 </Stack>
                 {obj.urls.length != 0 ? (
@@ -319,9 +327,18 @@ const ProductModal = observer(
                   align={"end"}
                   marginTop={"14px"}
                 >
-                  <Text color={"white"}>{parseInt(obj?.price)} ₽</Text>
+                  <Text
+                    color={"white"}
+                    fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
+                  >
+                    {parseInt(obj?.price)} ₽
+                  </Text>
                 </HStack>
-                <Text color={"white"} marginTop={"10px"}>
+                <Text
+                  color={"white"}
+                  marginTop={"10px"}
+                  fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
+                >
                   {obj?.name}
                 </Text>
                 {/* <p className={styles.modelNameText}>{obj?.name}</p> */}
@@ -329,6 +346,7 @@ const ProductModal = observer(
                 <Text
                   color={"white"}
                   fontWeight={500}
+                  fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
                   _hover={{ textDecoration: "underline", cursor: "pointer" }}
                 >
                   {obj?.company?.name}
@@ -342,14 +360,18 @@ const ProductModal = observer(
                   width={"100%"}
                   align={"flex-end"}
                 >
-                  <Text color={"white"} fontSize={"14px"} marginTop={"20px"}>
+                  <Text
+                    color={"white"}
+                    fontSize={width <= 600 ? ["14px", "16px"] : "16px"}
+                    marginTop={"20px"}
+                  >
                     Размеры (EU)
                   </Text>
                   <Text
                     color={"rgba(155,155,155,1)"}
                     cursor={"pointer"}
                     textDecoration={"underline"}
-                    fontSize={"14px"}
+                    fontSize={width <= 600 ? ["14px", "16px"] : "16px"}
                   >
                     Размерная сетка
                   </Text>
@@ -380,16 +402,27 @@ const ProductModal = observer(
                         border={"1px solid rgba(219, 105, 0, 1)"}
                         cursor={"pointer"}
                       >
-                        <Text color={"white"}>{item}</Text>
+                        <Text
+                          color={"white"}
+                          fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
+                        >
+                          {item}
+                        </Text>
                       </Stack>
                     ))}
                 </HStack>
                 {selectedSize == "" ? (
-                  <Text color={"red"} fontSize={"14px"}>
+                  <Text
+                    color={"red"}
+                    fontSize={width <= 600 ? ["14px", "16px"] : "16px"}
+                  >
                     Выберите размер
                   </Text>
                 ) : selectedSize == "new" ? (
-                  <Text color={"rgb(219, 105, 0)"} fontSize={"14px"}>
+                  <Text
+                    color={"rgb(219, 105, 0)"}
+                    fontSize={width <= 600 ? ["14px", "16px"] : "16px"}
+                  >
                     Товар добавлен!
                   </Text>
                 ) : null}
@@ -413,7 +446,12 @@ const ProductModal = observer(
                       setIsPressed(copyIsPressed);
                     }}
                   >
-                    <Text color={"white"}>Доставка</Text>
+                    <Text
+                      color={"white"}
+                      fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
+                    >
+                      Доставка
+                    </Text>
                     <Image
                       src={whiteArrow}
                       height={"32px"}
@@ -423,7 +461,10 @@ const ProductModal = observer(
                   </HStack>
                   <Collapse in={isPressed[0]}>
                     <VStack padding={"10px 0"}>
-                      <Text color={"white"}>
+                      <Text
+                        color={"white"}
+                        fontSize={width <= 600 ? ["14px", "16px"] : "16px"}
+                      >
                         Доставка Доставка Доставка Доставка Доставка Доставка
                         Доставка Доставка Доставка Доставка Доставка Доставка
                       </Text>
@@ -450,7 +491,12 @@ const ProductModal = observer(
                       setIsPressed(copyIsPressed);
                     }}
                   >
-                    <Text color={"white"}>Детали</Text>
+                    <Text
+                      color={"white"}
+                      fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
+                    >
+                      Детали
+                    </Text>
                     <Image
                       src={whiteArrow}
                       height={"32px"}
@@ -460,7 +506,12 @@ const ProductModal = observer(
                   </HStack>
                   <Collapse in={isPressed[1]}>
                     <VStack padding={"10px 0"}>
-                      <Text color={"white"}>{obj?.description}</Text>
+                      <Text
+                        color={"white"}
+                        fontSize={width <= 600 ? ["14px", "16px"] : "16px"}
+                      >
+                        {obj?.description}
+                      </Text>
                     </VStack>
                   </Collapse>
                 </VStack>
@@ -484,7 +535,12 @@ const ProductModal = observer(
                       setIsPressed(copyIsPressed);
                     }}
                   >
-                    <Text color={"white"}>Гарантия</Text>
+                    <Text
+                      color={"white"}
+                      fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
+                    >
+                      Гарантия
+                    </Text>
                     <Image
                       src={whiteArrow}
                       height={"32px"}
@@ -494,46 +550,16 @@ const ProductModal = observer(
                   </HStack>
                   <Collapse in={isPressed[2]}>
                     <VStack padding={"10px 0"}>
-                      <Text color={"white"}>
+                      <Text
+                        color={"white"}
+                        fontSize={width <= 600 ? ["14px", "16px"] : "16px"}
+                      >
                         Гарантия Гарантия Гарантия Гарантия Гарантия Гарантия
                         Гарантия Гарантия Гарантия Гарантия Гарантия Гарантия
                       </Text>
                     </VStack>
                   </Collapse>
                 </VStack>
-                {/* 
-                <div className={styles.actionButtons}>
-              <div
-                className={styles.buyButton}
-                style={selectedSize == "" ? { cursor: "no-drop" } : null}
-                onClick={() => {
-                  if (selectedSize != "") {
-                    let copy_cart = Array.from(pageStore.cart);
-                    copy_cart.push({ ...obj, size: selectedSize });
-                    pageStore.updateCart(copy_cart);
-                    setSelectedSize("");
-                    navigate("/cart");
-                  }
-                }}
-              >
-                <p>Купить сейчас</p>
-              </div>
-              <div
-                className={styles.addButton}
-                style={selectedSize == "" ? { cursor: "no-drop" } : null}
-                onClick={() => {
-                  if (selectedSize != "") {
-                    let copy_cart = Array.from(pageStore.cart);
-                    copy_cart.push({ ...obj, size: selectedSize });
-                    pageStore.updateCart(copy_cart);
-                    setSelectedSize("new");
-                    setTimeout(() => setSelectedSize(""), 1000);
-                  }
-                }}
-              >
-                <p>В корзину</p>
-              </div>
-            </div> */}
                 <HStack
                   margin={"40px 0"}
                   width={"100%"}
@@ -546,6 +572,7 @@ const ProductModal = observer(
                     w={"100%"}
                     backgroundColor={"rgba(219, 105, 0, 1)"}
                     color={"white"}
+                    fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
                     _hover={{
                       bgColor:
                         selectedSize == "" ? "rgba(219, 105, 0, 1)" : "white",
@@ -562,6 +589,7 @@ const ProductModal = observer(
                     w={"100%"}
                     bgColor={"black"}
                     color={"white"}
+                    fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
                     _hover={{
                       bgColor: selectedSize == "" ? "black" : "white",
                       color: selectedSize == "" ? "white" : "black",
