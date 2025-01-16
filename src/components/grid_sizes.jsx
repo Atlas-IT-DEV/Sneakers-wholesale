@@ -89,13 +89,13 @@ const GridSizes = ({ isOpen }) => {
     <VStack
       ref={containerRef}
       gap={0}
-      padding={"10px 0"}
+      padding={isOpen ? "10px 0" : 0}
       width={"100%"}
       align={"flex-start"}
       overflowY={"auto"}
       height={isOpen ? "auto" : "0px"} /* Меняем высоту */
       opacity={isOpen ? 1 : 0}
-      visibility={isOpen ? "visible" : "hidden"}
+      // visibility={isOpen ? "visible" : "hidden"}
       // transition={"opacity 1s, visibility 1s"}
       transition="height 0.5s ease, opacity 1s ease" /* Плавный переход */
     >
@@ -105,7 +105,7 @@ const GridSizes = ({ isOpen }) => {
         templateRows={"repeat(2, 1fr)"}
         // padding={"10px 0"}
       >
-        <GridItem colSpan={2} borderBottom={"1px solid white"}>
+        <GridItem colSpan={2} borderBottom={"1px solid white"} height={"48px"}>
           <Text color={"white"} fontWeight={"500"}>
             Размер <br /> EU
           </Text>
@@ -125,7 +125,7 @@ const GridSizes = ({ isOpen }) => {
             </Text>
           </GridItem>
         ))}
-        <GridItem colSpan={2}>
+        <GridItem colSpan={2} height={"48px"}>
           <Text color={"white"} fontWeight={"500"}>
             Длина стопы, см
           </Text>
@@ -153,7 +153,7 @@ const GridSizes = ({ isOpen }) => {
         templateRows={"repeat(2, 1fr)"}
         // padding={"10px 0"}
       >
-        <GridItem colSpan={2} borderBottom={"1px solid white"}>
+        <GridItem colSpan={2} borderBottom={"1px solid white"} height={"48px"}>
           <Text color={"white"} fontWeight={"500"}>
             Размер <br /> EU
           </Text>
@@ -165,15 +165,15 @@ const GridSizes = ({ isOpen }) => {
             alignContent={"center"}
             alignSelf={"center"}
             borderBottom={"1px solid white"}
-            height={"48px"}
             borderLeft={"1px solid white"}
+            height={"48px"}
           >
             <Text color={"white"} textAlign={"center"}>
               {item}
             </Text>
           </GridItem>
         ))}
-        <GridItem colSpan={2}>
+        <GridItem colSpan={2} height={"48px"}>
           <Text color={"white"} fontWeight={"500"}>
             Длина стопы, см
           </Text>
@@ -185,6 +185,7 @@ const GridSizes = ({ isOpen }) => {
             alignSelf={"center"}
             height={"48px"}
             borderLeft={"1px solid white"}
+            padding={0}
           >
             <Text color={"white"} textAlign={"center"}>
               {item}
