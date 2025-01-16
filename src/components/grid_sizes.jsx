@@ -95,7 +95,7 @@ const GridSizes = ({ isOpen }) => {
       overflowY={"auto"}
       height={isOpen ? "auto" : "0px"} /* Меняем высоту */
       opacity={isOpen ? 1 : 0}
-      // visibility={isOpen ? "visible" : "hidden"}
+      visibility={isOpen ? "visible" : "hidden"}
       // transition={"opacity 1s, visibility 1s"}
       transition="height 0.5s ease, opacity 1s ease" /* Плавный переход */
     >
