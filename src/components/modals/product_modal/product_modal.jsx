@@ -28,14 +28,7 @@ import {
   ModalContent,
   ModalOverlay,
   Stack,
-  Table,
-  TableContainer,
-  Tbody,
-  Td,
   Text,
-  Th,
-  Thead,
-  Tr,
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
@@ -595,6 +588,16 @@ const ProductModal = observer(
                       color:
                         selectedSize == "" ? "white" : "rgba(219, 105, 0, 1)",
                       cursor: selectedSize == "" ? "no-drop" : "pointer",
+                    }}
+                    onClick={() => {
+                      if (selectedSize != "") {
+                        let copy_cart = Array.from(pageStore.cart);
+                        copy_cart.push({ ...obj, size: selectedSize });
+                        pageStore.updateCart(copy_cart);
+                        setSelectedSize("new");
+                        setTimeout(() => setSelectedSize(""), 1000);
+                        navigate("/checkout");
+                      }
                     }}
                   >
                     Купить сейчас
