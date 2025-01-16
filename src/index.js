@@ -13,8 +13,6 @@ import FilterPage from "./pages/filter_page/filter_page";
 import ProfilePage from "./pages/profile_page/profile_page";
 import CheckoutPage from "./pages/checkout_page/checkout_page";
 import CopyPage from "./pages/copy_page/copy_page";
-import { ApolloProvider } from "@apollo/client";
-import client from "./appoloClient";
 
 const router = createMemoryRouter([
   {
@@ -88,9 +86,7 @@ root.render(
   <React.StrictMode>
     <ChakraProvider>
       <RootStoreContext.Provider value={new RootStore()}>
-        <ApolloProvider client={client}>
-          <RouterProvider router={router} />
-        </ApolloProvider>
+        <RouterProvider router={router} />
       </RootStoreContext.Provider>
     </ChakraProvider>
   </React.StrictMode>

@@ -40,6 +40,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { useToast } from "@chakra-ui/react";
+import GridSizes from "../../grid_sizes";
 
 const ProductModal = observer(
   ({
@@ -119,8 +120,11 @@ const ProductModal = observer(
       modalVisible && console.log("find", findFavourite());
     }, [pageStore.favourites, isOpen]);
 
-    // размерная сетка
     const [isOpenGrid, setIsOpenGrid] = useState(false);
+
+    useEffect(() => {
+      setIsOpenGrid(false);
+    }, [isOpen]);
 
     return (
       <div>
@@ -387,94 +391,7 @@ const ProductModal = observer(
                     Размерная сетка
                   </Text>
                 </HStack>
-                <Collapse in={isOpenGrid}>
-                  <HStack>
-                    <TableContainer>
-                      <Table>
-                        <Thead>
-                          <Th
-                            borderRight={"1px solid white"}
-                            color={"rgba(219, 105, 0, 1)"}
-                            textAlign={"end"}
-                            fontSize={"14px"}
-                          >
-                            Взрослым
-                          </Th>
-                          <Th></Th>
-                          <Th></Th>
-                          <Th></Th>
-                          <Th></Th>
-                          <Th></Th>
-                          <Th></Th>
-                          <Th></Th>
-                          <Th></Th>
-                          <Th></Th>
-                          <Th></Th>
-                          <Th></Th>
-                          <Th></Th>
-                          <Th></Th>
-                          <Th></Th>
-                        </Thead>
-
-                        <Tbody color={"white"}>
-                          <Tr>
-                            <Td
-                              borderRight={"1px solid white"}
-                              textAlign={"end"}
-                            >
-                              Размер EU
-                            </Td>
-                            <Td>35,5</Td>
-                            <Td>36</Td>
-                            <Td>36,5</Td>
-                            <Td>37</Td>
-                            <Td>37,5</Td>
-                            <Td>38</Td>
-                            <Td>38,5</Td>
-                            <Td>39</Td>
-                            <Td>40</Td>
-                            <Td>40,5</Td>
-                            <Td>41</Td>
-                            <Td>42</Td>
-                            <Td>42,5</Td>
-                            <Td>43</Td>
-                            <Td>44</Td>
-                            <Td>44,5</Td>
-                            <Td>45</Td>
-                            <Td>46</Td>
-                            <Td>46,5</Td>
-                            <Td>47</Td>
-                          </Tr>
-                          <Tr>
-                            <Td borderRight={"1px solid white"}>
-                              Длина стопы, см
-                            </Td>
-                            <Td>22,1</Td>
-                            <Td>22,5</Td>
-                            <Td>22,9</Td>
-                            <Td>23,3</Td>
-                            <Td>23,8</Td>
-                            <Td>24,2</Td>
-                            <Td>24,6</Td>
-                            <Td>25</Td>
-                            <Td>25,5</Td>
-                            <Td>26</Td>
-                            <Td>26,3</Td>
-                            <Td>26,7</Td>
-                            <Td>27,1</Td>
-                            <Td>27,6</Td>
-                            <Td>28</Td>
-                            <Td>28,4</Td>
-                            <Td>28,8</Td>
-                            <Td>29,3</Td>
-                            <Td>29,7</Td>
-                            <Td>30,1</Td>
-                          </Tr>
-                        </Tbody>
-                      </Table>
-                    </TableContainer>
-                  </HStack>
-                </Collapse>
+                <GridSizes isOpen={isOpenGrid} />
                 <HStack
                   overflow={"scroll"}
                   overflowY={"hidden"}
