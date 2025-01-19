@@ -85,6 +85,10 @@ const CartPage = observer(() => {
       <div className={styles.header}>
         <p className={styles.namePageText}>Корзина</p>
       </div>
+      <div className={styles.discountContainer}>
+        {/* Блок с информацией о скидке */}
+        {/* {pageStore.cart.length != 0 ? <DiscountCard /> : null} */}
+      </div>
       <div className={styles.productContainer}>
         {pageStore.cart.length != 0 ? (
           combineProducts(pageStore.cart)
