@@ -1,7 +1,9 @@
+import useWindowDimensions from "../hooks/windowDimensions";
+
 import styles from "./catalog.module.css";
 import arrowRightIcon from "../../images/arrow_right_icon.svg";
+
 import ProductCard from "../product_card.jsx/product_card";
-import useWindowDimensions from "../hooks/windowDimensions";
 
 const Catalog = () => {
   const { width } = useWindowDimensions();

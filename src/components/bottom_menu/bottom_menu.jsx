@@ -1,14 +1,15 @@
+import useWindowDimensions from "../hooks/windowDimensions";
+import { useNavigate } from "react-router";
+import { useStores } from "../../store/store_context";
+import { Text, VStack } from "@chakra-ui/react";
+import { observer } from "mobx-react-lite";
+
 import styles from "./bottom_menu.module.css";
 import homeIcon from "../../images/home.svg";
 import catalogIcon from "../../images/catalog.svg";
 import favouriteIcon from "../../images/fav.svg";
 import shoppingCartIcon from "../../images/shopping_cart_inactive.svg";
 
-import useWindowDimensions from "../hooks/windowDimensions";
-import { useNavigate } from "react-router";
-import { useStores } from "../../store/store_context";
-import { Text, VStack } from "@chakra-ui/react";
-import { observer } from "mobx-react-lite";
 const BottomMenu = observer(() => {
   const { width } = useWindowDimensions();
   const navigate = useNavigate();

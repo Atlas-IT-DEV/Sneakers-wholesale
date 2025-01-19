@@ -1,30 +1,18 @@
+import { useNavigate } from "react-router";
+import useWindowDimensions from "../../components/hooks/windowDimensions";
+import { useStores } from "../../store/store_context";
+
 import styles from "./checkout_page.module.css";
-// import arrowBackIcon from "../../images/arrow_back_icon.svg";
 import sdekIcon from "../../images/sdek_icon.svg";
-// import plusIcon from "../../images/plus_orange_icon.svg";
 import selectArrow from "../../images/arrow_light_gray.svg";
-// import mirIcon from "../../images/mir_icon.svg";
 import no_photo from "./../../images/tiger_big_logo.jpg";
 import pochtaIcon from "./../../images/pochta.svg";
 import geo from "./../../images/geo.svg";
 
-import { useNavigate } from "react-router";
-import useWindowDimensions from "../../components/hooks/windowDimensions";
-import { useStores } from "../../store/store_context";
-import {
-  HStack,
-  Image,
-  Input,
-  Popover,
-  PopoverBody,
-  PopoverContent,
-  PopoverTrigger,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { HStack, Image, Input, Text, VStack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
-const CheckoutPage = ({ count = 2 }) => {
+const CheckoutPage = ({}) => {
   const navigate = useNavigate();
   const { width } = useWindowDimensions();
 
@@ -109,7 +97,6 @@ const CheckoutPage = ({ count = 2 }) => {
               <img src={geo} style={{ height: "80px" }} />
             )}
           </div>
-          {/* <img src={plusIcon} /> */}
         </div>
         <div
           className={styles.methodButton}
@@ -237,20 +224,6 @@ const CheckoutPage = ({ count = 2 }) => {
           );
         })}
       </div>
-      {/* <div className={`${styles.view} ${styles.payment}`}>
-        <p className={styles.headerView}>Способ оплаты</p>
-        <div className={styles.selectButton}>
-          <div className={styles.contentView}>
-            <img src={mirIcon} alt="" />
-            <p>Привязать карту</p>
-          </div>
-          <img src={plusIcon} />
-        </div>
-        <div className={styles.methodButton}>
-          <p>Все способы оплаты</p>
-          <img src={selectArrow} alt="" />
-        </div>
-      </div> */}
       <div className={styles.divLine} />
       <div className={styles.totalView}>
         <p className={`${styles.attributeTotal} ${styles.totalText}`}>Итого</p>
@@ -267,26 +240,6 @@ const CheckoutPage = ({ count = 2 }) => {
             {pageStore.cart.length}
           </p>
         </div>
-        {/* <div className={styles.viewTotal}>
-          <p className={`${styles.descAttrTotal} ${styles.descText}`}>Сумма</p>
-          <p className={`${styles.descValueTotal} ${styles.descText}`}>
-            18400₽
-          </p>
-        </div> */}
-        {/* <div className={styles.viewTotal}>
-          <p className={`${styles.descAttrTotal} ${styles.descText}`}>Скидка</p>
-          <p className={`${styles.descValueTotal} ${styles.descText}`}>
-            -18400₽
-          </p>
-        </div> */}
-        {/* <div className={styles.viewTotal}>
-            <p className={`${styles.descAttrTotal} ${styles.descText}`}>
-              Доставка
-            </p>
-            <p className={`${styles.descValueTotal} ${styles.descText}`}>
-              Бесплатно
-            </p>
-          </div> */}
       </div>
       <div
         className={styles.orderButton}
@@ -303,7 +256,6 @@ const CheckoutPage = ({ count = 2 }) => {
       >
         <p className={styles.orderButtonText}>Продолжить</p>
         <div className={styles.prices}>
-          {/* <p className={`${styles.oldPriceText} ${styles.priceText}`}>18500₽</p> */}
           <p className={`${styles.newPriceText} ${styles.priceText}`}>
             {pageStore.cart.length != 0 ? countSumCart() : 0}₽
           </p>

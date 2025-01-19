@@ -1,22 +1,21 @@
-import BottomMenu from "../../components/bottom_menu/bottom_menu";
-import ProductCard from "../../components/product_card/product_card";
-import Categories from "../../components/categories/categories";
-import styles from "./catalog_page.module.css";
 import Fuse from "fuse.js";
 import { VStack, Text } from "@chakra-ui/react";
-
-// import arrowBackIcon from "../../images/arrow_back_icon.svg";
-import sortIcon from "../../images/sort_icon.svg";
-import filterIcon from "../../images/filter_icon.svg";
 import useWindowDimensions from "../../components/hooks/windowDimensions";
 import { useNavigate } from "react-router";
 import { useStores } from "../../store/store_context";
 import { observer } from "mobx-react-lite";
 import { useEffect } from "react";
 import { useState } from "react";
-import SborOptCard from "../../components/sbor_opt_card";
 import { createClient } from "graphql-ws";
-// import SborOptCard from "../../components/sbor_opt_card";
+
+import BottomMenu from "../../components/bottom_menu/bottom_menu";
+import ProductCard from "../../components/product_card/product_card";
+import Categories from "../../components/categories/categories";
+import SborOptCard from "../../components/sbor_opt_card";
+
+import styles from "./catalog_page.module.css";
+import sortIcon from "../../images/sort_icon.svg";
+import filterIcon from "../../images/filter_icon.svg";
 
 // Создаем клиент для подключения к серверу GraphQL через WebSocket
 const client = createClient({
@@ -93,7 +92,6 @@ const CatalogPage = observer(() => {
               (item) => JSON.stringify(el) == JSON.stringify(item)
             )
         );
-      console.log(similarProducts);
       setSimilar(similarProducts);
     }
     if (pageStore.selected_chars.length != 0) {
@@ -165,14 +163,11 @@ const CatalogPage = observer(() => {
       },
       {
         next: (data) => {
-          console.log("Получены данные:", data.data);
           setSubProducts(data.data.onProductsUpdated);
         },
         error: (err) => {
-          console.error("Ошибка:", err);
           setSubProducts([]);
         },
-        complete: () => console.log("Подписка завершена"),
       }
     );
   };
@@ -201,9 +196,6 @@ const CatalogPage = observer(() => {
       }
     >
       <div className={styles.header}>
-        {/* <div className={styles.backButton} onClick={() => navigate("/")}>
-          <img src={arrowBackIcon} alt="" />
-        </div> */}
         <div className={styles.searchField}>
           <input
             type="search"
@@ -238,10 +230,6 @@ const CatalogPage = observer(() => {
             <Categories key={index} name_category={elem?.name} id={elem?.id} />
           );
         })}
-        {/* <Categories name_category="Категории" />
-        <Categories name_category="Кроссовки" />
-        <Categories name_category="Nike" />
-        <Categories name_category="Adidas" /> */}
       </div>
 
       {pageStore.shop_format == 3 ? (
@@ -254,7 +242,6 @@ const CatalogPage = observer(() => {
       <div className={styles.products}>
         <div className={styles.productsField}>
           {products.map((elem, index) => {
-            console.log("elem", elem);
             return (
               <ProductCard
                 key={index}

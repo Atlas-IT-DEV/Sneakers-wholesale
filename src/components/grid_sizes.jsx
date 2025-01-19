@@ -1,12 +1,4 @@
-import {
-  Box,
-  Grid,
-  GridItem,
-  HStack,
-  Stack,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Grid, GridItem, Text, VStack } from "@chakra-ui/react";
 import { useEffect, useRef } from "react";
 
 const GridSizes = ({ isOpen }) => {
@@ -96,14 +88,12 @@ const GridSizes = ({ isOpen }) => {
       height={isOpen ? "auto" : "0px"} /* Меняем высоту */
       opacity={isOpen ? 1 : 0}
       visibility={isOpen ? "visible" : "hidden"}
-      // transition={"opacity 1s, visibility 1s"}
       transition="height 0.5s ease, opacity 1s ease" /* Плавный переход */
     >
       <Text color={"rgba(219, 105, 0, 1)"}>Взрослым</Text>
       <Grid
         templateColumns={`repeat(${eu_sizes_adult.length + 2}, 50px)`}
         templateRows={"repeat(2, 1fr)"}
-        // padding={"10px 0"}
       >
         <GridItem colSpan={2} borderBottom={"1px solid white"} height={"48px"}>
           <Text color={"white"} fontWeight={"500"}>

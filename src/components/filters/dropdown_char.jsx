@@ -1,18 +1,17 @@
-import styles from "./filters.module.css";
 import { useState } from "react";
+import { useStores } from "../../store/store_context";
+import { observer } from "mobx-react-lite";
 
-import divLine from "../../images/div_line.svg";
+import styles from "./filters.module.css";
 import selectArrow from "../../images/arrow_select_white.svg";
 import activeCheck from "../../images/active_check.svg";
 import inActiveCheck from "../../images/inactive_check.svg";
-import { useStores } from "../../store/store_context";
-import { observer } from "mobx-react-lite";
 
 const DropdownChar = observer(({ chars = [], name = "" }) => {
   const { pageStore } = useStores();
   const [isVisible, setIsVisible] = useState(false);
   let copyIsVisible = isVisible;
-  console.log(chars);
+
   return (
     <div className={styles.filterRow}>
       <div
@@ -29,7 +28,6 @@ const DropdownChar = observer(({ chars = [], name = "" }) => {
           className={isVisible ? styles.arrowClose : styles.arrowOpen}
         />
       </div>
-
       <div
         className={isVisible ? styles.subFiltersOpen : styles.subFiltersClose}
       >

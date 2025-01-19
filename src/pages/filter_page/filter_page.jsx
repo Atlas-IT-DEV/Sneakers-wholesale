@@ -1,13 +1,16 @@
 import { useNavigate } from "react-router";
 import useWindowDimensions from "../../components/hooks/windowDimensions";
-import styles from "./filter_page.module.css";
 import Filters from "../../components/filters/filters";
 import { observer } from "mobx-react-lite";
 import { useStores } from "../../store/store_context";
+
+import styles from "./filter_page.module.css";
+
 const FilterPage = observer(() => {
   const { width } = useWindowDimensions();
   const navigate = useNavigate();
   const { pageStore } = useStores();
+
   return (
     <div
       className={

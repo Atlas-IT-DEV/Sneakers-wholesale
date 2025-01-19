@@ -141,7 +141,6 @@ class PageStore {
     });
     const result = await response.json();
     this.token = result.access_token;
-    console.log(response);
   };
 
   signIn = async (tg_id) => {
@@ -157,7 +156,6 @@ class PageStore {
     });
     const result = await response.json();
     this.token = result.access_token;
-    console.log(response);
   };
 
   getCurrentAuthUser = async () => {
@@ -173,7 +171,6 @@ class PageStore {
     );
     const result = await response.json();
     this.user_info = result;
-    console.log("auth user", result);
   };
 
   createFavourite = async (product_id) => {
@@ -190,7 +187,6 @@ class PageStore {
         product_id: product_id,
       }),
     });
-    console.log(response);
   };
 
   getFavouriteByUserIdFull = async () => {

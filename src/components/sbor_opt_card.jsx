@@ -1,20 +1,13 @@
 import { HStack, Image, Stack, Text, VStack } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-// import "swiper/css/navigation";
 import { FreeMode, Navigation, Pagination } from "swiper/modules";
-
-import no_photo from "./../images/tiger_big_logo.jpg";
 import useWindowDimensions from "./hooks/windowDimensions";
 
-const SborOptCard = ({
-  brand = "Nike",
-  model = "lox",
-  sizes,
-  price = "3000",
-}) => {
+import "swiper/css";
+import "swiper/css/pagination";
+import no_photo from "./../images/tiger_big_logo.jpg";
+
+const SborOptCard = ({ brand = "Nike", model = "lox", price = "3000" }) => {
   const { width } = useWindowDimensions();
   return (
     <VStack

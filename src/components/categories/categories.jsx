@@ -1,4 +1,3 @@
-// import styles from "./categories.module.css";
 import { VStack, Text } from "@chakra-ui/react";
 import { useStores } from "../../store/store_context";
 import { observer } from "mobx-react-lite";

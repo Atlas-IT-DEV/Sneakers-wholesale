@@ -1,11 +1,4 @@
-import {
-  Button,
-  EditableTextarea,
-  HStack,
-  Stack,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { HStack, Stack, Text, VStack } from "@chakra-ui/react";
 import { useStores } from "../../store/store_context";
 
 const CopyPage = () => {
@@ -79,7 +72,6 @@ const CopyPage = () => {
         перенаправлены в чат с менеджером. После этого вставьте скопированный
         текст и отправьте нашему менеджеру.
       </Text>
-      {console.log(pageStore.user_info)}
       <Stack padding={"0 16px"} w={"100%"} marginTop={"16px"}>
         <textarea
           id="details"

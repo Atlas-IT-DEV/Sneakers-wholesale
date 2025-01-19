@@ -1,6 +1,7 @@
+import useWindowDimensions from "../hooks/windowDimensions";
+
 import styles from "./company_information.module.css";
 import rightArrowGrayIcon from "../../images/arrow_select_gray.svg";
-import useWindowDimensions from "../hooks/windowDimensions";
 
 const CompanyInformation = () => {
   const { width } = useWindowDimensions();

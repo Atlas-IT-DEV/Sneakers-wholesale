@@ -1,4 +1,5 @@
 import useWindowDimensions from "../hooks/windowDimensions";
+
 import styles from "./invite_friends.module.css";
 import rightArrowWhiteIcon from "../../images/arrow_select_white.svg";
 

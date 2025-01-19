@@ -1,11 +1,12 @@
-import styles from "./select_catalog.module.css";
 import useWindowDimensions from "../hooks/windowDimensions";
-
-import rightArrowWhiteIcon from "../../images/arrow_select_white.svg";
-import AttentionModal from "../modals/attention_modal/attenction_modal";
 import { useNavigate } from "react-router";
 import { useStores } from "../../store/store_context";
 import { observer } from "mobx-react-lite";
+
+import AttentionModal from "../modals/attention_modal/attenction_modal";
+
+import styles from "./select_catalog.module.css";
+import rightArrowWhiteIcon from "../../images/arrow_select_white.svg";
 
 const SelectCatalog = observer(() => {
   const navigate = useNavigate();

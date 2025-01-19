@@ -1,6 +1,6 @@
-import styles from "./delivery.module.css";
 import useWindowDimensions from "../hooks/windowDimensions";
 
+import styles from "./delivery.module.css";
 import rightArrowGrayIcon from "../../images/arrow_select_gray.svg";
 
 const Delivery = () => {

@@ -1,15 +1,11 @@
-import styles from "./header.module.css";
-import telegramIcon from "../../images/telegram_icon.svg";
 import useWindowDimensions from "../hooks/windowDimensions";
-
-import rightArrowWhiteIcon from "../../images/arrow_select_white.svg";
 import { useNavigate } from "react-router";
 
-const Header = ({
-  image = "https://legacy.reactjs.org/logo-og.png",
-  user = "Имя Фамилия",
-  rank = "Бронза",
-}) => {
+import styles from "./header.module.css";
+import telegramIcon from "../../images/telegram_icon.svg";
+import rightArrowWhiteIcon from "../../images/arrow_select_white.svg";
+
+const Header = ({ rank = "Бронза" }) => {
   const { width } = useWindowDimensions();
 
   const tg = window.Telegram.WebApp;
