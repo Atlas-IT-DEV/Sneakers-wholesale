@@ -1,13 +1,13 @@
-import styles from "./cart_page.module.css";
-import BottomMenu from "../../components/bottom_menu/bottom_menu";
-// import DiscountCard from "../../components/discount_card/discount_card";
-import CartProductCard from "../../components/cart_product_card/cart_product_card";
 import useWindowDimensions from "../../components/hooks/windowDimensions";
 import { useNavigate } from "react-router";
 import { Text } from "@chakra-ui/react";
 import { useStores } from "../../store/store_context";
 import { observer } from "mobx-react-lite";
 
+import BottomMenu from "../../components/bottom_menu/bottom_menu";
+import CartProductCard from "../../components/cart_product_card/cart_product_card";
+
+import styles from "./cart_page.module.css";
 import no_photo from "./../../images/tiger_big_logo.jpg";
 
 const CartPage = observer(() => {
@@ -84,13 +84,6 @@ const CartPage = observer(() => {
     >
       <div className={styles.header}>
         <p className={styles.namePageText}>Корзина</p>
-        {/* <div className={styles.selectButton}>
-          <p className={styles.selectButtonText}>Выбрать</p>
-        </div> */}
-      </div>
-      <div className={styles.discountContainer}>
-        {/* Блок с информацией о скидке */}
-        {/* {pageStore.cart.length != 0 ? <DiscountCard /> : null} */}
       </div>
       <div className={styles.productContainer}>
         {pageStore.cart.length != 0 ? (
@@ -105,7 +98,6 @@ const CartPage = observer(() => {
               return parseInt(a.size, 10) - parseInt(b.size, 10);
             })
             .map((item, index) => {
-              console.log("size", item?.size);
               return (
                 <CartProductCard
                   key={index}
@@ -118,7 +110,6 @@ const CartPage = observer(() => {
                   obj={item}
                   idx={index}
                   size={item?.size}
-                  // remove={() => removeProduct(item?.id, item?.size)}
                   onChangeQuantity={(value) =>
                     changeQuantity(value, item, item?.id, item?.size)
                   }

@@ -1,16 +1,9 @@
-import styles from "./attention_modal.module.css";
-import rightArrowGrayIcon from "../../../images/arrow_select_gray.svg";
-import closeIcon from "../../../images/close_icon.svg";
 import { useState } from "react";
 import useWindowDimensions from "../../hooks/windowDimensions";
+import { Modal, ModalContent, ModalOverlay, VStack } from "@chakra-ui/react";
 
-import {
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalOverlay,
-  VStack,
-} from "@chakra-ui/react";
+import styles from "./attention_modal.module.css";
+import closeIcon from "../../../images/close_icon.svg";
 
 const AttentionModalCustom = ({ header, text, children }) => {
   const [modalVisible, setModalVisible] = useState(false);

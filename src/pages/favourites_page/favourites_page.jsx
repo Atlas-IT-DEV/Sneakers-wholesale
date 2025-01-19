@@ -1,19 +1,18 @@
-import BottomMenu from "../../components/bottom_menu/bottom_menu";
-import styles from "./favourite_page.module.css";
-
-// import arrowBackIcon from "../../images/arrow_back_icon.svg";
-import sortIcon from "../../images/sort_icon.svg";
-import filterIcon from "../../images/filter_icon.svg";
 import { useNavigate } from "react-router";
-import SelectCatalog from "../../components/select_catalog/select_catalog";
-import FavouriteProductCard from "../../components/favourite_product_card/favourite_product_card";
 import useWindowDimensions from "../../components/hooks/windowDimensions";
 import { useEffect, useState } from "react";
 import { useStores } from "../../store/store_context";
 import { Text } from "@chakra-ui/react";
 import { observer } from "mobx-react-lite";
-import SborOptCard from "../../components/sbor_opt_card";
 import Fuse from "fuse.js";
+
+import BottomMenu from "../../components/bottom_menu/bottom_menu";
+import SelectCatalog from "../../components/select_catalog/select_catalog";
+import FavouriteProductCard from "../../components/favourite_product_card/favourite_product_card";
+
+import styles from "./favourite_page.module.css";
+import sortIcon from "../../images/sort_icon.svg";
+import filterIcon from "../../images/filter_icon.svg";
 
 const FavouritesPage = observer(() => {
   const navigate = useNavigate();
@@ -32,7 +31,6 @@ const FavouritesPage = observer(() => {
 
   useEffect(() => {
     pageStore.getFavouriteByUserIdFull();
-    console.log("fav", pageStore.favourites);
   }, []);
 
   const formats = ["Розница", "Опт", "Дропшиппинг", "Сборный опт"];
@@ -92,7 +90,6 @@ const FavouritesPage = observer(() => {
               (item) => JSON.stringify(el) == JSON.stringify(item)
             )
         );
-      console.log(similarProducts);
       setSimilar(similarProducts);
     }
     if (pageStore.selected_chars_fav.length != 0) {
@@ -170,9 +167,6 @@ const FavouritesPage = observer(() => {
         <p className={styles.namePageText}>Избранное</p>
 
         <div className={styles.headerButtons}>
-          {/* <div className={styles.backButton}>
-            <img src={arrowBackIcon} alt="" />
-          </div> */}
           <div className={styles.searchField}>
             <input
               type="search"
@@ -205,7 +199,6 @@ const FavouritesPage = observer(() => {
             if (
               pageStore.favourites.some((elem) => elem.product.id == item.id)
             ) {
-              console.log("item", item);
               return (
                 <FavouriteProductCard
                   key={index}

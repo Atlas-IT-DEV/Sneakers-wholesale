@@ -1,16 +1,12 @@
-import styles from "./profile_page.module.css";
-import telegramIcon from "../../images/telegram_icon.svg";
-import arrowWhite from "../../images/arrow_select_white.svg";
-
 import useWindowDimensions from "../../components/hooks/windowDimensions";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 
-const ProfilePage = ({
-  image = "https://legacy.reactjs.org/logo-og.png",
-  user = "Имя Фамилия",
-  rank = "Бронза",
-}) => {
+import styles from "./profile_page.module.css";
+import telegramIcon from "../../images/telegram_icon.svg";
+import arrowWhite from "../../images/arrow_select_white.svg";
+
+const ProfilePage = ({ rank = "Бронза" }) => {
   const { width } = useWindowDimensions();
   const [open, setOpen] = useState(false);
 

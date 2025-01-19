@@ -1,17 +1,10 @@
+import useWindowDimensions from "../hooks/windowDimensions";
+
+import ProductModal from "../modals/product_modal/product_modal";
+
 import styles from "./product_card.module.css";
-import favouriteInactiveIcon from "../../images/favourite_inactive_icon.svg";
-import favouriteActiveIcon from "../../images/favourite_active_icon.svg";
-import shoppingIcon from "../../images/shopping_icon.svg";
-import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
-import { FreeMode, Navigation, Pagination } from "swiper/modules";
-import { VStack, Text } from "@chakra-ui/react";
-import useWindowDimensions from "../hooks/windowDimensions";
-import { useState } from "react";
-import ProductModal from "../modals/product_modal/product_modal";
-import { useToast } from "@chakra-ui/react";
-import { useStores } from "../../store/store_context";
 
 const ProductCard = ({
   countProduct = "8 пар (опт)",
@@ -21,40 +14,7 @@ const ProductCard = ({
   obj = {},
 }) => {
   const { width } = useWindowDimensions();
-  const { pageStore } = useStores();
 
-  const [isPressed, setIsPressed] = useState(false);
-  const favouriteClick = () => {
-    setIsPressed(!isPressed);
-  };
-  const toast = useToast();
-
-  const handleClick = () => {
-    let copy_cart = Array.from(pageStore.cart);
-    copy_cart.push(obj);
-    pageStore.updateCart(copy_cart);
-    toast({
-      duration: 1000,
-      position: "bottom",
-      render: () => {
-        return (
-          <VStack
-            borderRadius={"12px !important"}
-            padding={"16px !important"}
-            border={"1px solid rgba(227, 110, 0, 1)"}
-            backgroundColor={"rgba(0, 0, 0, 0.9) !important"}
-            align={"center"}
-            justify={"center"}
-            marginTop={50}
-          >
-            <Text color={"white"} textAlign={"center"} fontSize={"12px"}>
-              {`${model_name} добавлено в корзину`}
-            </Text>
-          </VStack>
-        );
-      },
-    });
-  };
   return (
     <div
       className={
@@ -82,15 +42,6 @@ const ProductCard = ({
         </p>
       </div>
       <p className={styles.modelNameText}>{model_name}</p>
-      {/* <div
-        className={styles.addButton}
-        onClick={() => {
-          handleClick();
-        }}
-      >
-        <p className={styles.addButtonText}>Добавить</p>
-        <img src={shoppingIcon} alt="" className={styles.shopIcon} />
-      </div> */}
     </div>
   );
 };

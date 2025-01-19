@@ -10,9 +10,9 @@ import {
   ModalCloseButton,
   ModalBody,
 } from "@chakra-ui/react";
-import { SwiperSlide } from "swiper/react";
-import styles from "./slider_carousel.module.css"; // Импорт стилей
 import { useState } from "react";
+
+import styles from "./slider_carousel.module.css"; // Импорт стилей
 import "swiper/css";
 
 const CustomSlide = ({ elem, width }) => {
@@ -84,7 +84,7 @@ const CustomSlide = ({ elem, width }) => {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalCloseButton backgroundColor={'transparent'}/>
+          <ModalCloseButton backgroundColor={"transparent"} />
           <ModalBody>
             <Image src={selectedImage} w="100%" h="auto" objectFit="contain" />
           </ModalBody>

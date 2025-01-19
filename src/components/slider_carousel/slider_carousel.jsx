@@ -1,17 +1,18 @@
-import styles from "./slider_carousel.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
-import "swiper/css";
 import { Autoplay, FreeMode } from "swiper/modules";
-import { Image, VStack, HStack, Text } from "@chakra-ui/react";
-
-import tiger from "../../images/logo.png";
-import sneakers from "../../images/sneak_img_card.png";
+import { Image } from "@chakra-ui/react";
 import useWindowDimensions from "../hooks/windowDimensions";
 import { useEffect } from "react";
 import { useStores } from "../../store/store_context";
-import CustomSlide from "./custom_slide";
 import { observer } from "mobx-react-lite";
+
+import CustomSlide from "./custom_slide";
+
+import styles from "./slider_carousel.module.css";
+// Import Swiper styles
+import "swiper/css";
+import tiger from "../../images/logo.png";
+import sneakers from "../../images/sneak_img_card.png";
 
 const SliderCarousel = observer(() => {
   const { pageStore } = useStores();

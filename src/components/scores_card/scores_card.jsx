@@ -1,7 +1,9 @@
+import { VStack, HStack, Text } from "@chakra-ui/react";
+
+import AttentionModalCustom from "../modals/attention_modal/attention_modal_custom";
+
 import ArrowOrange from "../../images/orange_arrow.svg";
 import moneyIcon from "../../images/money_icon.svg";
-import { VStack, HStack, Text } from "@chakra-ui/react";
-import AttentionModalCustom from "../modals/attention_modal/attention_modal_custom";
 
 const ScoresCard = () => {
   return (

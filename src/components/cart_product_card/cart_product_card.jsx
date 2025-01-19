@@ -1,7 +1,3 @@
-import styles from "./cart_product_card.module.css";
-import minusIcon from "../../images/minus_icon.svg";
-import plusIcon from "../../images/plus_icon.svg";
-import settingProductIcon from "../../images/setting_product_icon.svg";
 import useWindowDimensions from "../hooks/windowDimensions";
 import {
   Button,
@@ -16,13 +12,15 @@ import {
 } from "@chakra-ui/react";
 import { useStores } from "../../store/store_context";
 
+import styles from "./cart_product_card.module.css";
+import minusIcon from "../../images/minus_icon.svg";
+import plusIcon from "../../images/plus_icon.svg";
+import settingProductIcon from "../../images/setting_product_icon.svg";
+
 const CartProductCard = ({
   brand = "Asics",
   model = "Gel Quantum Kinetic",
-  count = "8 пар",
-  type = "опт",
   size = 38,
-  price = 18400,
   new_price = 12000,
   image = "https://legacy.reactjs.org/logo-og.png",
   count_product,
@@ -35,19 +33,10 @@ const CartProductCard = ({
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const removeProduct = (id, size) => {
-    console.log("size", size, id);
-    console.log(pageStore.cart);
     let copy_cart = Array.from(pageStore.cart);
     pageStore.updateCart(
       copy_cart.filter((elem) => !(elem.id === id && elem.size === size))
     );
-    // pageStore.updateCart((prevProducts) =>
-    //   prevProducts.filter((elem) => !(elem.id === id && elem.size === size))
-    // ); prevProducts это текущее состояние которое записано в мобиксе,
-    // НО сам превпродуктс передается в функцию в качестве аргумента,
-    // что автоматом означает что у нас внутри стрелочной функции меняется область видимости и очевидно не в нашу пользу
-    // поэтому лучше такой конструкцией не пользуйся ибо можешь запутаться как сейчас и проебать много времени
-    //  либо явно передавай в стрелочную функцию нужные аргументы
   };
 
   return (
@@ -155,7 +144,6 @@ const CartProductCard = ({
                   onChange={(e) => onChangeQuantity(e.target.value)}
                 />
               </HStack>
-
               <Button
                 backgroundColor={"rgba(200,0,0,1)"}
                 color={"white"}
@@ -164,7 +152,6 @@ const CartProductCard = ({
                   backgroundColor: "rgba(205,205,205,1)",
                 }}
                 onClick={() => {
-                  console.log(obj);
                   removeProduct(obj.id, obj.size);
                   onClose();
                 }}

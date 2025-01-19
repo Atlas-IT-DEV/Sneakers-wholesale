@@ -1,4 +1,5 @@
 import useWindowDimensions from "../hooks/windowDimensions";
+
 import styles from "./discount_card.module.css";
 
 const DiscountCard = () => {
