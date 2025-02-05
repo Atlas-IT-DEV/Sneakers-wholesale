@@ -17,8 +17,8 @@ def get_card_by_id(card_id: int):
 
 
 def get_card_by_user_id(user_id: int):
-    card = card_repository.get_card_by_user_id(user_id)
-    if not card:
+    cards = card_repository.get_card_by_user_id(user_id)
+    if not cards:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='Card not found')
     return [Cards(**card) for card in cards]
 

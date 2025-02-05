@@ -247,6 +247,22 @@ class Promotions(BaseModel):
                             description="Sale of product")
 
 
+class Favorite(BaseModel):
+    """
+    Model of favorite
+    """
+    ID: Optional[int] = Field(None,
+                              alias="id")
+    UserID: int = Field(...,
+                        alias="user_id",
+                        examples=[10],
+                        description="User ID")
+    ProductID: int = Field(...,
+                           alias="product_id",
+                           examples=[12],
+                           description="Product ID")
+
+
 class Products(BaseModel):
     """
     Model of products

@@ -225,6 +225,30 @@ INSERT IGNORE INTO `order_products` (`id`, `order_id`, `product_id`, `quantity`)
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `promotions`
+--
+
+CREATE TABLE IF NOT EXISTS `promotions` (
+  `id` int(11) NOT NULL PRIMARY KEY,
+  `name` varchar(255) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `sale` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Дамп данных таблицы `promotions`
+--
+
+INSERT IGNORE INTO `promotions` (`id`, `name`, `quantity`, `sale`) VALUES
+(1, 'Скидка 8 процентов', 2, 15),
+(2, 'Скидка 10 процентов', 5, 10),
+(3, 'Скидка 12 процентов', 1, 12),
+(4, 'Скидка 40 процентов', 5, 40),
+(5, 'Скидка 30 процентов', 3, 30);
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `products`
 --
 
@@ -246,9 +270,9 @@ CREATE TABLE IF NOT EXISTS `products` (
 
 INSERT IGNORE INTO `products` (`id`, `name`, `price`, `description`, `category_id`, `promotion_id`, `company_id`, `image_id`, `type_product`) VALUES
 (1, 'Носки Lacosta', '1000.00', 'Дизайн придуман французом Алексеем', 1, 1, 1, Null, 'Опт'),
-(2, 'Майка с открытой спиной', '1000.00', 'Майка вдохвновленная фильмом Пляж', 2, 2, 2, Null, Null),
-(3, 'Кроссы с разноцветными шнурками', '1000.00', 'Разноцветные шнурки', 3, 3, 3, Null, Null),
-(4, 'Найки', '1000.00', 'Обычные кроссовки', 4, 4, 4, Null, Null),
+(2, 'Майка с открытой спиной', '1000.00', 'Майка вдохвновленная фильмом Пляж', 2, 2, 2, Null, 'Розница'),
+(3, 'Кроссы с разноцветными шнурками', '1000.00', 'Разноцветные шнурки', 3, 3, 3, Null, 'Сборный опт'),
+(4, 'Найки', '1000.00', 'Обычные кроссовки', 4, 4, 4, Null, 'Розница'),
 (5, 'Ветровка NewBalance', '1000.00', 'Дизайнерская ветровка от LiNaighty', 5, 5, 5, Null, 'Опт');
 
 -- --------------------------------------------------------
@@ -274,6 +298,29 @@ INSERT IGNORE INTO `product_characteristics` (`id`, `product_id`, `characteristi
 (3, 3, 3, 'True'),
 (4, 4, 4, '500.00'),
 (5, 5, 5, 'Новый');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `favorites`
+--
+
+CREATE TABLE IF NOT EXISTS `favorites` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Дамп данных таблицы `favorites`
+--
+
+INSERT IGNORE INTO `favorites` (`id`, `user_id`, `product_id`) VALUES
+(1, 1, 1),
+(2, 2, 2),
+(3, 3, 3),
+(4, 4, 4),
+(5, 5, 5);
 
 -- --------------------------------------------------------
 
@@ -304,38 +351,15 @@ INSERT IGNORE INTO `product_comments` (`id`, `product_id`, `user_id`, `comment`,
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `promotions`
---
-
-CREATE TABLE IF NOT EXISTS `promotions` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `quantity` int(11) NOT NULL,
-  `sale` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Дамп данных таблицы `promotions`
---
-
-INSERT IGNORE INTO `promotions` (`id`, `name`, `quantity`, `sale`) VALUES
-(1, 'Скидка 8 процентов', 2, 15),
-(2, 'Скидка 10 процентов', 5, 10),
-(3, 'Скидка 12 процентов', 1, 12),
-(4, 'Скидка 40 процентов', 5, 40),
-(5, 'Скидка 30 процентов', 3, 30);
-
--- --------------------------------------------------------
-
---
 -- Структура таблицы `question_answers`
 --
 
 CREATE TABLE IF NOT EXISTS `question_answers` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `question` varchar(255) NOT NULL,
-  `answer` text NOT NULL
+  `answer` text NOT NULL,
+  FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -350,7 +374,6 @@ INSERT IGNORE INTO `question_answers` (`id`, `user_id`, `question`, `answer`) VA
 (5, 5, 'Сделай упражнение два кроссовка по спине', 'Получи грыжу на конец');
 
 -- --------------------------------------------------------
-
 --
 -- Структура таблицы `receipts`
 --
@@ -457,6 +480,14 @@ INSERT IGNORE INTO `write_offs` (`id`, `product_id`, `quantity`, `date`) VALUES
 --
 ALTER TABLE `cards`
   ADD PRIMARY KEY (`id`);
+  
+--
+-- Индексы таблицы `favorites`
+--
+ALTER TABLE `favorites`
+  ADD PRIMARY KEY (`id`,`user_id`,`product_id`),
+  ADD KEY `order_id` (`user_id`),
+  ADD KEY `product_id` (`product_id`);
 
 --
 -- Индексы таблицы `categories`
@@ -536,18 +567,11 @@ ALTER TABLE `product_comments`
   ADD KEY `user_id` (`user_id`),
   ADD KEY `product_id` (`product_id`);
 
---
--- Индексы таблицы `promotions`
---
-ALTER TABLE `promotions`
-  ADD PRIMARY KEY (`id`);
-
---
--- Индексы таблицы `question_answers`
---
-ALTER TABLE `question_answers`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`);
+-- --
+-- -- Индексы таблицы `promotions`
+-- --
+-- ALTER TABLE `promotions`
+--   ADD PRIMARY KEY (`id`);
 
 --
 -- Индексы таблицы `receipts`
@@ -586,6 +610,12 @@ ALTER TABLE `write_offs`
 --
 ALTER TABLE `cards`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  
+--
+-- AUTO_INCREMENT для таблицы `favorites`
+--
+ALTER TABLE `favorites`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
 
 --
 -- AUTO_INCREMENT для таблицы `categories`
@@ -660,12 +690,6 @@ ALTER TABLE `promotions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=644;
 
 --
--- AUTO_INCREMENT для таблицы `question_answers`
---
-ALTER TABLE `question_answers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
 -- AUTO_INCREMENT для таблицы `receipts`
 --
 ALTER TABLE `receipts`
@@ -727,6 +751,13 @@ ALTER TABLE `products`
 ALTER TABLE `product_characteristics`
   ADD CONSTRAINT `product_characteristics_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `product_characteristics_ibfk_2` FOREIGN KEY (`characteristic_id`) REFERENCES `characteristics` (`id`) ON DELETE CASCADE;
+  
+--
+-- Ограничения внешнего ключа таблицы `favorites`
+--
+ALTER TABLE `favorites`
+  ADD CONSTRAINT `favorites_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `favorites_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `product_comments`

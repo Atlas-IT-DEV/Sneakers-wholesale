@@ -6,13 +6,13 @@ from src.service import (category_services, characteristic_services, company_ser
                          file_services, user_services, promotion_services, type_user_services,
                          card_services, new_services, question_answer_services,
                          receipt_services, write_off_services, company_comment_services,
-                         auth_services)
+                         auth_services, favorite_services)
 from typing import Dict
 from fastapi.openapi.models import Tag
 from src.database.models import (Users, Companies, Orders, Images, Categories, ProductsDict, Characteristics,
                                  OrderProducts, ProductComments, Products, ProductCharacteristics, Promotions,
                                  Cards, CompanyComments, News, QuestionAnswers, Receipts, TypeUsers, WriteOffs,
-                                 TokenInfo, AuthJWT)
+                                 TokenInfo, AuthJWT, Favorite)
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, FileResponse
 from src.utils.jwt_bearer import JWTBearer
@@ -32,6 +32,7 @@ app.add_middleware(
     allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
+    expose_headers=["*"],
     allow_headers=["*"],
 )
 
@@ -56,6 +57,7 @@ CardTag = Tag(name="Card", description="CRUD operations card")
 QuestionAnswerTag = Tag(name="QuestionAnswer", description="CRUD operations question answer")
 ProductCharacteristicTag = Tag(name="ProductCharacteristic", description="CRUD operations  product characteristic")
 ProductTag = Tag(name="Product", description="CRUD operations product")
+FavoriteTag = Tag(name="Favorite", description="CRUD operations favorite")
 
 # Настройка документации с тегами
 app.openapi_tags = [
@@ -78,7 +80,8 @@ app.openapi_tags = [
     CardTag.model_dump(),
     QuestionAnswerTag.model_dump(),
     ProductCharacteristicTag.model_dump(),
-    ProductTag.model_dump()
+    ProductTag.model_dump(),
+    FavoriteTag.model_dump()
 ]
 
 
@@ -2122,6 +2125,137 @@ async def delete_question_answer(question_answer_id):
         raise ex
 
 
+@app.get("/favorites/", response_model=list[Favorite], dependencies=[Depends(JWTBearer(access_level=0))],
+         tags=["Favorite"])
+async def get_all_favorites():
+    """
+    Route for getting all favorites from basedata.
+
+    :return: response model List[Favorite].
+    """
+    try:
+        return favorite_services.get_all_favorites(dirs=False)
+    except HTTPException as ex:
+        log.exception(f"Error {ex}")
+        raise ex
+
+
+@app.get("/favorites/full", response_model=list[Dict], dependencies=[Depends(JWTBearer(access_level=0))],
+         tags=["Favorite"])
+async def get_all_favorites_full():
+    """
+    Route for getting all favorites from basedata.
+
+    :return: response model List[Favorite].
+    """
+    try:
+        return favorite_services.get_all_favorites(dirs=True)
+    except HTTPException as ex:
+        log.exception(f"Error {ex}")
+        raise ex
+
+
+@app.get("/favorites/id/{favorite_id}", response_model=Favorite, dependencies=[Depends(JWTBearer(access_level=0))],
+         tags=["Favorite"])
+async def get_favorite_by_id(favorite_id: int):
+    """
+    Route for getting favorite by FavoriteID.
+
+    :param favorite_id: ID of the favorite. [int]
+
+    :return: response model Favorite.
+    """
+    try:
+        return favorite_services.get_favorite_by_id(favorite_id, dirs=False)
+    except HTTPException as ex:
+        log.exception(f"Error {ex}")
+        raise ex
+
+
+@app.get("/favorites/id/full/{favorite_id}", response_model=Dict, dependencies=[Depends(JWTBearer(access_level=0))],
+         tags=["Favorite"])
+async def get_favorite_by_id_full(favorite_id: int):
+    """
+    Route for getting favorite by FavoriteID.
+
+    :param favorite_id: ID of the favorite. [int]
+
+    :return: response model Favorite.
+    """
+    try:
+        return favorite_services.get_favorite_by_id(favorite_id, dirs=True)
+    except HTTPException as ex:
+        log.exception(f"Error {ex}")
+        raise ex
+
+
+@app.post("/favorites/", response_model=Favorite, dependencies=[Depends(JWTBearer(access_level=0))], tags=["Favorite"])
+async def create_favorite(favorite: Favorite):
+    """
+    Route for creating a favorite in basedata.
+
+    :param favorite: Model favorite. [Favorite]
+
+    :return: response model Favorite.
+    """
+    try:
+        return favorite_services.create_favorite(favorite)
+    except HTTPException as ex:
+        log.exception(f"Error {ex}")
+        raise ex
+
+
+@app.put("/favorites/{favorite_id}", response_model=Dict, dependencies=[Depends(JWTBearer(access_level=0))],
+         tags=["Favorite"])
+async def update_favorite(favorite_id: int, favorite: Favorite):
+    """
+    Route for updating a favorite in basedata.
+
+    :param favorite_id: ID of the favorite. [int]
+
+    :param favorite: Model favorite. [Favorite]
+
+    :return: response model dict.
+    """
+    try:
+        return favorite_services.update_favorite(favorite_id, favorite)
+    except HTTPException as ex:
+        log.exception(f"Error {ex}")
+        raise ex
+
+
+@app.delete("/favorites/{favorite_id}", response_model=Dict, dependencies=[Depends(JWTBearer(access_level=0))],
+            tags=["Favorite"])
+async def delete_favorite(favorite_id: int):
+    """
+    Route for deleting a favorite from basedata.
+
+    :param favorite_id: ID of the favorite. [int]
+
+    :return: response model dict.
+    """
+    try:
+        return favorite_services.delete_favorite(favorite_id)
+    except HTTPException as ex:
+        log.exception(f"Error {ex}")
+        raise ex
+
+
+@app.post("/favorites/likes_products", response_model=list[Favorite], tags=["Favorite"],
+          dependencies=[Depends(JWTBearer(access_level=0))])
+async def likes_products(user_id: int, list_products: list[int]):
+    """
+    Route for add all favorites products into basedata.
+
+    :return: response dict [Dict].
+    """
+    try:
+        return favorite_services.likes_products(user_id, list_products)
+    except HTTPException as ex:
+        log.exception(f"Error {ex}")
+        raise ex
+
+
 def run_server():
     import logging
     import uvicorn
@@ -2130,8 +2264,12 @@ def run_server():
     with open(uvicorn_log_config, 'r') as f:
         uvicorn_config = yaml.safe_load(f.read())
         logging.config.dictConfig(uvicorn_config)
-    uvicorn.run("main:app", host=config.__getattr__("HOST"), port=int(config.__getattr__("SERVER_PORT")),
-                reload=True, log_config=uvicorn_log_config)
+    uvicorn.run(
+        "main:app",
+        host=config.__getattr__("HOST"),
+        port=int(config.__getattr__("SERVER_PORT")),
+        log_config=uvicorn_log_config
+    )
 
 
 if __name__ == "__main__":

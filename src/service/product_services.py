@@ -43,6 +43,20 @@ def get_all_products(dirs: bool = False):
         # Получаем список изображений по ID продукта и выбираем первое изображение
         image_ids = decode_string_to_list(product.get("image_id"))
         urls = []
+        product_characteristic = get_product_characteristic_by_product_id(product.get("id"))
+        list_product_characteristic = []
+        if product_characteristic:
+            for characteristic in product_characteristic:
+                characteristic_value = characteristic.get("value")
+                characteristic_id = characteristic.get("characteristic_id")
+                characteristic = get_characteristic_by_id(characteristic_id)
+                characteristic = characteristic.model_dump(by_alias=True)
+                if characteristic_value:
+                    characteristic["value"] = characteristic_value
+                else:
+                    characteristic["value"] = None
+                list_product_characteristic.append(characteristic)
+        product["characteristics"] = list_product_characteristic
         for image_id in image_ids:
             # Обрабатываем URL для первого изображения
             if image_id is not None:
