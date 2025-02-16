@@ -1,18 +1,57 @@
 import { useState } from "react";
 import useWindowDimensions from "../../hooks/windowDimensions";
-import { Modal, ModalContent, ModalOverlay, VStack } from "@chakra-ui/react";
+import {
+  Button,
+  Modal,
+  ModalContent,
+  ModalOverlay,
+  VStack,
+} from "@chakra-ui/react";
 
 import styles from "./attention_modal.module.css";
 import closeIcon from "../../../images/close_icon.svg";
+import { useStores } from "../../../store/store_context";
+import { observer } from "mobx-react-lite";
 
-const AttentionModalCustom = ({ header, text, children }) => {
+const AttentionModalCustom = observer(({ ps_obj = {}, children }) => {
   const [modalVisible, setModalVisible] = useState(false);
   const { width } = useWindowDimensions();
+  const { pageStore } = useStores();
+  const orderPS = async () => {
+    const mutation = `
+      mutation updatePR {
+          updateProductSizeOrdered(productId:3, sizeId:1, ordered:false, telegramId:"Alleeoon", nickName:"COCK"){
+            id
+          }
+        }
+    `;
+
+    try {
+      const response = await fetch("http://reedshop.ru:8208/graphql", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          query: mutation,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.errors) {
+        console.error("GraphQL errors:", result.errors);
+      } else {
+        console.log("Mutation successful:", result.data);
+        // Optionally, update the UI or state here
+      }
+    } catch (error) {
+      console.error("Network error:", error);
+    }
+  };
   return (
     <>
-      <VStack onClick={() => setModalVisible(true)} width={"100%"}>
-        {children}
-      </VStack>
+      <div onClick={() => setModalVisible(true)}>{children}</div>
       {modalVisible && (
         <Modal isOpen={modalVisible} isCentered>
           <ModalOverlay bg={"black"} closeOnOverlayClick={false} />
@@ -40,15 +79,43 @@ const AttentionModalCustom = ({ header, text, children }) => {
               >
                 <img src={closeIcon} alt="" />
               </div>
-              <p className={styles.mainText}>{header}</p>
+              <p className={styles.mainText}>
+                {ps_obj?.ordered &&
+                ps_obj?.telegramId == pageStore.user_info?.telegram_id
+                  ? "Товар уже забронирован вами"
+                  : ps_obj?.ordered
+                  ? "Товар уже забронирован кем-то"
+                  : "Забронировать товар?"}
+              </p>
               <div className={styles.aboutButton}>
-                <p>{text}</p>
+                <p>
+                  {ps_obj?.ordered &&
+                  ps_obj?.telegramId == pageStore.user_info?.telegram_id
+                    ? "Вы можете выбрать другую пару, если в сборе остались доступные размеры"
+                    : ps_obj?.ordered
+                    ? "Вы можете выбрать другую пару, если в сборе остались доступные размеры"
+                    : "Нажмите ок, если вы готовы забронировать товар"}
+                </p>
               </div>
+              <VStack width={"100%"} align={"center"}>
+                <Button
+                  backgroundColor={"rgb(219, 105, 0)"}
+                  color={"white"}
+                  alignSelf={"center"}
+                  marginTop={"30px"}
+                  onClick={async () => {
+                    await orderPS();
+                    setModalVisible(false);
+                  }}
+                >
+                  ОК
+                </Button>
+              </VStack>
             </div>
           </ModalContent>
         </Modal>
       )}
     </>
   );
-};
+});
 export default AttentionModalCustom;

@@ -89,7 +89,7 @@ class PageStore {
   };
 
   getProducts = async () => {
-    const response = await fetch("https://reed-shop.ru:8088/products/full", {
+    const response = await fetch("https://reedshop.ru:8000/products/full", {
       method: "GET",
       headers: { accept: "application/json" },
     });
@@ -98,7 +98,7 @@ class PageStore {
   };
 
   getNews = async () => {
-    const response = await fetch("https://reed-shop.ru:8088/news/full", {
+    const response = await fetch("https://reedshop.ru:8000/news/full", {
       method: "GET",
       headers: { accept: "application/json" },
     });
@@ -107,7 +107,7 @@ class PageStore {
   };
 
   getCompanys = async () => {
-    const response = await fetch("https://reed-shop.ru:8088/companies/", {
+    const response = await fetch("https://reedshop.ru:8000/companies/", {
       method: "GET",
       headers: { accept: "application/json" },
     });
@@ -116,7 +116,7 @@ class PageStore {
   };
   getChars = async () => {
     const response = await fetch(
-      "https://reed-shop.ru:8088/product_characteristics/",
+      "https://reedshop.ru:8000/product_characteristics/",
       { method: "GET", headers: { accept: "application/json" } }
     );
     const result = await response.json();
@@ -124,7 +124,7 @@ class PageStore {
   };
 
   signUp = async (first_name, last_name, tg_id) => {
-    const response = await fetch("https://reed-shop.ru:8088/signup/", {
+    const response = await fetch("https://reedshop.ru:8000/signup/", {
       method: "POST",
       headers: {
         accept: "application/json",
@@ -144,7 +144,7 @@ class PageStore {
   };
 
   signIn = async (tg_id) => {
-    const response = await fetch("https://reed-shop.ru:8088/signin/", {
+    const response = await fetch("https://reedshop.ru:8000/signin/", {
       method: "POST",
       headers: {
         accept: "application/json",
@@ -160,7 +160,7 @@ class PageStore {
 
   getCurrentAuthUser = async () => {
     const response = await fetch(
-      `https://reed-shop.ru:8088/get_current_auth_user/?token=${this.token}`,
+      `https://reedshop.ru:8000/get_current_auth_user/?token=${this.token}`,
       {
         method: "GET",
         headers: {
@@ -174,7 +174,7 @@ class PageStore {
   };
 
   createFavourite = async (product_id) => {
-    const response = await fetch("https://reed-shop.ru:8088/favorites/", {
+    const response = await fetch("https://reedshop.ru:8000/favorites/", {
       method: "POST",
       headers: {
         accept: "application/json",
@@ -191,7 +191,7 @@ class PageStore {
 
   getFavouriteByUserIdFull = async () => {
     const response = await fetch(
-      `https://reed-shop.ru:8088/favorites/user_id/full/${this.user_info?.id}`,
+      `https://reedshop.ru:8000/favorites/user_id/full/${this.user_info?.id}`,
       {
         method: "GET",
         headers: {

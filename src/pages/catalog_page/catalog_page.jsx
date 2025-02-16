@@ -19,7 +19,7 @@ import filterIcon from "../../images/filter_icon.svg";
 
 // Создаем клиент для подключения к серверу GraphQL через WebSocket
 const client = createClient({
-  url: "ws://localhost:8000/graphql", // Замените на адрес вашего сервера
+  url: "wss://reedshop.ru:8208/graphql", // Замените на адрес вашего сервера
 });
 
 const CatalogPage = observer(() => {
@@ -146,24 +146,35 @@ const CatalogPage = observer(() => {
       {
         query: `
     subscription getPrSub {
-      onProductsUpdated {
-        id
-        sizes {
-          id
-          size {
+          onProductsUpdated {
+            id
             name
+            price
+            description
+            companyName
+            urls
+            sizes {
+              id
+              ordered
+              telegramId
+              nickName
+              
+              
+              size {
+                name
+              }
+              ordered
+              telegramId
+              nickName
+            }
           }
-          ordered
-          telegramId
-          nickName
         }
-      }
-    }
   `,
       },
       {
         next: (data) => {
           setSubProducts(data.data.onProductsUpdated);
+          console.log(data.data.onProductsUpdated);
         },
         error: (err) => {
           setSubProducts([]);
@@ -235,27 +246,33 @@ const CatalogPage = observer(() => {
       {pageStore.shop_format == 3 ? (
         <VStack padding={"30px"}>
           {sub_products.map((elem) => (
-            <SborOptCard />
+            <SborOptCard
+              brand={elem?.companyName}
+              model={elem?.name}
+              price={elem?.price}
+              obj={elem}
+            />
           ))}
         </VStack>
-      ) : null}
-      <div className={styles.products}>
-        <div className={styles.productsField}>
-          {products.map((elem, index) => {
-            return (
-              <ProductCard
-                key={index}
-                price={elem.price}
-                model_name={elem.name}
-                countProduct=""
-                oldPrice={""}
-                obj={elem}
-              />
-            );
-          })}
+      ) : (
+        <div className={styles.products}>
+          <div className={styles.productsField}>
+            {products.map((elem, index) => {
+              return (
+                <ProductCard
+                  key={index}
+                  price={elem.price}
+                  model_name={elem.name}
+                  countProduct=""
+                  oldPrice={""}
+                  obj={elem}
+                />
+              );
+            })}
+          </div>
         </div>
-      </div>
-      {similar.length != 0 && (
+      )}
+      {similar.length != 0 && pageStore.shop_format != 3 ? (
         <VStack padding={"0px 30px"}>
           <Text color={"white"} alignSelf={"flex-start"} fontSize={20}>
             Возможно вы искали...
@@ -277,7 +294,7 @@ const CatalogPage = observer(() => {
             </div>
           </div>
         </VStack>
-      )}
+      ) : null}
       <BottomMenu />
     </div>
   );

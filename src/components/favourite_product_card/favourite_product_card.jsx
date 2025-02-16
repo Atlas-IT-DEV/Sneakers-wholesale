@@ -29,7 +29,7 @@ const FavouriteProductCard = observer(
 
     const deleteFavourite = async (fav_id) => {
       const response = await fetch(
-        `https://reed-shop.ru:8088/favorites/${fav_id}`,
+        `https://reedshop.ru:8000/favorites/${fav_id}`,
         {
           method: "DELETE",
           headers: {

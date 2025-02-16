@@ -6,8 +6,14 @@ import useWindowDimensions from "./hooks/windowDimensions";
 import "swiper/css";
 import "swiper/css/pagination";
 import no_photo from "./../images/tiger_big_logo.jpg";
+import SborOptSize from "./sbor_opt_size";
 
-const SborOptCard = ({ brand = "Nike", model = "lox", price = "3000" }) => {
+const SborOptCard = ({
+  brand = "Nike",
+  model = "lox",
+  price = "3000",
+  obj = {},
+}) => {
   const { width } = useWindowDimensions();
   return (
     <VStack
@@ -76,6 +82,9 @@ const SborOptCard = ({ brand = "Nike", model = "lox", price = "3000" }) => {
       <Text color={"white"} fontSize={width <= 600 ? ["16px", "18px"] : "18px"}>
         {model}
       </Text>
+      <Text color={"white"} fontSize={width <= 600 ? ["16px", "18px"] : "18px"}>
+        {obj?.description}
+      </Text>
       <Text
         color={"rgba(100,100,100,1)"}
         fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
@@ -90,19 +99,9 @@ const SborOptCard = ({ brand = "Nike", model = "lox", price = "3000" }) => {
         overflowY={"hidden"}
         paddingBottom={"10px"}
       >
-        <Stack
-          height={"50px"}
-          width={"40px"}
-          minWidth={"40px"}
-          color={"white"}
-          border={"1px solid red"}
-          borderRadius={"10px"}
-          justifyContent={"center"}
-          align={"center"}
-          fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
-        >
-          <Text>42</Text>
-        </Stack>
+        {obj?.sizes?.map((elem) => (
+          <SborOptSize product_size_obj={elem} />
+        ))}
       </HStack>
 
       <Text
