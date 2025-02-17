@@ -11,15 +11,10 @@ import SelectCatalog from "../../components/select_catalog/select_catalog";
 import SliderCarousel from "../../components/slider_carousel/slider_carousel";
 
 import styles from "./main_page.module.css";
+import CommentsSlider from "../../components/comments_slider";
 
 const MainPage = observer(() => {
   const { pageStore } = useStores();
-  useEffect(() => {
-    pageStore.getProducts();
-    pageStore.getCompanys();
-    pageStore.getChars();
-    pageStore.getFavouriteByUserIdFull();
-  }, []);
   const tg = window.Telegram.WebApp;
 
   const signUp = async (first_name, last_name, tg_id) => {
@@ -45,6 +40,11 @@ const MainPage = observer(() => {
 
   useEffect(() => {
     register();
+    pageStore.getProducts();
+    pageStore.getCompanys();
+    pageStore.getChars();
+    pageStore.getFavouriteByUserIdFull();
+    pageStore.getAllComments();
   }, []);
 
   return (
@@ -61,6 +61,7 @@ const MainPage = observer(() => {
         <CompanyInformation />
         <Adress />
         <AboutDelivery />
+        <CommentsSlider></CommentsSlider>
       </main>
       <BottomMenu />
     </div>

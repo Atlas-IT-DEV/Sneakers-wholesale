@@ -56,10 +56,15 @@ const CustomSlide = ({ elem, width }) => {
       >
         REED
       </Text>
-      <Text fontSize="md" className={styles.descriptionText} color={"white"}>
+      <Text
+        fontSize="md"
+        className={styles.descriptionText}
+        color={"white"}
+        fontWeight={"500"}
+      >
         {elem?.name}
       </Text>
-      <Text fontSize="sm" className={styles.subDescriptionText} color={"white"}>
+      <Text fontSize="sm" className={styles.subDescriptionText} color={"gray"}>
         {elem?.description}
       </Text>
 

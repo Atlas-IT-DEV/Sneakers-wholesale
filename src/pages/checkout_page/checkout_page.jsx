@@ -8,6 +8,7 @@ import selectArrow from "../../images/arrow_light_gray.svg";
 import no_photo from "./../../images/tiger_big_logo.jpg";
 import pochtaIcon from "./../../images/pochta.svg";
 import geo from "./../../images/geo.svg";
+import delivery from "./../../images/delivery_car.svg";
 
 import { HStack, Image, Input, Text, VStack } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
@@ -58,8 +59,8 @@ const CheckoutPage = ({}) => {
     deliveryType[0] == 1
       ? pageStore.updateTypeDelivery("СДЭК")
       : deliveryType[1] == 1
-      ? pageStore.updateTypeDelivery("Почта России")
-      : pageStore.updateTypeDelivery("Самовывоз");
+      ? pageStore.updateTypeDelivery("Самовывоз")
+      : pageStore.updateTypeDelivery("Другие службы");
   }, [deliveryType]);
   return (
     <div
@@ -90,11 +91,11 @@ const CheckoutPage = ({}) => {
             style={{ display: "flex", justifyContent: "center", width: "100%" }}
           >
             {deliveryType[0] == 1 ? (
-              <img src={sdekIcon} style={{ height: "80px" }} />
+              <Image src={sdekIcon} style={{ height: "80px" }} />
             ) : deliveryType[1] == 1 ? (
-              <img src={pochtaIcon} style={{ height: "80px" }} />
+              <Image src={geo} style={{ height: "80px" }} />
             ) : (
-              <img src={geo} style={{ height: "80px" }} />
+              <Image src={delivery} height={"80px"} />
             )}
           </div>
         </div>
@@ -103,7 +104,7 @@ const CheckoutPage = ({}) => {
           onClick={() => setOpenPopup(!openPopup)}
         >
           <p>Все способы доставки</p>
-          <img src={selectArrow} alt="" />
+          <img src={selectArrow} alt="" width={"14px"} />
         </div>
         {openPopup && (
           <VStack
@@ -146,8 +147,8 @@ const CheckoutPage = ({}) => {
                   setOpenPopup(false);
                 }}
               >
-                <Image src={pochtaIcon} height={"50px"} />
-                <Text color={"white"}>Почта России</Text>
+                <Image src={geo} height={"50px"} />
+                <Text color={"white"}>Самовывоз</Text>
               </HStack>
               <HStack
                 w={"100%"}
@@ -164,18 +165,27 @@ const CheckoutPage = ({}) => {
                   setOpenPopup(false);
                 }}
               >
-                <Image src={geo} height={"50px"} />
-                <Text color={"white"}>Самовывоз</Text>
+                <Image src={delivery} height={"40px"} />
+                <Text color={"white"}>Другие службы</Text>
               </HStack>
             </VStack>
           </VStack>
         )}
       </div>
-
+      {deliveryType[2] == 1 && (
+        <Text
+          fontSize={"12px"}
+          color={"gray"}
+          padding={"0 16px"}
+          marginTop={"5px"}
+        >
+          Менеджер соориентирует вас в процессе оформления
+        </Text>
+      )}
       <HStack w={"100%"} padding={"0 16px"} marginTop={"20px"}>
         <Input
           type="text"
-          placeholder="Введите ФИО"
+          placeholder="ФИО"
           // pattern="/(?:\+|\d)[\d\-\(\) ]{9,}\d/g"
           backgroundColor={"rgba(57,57,57,1)"}
           border={"none"}
@@ -189,7 +199,7 @@ const CheckoutPage = ({}) => {
       <HStack w={"100%"} padding={"0 16px"} marginTop={"20px"}>
         <Input
           type="text"
-          placeholder="Введите номер телефона"
+          placeholder="Номер телефона"
           pattern="/(?:\+|\d)[\d\-\(\) ]{9,}\d/g"
           backgroundColor={"rgba(57,57,57,1)"}
           border={"none"}
@@ -200,10 +210,14 @@ const CheckoutPage = ({}) => {
           }}
         />
       </HStack>
-      {(deliveryType[0] == 1 || deliveryType[1] == 1) && (
+      {(deliveryType[0] == 1 || deliveryType[2] == 1) && (
         <HStack w={"100%"} padding={"0 16px"} marginTop={"20px"}>
           <Input
-            placeholder="Введите адрес доставки (город, улица, дом)"
+            placeholder={
+              deliveryType[2] == 1
+                ? "Адрес доставки (город, улица, дом)"
+                : "Адрес пункта выдачи (город, улица, дом)"
+            }
             backgroundColor={"rgba(57,57,57,1)"}
             border={"none"}
             color={"white"}
