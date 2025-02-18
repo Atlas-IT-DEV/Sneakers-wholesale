@@ -28,17 +28,9 @@ const CatalogPage = observer(() => {
   const { pageStore } = useStores();
   const formats = ["Розница", "Опт", "Дропшиппинг", "Сборный опт"];
 
-  const tg = window?.Telegram?.WebApp;
-  const backButton = tg?.BackButton;
-  backButton?.show();
-  const back_page = () => {
-    navigate("/");
-    backButton?.hide();
-  };
-
   const [products, setProducts] = useState([]);
   const [similar, setSimilar] = useState([]);
-  backButton?.onClick(back_page);
+
   const findMatchingProducts = (products, selectedCharacteristics) => {
     return products.filter((product) => {
       // Для каждой характеристики проверяем, есть ли совпадение в product.characteristics
