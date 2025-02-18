@@ -91,7 +91,7 @@ const ProductModal = observer(({ obj = {} }) => {
 
   const [isOpenGrid, setIsOpenGrid] = useState(false);
 
-  const [activeIndex, setActiveIndex] = useState("");
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     console.log(activeIndex);
@@ -102,20 +102,41 @@ const ProductModal = observer(({ obj = {} }) => {
   }, [isOpen]);
 
   const handleDownload = async (fileUrl, fileName) => {
-    try {
-      const response = await fetch(fileUrl);
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = fileName;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      window.URL.revokeObjectURL(url);
-    } catch (error) {
-      console.error("Ошибка при скачивании файла:", error);
-    }
+    const isMobile =
+      window.Telegram.WebApp.platform == "ios" ||
+      window.Telegram.WebApp.platform == "android";
+
+    if (!isMobile) {
+      try {
+        const response = await fetch(fileUrl, {
+          method: "GET",
+          headers: {
+            accept: "application/json",
+          },
+        });
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = fileName;
+        document.body.appendChild(a);
+        a.click();
+        console.log(a);
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+      } catch (error) {
+        console.error("Ошибка при скачивании файла:", error);
+      }
+    } else window.Telegram.WebApp.openLink(fileUrl);
+  };
+
+  const handleDefaultImageDownload = () => {
+    const a = document.createElement("a");
+    a.href = "/images/tiger_big_logo.jpg";
+    a.download = "tiger_big_logo.jpg"; // Указываем имя файла
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
   };
 
   return (
@@ -154,6 +175,7 @@ const ProductModal = observer(({ obj = {} }) => {
           pagination={true}
           onClick={() => {
             onOpen();
+            setActiveIndex(0);
           }}
         >
           {obj.urls.length != 0 && obj.urls[0] != null ? (
@@ -204,7 +226,10 @@ const ProductModal = observer(({ obj = {} }) => {
 
       <Modal
         isOpen={isOpen}
-        onClose={onClose}
+        onClose={() => {
+          onClose();
+          setActiveIndex(0);
+        }}
         size={"fullscreen"}
         motionPreset="slideInBottom"
         blockScrollOnMount
@@ -262,6 +287,7 @@ const ProductModal = observer(({ obj = {} }) => {
                 cursor={"pointer"}
                 onClick={() => {
                   setSelectedSize("");
+                  setActiveIndex(0);
                   onClose();
                 }}
                 backgroundColor={"white"}
@@ -315,9 +341,9 @@ const ProductModal = observer(({ obj = {} }) => {
                 borderRadius={"20px"}
                 border={"1px solid #db6900"}
                 onClick={async () =>
-                  obj?.urls.length == 0
-                    ? await handleDownload(no_photo, "no_photo")
-                    : await handleDownload(obj?.urls[activeIndex], `image`)
+                  obj?.urls.length != 0 && obj.urls[0] != null
+                    ? await handleDownload(obj?.urls[activeIndex], `image`)
+                    : handleDownload("/images/tiger_big_logo.jpg")
                 }
               >
                 <Text color={"black"}>Скачать</Text>
