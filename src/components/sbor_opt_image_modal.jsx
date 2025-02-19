@@ -81,16 +81,13 @@ const SborOptImageModal = ({
           flexDirection={"row"}
           borderRadius={"20px"}
           border={"1px solid #db6900"}
-          onClick={
-            async () => {
-              images != "" && images.split(",")?.length != 0
-                ? // ? console.log("я тут")
-                  await handleDownload(images.split(",")[activeIndex], `image`)
-                : await handleDownload("/images/tiger_big_logo.jpg");
-            }
-
+          onClick={async () => {
+            images != "" && images.split(",")?.length != 0
+              ? await handleDownload(images.split(",")[activeIndex], `image`)
+              : // ? console.log("я тут")
+                await handleDownload("/images/tiger_big_logo.jpg");
             //: console.log("я не тут")
-          }
+          }}
         >
           <Text color={"black"}>Скачать</Text>
           <Image src={downloadIcon} width={"16px"} />
