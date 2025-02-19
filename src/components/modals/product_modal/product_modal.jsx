@@ -111,9 +111,11 @@ const ProductModal = observer(({ obj = {} }) => {
         const response = await fetch(fileUrl, {
           method: "GET",
           headers: {
-            accept: "application/json",
+            // accept: "application/json",
+            "Content-Type": "application/octet-stream",
           },
         });
+        console.log("response", response);
         const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement("a");

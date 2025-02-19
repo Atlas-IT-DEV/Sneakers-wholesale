@@ -236,7 +236,7 @@ const CatalogPage = observer(() => {
       </div>
 
       {pageStore.shop_format == 3 ? (
-        <VStack padding={"30px"}>
+        <VStack padding={"30px"} marginBottom={"80px"}>
           {sub_products.map((elem) => (
             <SborOptCard
               brand={elem?.companyName}
