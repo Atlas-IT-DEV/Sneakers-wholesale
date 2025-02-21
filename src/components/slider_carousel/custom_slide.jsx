@@ -44,7 +44,7 @@ const CustomSlide = ({ elem, width }) => {
   return (
     <Box
       className={`${styles.main_block1} ${containerClass}`}
-      backgroundColor={"black"}
+      backgroundColor={"#080808"}
       borderRadius={"25px"}
       padding={"20px 35px 25px 35px"}
     >

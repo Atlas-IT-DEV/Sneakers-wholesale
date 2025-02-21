@@ -39,7 +39,7 @@ const SborOptCard = ({
       />
       <VStack
         w={"100%"}
-        bgColor={"black"}
+        bgColor={"#080808"}
         borderRadius={"26px"}
         padding={"20px"}
         align={"flex-start"}

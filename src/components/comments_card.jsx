@@ -25,7 +25,7 @@ const CommentCard = ({
     <>
       <VStack
         width={"100%"}
-        bgColor={"black"}
+        bgColor={"#080808"}
         padding={"20px"}
         borderRadius={"26px"}
         align={"flex-start"}
