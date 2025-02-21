@@ -63,4 +63,10 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    let tg = window.Telegram.WebApp;
+    tg.enableClosingConfirmation();
+    tg.expand();
+    tg.onEvent("viewportChanged", tg.expand());
+  </script>
 </html>

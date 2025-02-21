@@ -7,8 +7,7 @@
 .container585_600 .header {
   position: fixed;
   width: 100%;
-  padding-top: 40px;
-  padding-bottom: 14px;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container585_600 .header .namePageText {
@@ -21,6 +20,8 @@
 }
 .container585_600 .header .headerButtons {
   display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 .container585_600 .header .headerButtons .backButton {
   cursor: pointer;
@@ -32,7 +33,6 @@
   border: none;
   width: 100%;
   padding: 0;
-  margin-top: 11px;
   margin-left: 22px;
 }
 .container585_600 .header .headerButtons .searchField input {
@@ -48,20 +48,18 @@
 .container585_600 .header .headerButtons .sortButton {
   cursor: pointer;
   margin-left: 22px;
-  margin-top: 23px;
   min-width: 36px;
 }
 .container585_600 .header .headerButtons .filterButton {
   cursor: pointer;
   margin-left: 18px;
-  margin-top: 23px;
   margin-right: 30px;
   min-width: 30px;
 }
 .container585_600 .selector {
   display: inline-flexbox;
   margin-inline: 15px;
-  margin-top: 170px;
+  margin-top: 150px;
 }
 .container585_600 .products {
   display: flex;
@@ -78,8 +76,7 @@
 .container565_585 .header {
   position: fixed;
   width: 100%;
-  padding-top: 40px;
-  padding-bottom: 14px;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container565_585 .header .namePageText {
@@ -92,6 +89,8 @@
 }
 .container565_585 .header .headerButtons {
   display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 .container565_585 .header .headerButtons .backButton {
   cursor: pointer;
@@ -103,7 +102,6 @@
   border: none;
   width: 100%;
   padding: 0;
-  margin-top: 11px;
   margin-left: 22px;
 }
 .container565_585 .header .headerButtons .searchField input {
@@ -119,20 +117,18 @@
 .container565_585 .header .headerButtons .sortButton {
   cursor: pointer;
   margin-left: 22px;
-  margin-top: 23px;
   min-width: 34px;
 }
 .container565_585 .header .headerButtons .filterButton {
   cursor: pointer;
   margin-left: 18px;
-  margin-top: 23px;
   margin-right: 30px;
   min-width: 28px;
 }
 .container565_585 .selector {
   display: inline-flexbox;
   margin-inline: 15px;
-  margin-top: 170px;
+  margin-top: 150px;
 }
 .container565_585 .products {
   display: flex;
@@ -149,8 +145,7 @@
 .container525_565 .header {
   position: fixed;
   width: 100%;
-  padding-top: 40px;
-  padding-bottom: 14px;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container525_565 .header .namePageText {
@@ -163,6 +158,8 @@
 }
 .container525_565 .header .headerButtons {
   display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 .container525_565 .header .headerButtons .backButton {
   cursor: pointer;
@@ -174,7 +171,6 @@
   border: none;
   width: 100%;
   padding: 0;
-  margin-top: 11px;
   margin-left: 22px;
 }
 .container525_565 .header .headerButtons .searchField input {
@@ -190,20 +186,18 @@
 .container525_565 .header .headerButtons .sortButton {
   cursor: pointer;
   margin-left: 22px;
-  margin-top: 23px;
   min-width: 34px;
 }
 .container525_565 .header .headerButtons .filterButton {
   cursor: pointer;
   margin-left: 18px;
-  margin-top: 23px;
   margin-right: 30px;
   min-width: 28px;
 }
 .container525_565 .selector {
   display: inline-flexbox;
   margin-inline: 15px;
-  margin-top: 170px;
+  margin-top: 150px;
 }
 .container525_565 .products {
   display: flex;
@@ -220,8 +214,7 @@
 .container485_525 .header {
   position: fixed;
   width: 100%;
-  padding-top: 40px;
-  padding-bottom: 14px;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container485_525 .header .namePageText {
@@ -234,6 +227,8 @@
 }
 .container485_525 .header .headerButtons {
   display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 .container485_525 .header .headerButtons .backButton {
   cursor: pointer;
@@ -245,7 +240,6 @@
   border: none;
   width: 100%;
   padding: 0;
-  margin-top: 11px;
   margin-left: 22px;
 }
 .container485_525 .header .headerButtons .searchField input {
@@ -261,20 +255,18 @@
 .container485_525 .header .headerButtons .sortButton {
   cursor: pointer;
   margin-left: 22px;
-  margin-top: 23px;
   min-width: 32px;
 }
 .container485_525 .header .headerButtons .filterButton {
   cursor: pointer;
   margin-left: 18px;
-  margin-top: 23px;
   margin-right: 30px;
   min-width: 26px;
 }
 .container485_525 .selector {
   display: inline-flexbox;
   margin-inline: 15px;
-  margin-top: 170px;
+  margin-top: 145px;
 }
 .container485_525 .products {
   display: flex;
@@ -291,8 +283,7 @@
 .container450_485 .header {
   position: fixed;
   width: 100%;
-  padding-top: 40px;
-  padding-bottom: 14px;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container450_485 .header .namePageText {
@@ -305,6 +296,8 @@
 }
 .container450_485 .header .headerButtons {
   display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 .container450_485 .header .headerButtons .backButton {
   cursor: pointer;
@@ -316,7 +309,6 @@
   border: none;
   width: 100%;
   padding: 0;
-  margin-top: 11px;
   margin-left: 22px;
 }
 .container450_485 .header .headerButtons .searchField input {
@@ -332,20 +324,18 @@
 .container450_485 .header .headerButtons .sortButton {
   cursor: pointer;
   margin-left: 22px;
-  margin-top: 23px;
   min-width: 30px;
 }
 .container450_485 .header .headerButtons .filterButton {
   cursor: pointer;
   margin-left: 18px;
-  margin-top: 23px;
   margin-right: 30px;
   min-width: 24px;
 }
 .container450_485 .selector {
   display: inline-flexbox;
   margin-inline: 15px;
-  margin-top: 170px;
+  margin-top: 140px;
 }
 .container450_485 .products {
   display: flex;
@@ -362,8 +352,7 @@
 .container410_450 .header {
   position: fixed;
   width: 100%;
-  padding-top: 40px;
-  padding-bottom: 14px;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container410_450 .header .namePageText {
@@ -376,10 +365,11 @@
 }
 .container410_450 .header .headerButtons {
   display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 .container410_450 .header .headerButtons .backButton {
   cursor: pointer;
-  margin-top: 20px;
   margin-left: 24px;
   min-width: 13px;
 }
@@ -387,7 +377,6 @@
   border: none;
   width: 100%;
   padding: 0;
-  margin-top: 11px;
   margin-left: 22px;
 }
 .container410_450 .header .headerButtons .searchField input {
@@ -403,20 +392,18 @@
 .container410_450 .header .headerButtons .sortButton {
   cursor: pointer;
   margin-left: 22px;
-  margin-top: 23px;
   min-width: 28px;
 }
 .container410_450 .header .headerButtons .filterButton {
   cursor: pointer;
   margin-left: 18px;
-  margin-top: 23px;
   margin-right: 30px;
   min-width: 22px;
 }
 .container410_450 .selector {
   display: inline-flexbox;
   margin-inline: 15px;
-  margin-top: 170px;
+  margin-top: 140px;
 }
 .container410_450 .products {
   display: flex;
@@ -433,8 +420,7 @@
 .container375_410 .header {
   position: fixed;
   width: 100%;
-  padding-top: 40px;
-  padding-bottom: 14px;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container375_410 .header .namePageText {
@@ -447,6 +433,8 @@
 }
 .container375_410 .header .headerButtons {
   display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 .container375_410 .header .headerButtons .backButton {
   cursor: pointer;
@@ -458,7 +446,6 @@
   border: none;
   width: 100%;
   padding: 0;
-  margin-top: 11px;
   margin-left: 22px;
 }
 .container375_410 .header .headerButtons .searchField input {
@@ -474,20 +461,18 @@
 .container375_410 .header .headerButtons .sortButton {
   cursor: pointer;
   margin-left: 22px;
-  margin-top: 23px;
   min-width: 28px;
 }
 .container375_410 .header .headerButtons .filterButton {
   cursor: pointer;
   margin-left: 18px;
-  margin-top: 23px;
   margin-right: 30px;
   min-width: 22px;
 }
 .container375_410 .selector {
   display: inline-flexbox;
   margin-inline: 15px;
-  margin-top: 170px;
+  margin-top: 140px;
 }
 .container375_410 .products {
   display: flex;
