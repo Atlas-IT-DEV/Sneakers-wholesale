@@ -5,9 +5,9 @@
   overflow-x: hidden;
 }
 .container585_600 .header {
-  position: sticky;
-  padding-top: 70px;
-  padding-bottom: 14px;
+  width: 100%;
+  position: fixed;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container585_600 .header .closeButton {
@@ -43,7 +43,7 @@
   font-family: montserrat;
 }
 .container585_600 .filters {
-  margin-top: 15px;
+  margin-top: 90px;
   margin-bottom: 20px;
   padding: 0 22px 0 22px;
 }
@@ -54,9 +54,9 @@
   overflow-x: hidden;
 }
 .container565_585 .header {
-  position: sticky;
-  padding-top: 70px;
-  padding-bottom: 14px;
+  position: fixed;
+  width: 100%;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container565_585 .header .closeButton {
@@ -92,7 +92,7 @@
   font-family: montserrat;
 }
 .container565_585 .filters {
-  margin-top: 15px;
+  margin-top: 90px;
   margin-bottom: 20px;
   padding: 0 22px 0 22px;
 }
@@ -103,9 +103,9 @@
   overflow-x: hidden;
 }
 .container525_565 .header {
-  position: sticky;
-  padding-top: 70px;
-  padding-bottom: 14px;
+  width: 100%;
+  position: fixed;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container525_565 .header .closeButton {
@@ -141,7 +141,7 @@
   font-family: montserrat;
 }
 .container525_565 .filters {
-  margin-top: 15px;
+  margin-top: 90px;
   margin-bottom: 20px;
   padding: 0 22px 0 22px;
 }
@@ -152,9 +152,9 @@
   overflow-x: hidden;
 }
 .container485_525 .header {
-  position: sticky;
-  padding-top: 70px;
-  padding-bottom: 14px;
+  width: 100%;
+  position: fixed;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container485_525 .header .closeButton {
@@ -190,7 +190,7 @@
   font-family: montserrat;
 }
 .container485_525 .filters {
-  margin-top: 15px;
+  margin-top: 80px;
   margin-bottom: 20px;
   padding: 0 22px 0 22px;
 }
@@ -201,9 +201,9 @@
   overflow-x: hidden;
 }
 .container450_485 .header {
-  position: sticky;
-  padding-top: 70px;
-  padding-bottom: 14px;
+  width: 100%;
+  position: fixed;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container450_485 .header .closeButton {
@@ -239,7 +239,7 @@
   font-family: montserrat;
 }
 .container450_485 .filters {
-  margin-top: 15px;
+  margin-top: 80px;
   margin-bottom: 20px;
   padding: 0 22px 0 22px;
 }
@@ -250,9 +250,9 @@
   overflow-x: hidden;
 }
 .container410_450 .header {
-  position: sticky;
-  padding-top: 70px;
-  padding-bottom: 14px;
+  position: fixed;
+  width: 100%;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container410_450 .header .closeButton {
@@ -288,7 +288,7 @@
   font-family: montserrat;
 }
 .container410_450 .filters {
-  margin-top: 15px;
+  margin-top: 80px;
   margin-bottom: 20px;
   padding: 0 22px 0 22px;
 }
@@ -299,9 +299,9 @@
   overflow-x: hidden;
 }
 .container375_410 .header {
-  position: sticky;
-  padding-top: 70px;
-  padding-bottom: 14px;
+  width: 100%;
+  position: fixed;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container375_410 .header .closeButton {
@@ -337,7 +337,7 @@
   font-family: montserrat;
 }
 .container375_410 .filters {
-  margin-top: 15px;
+  margin-top: 80px;
   margin-bottom: 20px;
   padding: 0 22px 0 22px;
 }

@@ -28,17 +28,9 @@ const CatalogPage = observer(() => {
   const { pageStore } = useStores();
   const formats = ["Розница", "Опт", "Дропшиппинг", "Сборный опт"];
 
-  const tg = window?.Telegram?.WebApp;
-  const backButton = tg?.BackButton;
-  backButton?.show();
-  const back_page = () => {
-    navigate("/");
-    backButton?.hide();
-  };
-
   const [products, setProducts] = useState([]);
   const [similar, setSimilar] = useState([]);
-  backButton?.onClick(back_page);
+
   const findMatchingProducts = (products, selectedCharacteristics) => {
     return products.filter((product) => {
       // Для каждой характеристики проверяем, есть ли совпадение в product.characteristics
@@ -245,7 +237,7 @@ const CatalogPage = observer(() => {
       <SborOptCard />
 
       {pageStore.shop_format == 3 ? (
-        <VStack padding={"30px"}>
+        <VStack padding={"30px"} marginBottom={"80px"}>
           {sub_products.map((elem) => (
             <SborOptCard
               brand={elem?.companyName}

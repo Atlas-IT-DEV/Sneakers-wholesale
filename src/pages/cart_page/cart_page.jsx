@@ -14,14 +14,6 @@ const CartPage = observer(() => {
   const { width } = useWindowDimensions();
   const navigate = useNavigate();
   const { pageStore } = useStores();
-  const tg = window?.Telegram?.WebApp;
-  const backButton = tg?.BackButton;
-  backButton?.show();
-  const back_page = () => {
-    navigate("/");
-    backButton?.hide();
-  };
-  backButton?.onClick(back_page);
 
   const combineProducts = (products) => {
     return products.reduce((acc, product) => {

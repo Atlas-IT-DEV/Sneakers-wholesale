@@ -18,15 +18,6 @@ const FavouritesPage = observer(() => {
   const navigate = useNavigate();
   const { width } = useWindowDimensions();
 
-  const tg = window?.Telegram?.WebApp;
-  const backButton = tg?.BackButton;
-  backButton?.show();
-  const back_page = () => {
-    navigate("/");
-    backButton?.hide();
-  };
-  backButton?.onClick(back_page);
-
   const { pageStore } = useStores();
 
   useEffect(() => {
@@ -204,7 +195,6 @@ const FavouritesPage = observer(() => {
                   key={index}
                   name={item?.company?.name}
                   model_name={item?.name}
-                  image_product={item?.urls[0]?.url}
                   price={item?.price}
                   shop_type={item?.type_product}
                   obj={item}

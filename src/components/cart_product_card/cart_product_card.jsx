@@ -1,21 +1,12 @@
 import useWindowDimensions from "../hooks/windowDimensions";
-import {
-  Button,
-  HStack,
-  Input,
-  Popover,
-  PopoverBody,
-  PopoverContent,
-  PopoverTrigger,
-  VStack,
-  useDisclosure,
-} from "@chakra-ui/react";
+
 import { useStores } from "../../store/store_context";
+import { Image } from "@chakra-ui/react";
 
 import styles from "./cart_product_card.module.css";
 import minusIcon from "../../images/minus_icon.svg";
 import plusIcon from "../../images/plus_icon.svg";
-import settingProductIcon from "../../images/setting_product_icon.svg";
+import trashIcon from "./../../images/trash.svg";
 
 const CartProductCard = ({
   brand = "Asics",
@@ -30,7 +21,6 @@ const CartProductCard = ({
   const { width } = useWindowDimensions();
 
   const { pageStore } = useStores();
-  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const removeProduct = (id, size) => {
     let copy_cart = Array.from(pageStore.cart);
@@ -57,6 +47,15 @@ const CartProductCard = ({
           : styles.container375_410
       }
     >
+      <Image
+        src={trashIcon}
+        position={"absolute"}
+        width={"15px"}
+        height={"20px"}
+        right={"10px"}
+        top={"20px"}
+        onClick={() => removeProduct(obj.id, obj.size)}
+      />
       <div className={styles.productImage}>
         <img src={image} alt="" />
       </div>
@@ -109,59 +108,6 @@ const CartProductCard = ({
           </p>
         </div>
       </div>
-
-      <Popover
-        strategy="absolute"
-        placement="auto"
-        isOpen={isOpen}
-        onClose={onClose}
-        onOpen={onOpen}
-      >
-        <PopoverTrigger>
-          <div className={styles.settingsButton}>
-            <img
-              src={settingProductIcon}
-              alt=""
-              width={["20px", "20px", "22px", "24px", "26px", "28px", "30px"]}
-              height={["20px", "20px", "22px", "24px", "26px", "28px", "30px"]}
-            />
-          </div>
-        </PopoverTrigger>
-        <PopoverContent
-          bgColor={"rgba(30,30,30,1)"}
-          border={"1px solid #db6900"}
-          width={"220px"}
-          padding={"5px"}
-        >
-          <PopoverBody>
-            <VStack>
-              <HStack>
-                <Input
-                  placeholder="Введите количество"
-                  border={"1px solid #db6900"}
-                  color={"white"}
-                  inputMode="numeric"
-                  onChange={(e) => onChangeQuantity(e.target.value)}
-                />
-              </HStack>
-              <Button
-                backgroundColor={"rgba(200,0,0,1)"}
-                color={"white"}
-                _hover={{
-                  color: "black",
-                  backgroundColor: "rgba(205,205,205,1)",
-                }}
-                onClick={() => {
-                  removeProduct(obj.id, obj.size);
-                  onClose();
-                }}
-              >
-                Убрать из корзины
-              </Button>
-            </VStack>
-          </PopoverBody>
-        </PopoverContent>
-      </Popover>
     </div>
   );
 };

@@ -13,7 +13,6 @@ const FavouriteProductCard = observer(
     model_name = "Gel Quantum Kinetic",
     count_product = "8 пар (опт)",
     price = 18400,
-    image_product = no_photo,
     shop_type,
     obj = {},
   }) => {
@@ -65,7 +64,7 @@ const FavouriteProductCard = observer(
         }
       >
         <div className={styles.imageContainer}>
-          <img src={image_product} alt="" />
+          <img src={obj?.urls[0] != null ? obj?.urls[0] : no_photo} alt="" />
         </div>
         <div className={styles.infoCard}>
           <div className={styles.headerCard}>

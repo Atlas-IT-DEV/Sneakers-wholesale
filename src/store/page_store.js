@@ -25,6 +25,7 @@ class PageStore {
   user_name = "";
   phone_number = "";
   adress_delivery = "";
+  comments = [];
 
   favourites = [];
 
@@ -201,6 +202,21 @@ class PageStore {
     );
     const result = await response.json();
     this.favourites = response.status == 404 ? [] : result;
+  };
+
+  getAllComments = async () => {
+    const response = await fetch(
+      "https://reedshop.ru:8000/product_comments/full",
+      {
+        method: "GET",
+        headers: {
+          accept: "application/json",
+        },
+      }
+    );
+    const result = await response.json();
+    console.log("result", result);
+    this.comments = result;
   };
 
   updateFav = (new_fav) => {

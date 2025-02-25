@@ -9,7 +9,7 @@
   position: fixed;
   width: 100%;
   z-index: 998;
-  padding-bottom: 14px;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container585_600 .header .backButton {
@@ -22,7 +22,6 @@
   border: none;
   width: 100%;
   padding: 0;
-  margin-top: 31px;
   margin-left: 22px;
 }
 .container585_600 .header .searchField input {
@@ -38,13 +37,13 @@
 .container585_600 .header .sortButton {
   cursor: pointer;
   margin-left: 22px;
-  margin-top: 43px;
+  margin-top: 10px;
   min-width: 36px;
 }
 .container585_600 .header .filterButton {
   cursor: pointer;
   margin-left: 18px;
-  margin-top: 43px;
+  margin-top: 10px;
   margin-right: 30px;
   min-width: 30px;
 }
@@ -79,7 +78,7 @@
   position: fixed;
   width: 100%;
   z-index: 998;
-  padding-bottom: 14px;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container565_585 .header .backButton {
@@ -92,7 +91,6 @@
   border: none;
   width: 100%;
   padding: 0;
-  margin-top: 31px;
   margin-left: 22px;
 }
 .container565_585 .header .searchField input {
@@ -108,13 +106,13 @@
 .container565_585 .header .sortButton {
   cursor: pointer;
   margin-left: 22px;
-  margin-top: 43px;
+  margin-top: 10px;
   min-width: 34px;
 }
 .container565_585 .header .filterButton {
   cursor: pointer;
   margin-left: 18px;
-  margin-top: 43px;
+  margin-top: 10px;
   margin-right: 30px;
   min-width: 28px;
 }
@@ -149,7 +147,7 @@
   position: fixed;
   width: 100%;
   z-index: 998;
-  padding-bottom: 14px;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container525_565 .header .backButton {
@@ -162,7 +160,6 @@
   border: none;
   width: 100%;
   padding: 0;
-  margin-top: 31px;
   margin-left: 22px;
 }
 .container525_565 .header .searchField input {
@@ -178,13 +175,13 @@
 .container525_565 .header .sortButton {
   cursor: pointer;
   margin-left: 22px;
-  margin-top: 43px;
+  margin-top: 10px;
   min-width: 34px;
 }
 .container525_565 .header .filterButton {
   cursor: pointer;
   margin-left: 18px;
-  margin-top: 43px;
+  margin-top: 10px;
   margin-right: 30px;
   min-width: 28px;
 }
@@ -219,7 +216,7 @@
   position: fixed;
   width: 100%;
   z-index: 998;
-  padding-bottom: 14px;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container485_525 .header .backButton {
@@ -232,7 +229,6 @@
   border: none;
   width: 100%;
   padding: 0;
-  margin-top: 31px;
   margin-left: 22px;
 }
 .container485_525 .header .searchField input {
@@ -248,13 +244,13 @@
 .container485_525 .header .sortButton {
   cursor: pointer;
   margin-left: 22px;
-  margin-top: 43px;
+  margin-top: 10px;
   min-width: 32px;
 }
 .container485_525 .header .filterButton {
   cursor: pointer;
   margin-left: 18px;
-  margin-top: 43px;
+  margin-top: 10px;
   margin-right: 30px;
   min-width: 26px;
 }
@@ -289,7 +285,7 @@
   position: fixed;
   width: 100%;
   z-index: 998;
-  padding-bottom: 14px;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container450_485 .header .backButton {
@@ -302,7 +298,6 @@
   border: none;
   width: 100%;
   padding: 0;
-  margin-top: 31px;
   margin-left: 22px;
 }
 .container450_485 .header .searchField input {
@@ -318,13 +313,13 @@
 .container450_485 .header .sortButton {
   cursor: pointer;
   margin-left: 22px;
-  margin-top: 43px;
+  margin-top: 10px;
   min-width: 30px;
 }
 .container450_485 .header .filterButton {
   cursor: pointer;
   margin-left: 18px;
-  margin-top: 43px;
+  margin-top: 10px;
   margin-right: 30px;
   min-width: 24px;
 }
@@ -359,7 +354,7 @@
   position: fixed;
   width: 100%;
   z-index: 998;
-  padding-bottom: 14px;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container410_450 .header .backButton {
@@ -372,7 +367,6 @@
   border: none;
   width: 100%;
   padding: 0;
-  margin-top: 31px;
   margin-left: 22px;
 }
 .container410_450 .header .searchField input {
@@ -388,13 +382,13 @@
 .container410_450 .header .sortButton {
   cursor: pointer;
   margin-left: 22px;
-  margin-top: 43px;
+  margin-top: 10px;
   min-width: 28px;
 }
 .container410_450 .header .filterButton {
   cursor: pointer;
   margin-left: 18px;
-  margin-top: 43px;
+  margin-top: 10px;
   margin-right: 30px;
   min-width: 24px;
 }
@@ -429,7 +423,7 @@
   position: fixed;
   width: 100%;
   z-index: 998;
-  padding-bottom: 14px;
+  padding: 16px 0;
   background-color: #db6900;
 }
 .container375_410 .header .backButton {
@@ -442,7 +436,6 @@
   border: none;
   width: 100%;
   padding: 0;
-  margin-top: 31px;
   margin-left: 22px;
 }
 .container375_410 .header .searchField input {
@@ -458,13 +451,13 @@
 .container375_410 .header .sortButton {
   cursor: pointer;
   margin-left: 22px;
-  margin-top: 43px;
+  margin-top: 10px;
   min-width: 28px;
 }
 .container375_410 .header .filterButton {
   cursor: pointer;
   margin-left: 18px;
-  margin-top: 43px;
+  margin-top: 10px;
   margin-right: 30px;
   min-width: 24px;
 }

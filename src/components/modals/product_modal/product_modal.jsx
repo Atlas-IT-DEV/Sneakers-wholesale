@@ -31,6 +31,7 @@ import favouriteActiveIcon from "../../../images/favourite_active_icon.svg";
 import backArrow from "../../../images/arrow_right_icon.svg";
 import whiteArrow from "./../../../images/arrow_select_white.svg";
 import no_photo from "./../../../images/tiger_big_logo.jpg";
+import downloadIcon from "./../../../images/download_arrow_icon.svg";
 
 const ProductModal = observer(({ obj = {} }) => {
   const { width } = useWindowDimensions();
@@ -90,9 +91,55 @@ const ProductModal = observer(({ obj = {} }) => {
 
   const [isOpenGrid, setIsOpenGrid] = useState(false);
 
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    console.log(activeIndex);
+  }, [activeIndex]);
+
   useEffect(() => {
     setIsOpenGrid(false);
   }, [isOpen]);
+
+  const handleDownload = async (fileUrl, fileName) => {
+    const isMobile =
+      window.Telegram.WebApp.platform == "ios" ||
+      window.Telegram.WebApp.platform == "android";
+
+    if (!isMobile) {
+      try {
+        const response = await fetch(fileUrl, {
+          method: "GET",
+          headers: {
+            // accept: "application/json",
+            "Content-Type": "application/octet-stream",
+          },
+        });
+        console.log("response", response);
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = fileName;
+        document.body.appendChild(a);
+        a.click();
+        console.log(a);
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+      } catch (error) {
+        console.error("Ошибка при скачивании файла:", error);
+      }
+    } else window.Telegram.WebApp.openLink(fileUrl);
+  };
+
+  const handleDefaultImageDownload = () => {
+    const a = document.createElement("a");
+    a.href = "/images/tiger_big_logo.jpg";
+    a.download = "tiger_big_logo.jpg"; // Указываем имя файла
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
 
   return (
     <div>
@@ -130,13 +177,14 @@ const ProductModal = observer(({ obj = {} }) => {
           pagination={true}
           onClick={() => {
             onOpen();
+            setActiveIndex(0);
           }}
         >
-          {obj.urls.length != 0 ? (
+          {obj.urls.length != 0 && obj.urls[0] != null ? (
             obj.urls.map((elem, index) => {
               return (
                 <SwiperSlide className={styles.slider} key={index}>
-                  <img src={elem?.url} alt="" className={styles.imageProduct} />
+                  <img src={elem} alt="" className={styles.imageProduct} />
                   <div
                     className={styles.favouriteButton}
                     onClick={async () => {
@@ -155,7 +203,7 @@ const ProductModal = observer(({ obj = {} }) => {
                 </SwiperSlide>
               );
             })
-          ) : (
+          ) : obj.urls[0] == null ? (
             <SwiperSlide className={styles.slider}>
               <img src={no_photo} alt="" className={styles.imageProduct} />
               <div
@@ -174,13 +222,16 @@ const ProductModal = observer(({ obj = {} }) => {
                 />
               </div>
             </SwiperSlide>
-          )}
+          ) : null}
         </Swiper>
       </div>
 
       <Modal
         isOpen={isOpen}
-        onClose={onClose}
+        onClose={() => {
+          onClose();
+          setActiveIndex(0);
+        }}
         size={"fullscreen"}
         motionPreset="slideInBottom"
         blockScrollOnMount
@@ -205,7 +256,6 @@ const ProductModal = observer(({ obj = {} }) => {
           overflowX={"hidden"}
         >
           <ModalBody padding={0} width={"100%"}>
-            {/* <VStack align={"flex-start"} position={"relative"}> */}
             <Swiper
               style={{
                 "--swiper-pagination-position": "top",
@@ -229,6 +279,7 @@ const ProductModal = observer(({ obj = {} }) => {
                 clickable: true,
                 type: "bullets",
               }}
+              onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
             >
               <Stack
                 position={"absolute"}
@@ -238,6 +289,7 @@ const ProductModal = observer(({ obj = {} }) => {
                 cursor={"pointer"}
                 onClick={() => {
                   setSelectedSize("");
+                  setActiveIndex(0);
                   onClose();
                 }}
                 backgroundColor={"white"}
@@ -277,17 +329,39 @@ const ProductModal = observer(({ obj = {} }) => {
                   width={width <= 600 ? ["20px", "25px"] : "25px"}
                 />
               </Stack>
-              {obj.urls.length != 0 ? (
+              <Stack
+                position={"absolute"}
+                zIndex={1000}
+                right={"20px"}
+                bottom={"20px"}
+                padding={"6px"}
+                backgroundColor={"#db6900"}
+                justify={"center"}
+                align={"center"}
+                cursor={"pointer"}
+                flexDirection={"row"}
+                borderRadius={"20px"}
+                border={"1px solid #db6900"}
+                onClick={async () =>
+                  obj?.urls.length != 0 && obj.urls[0] != null
+                    ? await handleDownload(obj?.urls[activeIndex], `image`)
+                    : handleDownload("/images/tiger_big_logo.jpg")
+                }
+              >
+                <Text color={"black"}>Скачать</Text>
+                <Image src={downloadIcon} width={"16px"} />
+              </Stack>
+              {obj.urls.length != 0 && obj.urls[0] != null ? (
                 obj.urls.map((elem) => (
                   <SwiperSlide className={styles.slideProduct}>
-                    <Image src={elem?.url || no_photo} width={width} />
+                    <Image src={elem} width={width} />
                   </SwiperSlide>
                 ))
-              ) : (
+              ) : obj.urls[0] == null ? (
                 <SwiperSlide className={styles.slideProduct}>
                   <Image src={no_photo} width={width} objectFit={"fill"} />
                 </SwiperSlide>
-              )}
+              ) : null}
             </Swiper>
             <VStack width={"100%"} padding={"0 20px"} align={"flex-start"}>
               <HStack
@@ -355,7 +429,11 @@ const ProductModal = observer(({ obj = {} }) => {
                     <Stack
                       width={"50px"}
                       height={"60px"}
-                      onClick={() => setSelectedSize(item)}
+                      onClick={() =>
+                        selectedSize != item
+                          ? setSelectedSize(item)
+                          : setSelectedSize("")
+                      }
                       justify={"center"}
                       align={"center"}
                       borderRadius={"13px"}

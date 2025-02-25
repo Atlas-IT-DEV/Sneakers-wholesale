@@ -44,7 +44,7 @@ const CustomSlide = ({ elem, width }) => {
   return (
     <Box
       className={`${styles.main_block1} ${containerClass}`}
-      backgroundColor={"black"}
+      backgroundColor={"#080808"}
       borderRadius={"25px"}
       padding={"20px 35px 25px 35px"}
     >
@@ -56,10 +56,15 @@ const CustomSlide = ({ elem, width }) => {
       >
         REED
       </Text>
-      <Text fontSize="md" className={styles.descriptionText} color={"white"}>
+      <Text
+        fontSize="md"
+        className={styles.descriptionText}
+        color={"white"}
+        fontWeight={"500"}
+      >
         {elem?.name}
       </Text>
-      <Text fontSize="sm" className={styles.subDescriptionText} color={"white"}>
+      <Text fontSize="sm" className={styles.subDescriptionText} color={"gray"}>
         {elem?.description}
       </Text>
 
