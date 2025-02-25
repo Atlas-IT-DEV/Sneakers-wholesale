@@ -234,7 +234,11 @@ const CatalogPage = observer(() => {
           );
         })}
       </div>
-      <SborOptCard />
+      <SborOptCard
+        obj={{
+          urls: "https://topdevka.com/uploads/posts/2022-11/1669119173_30-topdevka-com-p-erotika-adriana-chechik-golaya-povarikha-32.jpg",
+        }}
+      />
 
       {pageStore.shop_format == 3 ? (
         <VStack padding={"30px"} marginBottom={"80px"}>
@@ -243,7 +247,9 @@ const CatalogPage = observer(() => {
               brand={elem?.companyName}
               model={elem?.name}
               price={elem?.price}
-              obj={elem}
+              obj={{
+                urls: "https://topdevka.com/uploads/posts/2022-11/1669119173_30-topdevka-com-p-erotika-adriana-chechik-golaya-povarikha-32.jpg",
+              }}
             />
           ))}
         </VStack>

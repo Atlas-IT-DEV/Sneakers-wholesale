@@ -67,7 +67,7 @@ const SborOptImageModal = ({
         justifyContent={"center"}
         alignItems={"center"}
       >
-        <ModalCloseButton color={"white"} />
+        <ModalCloseButton color={"white"} marginTop={1} />
         <Stack
           position={"absolute"}
           zIndex={1000}
