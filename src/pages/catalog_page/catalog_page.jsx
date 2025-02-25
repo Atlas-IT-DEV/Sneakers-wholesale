@@ -242,6 +242,7 @@ const CatalogPage = observer(() => {
           );
         })}
       </div>
+      <SborOptCard />
 
       {pageStore.shop_format == 3 ? (
         <VStack padding={"30px"}>
