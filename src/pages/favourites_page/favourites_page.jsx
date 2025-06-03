@@ -180,9 +180,9 @@ const FavouritesPage = observer(() => {
           </div>
         </div>
       </div>
-      <div className={styles.selector}>
+      {/* <div className={styles.selector}>
         <SelectCatalog />
-      </div>
+      </div> */}
       <div className={styles.products}>
         {pageStore.favourites.length != 0 &&
         Array.isArray(pageStore.favourites) ? (
@@ -203,7 +203,7 @@ const FavouritesPage = observer(() => {
             }
           })
         ) : (
-          <Text color={"white"} textAlign={"center"}>
+          <Text color={"white"} textAlign={"center"} marginTop={"120px"}>
             Вы ничего не добавляли в избранное
           </Text>
         )}

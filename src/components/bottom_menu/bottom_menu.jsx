@@ -54,17 +54,26 @@ const BottomMenu = observer(() => {
       </VStack>
       <VStack position={"relative"}>
         <img src={shoppingCartIcon} alt="" onClick={() => navigate("/cart")} />
-        {pageStore.cart.length != 0 && (
-          <Text
-            position={"absolute"}
-            color={"rgb(219, 105, 0)"}
-            top={0}
-            right={-2}
-            fontWeight={600}
-          >
-            {pageStore.cart.length}
-          </Text>
-        )}
+
+        <Text
+          position={"absolute"}
+          color={"rgb(219, 105, 0)"}
+          top={0}
+          right={-2}
+          fontWeight={600}
+        >
+          {pageStore.shop_format == 0 &&
+          pageStore.cart.filter((item) => item?.type_product == "Розница")
+            .length != 0
+            ? pageStore.cart.filter((item) => item?.type_product == "Розница")
+                .length
+            : pageStore.shop_format == 1 &&
+              pageStore.cart.filter((item) => item?.type_product == "Опт")
+                .length
+            ? pageStore.cart.filter((item) => item?.type_product == "Опт")
+                .length
+            : null}
+        </Text>
       </VStack>
     </div>
   );

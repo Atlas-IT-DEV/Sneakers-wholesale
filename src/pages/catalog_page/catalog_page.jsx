@@ -234,16 +234,12 @@ const CatalogPage = observer(() => {
           );
         })}
       </div>
-      <SborOptCard
-        obj={{
-          urls: "https://topdevka.com/uploads/posts/2022-11/1669119173_30-topdevka-com-p-erotika-adriana-chechik-golaya-povarikha-32.jpg",
-        }}
-      />
 
       {pageStore.shop_format == 3 ? (
         <VStack padding={"30px"} marginBottom={"80px"}>
-          {sub_products.map((elem) => (
+          {sub_products.map((elem, index) => (
             <SborOptCard
+            key={index}
               brand={elem?.companyName}
               model={elem?.name}
               price={elem?.price}

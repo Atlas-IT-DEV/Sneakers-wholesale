@@ -61,7 +61,9 @@ const CartProductCard = ({
       </div>
       <div className={styles.aboutProduct}>
         <p className={styles.brandText}>{brand}</p>
-        <p className={styles.modelText}>{model}</p>
+        <p className={styles.modelText}>
+          {model} {obj?.is_original ? "(Оригинал)" : "(Реплика)"}
+        </p>
         <p className={styles.countText}>({obj?.type_product})</p>
         <div className={styles.sizeField}>
           <p className={styles.sizeAttributeText}>Размер:</p>

@@ -29,8 +29,24 @@ class PageStore {
 
   favourites = [];
 
+  buy_type = ""
+
+  addressWallet = ""
+
+  created_order = {}
+
+  created_payment = {}
+
   constructor() {
     makeAutoObservable(this);
+  }
+
+
+  updateCreatedOrderPayment = (new_order) => {
+    this.created_payment = new_order
+  }
+  setAddressWallet = (new_wallet) => {
+    this.addressWallet = new_wallet
   }
 
   updateShopFormat = (new_format) => {
@@ -88,6 +104,10 @@ class PageStore {
   updateUsername = (new_user_name) => {
     this.user_name = new_user_name;
   };
+
+  updateBuyType = (new_type) => {
+    this.buy_type = new_type
+  }
 
   getProducts = async () => {
     const response = await fetch("https://reedshop.ru:8000/products/full", {
@@ -222,6 +242,59 @@ class PageStore {
   updateFav = (new_fav) => {
     this.favourites = new_fav;
   };
+
+  countSumOptCart = () => {
+    const sumCart = this.cart
+      .filter((item) => item?.type_product == "Опт")
+      .map((item) => {
+        let sum = 0;
+        sum += parseInt(item?.price);
+        return sum;
+      });
+
+    let priceCart = 0;
+    sumCart.forEach((x) => (priceCart += x));
+
+    return priceCart;
+  };
+
+  createOrder = async () => {
+    const response = await fetch("https://reedshop.ru:8000/orders/", {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${this.token}`
+      },
+      body: JSON.stringify({
+        "id": 0,
+        "user_id": this.user_info?.id,
+        "date": new Date().toISOString().replace(/\.\d{3}Z$/, ''),
+        "total_price": this.countSumOptCart()
+      })
+    })
+    const result = await response.json()
+    this.created_order = result
+  }
+
+  createOrderPayment = async () => {
+    const response = await fetch("https://reedshop.ru:8000/order_payments/", {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        Authorization: `Bearer ${this.token}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        "id": 0,
+        "order_id": this.created_order?.id,
+        "is_payment": false
+      })
+    })
+    const result = await response.json();
+    this.created_payment = result
+    return response.ok
+  }
 }
 
 export default PageStore;
