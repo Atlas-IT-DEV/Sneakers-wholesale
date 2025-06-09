@@ -243,9 +243,6 @@ const CatalogPage = observer(() => {
               brand={elem?.companyName}
               model={elem?.name}
               price={elem?.price}
-              obj={{
-                urls: "https://topdevka.com/uploads/posts/2022-11/1669119173_30-topdevka-com-p-erotika-adriana-chechik-golaya-povarikha-32.jpg",
-              }}
             />
           ))}
         </VStack>

@@ -65,8 +65,8 @@ const SborOptCard = ({
           pagination={true}
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
         >
-          {obj?.urls != "" ? (
-            obj?.urls.split(",").map((elem) => (
+          {obj?.urls ? (
+            obj?.urls?.split("#")?.map((elem) => (
               <SwiperSlide
                 style={{
                   width: "100%",
