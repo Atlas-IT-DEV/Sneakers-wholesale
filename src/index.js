@@ -91,6 +91,7 @@ const router = createMemoryRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+window.Telegram.WebApp.disableVerticalSwipes()
 root.render(
   <React.StrictMode>
     <ChakraProvider>
