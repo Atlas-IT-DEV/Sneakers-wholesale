@@ -13,6 +13,7 @@ import FilterPage from "./pages/filter_page/filter_page";
 import ProfilePage from "./pages/profile_page/profile_page";
 import CheckoutPage from "./pages/checkout_page/checkout_page";
 import CopyPage from "./pages/copy_page/copy_page";
+import PayPage from "./pages/pay_page";
 
 const router = createMemoryRouter([
   {
@@ -79,9 +80,18 @@ const router = createMemoryRouter([
       </PageContainer>
     ),
   },
+  {
+    path: "/pay",
+    element: (
+      <PageContainer>
+        <PayPage />
+      </PageContainer>
+    )
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+window.Telegram.WebApp.disableVerticalSwipes()
 root.render(
   <React.StrictMode>
     <ChakraProvider>

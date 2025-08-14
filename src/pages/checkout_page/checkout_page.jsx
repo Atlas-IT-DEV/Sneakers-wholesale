@@ -10,12 +10,23 @@ import pochtaIcon from "./../../images/pochta.svg";
 import geo from "./../../images/geo.svg";
 import delivery from "./../../images/delivery_car.svg";
 
-import { HStack, Image, Input, Text, VStack } from "@chakra-ui/react";
+import {
+  HStack,
+  Image,
+  Input,
+  Radio,
+  RadioGroup,
+  Text,
+  useToast,
+  VStack,
+} from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+import { observer } from "mobx-react-lite";
 
-const CheckoutPage = ({}) => {
+const CheckoutPage = observer(({}) => {
   const navigate = useNavigate();
   const { width } = useWindowDimensions();
+  const toast = useToast();
 
   const tg = window?.Telegram?.WebApp;
   const backButton = tg?.BackButton;
@@ -62,6 +73,57 @@ const CheckoutPage = ({}) => {
       ? pageStore.updateTypeDelivery("Самовывоз")
       : pageStore.updateTypeDelivery("Другие службы");
   }, [deliveryType]);
+
+  const countSumRoznCart = () => {
+    const sumCart = pageStore.cart
+      .filter((item) => item?.type_product == "Розница")
+      .map((item) => {
+        let sum = 0;
+        sum += parseInt(item?.price);
+        return sum;
+      });
+
+    let priceCart = 0;
+    sumCart.forEach((x) => (priceCart += x));
+
+    return priceCart;
+  };
+
+  const countSumOptCart = () => {
+    const sumCart = pageStore.cart
+      .filter((item) => item?.type_product == "Опт")
+      .map((item) => {
+        let sum = 0;
+        sum += parseInt(item?.price);
+        return sum;
+      });
+
+    let priceCart = 0;
+    sumCart.forEach((x) => (priceCart += x));
+
+    return priceCart;
+  };
+
+  const createOrder = async () => {
+    await pageStore.createOrder();
+  };
+  const createOrderPayment = async () => {
+    return await pageStore.createOrderPayment();
+  };
+
+  const handleCreateOrder = async () => {
+    await createOrder();
+    const ok = await createOrderPayment();
+    if (ok) {
+      toast({
+        title: "Заказ создан",
+        status: "success",
+      });
+      navigate("/pay");
+    }
+  };
+
+  const [typePay, setTypePay] = useState("1");
   return (
     <div
       className={
@@ -182,11 +244,28 @@ const CheckoutPage = ({}) => {
           Менеджер соориентирует вас в процессе оформления
         </Text>
       )}
+      {pageStore.shop_format == 1 && (
+        <VStack
+          color={"white"}
+          width={"100%"}
+          align={"flex-start"}
+          justify={"flex-start"}
+          padding={"0 20px"}
+          marginTop={"10px"}
+        >
+          <Text fontWeight={"600"}>Способ оплаты</Text>
+          <RadioGroup value={typePay} onChange={(e) => setTypePay(e)}>
+            <VStack justify={"flex-start"} align={"flex-start"}>
+              <Radio value="1">1. Криптокошельком</Radio>
+              <Radio value="2">2. Другой способ</Radio>
+            </VStack>
+          </RadioGroup>
+        </VStack>
+      )}
       <HStack w={"100%"} padding={"0 16px"} marginTop={"20px"}>
         <Input
           type="text"
           placeholder="ФИО"
-          // pattern="/(?:\+|\d)[\d\-\(\) ]{9,}\d/g"
           backgroundColor={"rgba(57,57,57,1)"}
           border={"none"}
           color={"white"}
@@ -228,21 +307,36 @@ const CheckoutPage = ({}) => {
       )}
 
       <div className={styles.products}>
-        {pageStore.cart.map((item, index) => {
-          return item?.urls.length != 0 ? (
-            item?.urls.map((images) => {
-              return <img src={images?.url} alt="" />;
-            })
-          ) : (
-            <img src={no_photo} alt="" />
-          );
-        })}
+        {pageStore.shop_format == 0
+          ? pageStore.cart
+              .filter((item) => item?.type_product == "Розница")
+              .map((item) => {
+                return item?.urls.length != 0 && item?.urls[0] != null ? (
+                  item?.urls.map((images, index2) => {
+                    return <img src={images} alt="" key={index2} />;
+                  })
+                ) : (
+                  <img src={no_photo} alt="" />
+                );
+              })
+          : pageStore.cart
+              .filter((item) => item?.type_product == "Опт")
+              .map((item) => {
+                return item?.urls.length != 0 && item?.urls[0] != null ? (
+                  item?.urls.map((images, index2) => {
+                    return <img src={images} alt="" key={index2} />;
+                  })
+                ) : (
+                  <img src={no_photo} alt="" />
+                );
+              })}
       </div>
       <div className={styles.divLine} />
       <div className={styles.totalView}>
         <p className={`${styles.attributeTotal} ${styles.totalText}`}>Итого</p>
         <p className={`${styles.valueTotal} ${styles.totalText}`}>
-          {pageStore.cart.length != 0 ? countSumCart() : 0}₽
+          {pageStore.shop_format == 0 ? countSumRoznCart() : countSumOptCart()}{" "}
+          ₽
         </p>
       </div>
       <div className={styles.descriptionView}>
@@ -251,17 +345,27 @@ const CheckoutPage = ({}) => {
             Количество товаров
           </p>
           <p className={`${styles.descValueTotal} ${styles.descText}`}>
-            {pageStore.cart.length}
+            {pageStore.shop_format == 0
+              ? pageStore.cart?.filter(
+                  (item) => item?.type_product == "Розница"
+                ).length
+              : pageStore.cart?.filter((item) => item?.type_product == "Опт")
+                  .length}
           </p>
         </div>
       </div>
       <div
         className={styles.orderButton}
-        onClick={() =>
-          adressDelivery == "" && (deliveryType[0] == 1 || deliveryType[1] == 1)
-            ? null
-            : navigate("/copy")
-        }
+        onClick={async () => {
+          if (
+            adressDelivery == "" &&
+            (deliveryType[0] == 1 || deliveryType[1] == 1)
+          )
+            return;
+          else if (typePay == "1") {
+            await handleCreateOrder();
+          } else navigate("/copy");
+        }}
         style={
           adressDelivery == "" && (deliveryType[0] == 1 || deliveryType[1] == 1)
             ? { backgroundColor: "rgba(200,0,0,1)", cursor: "no-drop" }
@@ -271,12 +375,15 @@ const CheckoutPage = ({}) => {
         <p className={styles.orderButtonText}>Продолжить</p>
         <div className={styles.prices}>
           <p className={`${styles.newPriceText} ${styles.priceText}`}>
-            {pageStore.cart.length != 0 ? countSumCart() : 0}₽
+            {pageStore.shop_format == 0
+              ? countSumRoznCart()
+              : countSumOptCart()}{" "}
+            ₽
           </p>
         </div>
       </div>
     </div>
   );
-};
+});
 
 export default CheckoutPage;

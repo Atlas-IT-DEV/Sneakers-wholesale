@@ -112,9 +112,6 @@
   margin: 12px 32px 0 32px;
   justify-content: space-between;
 }
-.container585_600 .totalView .attributeTotal {
-  width: 80%;
-}
 .container585_600 .totalView .totalText {
   color: white;
   font-size: 23px;
@@ -286,9 +283,6 @@
   display: flex;
   margin: 12px 32px 0 32px;
   justify-content: space-between;
-}
-.container565_585 .totalView .attributeTotal {
-  width: 80%;
 }
 .container565_585 .totalView .totalText {
   color: white;
@@ -462,9 +456,6 @@
   margin: 12px 32px 0 32px;
   justify-content: space-between;
 }
-.container525_565 .totalView .attributeTotal {
-  width: 80%;
-}
 .container525_565 .totalView .totalText {
   color: white;
   font-size: 20px;
@@ -636,9 +627,6 @@
   display: flex;
   margin: 12px 32px 0 32px;
   justify-content: space-between;
-}
-.container485_525 .totalView .attributeTotal {
-  width: 80%;
 }
 .container485_525 .totalView .totalText {
   color: white;
@@ -812,9 +800,6 @@
   margin: 12px 32px 0 32px;
   justify-content: space-between;
 }
-.container450_485 .totalView .attributeTotal {
-  width: 80%;
-}
 .container450_485 .totalView .totalText {
   color: white;
   font-size: 17px;
@@ -987,9 +972,6 @@
   margin: 12px 32px 0 32px;
   justify-content: space-between;
 }
-.container410_450 .totalView .attributeTotal {
-  width: 80%;
-}
 .container410_450 .totalView .totalText {
   color: white;
   font-size: 16px;
@@ -1161,9 +1143,6 @@
   display: flex;
   margin: 12px 32px 0 32px;
   justify-content: space-between;
-}
-.container375_410 .totalView .attributeTotal {
-  width: 80%;
 }
 .container375_410 .totalView .totalText {
   color: white;

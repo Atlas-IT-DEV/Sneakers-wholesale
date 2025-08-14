@@ -34,6 +34,36 @@ const CopyPage = () => {
     a.select();
     document.execCommand("copy");
   }
+
+  const countSumRoznCart = () => {
+    const sumCart = pageStore.cart
+      .filter((item) => item?.type_product == "Розница")
+      .map((item) => {
+        let sum = 0;
+        sum += parseInt(item?.price);
+        return sum;
+      });
+
+    let priceCart = 0;
+    sumCart.forEach((x) => (priceCart += x));
+
+    return priceCart;
+  };
+
+  const countSumOptCart = () => {
+    const sumCart = pageStore.cart
+      .filter((item) => item?.type_product == "Опт")
+      .map((item) => {
+        let sum = 0;
+        sum += parseInt(item?.price);
+        return sum;
+      });
+
+    let priceCart = 0;
+    sumCart.forEach((x) => (priceCart += x));
+
+    return priceCart;
+  };
   return (
     <VStack
       width={"100%"}
@@ -83,8 +113,16 @@ const CopyPage = () => {
             pageStore.delivery_type == "СДЭК"
               ? `Адрес доставки: ${pageStore.adress_delivery}\n `
               : ""
-          }Сумма заказа: ${countSumCart()} ₽ \n\n Товары: \n\n${combineProducts(
-            pageStore.cart
+          }Сумма заказа: ${
+            pageStore.shop_format == 0 ? countSumRoznCart() : countSumOptCart()
+          } ₽ ${
+            pageStore.created_payment?.is_payment
+              ? `(Оплачено криптовалютой с кошелька ${pageStore.addressWallet})`
+              : null
+          } \n\n Товары: \n\n${combineProducts(
+            pageStore.shop_format == 0
+              ? pageStore.cart.filter((item) => item?.type_product == "Розница")
+              : pageStore.cart.filter((item) => item?.type_product == "Опт")
           )
             .map((item) => {
               return ` Бренд: ${item?.company?.name}, \n Наименование: ${

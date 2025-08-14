@@ -261,6 +261,7 @@ const CatalogPage = observer(() => {
         <VStack padding={"30px"} marginBottom={"80px"}>
           {sub_sorted.map((elem) => (
             <SborOptCard
+              key={index}
               brand={elem?.companyName}
               model={elem?.name}
               price={elem?.price}

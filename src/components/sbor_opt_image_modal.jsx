@@ -105,8 +105,8 @@ const SborOptImageModal = ({
           }}
           onSlideChange={(swiper) => setIndex(swiper.activeIndex)}
         >
-          {images != "" ? (
-            images.split(",").map((elem) => (
+          {images ? (
+            images?.split("#")?.map((elem) => (
               <SwiperSlide
                 style={{
                   display: "flex",

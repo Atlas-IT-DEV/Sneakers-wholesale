@@ -242,6 +242,24 @@ const ProductModal = observer(({ obj = {} }) => {
     document.body.removeChild(a);
   };
 
+  const originalInCart = pageStore.cart
+    .filter((item) => item.type_product == "Опт")
+    .some((item) => item?.is_original);
+
+  const replicaInCart = pageStore.cart
+    .filter((item) => item.type_product == "Опт")
+    .some((item) => !item?.is_original);
+
+  const isAddButtonDisabled = (product) => {
+    if (originalInCart && !product?.is_original) {
+      return true; // Блокируем реплику, если есть оригинал
+    }
+    if (replicaInCart && product?.is_original) {
+      return true; // Блокируем оригинал, если есть реплика
+    }
+    return false; // Иначе кнопка активна
+  };
+
   return (
     <div>
       <div
@@ -547,7 +565,7 @@ const ProductModal = observer(({ obj = {} }) => {
                 marginTop={"10px"}
                 fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
               >
-                {obj?.name}
+                {obj?.name} {obj?.is_original ? "(Оригинал)" : "(Реплика)"}
               </Text>
               <Text
                 color={"white"}
@@ -800,9 +818,17 @@ const ProductModal = observer(({ obj = {} }) => {
                 </Collapse>
               </VStack>
               <HStack
-                margin={"40px 0"}
+                margin={
+                  obj?.type_product == "Розница"
+                    ? "40px 0"
+                    : !isAddButtonDisabled(obj)
+                    ? "40px 0"
+                    : "40px 0 0 0"
+                }
                 width={"100%"}
-                justify={"space-around"}
+                justify={
+                  pageStore.shop_format == 1 ? "flex-end" : "space-around"
+                }
                 gap={"20px"}
               >
                 <Button
@@ -835,17 +861,34 @@ const ProductModal = observer(({ obj = {} }) => {
                 <Button
                   borderRadius={"13px"}
                   height={"50px"}
-                  w={"100%"}
+                  w={pageStore.shop_format == 1 ? "50%" : "100%"}
                   bgColor={"black"}
                   color={"white"}
                   fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
                   _hover={{
-                    bgColor: selectedSize == "" ? "black" : "white",
-                    color: selectedSize == "" ? "white" : "black",
-                    cursor: selectedSize == "" ? "no-drop" : "pointer",
+                    bgColor:
+                      selectedSize == "" ||
+                      (isAddButtonDisabled(obj) && obj?.type_product == "Опт")
+                        ? "black"
+                        : "white",
+                    color:
+                      selectedSize == "" ||
+                      (isAddButtonDisabled(obj) && obj?.type_product == "Опт")
+                        ? "white"
+                        : "black",
+                    cursor:
+                      selectedSize == "" ||
+                      (isAddButtonDisabled(obj) && obj?.type_product == "Опт")
+                        ? "no-drop"
+                        : "pointer",
                   }}
                   onClick={() => {
-                    if (selectedSize != "") {
+                    if (
+                      isAddButtonDisabled(obj) &&
+                      obj?.type_product == "Опт"
+                    ) {
+                      return;
+                    } else if (selectedSize != "") {
                       let copy_cart = Array.from(pageStore.cart);
                       copy_cart.push({ ...obj, size: selectedSize });
                       pageStore.updateCart(copy_cart);
@@ -857,6 +900,11 @@ const ProductModal = observer(({ obj = {} }) => {
                   В корзину
                 </Button>
               </HStack>
+              {isAddButtonDisabled(obj) && obj?.type_product == "Опт" ? (
+                <Text marginBottom={"40px"} color={"red"}>
+                  Нельзя добавлять в корзину оригинал и реплику одновременно!
+                </Text>
+              ) : null}
             </VStack>
           </ModalBody>
         </ModalContent>
