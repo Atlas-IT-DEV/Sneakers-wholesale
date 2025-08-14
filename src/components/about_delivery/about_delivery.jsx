@@ -33,14 +33,14 @@ const AboutDelivery = () => {
         <p className={styles.fieldText}>Условия доставки</p>
         <img src={rightArrowGrayIcon} alt="" />
       </div>
-      <div className={styles.divideLine}></div>
+      {/* <div className={styles.divideLine}></div>
       <div
         className={styles.field}
         onClick={() => tg.openLink("https://telegra.ph/Sposoby-oplaty-07-13")}
       >
         <p className={styles.fieldText}>Способы оплаты</p>
         <img src={rightArrowGrayIcon} alt="" />
-      </div>
+      </div> */}
     </div>
   );
 };

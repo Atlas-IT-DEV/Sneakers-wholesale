@@ -34,7 +34,8 @@ import no_photo from "./../../../images/tiger_big_logo.jpg";
 import downloadIcon from "./../../../images/download_arrow_icon.svg";
 import redact from "../../../redact";
 import ShoeSizeSelector from "./shoe_size";
-import original from "./original.png";
+// import original from "./original.png";
+import { FaCheckCircle } from "react-icons/fa";
 const defaultSizeTable = [
   { id: 1, EU: "36", US: "4", UK: "3,5", RU: "35", mm: "22" },
   { id: 2, EU: "36,5", US: "4,5", UK: "4", RU: "35,5", mm: "22,5" },
@@ -459,6 +460,8 @@ const ProductModal = observer(({ obj = {} }) => {
               </Stack>
               {obj.is_original ? (
                 <Stack
+                  bg={"rgba(0,0,0,0.8)"}
+                  borderRadius={"10px"}
                   position={"absolute"}
                   zIndex={1000}
                   left={"20px"}
@@ -474,10 +477,11 @@ const ProductModal = observer(({ obj = {} }) => {
                       : handleDownload("/images/tiger_big_logo.jpg")
                   }
                 >
-                  <Text color={"white"} fontWeight={600}>
+                  <Text color={"rgba(89, 200, 79, 1)"} fontWeight={600}>
                     Оригинал
                   </Text>
-                  <Image src={original} width={"16px"} />
+                  {/* <Image src={original} width={"16px"} /> */}
+                  <FaCheckCircle color="rgba(89, 200, 79, 1)"/>
                 </Stack>
               ) : null}
 
@@ -539,7 +543,7 @@ const ProductModal = observer(({ obj = {} }) => {
                     fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
                     fontWeight={600}
                   >
-                    {`${obj.price.split("#")[0]}`}₽
+                    {`${obj.price.split("#")[0] ?? 0}`}₽
                   </Text>
                   <Text color={"white"}>{obj.price.split("#")[1]}</Text>
                 </VStack>
@@ -560,21 +564,21 @@ const ProductModal = observer(({ obj = {} }) => {
                   <Text color={"white"}>{obj.price.split("#")[3]}</Text>
                 </VStack>
               </HStack>
-              <Text
+              {/* <Text
                 color={"white"}
                 marginTop={"10px"}
                 fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
               >
                 {obj?.name} {obj?.is_original ? "(Оригинал)" : "(Реплика)"}
-              </Text>
-              <Text
+              </Text> */}
+              {/* <Text
                 color={"white"}
                 fontWeight={500}
                 fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
                 _hover={{ textDecoration: "underline", cursor: "pointer" }}
               >
                 Бренд {obj?.company?.name}
-              </Text>
+              </Text> */}
               <HStack
                 width={"100%"}
                 onClick={() => console.log(obj)}

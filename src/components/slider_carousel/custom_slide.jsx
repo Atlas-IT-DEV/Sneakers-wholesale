@@ -46,43 +46,58 @@ const CustomSlide = ({ elem, width }) => {
       className={`${styles.main_block1} ${containerClass}`}
       backgroundColor={"#080808"}
       borderRadius={"25px"}
-      padding={"20px 35px 25px 35px"}
+      padding={"10px 25px 25px 25px"}
+      height={elem?.urls?.length > 0 ? "263px" : "auto"}
+      position={"relative"}
     >
-      <Text
+      {/* <Text
         fontSize="xl"
         fontWeight="bold"
         className={styles.nameCompany}
         color={"rgba(227, 110, 0, 1)"}
       >
         REED
-      </Text>
-      <Text
-        fontSize="md"
-        className={styles.descriptionText}
-        color={"white"}
-        fontWeight={"500"}
+      </Text> */}
+      <Box
+        position={"relative"}
+        zIndex={3}
+        bg={"rgba(0,0,0,0.8)"}
+        padding={"10px"}
+        borderRadius={"15px"}
       >
-        {elem?.name}
-      </Text>
-      <Text fontSize="sm" className={styles.subDescriptionText} color={"gray"}>
-        {elem?.description}
-      </Text>
+        <Text
+          fontSize="md"
+          className={styles.descriptionText}
+          color={"white"}
+          fontWeight={"500"}
+        >
+          {elem?.name}
+        </Text>
+        <Text
+          fontSize="sm"
+          className={styles.subDescriptionText}
+          color={"gray"}
+        >
+          {elem?.description}
+        </Text>
+      </Box>
 
       {/* Рендеринг миниатюр, если есть изображения */}
       {elem?.urls?.length > 0 && (
-        <Flex mt={3} gap={2}>
-          {elem.urls.map((url, index) => (
-            <Image
-              key={index}
-              src={url}
-              boxSize="50px"
-              objectFit="cover"
-              cursor="pointer"
-              onClick={() => handleImageClick(url)}
-              borderRadius="md"
-            />
-          ))}
-        </Flex>
+        <Image
+          src={elem?.urls[0]}
+          objectFit="fill"
+          // onClick={() => handleImageClick(url)}
+          borderRadius="25px"
+          position={"absolute"}
+          zIndex={2}
+          top={0}
+          left={0}
+          w={"100%"}
+          h={"100%"}
+          height={"263px"}
+          overflow={"hidden"}
+        />
       )}
 
       {/* Модальное окно для полноразмерного просмотра изображения */}

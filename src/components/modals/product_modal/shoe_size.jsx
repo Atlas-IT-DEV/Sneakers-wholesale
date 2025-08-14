@@ -202,7 +202,7 @@ const ShoeSizePicker = ({ sizeTable = defaultSizeTable, setSelectedSize }) => {
 
       {/* Подпись и кнопка выбора */}
       <Box mt={4}>
-        <Text fontSize="sm" color="gray.300">
+        {/* <Text fontSize="sm" color="gray.300">
           🛡 Этот товар можно вернуть, если он вам не подойдёт.{" "}
           <Text
             as="span"
@@ -212,7 +212,7 @@ const ShoeSizePicker = ({ sizeTable = defaultSizeTable, setSelectedSize }) => {
           >
             Как вернуть товар?
           </Text>
-        </Text>
+        </Text> */}
       </Box>
     </Box>
   );

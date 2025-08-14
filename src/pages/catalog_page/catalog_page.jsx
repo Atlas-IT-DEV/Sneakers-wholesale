@@ -259,7 +259,7 @@ const CatalogPage = observer(() => {
 
       {pageStore.shop_format == 3 ? (
         <VStack padding={"30px"} marginBottom={"80px"}>
-          {sub_sorted.map((elem) => (
+          {sub_sorted.map((elem, index) => (
             <SborOptCard
               key={index}
               brand={elem?.companyName}

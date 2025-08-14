@@ -27,7 +27,7 @@ const SliderCarousel = observer(() => {
         modules={[FreeMode, Autoplay]}
         freeMode={false}
         autoplay={{ delay: 6000, disableOnInteraction: false }}
-        spaceBetween={40}
+        spaceBetween={width >= 400 ? 40 : 20}
       >
         <SwiperSlide className={styles.slider}>
           <div className={styles.main_block2} style={{ overflow: "hidden" }}>
