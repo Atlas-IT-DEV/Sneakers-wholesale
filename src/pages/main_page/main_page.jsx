@@ -40,6 +40,19 @@ const MainPage = observer(() => {
     }
   };
 
+  const getDeals = async () => {
+    const response = await fetch(
+      "https://kamyshnikov.getcourse.ru/pl/api/account/deals?key=fvFv4Fln9VRXmZ514s59tW5Rlf1DZSUoqkM12F3992SeK1PUbInNZxbWcEjSl0VSS9544Oih0omFDrVsspKBxFLVHNiQKdaljjc9hB7wGPaT9tQ7eq8MOkFplC3DsdDN&created_at[from]=2024-09-01"
+    );
+    const export_info = await response.json();
+    const get_export_response = await fetch(
+      `https://kamyshnikov.getcourse.ru/pl/api/account/exports/${export_info.info.export_id}?key=fvFv4Fln9VRXmZ514s59tW5Rlf1DZSUoqkM12F3992SeK1PUbInNZxbWcEjSl0VSS9544Oih0omFDrVsspKBxFLVHNiQKdaljjc9hB7wGPaT9tQ7eq8MOkFplC3DsdDN`
+    );
+    const export_result = await get_export_response.json();
+
+    console.log(export_info);
+  };
+
   useEffect(() => {
     register();
     pageStore.getProducts();
@@ -51,7 +64,7 @@ const MainPage = observer(() => {
 
   return (
     <div className={styles.container}>
-      <header>
+      <header onClick={() => getDeals()}>
         <Header />
       </header>
 

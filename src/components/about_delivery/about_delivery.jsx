@@ -4,6 +4,7 @@ import styles from "./about_delivery.module.css";
 import rightArrowGrayIcon from "../../images/arrow_select_gray.svg";
 
 const AboutDelivery = () => {
+  const tg = window.Telegram.WebApp;
   const { width } = useWindowDimensions();
   return (
     <div
@@ -23,12 +24,20 @@ const AboutDelivery = () => {
           : styles.container375_410
       }
     >
-      <div className={styles.field}>
+      <div
+        className={styles.field}
+        onClick={() =>
+          tg.openLink("https://telegra.ph/Usloviya-dostavki-07-13")
+        }
+      >
         <p className={styles.fieldText}>Условия доставки</p>
         <img src={rightArrowGrayIcon} alt="" />
       </div>
       <div className={styles.divideLine}></div>
-      <div className={styles.field}>
+      <div
+        className={styles.field}
+        onClick={() => tg.openLink("https://telegra.ph/Sposoby-oplaty-07-13")}
+      >
         <p className={styles.fieldText}>Способы оплаты</p>
         <img src={rightArrowGrayIcon} alt="" />
       </div>

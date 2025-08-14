@@ -5,6 +5,7 @@ import rightArrowGrayIcon from "../../images/arrow_select_gray.svg";
 
 const CompanyInformation = () => {
   const { width } = useWindowDimensions();
+  const tg = window.Telegram.WebApp;
   return (
     <div
       className={
@@ -24,16 +25,16 @@ const CompanyInformation = () => {
       }
     >
       <div className={styles.field}>
-        <p className={styles.fieldText}>Отзывы</p>
+        <p
+          className={styles.fieldText}
+          onClick={() => tg.openLink("https://telegra.ph/Kontakt-07-13")}
+        >
+          Контакты
+        </p>
         <img src={rightArrowGrayIcon} alt="" />
       </div>
       <div className={styles.divideLine}></div>
-      <div className={styles.field}>
-        <p className={styles.fieldText}>Контакты</p>
-        <img src={rightArrowGrayIcon} alt="" />
-      </div>
-      <div className={styles.divideLine}></div>
-      <div>
+      <div onClick={() => tg.openLink("https://telegra.ph/FAQ-07-13-20")}>
         <div className={styles.field}>
           <p className={styles.fieldText}>FAQ</p>
           <img src={rightArrowGrayIcon} alt="" />

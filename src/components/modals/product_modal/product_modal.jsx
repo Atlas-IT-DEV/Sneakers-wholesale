@@ -32,6 +32,34 @@ import backArrow from "../../../images/arrow_right_icon.svg";
 import whiteArrow from "./../../../images/arrow_select_white.svg";
 import no_photo from "./../../../images/tiger_big_logo.jpg";
 import downloadIcon from "./../../../images/download_arrow_icon.svg";
+import redact from "../../../redact";
+import ShoeSizeSelector from "./shoe_size";
+import original from "./original.png";
+const defaultSizeTable = [
+  { id: 1, EU: "36", US: "4", UK: "3,5", RU: "35", mm: "22" },
+  { id: 2, EU: "36,5", US: "4,5", UK: "4", RU: "35,5", mm: "22,5" },
+  { id: 3, EU: "37,5", US: "5", UK: "4,5", RU: "36", mm: "23" },
+  { id: 4, EU: "38", US: "5,5", UK: "5", RU: "37", mm: "23,5" },
+  { id: 5, EU: "38,5", US: "6", UK: "5,5", RU: "37,5", mm: "24" },
+  { id: 6, EU: "39", US: "6,5", UK: "6", RU: "38", mm: "24,5" },
+  { id: 7, EU: "40", US: "7", UK: "6,5", RU: "39", mm: "25" },
+  { id: 8, EU: "40,5", US: "7,5", UK: "7", RU: "39,5", mm: "25,5" },
+  { id: 9, EU: "41", US: "8", UK: "7,5", RU: "40", mm: "26" },
+  { id: 10, EU: "42", US: "8,5", UK: "8", RU: "41", mm: "26,5" },
+  { id: 11, EU: "42,5", US: "9", UK: "8,5", RU: "41,5", mm: "27" },
+  { id: 12, EU: "43", US: "9,5", UK: "9", RU: "42", mm: "27,5" },
+  { id: 13, EU: "44", US: "10", UK: "9,5", RU: "43", mm: "28" },
+  { id: 14, EU: "44,5", US: "10,5", UK: "10", RU: "43,5", mm: "28,5" },
+  { id: 15, EU: "45", US: "11", UK: "10,5", RU: "44", mm: "29" },
+  { id: 16, EU: "46", US: "11,5", UK: "11", RU: "44,5", mm: "29,5" },
+  { id: 17, EU: "47", US: "12", UK: "11,5", RU: "45", mm: "30" },
+  { id: 18, EU: "47,5", US: "12,5", UK: "12", RU: "45,5", mm: "30,5" },
+  { id: 19, EU: "48", US: "13", UK: "12,5", RU: "46", mm: "31" },
+  { id: 20, EU: "48,5", US: "13,5", UK: "13", RU: "46,5", mm: "31,5" },
+  { id: 21, EU: "49", US: "14", UK: "13,5", RU: "47", mm: "32" },
+  { id: 22, EU: "49,5", US: "14,5", UK: "14", RU: "47,5", mm: "32,5" },
+  { id: 23, EU: "50", US: "15", UK: "14,5", RU: "48", mm: "33" },
+];
 
 const ProductModal = observer(({ obj = {} }) => {
   const { width } = useWindowDimensions();
@@ -99,7 +127,37 @@ const ProductModal = observer(({ obj = {} }) => {
 
   useEffect(() => {
     setIsOpenGrid(false);
+    getTexts();
   }, [isOpen]);
+  const [policy, setPolicy] = useState([{ text: "" }, { text: "" }]);
+  const getPolicy = async (policyType) => {
+    try {
+      const response = await fetch(
+        `https://reedshop.ru:8888/policy/${policyType}`,
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`Ошибка HTTP: ${response.status}`);
+      }
+
+      return await response.json();
+    } catch (error) {
+      console.error("Ошибка при получении политики:", error);
+      throw error;
+    }
+  };
+  const getTexts = async () => {
+    let initial = Array.from(policy);
+    let dostavka = await getPolicy("delivery");
+    let warranty = await getPolicy("warranty");
+    setPolicy([dostavka, warranty]);
+  };
 
   const handleDownload = async (fileUrl, fileName) => {
     const isMobile =
@@ -131,6 +189,49 @@ const ProductModal = observer(({ obj = {} }) => {
       }
     } else window.Telegram.WebApp.openLink(fileUrl);
   };
+  const [sizeTable, setSizeTable] = useState([]); // Состояние для хранения таблицы размеров
+
+  // Функция загрузки таблицы размеров
+  const fetchSizeTable = async (productId) => {
+    try {
+      const response = await fetch(
+        `https://reedshop.ru:8888/size-table/${productId}`,
+        {
+          method: "GET",
+          headers: {
+            accept: "application/json",
+            Authorization: `Bearer ${pageStore.token}`, // если требуется авторизация
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`Ошибка HTTP: ${response.status}`);
+      }
+
+      const data = await response.json();
+      setSizeTable(data); // Сохраняем данные в состояние
+
+      // Если данных нет - устанавливаем таблицу по умолчанию
+      if (!data || data.length === 0) {
+        setSizeTable(defaultSizeTable);
+      }
+
+      return data;
+    } catch (error) {
+      console.error("Ошибка при загрузке таблицы размеров:", error);
+      // В случае ошибки устанавливаем таблицу по умолчанию
+      setSizeTable(defaultSizeTable);
+      throw error;
+    }
+  };
+
+  // Или при изменении productId:
+  useEffect(() => {
+    if (obj.id !== null) {
+      fetchSizeTable(obj.id).catch(console.error);
+    }
+  }, [obj]);
 
   const handleDefaultImageDownload = () => {
     const a = document.createElement("a");
@@ -184,7 +285,16 @@ const ProductModal = observer(({ obj = {} }) => {
             obj.urls.map((elem, index) => {
               return (
                 <SwiperSlide className={styles.slider} key={index}>
-                  <img src={elem} alt="" className={styles.imageProduct} />
+                  {elem.includes("MOV") || elem.includes("mp4") ? (
+                    <video
+                      src={elem}
+                      autoPlay
+                      className={styles.imageProduct}
+                      muted
+                    />
+                  ) : (
+                    <img src={elem} alt="" className={styles.imageProduct} />
+                  )}
                   <div
                     className={styles.favouriteButton}
                     onClick={async () => {
@@ -329,6 +439,30 @@ const ProductModal = observer(({ obj = {} }) => {
                   width={width <= 600 ? ["20px", "25px"] : "25px"}
                 />
               </Stack>
+              {obj.is_original ? (
+                <Stack
+                  position={"absolute"}
+                  zIndex={1000}
+                  left={"20px"}
+                  bottom={"20px"}
+                  padding={"6px"}
+                  justify={"center"}
+                  align={"center"}
+                  cursor={"pointer"}
+                  flexDirection={"row"}
+                  onClick={async () =>
+                    obj?.urls.length != 0 && obj.urls[0] != null
+                      ? await handleDownload(obj?.urls[activeIndex], `image`)
+                      : handleDownload("/images/tiger_big_logo.jpg")
+                  }
+                >
+                  <Text color={"white"} fontWeight={600}>
+                    Оригинал
+                  </Text>
+                  <Image src={original} width={"16px"} />
+                </Stack>
+              ) : null}
+
               <Stack
                 position={"absolute"}
                 zIndex={1000}
@@ -340,7 +474,7 @@ const ProductModal = observer(({ obj = {} }) => {
                 align={"center"}
                 cursor={"pointer"}
                 flexDirection={"row"}
-                borderRadius={"20px"}
+                borderRadius={"13px"}
                 border={"1px solid #db6900"}
                 onClick={async () =>
                   obj?.urls.length != 0 && obj.urls[0] != null
@@ -354,7 +488,11 @@ const ProductModal = observer(({ obj = {} }) => {
               {obj.urls.length != 0 && obj.urls[0] != null ? (
                 obj.urls.map((elem) => (
                   <SwiperSlide className={styles.slideProduct}>
-                    <Image src={elem} width={width} />
+                    {elem.includes("MOV") || elem.includes("mp4") ? (
+                      <video src={elem} muted autoPlay />
+                    ) : (
+                      <Image src={elem} width={width} />
+                    )}
                   </SwiperSlide>
                 ))
               ) : obj.urls[0] == null ? (
@@ -366,16 +504,43 @@ const ProductModal = observer(({ obj = {} }) => {
             <VStack width={"100%"} padding={"0 20px"} align={"flex-start"}>
               <HStack
                 width={"100%"}
-                justifyContent={"space-between"}
+                justifyContent={"flex-start"}
                 align={"end"}
                 marginTop={"14px"}
+                gap={"15px"}
               >
-                <Text
-                  color={"white"}
-                  fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
+                <VStack
+                  align={"flex-start"}
+                  borderRadius={"13px"}
+                  backgroundColor={"rgb(28, 28, 28)"}
+                  border={"1px solid rgb(219, 105, 0)"}
+                  p={"10px"}
                 >
-                  {parseInt(obj?.price)} ₽
-                </Text>
+                  <Text
+                    color={"rgb(219, 105, 0)"}
+                    fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
+                    fontWeight={600}
+                  >
+                    {`${obj.price.split("#")[0]}`}₽
+                  </Text>
+                  <Text color={"white"}>{obj.price.split("#")[1]}</Text>
+                </VStack>
+                <VStack
+                  align={"flex-start"}
+                  borderRadius={"13px"}
+                  backgroundColor={"rgb(28, 28, 28)"}
+                  border={"1px solid rgb(219, 105, 0)"}
+                  p={"10px"}
+                >
+                  <Text
+                    color={"rgb(219, 105, 0)"}
+                    fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
+                    fontWeight={600}
+                  >
+                    {`${obj.price.split("#")[2]}`}₽
+                  </Text>
+                  <Text color={"white"}>{obj.price.split("#")[3]}</Text>
+                </VStack>
               </HStack>
               <Text
                 color={"white"}
@@ -390,8 +555,37 @@ const ProductModal = observer(({ obj = {} }) => {
                 fontSize={width <= 600 ? ["16px", "18px"] : "18px"}
                 _hover={{ textDecoration: "underline", cursor: "pointer" }}
               >
-                {obj?.company?.name}
+                Бренд {obj?.company?.name}
               </Text>
+              <HStack
+                width={"100%"}
+                onClick={() => console.log(obj)}
+                overflowX={"scroll"}
+                gap={"30px"}
+                align={"flex-start"}
+              >
+                {obj.characteristics
+                  .filter((char) => char.name != "Размер")
+                  .map((char) => {
+                    return (
+                      <VStack
+                        align={"flex-start"}
+                        border={"1px solid rgba(219, 105, 0, 1)"}
+                        borderRadius={"13px"}
+                        padding={"15px"}
+                      >
+                        <Text
+                          fontWeight={600}
+                          color={"rgb(219, 105, 0)"}
+                          whiteSpace="nowrap"
+                        >
+                          {char.name}
+                        </Text>
+                        <Text color={"white"}>{char.value}</Text>
+                      </VStack>
+                    );
+                  })}
+              </HStack>
               <HStack
                 justify={"space-between"}
                 width={"100%"}
@@ -404,7 +598,7 @@ const ProductModal = observer(({ obj = {} }) => {
                 >
                   Размеры (EU)
                 </Text>
-                <Text
+                {/* <Text
                   color={"rgba(155,155,155,1)"}
                   cursor={"pointer"}
                   textDecoration={"underline"}
@@ -412,9 +606,13 @@ const ProductModal = observer(({ obj = {} }) => {
                   onClick={() => setIsOpenGrid(!isOpenGrid)}
                 >
                   Размерная сетка
-                </Text>
+                </Text> */}
               </HStack>
-              <GridSizes isOpen={isOpenGrid} />
+              <ShoeSizeSelector
+                sizeTable={sizeTable}
+                setSelectedSize={setSelectedSize}
+              />
+              {/* <GridSizes isOpen={isOpenGrid} /> */}
               <HStack
                 overflow={"scroll"}
                 overflowY={"hidden"}
@@ -475,7 +673,7 @@ const ProductModal = observer(({ obj = {} }) => {
                 padding={"0 20px"}
                 width={"100%"}
                 backgroundColor={"rgba(8,8,8,1)"}
-                borderRadius={"26px"}
+                borderRadius={"13px"}
                 marginTop={"20px"}
               >
                 <HStack
@@ -508,8 +706,7 @@ const ProductModal = observer(({ obj = {} }) => {
                       color={"white"}
                       fontSize={width <= 600 ? ["14px", "16px"] : "16px"}
                     >
-                      Доставка Доставка Доставка Доставка Доставка Доставка
-                      Доставка Доставка Доставка Доставка Доставка Доставка
+                      {redact(policy[0].text)}
                     </Text>
                   </VStack>
                 </Collapse>
@@ -520,7 +717,7 @@ const ProductModal = observer(({ obj = {} }) => {
                 padding={"0 20px"}
                 width={"100%"}
                 backgroundColor={"rgba(8,8,8,1)"}
-                borderRadius={"26px"}
+                borderRadius={"13px"}
                 marginTop={"10px"}
               >
                 <HStack
@@ -564,7 +761,7 @@ const ProductModal = observer(({ obj = {} }) => {
                 padding={"0 20px"}
                 width={"100%"}
                 backgroundColor={"rgba(8,8,8,1)"}
-                borderRadius={"26px"}
+                borderRadius={"13px"}
                 marginTop={"10px"}
               >
                 <HStack
@@ -597,8 +794,7 @@ const ProductModal = observer(({ obj = {} }) => {
                       color={"white"}
                       fontSize={width <= 600 ? ["14px", "16px"] : "16px"}
                     >
-                      Гарантия Гарантия Гарантия Гарантия Гарантия Гарантия
-                      Гарантия Гарантия Гарантия Гарантия Гарантия Гарантия
+                      {redact(policy[1].text)}
                     </Text>
                   </VStack>
                 </Collapse>
@@ -610,7 +806,7 @@ const ProductModal = observer(({ obj = {} }) => {
                 gap={"20px"}
               >
                 <Button
-                  borderRadius={"26px"}
+                  borderRadius={"13px"}
                   height={"50px"}
                   w={"100%"}
                   backgroundColor={"rgba(219, 105, 0, 1)"}
@@ -637,7 +833,7 @@ const ProductModal = observer(({ obj = {} }) => {
                   Купить сейчас
                 </Button>
                 <Button
-                  borderRadius={"26px"}
+                  borderRadius={"13px"}
                   height={"50px"}
                   w={"100%"}
                   bgColor={"black"}

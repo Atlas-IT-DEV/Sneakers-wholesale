@@ -8,7 +8,7 @@ const Adress = ({ adress = "ТЯК-Москва" }) => {
   return (
     <a
       style={{ cursor: "pointer" }}
-      href="https://telegra.ph/Putevoditel-dopustim-01-04"
+      href="https://yandex.ru/maps/org/reed/220086318321?si=3wkxcba7b2um40e07h3kj1rtwg"
     >
       <div
         className={

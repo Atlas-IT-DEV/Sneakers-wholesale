@@ -30,6 +30,9 @@ const CatalogPage = observer(() => {
 
   const [products, setProducts] = useState([]);
   const [similar, setSimilar] = useState([]);
+  const [sub_products, setSubProducts] = useState([]);
+
+  const [sub_sorted, setSubSorted] = useState([]);
 
   const findMatchingProducts = (products, selectedCharacteristics) => {
     return products.filter((product) => {
@@ -50,10 +53,13 @@ const CatalogPage = observer(() => {
         (elem) => elem.type_product == formats[pageStore.shop_format]
       )
     );
+    let copy_sub = Array.from(sub_products);
     if (pageStore.sort_type == 1) {
       copy_catalog = copy_catalog.sort((a, b) => a.price - b.price);
+      copy_sub = copy_sub.sort((a, b) => a.price - b.price);
     } else if (pageStore.sort_type == 2) {
       copy_catalog = copy_catalog.sort((a, b) => b.price - a.price);
+      copy_sub = copy_sub.sort((a, b) => b.price - a.price);
     }
     if (pageStore.search_str != "") {
       let fuce_copy_catalog = Array.from(copy_catalog);
@@ -98,12 +104,23 @@ const CatalogPage = observer(() => {
           Number(elem.price) >= Number(pageStore.min_max[0]) &&
           Number(elem.price) <= Number(pageStore.min_max[1])
       );
+      copy_sub = copy_sub.filter(
+        (elem) =>
+          Number(elem.price) >= Number(pageStore.min_max[0]) &&
+          Number(elem.price) <= Number(pageStore.min_max[1])
+      );
     } else if (pageStore.min_max[0] != "" && pageStore.min_max[1] == "") {
       copy_catalog = copy_catalog.filter(
         (elem) => Number(elem.price) >= Number(pageStore.min_max[0])
       );
+      copy_sub = copy_sub.filter(
+        (elem) => Number(elem.price) >= Number(pageStore.min_max[0])
+      );
     } else if (pageStore.min_max[0] == "" && pageStore.min_max[1] != "") {
       copy_catalog = copy_catalog.filter(
+        (elem) => Number(elem.price) <= Number(pageStore.min_max[1])
+      );
+      copy_sub = copy_sub.filter(
         (elem) => Number(elem.price) <= Number(pageStore.min_max[1])
       );
     }
@@ -111,9 +128,14 @@ const CatalogPage = observer(() => {
       copy_catalog = copy_catalog.filter((elem) =>
         pageStore.selected_companys.includes(elem.company.name)
       );
+      copy_sub = copy_sub.filter((elem) =>
+        pageStore.selected_companys.includes(elem.companyName)
+      );
     }
 
     setProducts(copy_catalog);
+    setSubSorted(copy_sub);
+    console.log("KSDLSKDJ");
   };
   const handleSortClick = () => {
     if (pageStore.sort_type < 2) {
@@ -132,7 +154,7 @@ const CatalogPage = observer(() => {
     pageStore.min_max,
     pageStore.selected_companys,
   ]);
-  const [sub_products, setSubProducts] = useState([]);
+
   const subs = () => {
     client.subscribe(
       {
@@ -234,21 +256,16 @@ const CatalogPage = observer(() => {
           );
         })}
       </div>
-      <SborOptCard
-        obj={{
-          urls: "https://topdevka.com/uploads/posts/2022-11/1669119173_30-topdevka-com-p-erotika-adriana-chechik-golaya-povarikha-32.jpg",
-        }}
-      />
 
       {pageStore.shop_format == 3 ? (
         <VStack padding={"30px"} marginBottom={"80px"}>
-          {sub_products.map((elem) => (
+          {sub_sorted.map((elem) => (
             <SborOptCard
               brand={elem?.companyName}
               model={elem?.name}
               price={elem?.price}
               obj={{
-                urls: "https://topdevka.com/uploads/posts/2022-11/1669119173_30-topdevka-com-p-erotika-adriana-chechik-golaya-povarikha-32.jpg",
+                urls: elem.urls,
               }}
             />
           ))}
@@ -260,7 +277,9 @@ const CatalogPage = observer(() => {
               return (
                 <ProductCard
                   key={index}
-                  price={elem.price}
+                  price={`${elem.price.split("#")[0]} | ${
+                    elem.price.split("#")[2]
+                  }`}
                   model_name={elem.name}
                   countProduct=""
                   oldPrice={""}

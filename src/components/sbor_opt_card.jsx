@@ -40,7 +40,7 @@ const SborOptCard = ({
       <VStack
         w={"100%"}
         bgColor={"#080808"}
-        borderRadius={"26px"}
+        borderRadius={"13px"}
         padding={"20px"}
         align={"flex-start"}
         justify={"flex-start"}
@@ -81,7 +81,7 @@ const SborOptCard = ({
                 <Image
                   src={elem}
                   objectFit={"cover"}
-                  borderRadius={"26px"}
+                  borderRadius={"13px"}
                   margin={"0 auto"}
                   cursor={"pointer"}
                 />
@@ -102,7 +102,7 @@ const SborOptCard = ({
               <Image
                 src={no_photo}
                 objectFit={"cover"}
-                borderRadius={"26px"}
+                borderRadius={"13px"}
                 margin={"0 auto"}
                 cursor={"pointer"}
               />
