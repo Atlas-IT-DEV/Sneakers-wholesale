@@ -7,11 +7,28 @@ import AttentionModal from "../modals/attention_modal/attenction_modal";
 
 import styles from "./select_catalog.module.css";
 import rightArrowWhiteIcon from "../../images/arrow_select_white.svg";
+import { useEffect, useState } from "react";
 
 const SelectCatalog = observer(() => {
   const navigate = useNavigate();
   const { pageStore } = useStores();
   const { width } = useWindowDimensions();
+
+  const [shopNames, setShopNames] = useState([]);
+
+  useEffect(() => {
+    const getAllShopNames = async () => {
+      const response = await fetch("https://reedshop.ru:8888/shop_name/", {
+        method: "GET",
+        headers: {
+          accept: "application/json",
+        },
+      });
+      const result = await response.json();
+      setShopNames(result);
+    };
+    getAllShopNames();
+  }, []);
   return (
     <div
       className={
@@ -43,7 +60,7 @@ const SelectCatalog = observer(() => {
               pageStore.shop_format == 0 ? "rgb(227, 110, 0)" : null,
           }}
         >
-          <p className={styles.buttonText}>Розничный магазин</p>
+          <p className={styles.buttonText}>{shopNames[0]?.name}</p>
           <img src={rightArrowWhiteIcon} alt="" />
         </div>
         <div
@@ -57,10 +74,10 @@ const SelectCatalog = observer(() => {
               pageStore.shop_format == 1 ? "rgb(227, 110, 0)" : null,
           }}
         >
-          <p className={styles.buttonText}>Оптовый магазин</p>
+          <p className={styles.buttonText}>{shopNames[1]?.name}</p>
           <img src={rightArrowWhiteIcon} alt="" />
         </div>
-        <AttentionModal name_button="Дропшиппинг" />
+        <AttentionModal name_button={shopNames[2]?.name} />
         {/* <AttentionModal name_button="Сборный опт" /> */}
         <div
           className={`${styles.button} ${styles.activeButton}`}
@@ -73,7 +90,7 @@ const SelectCatalog = observer(() => {
               pageStore.shop_format == 3 ? "rgb(227, 110, 0)" : null,
           }}
         >
-          <p className={styles.buttonText}>Сборный опт</p>
+          <p className={styles.buttonText}>{shopNames[3]?.name}</p>
           <img src={rightArrowWhiteIcon} alt="" />
         </div>
       </div>

@@ -585,6 +585,7 @@ const ProductModal = observer(({ obj = {} }) => {
                 overflowX={"scroll"}
                 gap={"30px"}
                 align={"flex-start"}
+                paddingBottom={"10px"}
               >
                 {obj.characteristics
                   .filter((char) => char.name != "Размер")

@@ -27,9 +27,9 @@ const CompanyInformation = () => {
       <div className={styles.field}>
         <p
           className={styles.fieldText}
-          onClick={() => tg.openLink("https://telegra.ph/Kontakt-07-13")}
+          onClick={() => tg.openLink("https://t.me/andreykamyshnikov")}
         >
-          Контакты
+          Связь с администратором
         </p>
         <img src={rightArrowGrayIcon} alt="" />
       </div>
